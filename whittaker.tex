@@ -1,0 +1,421 @@
+%edited starting 8/27/17 for re-submission to Duke
+\documentclass[10pt,leqno]{article}
+\usepackage{verbatim}
+\usepackage{amssymb}
+\usepackage{mathtools}
+%\usepackage{amsrefs}
+\usepackage{rotating}
+\usepackage{amsmath}
+%\usepackage{showkeys}
+\usepackage{tabularx}
+\setlength\extrarowheight{4pt}   %spacing in tables
+\usepackage{theorem}
+\usepackage[matrix,tips,frame,color,line,poly,curve]{xy}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\newcommand\kappaarrow[2]{#1\overset\kappa\rightarrow#2}
+\newtheorem{theorem}[equation]{Theorem}
+\newtheorem{corollary}[equation]{Corollary}
+\newtheorem{definition}[equation]{Definition}
+\newtheorem{lemma}[equation]{Lemma}
+\newtheorem{desideratum}[equation]{Desideratum}
+\newtheorem{conjecture}[equation]{Conjecture}
+\newtheorem{proposition}[equation]{Proposition}
+\newtheorem{remark}[equation]{Remark}
+{\theorembodyfont{\rmfamily}\newtheorem{theoremplain}[equation]{Theorem}
+\newtheorem{remarkplain}[equation]{Remark}
+\newtheorem{editorialremarkplain}[equation]{Editorial Remark}
+\newtheorem{exampleplain}[equation]{Example}
+\newtheorem{corollaryplain}[equation]{Corollary}
+\newtheorem{mytable}[equation]{Table}
+}
+
+\renewcommand{\sec}[1]{\section{#1}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+  \setcounter{equation}{0}}
+\newcommand{\subsec}[1]{\subsection{#1}
+\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+  \setcounter{equation}{0}}
+
+\newcommand{\subsubsec}[1]{\subsubsection{#1}
+\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+  \setcounter{equation}{0}}
+
+% Danger, Will Robinson!
+\def\danger{\begin{trivlist}\item[]\noindent%
+\begingroup\hangindent=3pc\hangafter=-2%\clubpenalty=10000%
+\def\par{\endgraf\endgroup}%
+\hbox to0pt{\hskip-\hangindent\dbend\hfill}\ignorespaces}
+\def\enddanger{\par\end{trivlist}}
+
+\newcommand{\Gext}{\negthinspace\negthinspace\phantom{a}^\delta G}
+\newcommand{\thetaG}{\negthinspace\negthinspace\phantom{a}^\theta
+  G(\C)}
+\newcommand{\thetaK}{\negthinspace\negthinspace\phantom{a}^\theta K(\C)}
+\newcommand{\qed}{\hfill $\square$ \medskip}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\qed}
+\newcommand\exact[3]{1\rightarrow #1\rightarrow #2\rightarrow #3\rightarrow1}
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Inv}{\mathrm{Invol}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\gr}{\mathrm{gr}}
+\newcommand{\Out}{\mathrm{Out}}
+\newcommand{\Int}{\mathrm{Int}}
+\renewcommand{\int}{\mathrm{int}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\kernel}{\mathrm{kernel}}
+\newcommand{\Ad}{\mathrm{Ad}}
+\newcommand{\zinv}{\mathrm{inv}}
+\newcommand{\SRF}{\mathrm{SRF}}
+\newcommand{\Gad}{G_\mathrm{ad}}
+\newcommand{\Gsc}{G_\mathrm{sc}}
+\newcommand{\Zsc}{Z_\mathrm{sc}}
+\newcommand{\Ztor}{Z_\mathrm{tor}}
+\newcommand{\Gbar}{\overline G}
+\newcommand{\Kad}{K_\mathrm{ad}}
+\newcommand{\Gal}{\mathrm{Gal}}
+\newcommand{\Norm}{\mathrm{Norm}}
+\newcommand{\Cent}{\mathrm{Cent}}
+\newcommand{\Stab}{\mathrm{Stab}}
+\newcommand{\I}{\mathcal I}
+\renewcommand{\O}{\mathcal O}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\W}{\mathbb W}
+\newcommand{\Ztwo}{\mathbb Z_2}
+\newcommand{\N}{\mathcal N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\G}{G}
+\renewcommand{\H}{\mathbb H}
+\newcommand{\h}{\mathfrak h}
+\newcommand{\n}{\mathfrak n}
+\renewcommand{\sl}{\mathfrak s\mathfrak l}
+\renewcommand{\P}{\mathfrak p}
+\renewcommand{\a}{\mathfrak a}
+\newcommand{\zk}{\mathfrak z_\mathfrak k}
+\newcommand{\A}{\mathbb A}
+\newcommand{\K}{\mathcal K}
+\newcommand{\B}{\mathcal B}
+\renewcommand{\k}{\mathfrak k}
+\newcommand{\spint}{\widetilde{Spin}}
+\newcommand{\ch}[1]{#1^\vee}
+\newcommand\sigmaqc{\sigma_{\text{qc}}}
+\newcommand\thetaqc{\theta_{\text{qc}}}
+\newcommand{\Fgal}{F_{\text{gal}}}
+\newcommand{\Falg}{F_{\text{alg}}}
+\newcommand{\cl}{\mathit{cl}}
+\newcommand{\Lie}{\mathrm{Lie}}
+\newcommand{\opp}{\text{-opp}}
+
+\renewcommand{\t}{\mathfrak t}
+\newcommand{\su}{\mathfrak s\mathfrak u}
+\newcommand{\g}{\mathfrak g}
+\newcommand\inv{^{-1}}
+\newcommand\wh{\widehat}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\SL}{\text{SL}}
+\newcommand{\SO}{\text{SO}}
+\newcommand{\SU}{\text{SU}}
+\newcommand{\Spin}{\text{Spin}}
+\newcommand{\chGGamma}{\phantom{a}^\vee G^\Gamma}
+\newcommand{\GGamma}{G^\Gamma}
+\newcommand{\s}{\mathfrak s}
+\newcommand{\w}{\mathfrak w}
+\newcommand{\AV}{\mathrm{AV}}
+\newcommand{\WF}{\mathrm{WF}}
+\newcommand{\AVann}{\mathrm{AV}_{\mathrm{ann}}}
+\newcommand{\GK}{\mathrm{GK}}
+\newcommand{\Op}{\O_p}
+\begin{document}
+\title{Whittaker Models for Real Groups}
+\author{Jeffrey Adams}
+\maketitle
+
+Let $G$ be a connected, complex reductive group, defined over $\R$, and suppose $G(\R)$ is quasisplit.
+We fix some notation.
+
+Let $\g=\Lie(G), \g(\R)=\Lie(G(\R))$. Choose a Cartan involution $\theta$ for $G$. This means:
+$\theta$ is an algebraic involution; commuting with the anti-holomorphic involution $\sigma$ defining $G(\R)$;
+and $G(\R)^\theta$ is a maximal compact subgroup of $G(\R)$. Set $K=G^\theta$, $K(\R)=G(\R)^\theta=K^\sigma$.
+Let $\s$ be the $-1$ eigenspace of $\theta$ acting on $\g$.
+
+We assume $G(\R)$ has discrete series representations, and fix an L-packet $\Pi$ of discrete series representations.
+
+By a  {\it Whittaker datum} we mean a $G(\R)$-conjugacy class of pairs  $(B(\R),\eta)$ where $B(\R)$ is a
+Borel subgroup of $G(\R)$, and $\eta$
+and $\eta$ is a non-degenerate character of the nilpotent radical $N(\R)$ of $B(\R)$. Non-degenerate means: non-trivial on each simple root space.
+
+
+Let $\N$ be the set of nilpotent elements of $G$ on $\g$.
+This is the closure of the principal nilpotent orbit $\Op$.
+
+Suppose $\pi$ is an irreducible $(\g,K)$-module. Let $I_\pi$ be the annihlator of $\pi$ in the universal enveloping algebra.
+Let $\AVann(\pi)$ be the associated variety of $I_\pi$. 
+This is the closure of a single complex nilpotent orbit $\O$.
+Write $\GK(\pi)$ for the Gelfand-Kirillov dimension of $\pi$
+\cite{vogan-gelfand-kirillov}. 
+All dimensions are complex unless otherwise stated.
+The associated variety of $\pi$, denoted $\AV(\pi)$, is the  the union of a set of
+$K$-orbits on $\O\cap\s$.
+We have
+Then
+$$
+GK(\pi)=\dim(AV(\pi))=\frac12\dim(\AVann(\pi)
+$$
+For all of these facts see \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
+
+Set $N=\dim(\N)=\dim(G)-\mathrm{rank}(G)$. The maximal Gelfand-Kirillov dimension of a representation is $N/2$.
+We say $\pi$ is {\it large} if $\GK(\pi)=N/2$. See \cite[Section 6]{Vogan78}.
+
+
+The wave-front set of $\pi$, written $\WF(\pi)$, is the union of a (finite) set of nilpotent $G(\R)$ orbits in
+$i\g(\R)^*=i\Hom_\R(\g(\R),\R)$. See \cite{howe_wave_front}, \cite{bv_local_structure}.
+
+\begin{lemma}
+  \label{l:large}
+  The following conditions are equivalent.
+  \begin{enumerate}
+    \item $\pi$ is large;
+\item $\AVann(\pi)=\N=\overline{\Op}$;
+\item $\dim(\AVann(\pi))=N$;
+  \item $\dim(AV(\pi))=N/2$;
+\item $\GK(\pi)=N/2$;
+
+\end{enumerate}
+\end{lemma}
+See \cite{vogan_bowdoin}.
+
+
+Let $Z=Z(G)$ be the center of $G$, and $\Gad=G/Z$.
+Then $Z$ and $\Gad$ are defined over $\R$, and $Z(\R)=Z(G(\R))$.
+Set $G(\R)_{\mathrm{ad}}=G(\R)/Z(\R)$.
+Define
+$$
+Q(\R)=\Gad(\R)/G(\R)_{\mathrm{ad}}
+$$
+Thus $\Gad(\R)$ is the set of inner automorphisms of $G$ which are defined over $\R$, containing
+$G(\R)_{\mathrm{ad}}=G(\R)/Z(\R)$ as a normal subgroup. This is a subgroup of $\Out(G(\R))$,
+and therefore acts on representations, conjugacy classes, etc.
+
+
+\begin{lemma}
+  \label{l:Q}
+  $Q(\R)\simeq\kernel(H^1(\Gamma,Z)\rightarrow H^1(\Gamma,G))$
+\end{lemma}
+
+This is well known:
+the exact sequence $1\rightarrow Z \rightarrow G \rightarrow \Gad\rightarrow 1$
+gives rise to the long exact sequence:
+$$
+1\rightarrow Z(\R) \rightarrow G(\R) \rightarrow \Gad(\R) \rightarrow H^1(\Gamma,Z)\rightarrow H^1(\Gamma,G)\rightarrow\dots
+$$.
+\section{The Main Result}
+
+We're in the setting of the previous section:  $G(\R)$ is quasisplit, and has discrete series representations.
+
+\begin{theorem}
+  \label{t:main}
+There are canonical bijections between the following sets.
+
+\begin{enumerate}
+\item Large discrete series representations in $\Pi$
+\item Whittaker data for $G(\R)$
+\item $(\Op\cap \s)/K$
+\item  $(\Op\cap \g(\R))/G(\R)$
+\end{enumerate}
+
+The group $Q(\R)$ acts simply transitively on each of these sets, and the bijections commute with this action.
+\end{theorem}
+
+This is mostly an exercise in looking up some references.
+
+\medskip
+
+\begin{proof}
+Suppose $\pi$ is a large discrete series representation.
+We will show:
+\begin{enumerate}
+\item $\pi$ admits a Whittaker model for a unique choice of Whittaker datum;
+\item $AV(\pi)$ is the closure of a $K$-orbit on $\Op\cap\s$;
+\item $WF(\pi)$ is the closure of a $G(\R)$-orbit on $\Op\cap i\g(\R)$.
+\end{enumerate}
+This defines the maps from (1) to (2,3,4). The fact these are all bijections will follow from the action of $Q(\R)$.
+
+By \cite{Vogan78} and \cite{kostant_whittaker}
+a representation $\pi$ is large if and only if it admits a Whittaker model for some Whittaker datum,
+and by \cite[Lemma 14.14]{abv} a  large discrete series representation admits a unique Whittaker datum.
+This defines the map (1)$\mapsto$(2).
+
+Suppose $\pi$ is a large irreducible representation.
+By Lemma \ref{l:large} $\AV(\pi)$ is the union of a set of $K$-orbits on $\Op\cap\s$.
+If $\pi$ is a discrete series representation $AV(\pi)$ is the closure of a single $K$-orbit on $\s$.
+This defines the map (1)$\mapsto$(3).
+
+By \cite{rossmann_limit_orbits}, $\WF(\pi)$ is the closure of a single orbit
+so $\pi\mapsto WF(\pi)$ gives  (1)$\mapsto$(4).
+
+The group $Q(\R)$ acts on  $(\g,K)$-modules, and preserves $\Pi$ and the property of being large.
+Therefore, by \cite[(14.15)(d)]{abv}, it acts simply transitively on the set (1).
+By \cite[(14.15)(c)]{abv} $Q(\R)$ acts simply transitively on the set (2).
+
+It is well known that if $X\in\g$ is nilpotent then  $G\cdot X\cap \g(\R)/G(\R)$ is in bijection with
+$\kernel(H^1(\Gamma,\Stab_G(X)) \rightarrow H^1(\Gamma,G))$. For example see \cite[Lemma 5.2]{galois}.
+In the case of the principal nilpotent orbit $\Op$, $\Stab_G(X)$ is $Z(G)$ times a unipotent group,
+which implies $H^1(\Gamma,\Stab_G(X))=H^1(\Gamma,Z)$. Therefore by Lemma \ref{l:Q} $Q(\R)$ acts simply transitively
+on (4).
+Finally the Kostant-Sekiguchi correspondence \cite{sekiguchi} is a bijection between (3) and (4).
+
+Therefore $Q(\R)$ acts on the sets (1-4), and simply transitively on (1). The maps clearly commute with this action. This completes the proof.
+\end{proof}
+
+There is one obvious shortcoming of this result: we'd like to know that the Sekiguchi correspondence takes $\AV(\pi)$ to $\WF(\pi)$.
+This is true by \cite{SV1} (and also follows in this special case by more elementary arguments). More generally we would like to describe the maps between the various sets more explicitly.
+
+\section{Further results}
+
+We describe maps between the sets (1-4) of Theorem \ref{t:main}.
+
+\medskip
+
+\noindent (2)$\leftrightarrow$(4)
+
+First we describe the set of Whittaker data more explicitly.
+Let $B$ be a Borel subgroup of $G$. Let $N$ be the nilradical of $B$, and $\overline N$ the opposite
+nilpotent subgroup. Let $\n,\overline\n$ be the Lie algebras of $N,\overline N$.
+If $B$ is defined over $\R$ we consider $N(\R),\n(\R), \overline\n(\R)$, etc.
+Let $\kappa(\,,\,)$  be the Killing form. 
+For $X\in i\overline \n(\R)$ define a unitary character $\psi_X$ of $N(\R)$ by:
+$$
+\psi_X(e^Y))=e^{2\pi \kappa(X,Y)}\quad(Y\in \n(\R)).
+$$
+The map $X\rightarrow \psi_X$ is an isomorphism between $i\overline\n(\R)$ and the unitary characters of $N(\R)$.
+It is easy to see $\psi_X$ is non-degenerate if and only if $iX\in i\g(\R)$ is a principal nilpotent element.
+In this case we write $(B(\R),X)$for the Whittaker datum $(B(\R),\psi_X)$.
+It is clear that $(B(\R),X)\mapsto G(\R)\cdot X$ is a bijection between Whittaker data and
+$(\Op(\R)\cap i\g(\R))/G(\R)$.
+
+The main result of \cite{matumoto} (Theorem A) says:
+
+\begin{lemma}[(2)$\leftrightarrow$(4)]  
+The bijection (2)$\leftrightarrow$(4) takes the Whittaker datum $(B(\R),X)$ to
+the principal orbit $G(\R)\cdot X\subset \Op\cap i\g(\R)$. 
+ \end{lemma} 
+
+
+\medskip
+
+\noindent (1)$\leftrightarrow$(3)
+Suppose $\pi(\lambda)$ is a  discrete series representation. Choose a compact Cartan subgroup $T$, and let
+$\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$. Let $\Delta$ be the set of roots of $\t$ in $\g$, and 
+let $\Delta^+(\lambda)=\{\alpha\mid \langle\lambda,\ch\alpha\rangle>0$,
+and let $S(\lambda)\in\Delta^+(\lambda)$ be the simple roots.
+For $\alpha\in \Delta$ let $\g_\alpha$ be the corresponding root space, and choose a non-zero element $X_\alpha\in\g_\alpha$ for each $\alpha$.
+
+\begin{lemma}[(1)$\leftrightarrow$(3)]
+Suppose $\pi$ is a large discrete series representation with Harish-Chandra parameter $\lambda\in\t^*$.
+Set
+
+\begin{equation}
+  \label{e:Epi}
+  E_\pi=\sum_{\alpha\in S(\lambda)}X_\alpha\in \N.
+\end{equation}
+
+Then $E_\pi\in\s$ is a regular nilpotent element, and
+$$
+\AV(\pi)=\overline{K\cdot E_\pi}.
+$$
+\end{lemma}
+
+\begin{proof}
+If $\pi$ is any discrete series representation, with Harish-Chandra parameter $\lambda$, let
+$\n=\sum_{\alpha\in\Delta^+(\lambda)}\g_\alpha$.
+Then by \cite[Proposition 6.8]{vogan_irreducibility} $AV(\pi)=K\cdot(\n\cap\s)$. 
+
+Now assume $\pi$ is large. This implies $X_\alpha\in\s$ for all $\alpha\in S(\lambda)$, so $E_\pi\in \s$. 
+By \cite{kostant_tds} $E_\alpha$ is a regular nilpotent element, so the closure of $K\cdot E_\alpha$ in $\s$ is $K\cdot(\n\cap\s)$. 
+\end{proof}
+
+\medskip
+
+\noindent (3)$\leftrightarrow$(4)
+
+This is the Kostant-Sekiguchi correspondence. We make this explicit, following \cite[Section 1]{avav}.
+
+Suppose $E_\R\in \Op\cap i\g(\R)$. Then we may choose an $SL(2)$-triple $(H_\R,E_\R,F_\R)$ with $F_\R$  contained in $i\g(\R)$,
+which implies $H_\R\in \g(\R)$. 
+After conjugating by $G(\R)$ we may further assume $\theta(E_\R)=-F_\R$.
+The Sekiguchi correspondence takes
+$$
+\Op\cap i\g(\R)\ni E_\R\mapsto E_\theta=\frac12(-iE_\R-iF_\R+H_\R)\in \N\cap \s.
+$$
+
+
+The map in the other direction of course the inverse. Given 
+$E_\theta\in \Op\cap\s$, choose $(H_\theta,E_\theta,F_\theta)$, with
+$F_\theta\in\s$, which implies $H_\theta\in\k$. After conjugating by $K$ we may further assume $\sigma(E_\theta)=F_\theta$.
+The correspondence takes
+$$
+\Op\cap\s\ni E_\theta\mapsto E_\R=\frac i2(E_\theta-F_\theta-H_\theta)\in\N\cap i\g(\R).
+$$
+
+\medskip
+
+\noindent (1)$\leftrightarrow$(4)
+
+There are several ways to describe this bijection. We choose to compose the maps (1)$\leftrightarrow$(3)$\leftrightarrow$(4).
+Here is the conclusion.
+
+\begin{lemma}
+  Let $\pi$ be a large discrete series representation.
+Choose a compact Cartan subgroup $T$ and let $\lambda\in \t^*$ be the Harish-Chandra parameter of $\pi$.
+Define $E_\theta=E_\pi$ as in \eqref{e:Epi}, and choose an $SL(2)$-triple $(H_\theta,E_\theta,F_\theta)$ as usual.
+After conjugating by $K$ we may assume $\sigma(E_\theta)=F_\theta$.  Then
+$$
+\WF(\pi)=G(\R)\cdot\frac i2(E_\theta-F_\theta-H_\theta)\in\N\cap i\g(\R)
+$$
+Conversely if $E_\R\in \Op\cap i\g(\R)$, choose an $SL(2)$-triple $(H_\R,E_\R,F_\R)$ which (after conjugating by $G(\R)$) satisfies $\theta(E_\R)=-F_\R$.
+Let
+$$
+H_\theta=E_\R-F_\R.
+$$
+Then $H_\theta\in\k$ is a regular semisimple element.
+Set $\t=\Cent_{\g}(H_\theta)$, and let
+$$
+\Delta^+=\{\alpha\in\Delta(T,G)\mid  \alpha(H_\theta)>0\}
+$$
+Then $\pi$ is the discrete series representation in $\Pi$ whose Harish-Chandra parameter is dominant for $\Delta^+$. 
+\end{lemma}
+
+We can also express (1)$\mapsto$(4) using the {\it Kostant section}.
+
+Suppose $\pi$ is a discrete series representation.
+Choose a compact Cartan subgroup $T$, and let $\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$.
+Identify $\lambda$ with an element $H_\pi\in i\t\subset i\g$ using the isomorphism $\t\simeq \t^*$ induced by the Killing form. 
+Let $\O^{ss}_\pi=G(\R)\cdot H_\pi\subset i\g(\R)$. We write $ss$ to emphasize this is a semisimple orbit.
+
+
+\begin{lemma}
+  Suppose $\pi$ is a discrete series representation, and $E_\R\in\Op\cap i\g(\R)$.
+
+  Then $WF(\pi)=\G(\R)\cdot E_\R$ if and only if
+$\O^{ss}_\pi$ meets the Kostant section of $E_\R$.
+\end{lemma}
+
+\begin{proof}
+  This is a simple restatement of the previous Lemma.  [details...]
+\end{proof}
+
+This confirms that  the corresponding statement  in the p-adic case \cite{debacker_reeder_generic} and \cite{kaletha_epipelagic}
+applies to the real case as well.
+\bibliographystyle{plain}
+\bibliography{Refs}
+
+\end{document}
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: s_{1}:0 -> -1 6
+
+
