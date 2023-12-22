@@ -137,14 +137,14 @@ Let $G$ be a connected, complex reductive group, defined over $\R$, and suppose 
 We fix some notation.
 
 Let $\g=\Lie(G), \g(\R)=\Lie(G(\R))$. Choose a Cartan involution $\theta$ for $G$. This means:
-$\theta$ is an algebraic involution; commuting with the anti-holomorphic involution $\sigma$ defining $G(\R)$;
+$\theta$ is an algebraic involution, commuting with the anti-holomorphic involution $\sigma$ defining $G(\R)$,
 and $G(\R)^\theta$ is a maximal compact subgroup of $G(\R)$. Set $K=G^\theta$, $K(\R)=G(\R)^\theta=K^\sigma$.
 Let $\s$ be the $-1$ eigenspace of $\theta$ acting on $\g$.
 
 We assume $G(\R)$ has discrete series representations, and fix an L-packet $\Pi$ of discrete series representations.
 
 By a  {\it Whittaker datum} we mean a $G(\R)$-conjugacy class of pairs  $(B(\R),\eta)$ where $B(\R)$ is a
-Borel subgroup of $G(\R)$, and $\eta$
+Borel subgroup of $G(\R)$, 
 and $\eta$ is a non-degenerate character of the nilpotent radical $N(\R)$ of $B(\R)$. Non-degenerate means: non-trivial on each simple root space.
 
 
@@ -159,7 +159,6 @@ Write $\GK(\pi)$ for the Gelfand-Kirillov dimension of $\pi$
 All dimensions are complex unless otherwise stated.
 The associated variety of $\pi$, denoted $\AV(\pi)$, is the  the union of a set of
 $K$-orbits on $\O\cap\s$.
-We have
 Then
 $$
 GK(\pi)=\dim(AV(\pi))=\frac12\dim(\AVann(\pi)
@@ -288,10 +287,10 @@ If $B$ is defined over $\R$ we consider $N(\R),\n(\R), \overline\n(\R)$, etc.
 Let $\kappa(\,,\,)$  be the Killing form. 
 For $X\in i\overline \n(\R)$ define a unitary character $\psi_X$ of $N(\R)$ by:
 $$
-\psi_X(e^Y))=e^{2\pi \kappa(X,Y)}\quad(Y\in \n(\R)).
+\psi_X(e^Y)=e^{2\pi \kappa(X,Y)}\quad(Y\in \n(\R)).
 $$
 The map $X\rightarrow \psi_X$ is an isomorphism between $i\overline\n(\R)$ and the unitary characters of $N(\R)$.
-It is easy to see $\psi_X$ is non-degenerate if and only if $iX\in i\g(\R)$ is a principal nilpotent element.
+It is easy to see $\psi_X$ is non-degenerate if and only if $X\in i\g(\R)$ is a principal nilpotent element.
 In this case we write $(B(\R),X)$for the Whittaker datum $(B(\R),\psi_X)$.
 It is clear that $(B(\R),X)\mapsto G(\R)\cdot X$ is a bijection between Whittaker data and
 $(\Op(\R)\cap i\g(\R))/G(\R)$.
@@ -308,8 +307,8 @@ the principal orbit $G(\R)\cdot X\subset \Op\cap i\g(\R)$.
 
 \noindent (1)$\leftrightarrow$(3)
 Suppose $\pi(\lambda)$ is a  discrete series representation. Choose a compact Cartan subgroup $T$, and let
-$\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$. Let $\Delta$ be the set of roots of $\t$ in $\g$, and 
-let $\Delta^+(\lambda)=\{\alpha\mid \langle\lambda,\ch\alpha\rangle>0$,
+$\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$. Let $\Delta$ be the set of roots of $\t$ in $\g$, 
+let $\Delta^+(\lambda)=\{\alpha\mid \langle\lambda,\ch\alpha\rangle>0\}$,
 and let $S(\lambda)\in\Delta^+(\lambda)$ be the simple roots.
 For $\alpha\in \Delta$ let $\g_\alpha$ be the corresponding root space, and choose a non-zero element $X_\alpha\in\g_\alpha$ for each $\alpha$.
 
@@ -334,7 +333,7 @@ $\n=\sum_{\alpha\in\Delta^+(\lambda)}\g_\alpha$.
 Then by \cite[Proposition 6.8]{vogan_irreducibility} $AV(\pi)=K\cdot(\n\cap\s)$. 
 
 Now assume $\pi$ is large. This implies $X_\alpha\in\s$ for all $\alpha\in S(\lambda)$, so $E_\pi\in \s$. 
-By \cite{kostant_tds} $E_\alpha$ is a regular nilpotent element, so the closure of $K\cdot E_\alpha$ in $\s$ is $K\cdot(\n\cap\s)$. 
+By \cite{kostant_tds} $E_\pi$ is a regular nilpotent element, so the closure of $K\cdot E_\pi$ in $\s$ is $K\cdot(\n\cap\s)$. 
 \end{proof}
 
 \medskip
@@ -352,7 +351,7 @@ $$
 $$
 
 
-The map in the other direction of course the inverse. Given 
+Computing the map in the other direction goes as follows.
 $E_\theta\in \Op\cap\s$, choose $(H_\theta,E_\theta,F_\theta)$, with
 $F_\theta\in\s$, which implies $H_\theta\in\k$. After conjugating by $K$ we may further assume $\sigma(E_\theta)=F_\theta$.
 The correspondence takes
@@ -393,19 +392,14 @@ We can also express (1)$\mapsto$(4) using the {\it Kostant section}.
 Suppose $\pi$ is a discrete series representation.
 Choose a compact Cartan subgroup $T$, and let $\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$.
 Identify $\lambda$ with an element $H_\pi\in i\t\subset i\g$ using the isomorphism $\t\simeq \t^*$ induced by the Killing form. 
-Let $\O^{ss}_\pi=G(\R)\cdot H_\pi\subset i\g(\R)$. We write $ss$ to emphasize this is a semisimple orbit.
 
+\begin{proposition}[\cite{adams_kaletha}]
+Suppose $\pi$ is a generic discrete series representation. Then $\pi$ is $\w$-generic
+for a unique Whittaker datum $\w$.
+Write $\w=\w_X$ for some regular nilpotent element $X\in i\g(\R)$.
+Then $H_\pi$ is $G(\R)$-conjugate to an element of the Kostant section of $X$.
+\end{proposition}
 
-\begin{lemma}
-  Suppose $\pi$ is a discrete series representation, and $E_\R\in\Op\cap i\g(\R)$.
-
-  Then $WF(\pi)=\G(\R)\cdot E_\R$ if and only if
-$\O^{ss}_\pi$ meets the Kostant section of $E_\R$.
-\end{lemma}
-
-\begin{proof}
-  This is a simple restatement of the previous Lemma.  [details...]
-\end{proof}
 
 This confirms that  the corresponding statement  in the p-adic case \cite{debacker_reeder_generic} and \cite{kaletha_epipelagic}
 applies to the real case as well.
