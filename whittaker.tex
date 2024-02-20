@@ -5,7 +5,11 @@
 \usepackage{mathtools}
 %\usepackage{amsrefs}
 \usepackage{rotating}
+\usepackage{xcolor}
 \usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage[colorlinks=true, linktoc=page, citecolor=blue, linkcolor=blue, urlcolor=blue]{hyperref}
+
 %\usepackage{showkeys}
 \usepackage{tabularx}
 \setlength\extrarowheight{4pt}   %spacing in tables
@@ -130,16 +134,11 @@
 \newcommand{\Op}{\O_p}
 \begin{document}
 \title{Whittaker Models for Real Groups}
-\author{Jeffrey Adams}
+\author{Jeffrey Adams + AA}
 \maketitle
 
-Let $G$ be a connected, complex reductive group, defined over $\R$, and suppose $G(\R)$ is quasisplit.
-We fix some notation.
+Let $G$ be a connected complex reductive group, defined over $\R$, and suppose $G(\R)$ is quasisplit.
 
-Let $\g=\Lie(G), \g(\R)=\Lie(G(\R))$. Choose a Cartan involution $\theta$ for $G$. This means:
-$\theta$ is an algebraic involution, commuting with the anti-holomorphic involution $\sigma$ defining $G(\R)$,
-and $G(\R)^\theta$ is a maximal compact subgroup of $G(\R)$. Set $K=G^\theta$, $K(\R)=G(\R)^\theta=K^\sigma$.
-Let $\s$ be the $-1$ eigenspace of $\theta$ acting on~$\g$.
 
 We assume $G(\R)$ has discrete series representations, and fix an L-packet $\Pi$ of discrete series representations.
 
@@ -147,30 +146,49 @@ By a  {\it Whittaker datum} we mean a $G(\R)$-conjugacy class of pairs  $(B(\R),
 Borel subgroup of $G(\R)$, 
 and $\eta$ is a non-degenerate character of the nilpotent radical $N(\R)$ of $B(\R)$. Non-degenerate means: non-trivial on each simple root space.
 
+TODO: write about generic/large representations, and explain what's in the paper...
+
+\section{Some invariants of irreducible $(\g, K)$-modules}
+
+
+
+Suppose $\pi$ is an irreducible $(\g,K)$-module. Then we can associate to~$\pi$ several invariants, which depend only on the equivalence class of~$\pi$: the associated variety, the Gelfand---Kirillov dimension, and the wavefront set.  We do not give full definitions, but try to point to convenient places in the literature.\footnote{AA 20-II-2024: of course if we write this, we should maybe add a few basic references for the notions.}
+
+\subsection{Some notation}
+
+Let~$\sigma$ be the anti-holomorphic involution defining~$G(\R)$. 
+Let $\g=\Lie(G), \g(\R)=\Lie(G(\R))$. Choose a Cartan involution $\theta$ for $G$. This means:
+$\theta$ is an algebraic involution, commuting with~$\sigma$,
+and $G(\R)^\theta$ is a maximal compact subgroup of~$G(\R)$. Set $K=G^\theta$, $K(\R)=G(\R)^\theta=K^\sigma$.
+Let $\s$ be the $-1$ eigenspace of $\theta$ acting on~$\g$.
 
 Let $\N$ be the set of nilpotent elements of $G$ on $\g$.
 This is the closure of the principal nilpotent orbit $\Op$.
 
-Suppose $\pi$ is an irreducible $(\g,K)$-module. Let $I_\pi$ be the annihlator of $\pi$ in the universal enveloping algebra.
+ \subsection{The invariants}
+
+
+Let $I_\pi$ be the annihlator of $\pi$ in the universal enveloping algebra.
 Let $\AVann(\pi)$ be the associated variety of $I_\pi$. 
 This is the closure of a single complex nilpotent orbit $\O$.
-Write $\GK(\pi)$ for the Gelfand-Kirillov dimension of $\pi$
-\cite{vogan-gelfand-kirillov}. 
-All dimensions are complex unless otherwise stated.
+
 The associated variety of $\pi$, denoted $\AV(\pi)$, is the  the union of a set of
 $K$-orbits on $\O\cap\s$.
-Then
+
+The Gelfand---Kirillov dimension~$\GK(\pi)$ of~$\pi$ can be defined in several different ways~\cite{vogan-gelfand-kirillov}; but one of them is
 $$
-GK(\pi)=\dim(AV(\pi))=\frac12\dim(\AVann(\pi)
+GK(\pi)=\dim(\AV(\pi))=\frac12\dim(\AVann(\pi)).
 $$
+(All dimensions are complex unless otherwise stated.)
+
 For all of these facts see \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
 
-Set $N=\dim(\N)=\dim(G)-\mathrm{rank}(G)$. The maximal Gelfand-Kirillov dimension of a representation is $N/2$.
-We say $\pi$ is {\it large} if $\GK(\pi)=N/2$. See \cite[Section 6]{Vogan78}.
+Another invariant of an irreducible $(\g, K)$-module~$\pi$ is the \emph{wave-front set} of $\pi$, written $\WF(\pi)$. It is the union of a (finite) set of nilpotent $G(\R)$ orbits in
+$i\g(\R)^*=i\Hom_\R(\g(\R),\R)$. See \cite{howe_wave_front}, \cite{bv_local_structure}.\footnote{AA 14-II-2024: another convenient reference  for definitions re~$\WF(\pi)$ seems to be  Harris--He--Olafsson (Duke 2016).}
 
+\subsection{Large representations} Set $N=\dim(\N)=\dim(G)-\mathrm{rank}(G)$. The maximal Gelfand--Kirillov dimension of a representation is $N/2$.
+We say $\pi$ is {\it large} if $\GK(\pi)=N/2$. See \cite[Section~6]{Vogan78}. 
 
-The wave-front set of $\pi$, written $\WF(\pi)$, is the union of a (finite) set of nilpotent $G(\R)$ orbits in
-$i\g(\R)^*=i\Hom_\R(\g(\R),\R)$. See \cite{howe_wave_front}, \cite{bv_local_structure}.
 
 \begin{lemma}
   \label{l:large}
@@ -179,7 +197,7 @@ $i\g(\R)^*=i\Hom_\R(\g(\R),\R)$. See \cite{howe_wave_front}, \cite{bv_local_stru
     \item $\pi$ is large;
 \item $\AVann(\pi)=\N=\overline{\Op}$;
 \item $\dim(\AVann(\pi))=N$;
-  \item $\dim(AV(\pi))=N/2$;
+  \item $\dim(\AV(\pi))=N/2$;
 \item $\GK(\pi)=N/2$;
 
 \end{enumerate}
@@ -187,98 +205,106 @@ $i\g(\R)^*=i\Hom_\R(\g(\R),\R)$. See \cite{howe_wave_front}, \cite{bv_local_stru
 See \cite{vogan_bowdoin}.
 
 
-Let $Z=Z(G)$ be the center of $G$, and $\Gad=G/Z$.
-Then $Z$ and $\Gad$ are defined over $\R$, and $Z(\R)=Z(G(\R))$.
-Set $G(\R)_{\mathrm{ad}}=G(\R)/Z(\R)$.
-Define
-$$
-Q(\R)=\Gad(\R)/G(\R)_{\mathrm{ad}}
-$$
-Thus $\Gad(\R)$ is the set of inner automorphisms of $G$ which are defined over $\R$, containing
-$G(\R)_{\mathrm{ad}}=G(\R)/Z(\R)$ as a normal subgroup. This is a subgroup of $\Out(G(\R))$,
-and therefore acts on representations, conjugacy classes, etc.
+\section{The dictionary for large discrete series}
 
+
+\subsection{Statement of the results}  
+
+
+The following uses rather deep results of representation theory:
+\begin{proposition} Let~$\pi$ be the $(\g, K)$-module for a large discrete series representation of~$G(\R)$.  
+\begin{enumerate}[(a)]
+\item There is a unique Whittaker datum~$\mathfrak{w}$ such that~$\pi$ is $\mathfrak{w}$-generic.
+\item $\AV(\pi)$ is the closure of a single $K$-orbit on~$\mathcal{O}_p \cap \mathfrak{s}$.
+\item  $\WF(\pi)$ is the closure of a single $G(\R)$-orbit on $\mathcal{O}_p \cap  i \g(\R)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof} For (a), by \cite{vogan-gelfand-kirillov} and \cite{kostant_whittaker}
+a representation $\pi$ is large if and only if it admits a Whittaker model for some Whittaker datum,
+and by \cite[Lemma 14.14]{abv} a  large discrete series representation admits a unique Whittaker datum.
+
+Part~(b) is one of the main results of~\cite{vogan_bowdoin}: see \cite[Theorem ?]{vogan_bowdoin}.\footnote{AA 19-II-2024: I'd welcome some help in navigating~\cite{vogan_bowdoin}: the relevant places seem to be  Sections 4, 5 and 8, but I have a few questions.}
+
+Part~(c) follows from~\cite{rossmann_limit_orbits}.\footnote{AA 14-II-2024: maybe a little more detail would be welcome, the Rossmann paper does not seem to state the result in these terms.}
+\end{proof}
+
+Given a large discrete series representation~$\pi$ we consider the invariants of~$\pi$ defined by the Proposition: a Whittaker datum  $\mathfrak{w}(\pi) \in \mathfrak{W}(G(\R))$, a $K$-orbit $\AV^\flat(\pi) \in (\mathcal{O}_p \cap \mathfrak{s})/K$  and a nilpotent $G(\R)$-orbit $\WF^\flat(\pi) \in (\mathcal{O}_p \cap  i \g(\R))/G(\R)$. 
+
+Here is our main statement.
+
+\begin{theorem} \label{th:main} Suppose~$\Pi$ is an $L$-packet of discrete series for~$G(\R)$. 
+The maps $\pi \mapsto \mathfrak{w}(\pi)$, $\pi \mapsto \AV^\flat(\pi)$ and $\pi\mapsto \WF^\flat(\pi)$ induce bijections between:
+\begin{enumerate}
+\item[(1)] The set~$\Pi_{\mathrm{large}}$ of large discrete series representations in~$\Pi$ ;
+\item[(2)] The set of Whittaker data for $G(\R)$ ;
+\item[(3)] The set $(\Op \cap \s)/K$ of~$K$-orbits on $\mathcal{O}_p \cap \s$.
+\item[(4)] The set $(\Op \cap i\g(\R))/G(\R)$ of~$G(\R)$-orbits on $\mathcal{O}_p \cap  i \g(\R)$.
+\end{enumerate}
+\end{theorem}
+
+Before embarking on the proof, let us point out that the bijections are defined using rather deep results of representation theory. However, we shall prove in Section~\ref{sec:explicit} that all bijections $(i) \leftrightarrow (j)$, for $i,j \in \{(1), \dots, (4)\}$, can be spelled out in elementary terms. Furthermore we shall prove, using elementary arguments, that (3) $\leftrightarrow$ (4) coincides with the Kostant--Sekiguchi correspondence.  
+
+
+
+Let us now explain the strategy of the proof, which is mainly an exercise in putting together some references that are rather scattered in the literature. What we shall actually do is: introduce a finite group~$Q(\R)$, and point out that 
+\begin{itemize}
+\item[(i)] it acts simply transitively on the sets~(1)--(4), and 
+\item[(ii)] the maps $\pi \mapsto \mathfrak{w}(\pi)$, $\pi \mapsto \AV^\flat(\pi)$ and $\pi\mapsto \WF^\flat(\pi)$  are equivariant for these actions.
+\end{itemize}
+The theorem follows immediately from these two observations. 
+
+\subsection{The group $Q(\R)$ and its actions} Let $Z=Z(G)$ be the center of $G$, and let $\Gad$ be the complex reductive group~$G/Z$.
+Then $Z$ and $\Gad$ are defined over $\R$, and $Z(\R)$ is equal to the center of $G(\R)$. We may view~$\Gad(\R)$ as the set of inner automorphisms of~$G$ which are defined over~$\R$, and this contains the group $G(\R)_{\mathrm{ad}}=G(\R)/Z(\R)$ as a normal subgroup of finite index\footnote{AA 15-II-2024: is there a trivial way to explain why finite index?}
+Define 
+$$
+Q(\R)=\Gad(\R)/G(\R)_{\mathrm{ad}}.
+$$
+This finite group may be viewed as a group of outer automorphisms of~$G(\R)$. 
+
+\paragraph*{$\bullet$ Action on~(1)} Since~$Q(\R)$ can be viewed as a group of automorphisms of~$G(\R)$,  it has a canonical action on equivalence classes of $(\g, K)$-modules.\footnote{AA 15-II-2024: probably better to spell out the action.} This action preserves  the property of being large\footnote{AA 15-II-2024: should say something about this using the fact that it comes from automorphisms, either here or in the section on large reps}. It also preserves $L$-packets by~\cite[Lemma 6.18]{Contragredient}.
+
+\paragraph*{$\bullet$ Action on~(2)}  By definition of Whittaker data, the action of~$Q(\R)$ on $G(\R)$ induces a canonical action on the set of Whittaker data. By \cite[(14.15)]{abv} this action is simply transitive. 
+
+It is an immediate consequence of the definitions that the map $\pi \mapsto \w(\pi)$, taking a large discrete series representation to the Whittaker datum for which it has a Whittaker model, is equivariant for the actions of $Q(\R)$ on (1) and (2). 
+
+
+\paragraph*{$\bullet$ Action on~(4)} The actions of $Q(\R)$ on (3) and (4) both use an interpretation of $Q(\R)$ in terms of group cohomology. We begin with the action on (4), because the underlying ideas in Galois cohomology may be more familiar to some readers. 
+
+We first recall some notation from group cohomology. Let~$\Gamma$ be the Galois group~$\Z/2\Z$ of~$\R$. When~$A$ is a group and $\tau$ is an involutive automorphism of~$A$, we may consider the cohomology sets $H^0_\tau(\Gamma, A)$ and $H^1_\tau(\Gamma, A)$ attached to the action of~$\Gamma$ on~$G$ using~$\tau$.  These are pointed sets, and not groups in general if~$A$ isn't abelian. We may view $H^0_\tau(\Gamma, A)$ as the fixed-point-set $A^{\tau}$, and $H^1_\tau(\Gamma,A)$ as the quotient of $A^{-\tau} = \{ a \in A, a\tau(a)=1\}$ by the equivalence relation~$\sim$ generated by $a \sim x a \tau(x^{-1})$ for all $x \in G$. 
+
+Let us now define the action of $Q(\R)$ on~(4). By definition we have the exact sequence $1\rightarrow Z \rightarrow G \rightarrow \Gad\rightarrow 1$. It 
+gives rise to a long exact sequence of pointed sets:
+\begin{equation} \label{long_ptset}
+1\rightarrow Z(\R) \rightarrow G(\R) \rightarrow \Gad(\R) \rightarrow H^1_\sigma(\Gamma,Z)\rightarrow H^1_\sigma(\Gamma,G)\rightarrow H^1_\sigma(\Gamma,\Gad).
+\end{equation}
+By definition the connecting map  $ \Gad(\R) \rightarrow H^1_\sigma(\Gamma,Z)$ sends $g \in \Gad(\R)$ to the equivalence class of $g \sigma(g^{-1})$ in $H^1_\sigma(\Gamma, Z)$. Going through the definitions we see that   two elements  $g_1, g_2$ have the same image if and only if $g_1 g_{2}\inv \in G(\R)_{\mathrm{ad}}$; therefore the image of the connecting map is in canonical bijection with $Q(\R)=\Gad(\R)/G(\R)_{\mathrm{ad}}$, and by exactness of~\eqref{long_ptset} we get:
 
 \begin{lemma}
   \label{l:Q}
-  $Q(\R)\simeq\kernel(H^1(\Gamma,Z)\rightarrow H^1(\Gamma,G))$
+The above discussion determines a canonical bijection 
+ \[ Q(\R) \simeq\kernel(H^1_\sigma(\Gamma,Z)\rightarrow H^1_\sigma(\Gamma,G)).\]
 \end{lemma}
 
-This is well known:
-the exact sequence $1\rightarrow Z \rightarrow G \rightarrow \Gad\rightarrow 1$
-gives rise to the long exact sequence:
+
+
+Using this we define an action of~$Q(\R)$ on $(\Op \cap i\g(\R))/G(\R)$. Suppose~$X \in \g$ is nilpotent. Consider the intersection of the orbit $\Omega_X=\mathrm{Ad}(G) \cdot X$ with $\g(\R)$, and its decomposition into $G(\R)$-orbits. The map 
+\begin{align*} (\Omega_{X} \cap \g(\R))/G(\R) & \to \kernel\left(H^1_\sigma(\Gamma,\mathrm{Stab}_G(X))\rightarrow H^1_\sigma(\Gamma,G)\right) \\ \mathrm{Ad}(g) \cdot X & \mapsto \text{class of $g^{-1} \sigma(g)$ in $H^1_\sigma(\Gamma,\mathrm{Stab}_G(X))$} \end{align*} is a bijection: see \cite[Lemma 5.2]{galois}. 
+In the case where $X$ lies on the principal nilpotent orbit $\Op$, the stabilizer $\mathrm{Stab}_G(X)$ is the direct product of $Z(G)$ with a unipotent group\footnote{AA 19-II-2024: should we insert a reference?}, which implies $H^1(\Gamma, \mathrm{Stab}_G(X)) =H^1(\Gamma,Z)$. Using Lemma~\ref{l:Q}, we get a bijection $Q(\R) \leftrightarrow (\Op \cap i\g(\R))/G(\R)$, which depends only on the choice of~$X \in \Op$; and a simply transitive action of~$Q(\R)$ on~$(\Op \cap i\g(\R))/G(\R)$, which is entirely canonical.\footnote{AA 19-II-2023: we should say why the map $\pi \mapsto \WF(\pi)$ is equivariant for the action of $Q(\R)$ on both sides.  You wrote this is obvious, but is it really obvious if we choose this description of the action? }
+
+ 
+\paragraph*{$\bullet$ Action on~(3)} The action of~$Q(\R)$ on (3) is defined similarly, using the version of group cohomology attached to the Cartan involution~$\theta$. As above the exact sequence $1\rightarrow Z \rightarrow G \rightarrow \Gad\rightarrow 1$ 
+gives rise to a long exact sequence of pointed sets
 $$
-1\rightarrow Z(\R) \rightarrow G(\R) \rightarrow \Gad(\R) \rightarrow H^1(\Gamma,Z)\rightarrow H^1(\Gamma,G)\rightarrow\dots
-$$.
-\section{The Main Result}
+1\rightarrow Z(\R) \rightarrow G(\R) \rightarrow \Gad(\R) \rightarrow H^1_\theta(\Gamma,Z)\rightarrow H^1_\theta(\Gamma,G)\rightarrow H^1_\theta(\Gamma,\Gad)
+$$
+and induces a canonical bijection $Q(\R) \simeq\kernel(H^1_\tau(\Gamma,Z)\rightarrow H^1_\tau(\Gamma,G))$ as in Lemma~\ref{l:Q}. We can use this to define an action of~$Q(\R)$ on $(\Op \cap \s)/K$: if~$X \in \Op \cap \s$ and we use the notation above, then by  \cite[Lemma 5.2]{galois} (applied using the Cartan involution~$\theta$ on~$G$, and the opposite of its differential on~$\mathfrak{s}$), the map
+\begin{align*} (\Op \cap \s)/K & \to \kernel\left(H^1_\theta(\Gamma,\mathrm{Stab}_G(X))\rightarrow H^1_\theta(\Gamma,G)\right) \\ \mathrm{Ad}^\ast(g) \cdot X & \mapsto \text{class of $g^{-1} \theta(g)$ in $H^1_\theta(\Gamma,\mathrm{Stab}_G(X))$} \end{align*} is a bijection. Putting this together we get a simply transitive action of~$Q(\R)$ on~$(\Op \cap\s)/K$.
+\footnote{AA 19-II-2023: should also say why the maps are equivariant. Is it obvious? At the moment I can't see it. We could always use Lemma~\ref{l:pi_to_av}.}
 
-We're in the setting of the previous section:  $G(\R)$ is quasisplit, and has discrete series representations.
+\section{Explicit versions of the dictionary}\label{sec:explicit}
 
-\begin{theorem}
-  \label{t:main}
-There are canonical bijections between the following sets.
-
-\begin{enumerate}
-\item Large discrete series representations in $\Pi$
-\item Whittaker data for $G(\R)$
-\item $(\Op\cap \s)/K$
-\item  $(\Op\cap \g(\R))/G(\R)$
-\end{enumerate}
-
-The group $Q(\R)$ acts simply transitively on each of these sets, and the bijections commute with this action.
-\end{theorem}
-
-This is mostly an exercise in looking up some references.
-
-\medskip
-
-\begin{proof}
-Suppose $\pi$ is a large discrete series representation.
-We will show:
-\begin{enumerate}
-\item $\pi$ admits a Whittaker model for a unique choice of Whittaker datum;
-\item $AV(\pi)$ is the closure of a $K$-orbit on $\Op\cap\s$;
-\item $WF(\pi)$ is the closure of a $G(\R)$-orbit on $\Op\cap i\g(\R)$.
-\end{enumerate}
-This defines the maps from (1) to (2,3,4). The fact these are all bijections will follow from the action of $Q(\R)$.
-
-By \cite{Vogan78} and \cite{kostant_whittaker}
-a representation $\pi$ is large if and only if it admits a Whittaker model for some Whittaker datum,
-and by \cite[Lemma 14.14]{abv} a  large discrete series representation admits a unique Whittaker datum.
-This defines the map (1)$\mapsto$(2).
-
-Suppose $\pi$ is a large irreducible representation.
-By Lemma \ref{l:large} $\AV(\pi)$ is the union of a set of $K$-orbits on $\Op\cap\s$.
-If $\pi$ is a discrete series representation $AV(\pi)$ is the closure of a single $K$-orbit on $\s$.
-This defines the map (1)$\mapsto$(3).
-
-By \cite{rossmann_limit_orbits}, $\WF(\pi)$ is the closure of a single orbit
-so $\pi\mapsto WF(\pi)$ gives  (1)$\mapsto$(4).
-
-The group $Q(\R)$ acts on  $(\g,K)$-modules, and preserves $\Pi$ and the property of being large.
-Therefore, by \cite[(14.15)(d)]{abv}, it acts simply transitively on the set (1).
-By \cite[(14.15)(c)]{abv} $Q(\R)$ acts simply transitively on the set (2).
-
-It is well known that if $X\in\g$ is nilpotent then  $G\cdot X\cap \g(\R)/G(\R)$ is in bijection with
-$\kernel(H^1(\Gamma,\Stab_G(X)) \rightarrow H^1(\Gamma,G))$. For example see \cite[Lemma 5.2]{galois}.
-In the case of the principal nilpotent orbit $\Op$, $\Stab_G(X)$ is $Z(G)$ times a unipotent group,
-which implies $H^1(\Gamma,\Stab_G(X))=H^1(\Gamma,Z)$. Therefore by Lemma \ref{l:Q} $Q(\R)$ acts simply transitively
-on (4).
-Finally the Kostant-Sekiguchi correspondence \cite{sekiguchi} is a bijection between (3) and (4).
-
-Therefore $Q(\R)$ acts on the sets (1-4), and simply transitively on (1). The maps clearly commute with this action. This completes the proof.
-\end{proof}
-
-There is one obvious shortcoming of this result: we'd like to know that the Sekiguchi correspondence takes $\AV(\pi)$ to $\WF(\pi)$.
-This is true by \cite{SV1} (and also follows in this special case by more elementary arguments). More generally we would like to describe the maps between the various sets more explicitly.
-
-\section{Further results}
-
-We describe maps between the sets (1-4) of Theorem \ref{t:main}.
-
-\medskip
-
-\noindent (2)$\leftrightarrow$(4)
+\subsection{From Whittaker data to real orbits ((2) $\leftrightarrow$ (4))}
 
 First we describe the set of Whittaker data more explicitly.
 Let $B$ be a Borel subgroup of $G$. Let $N$ be the nilradical of $B$, and $\overline N$ the opposite
@@ -291,58 +317,30 @@ $$
 $$
 The map $X\rightarrow \psi_X$ is an isomorphism between $i\overline\n(\R)$ and the unitary characters of $N(\R)$.
 It is easy to see $\psi_X$ is non-degenerate if and only if $X\in i\g(\R)$ is a principal nilpotent element.
-In this case we write $(B(\R),X)$for the Whittaker datum $(B(\R),\psi_X)$.
+In this case we write $(B(\R),X)$ for the Whittaker datum $(B(\R),\psi_X)$.
+
 It is clear that $(B(\R),X)\mapsto G(\R)\cdot X$ is a bijection between Whittaker data and
-$(\Op(\R)\cap i\g(\R))/G(\R)$.
+$(\Op(\R)\cap i\g(\R))/G(\R)$. The main result of \cite{matumoto} (Theorem A) says:
 
-The main result of \cite{matumoto} (Theorem A) says:
-
-\begin{lemma}[(2)$\leftrightarrow$(4)]  
+\begin{lemma}
 The bijection (2)$\leftrightarrow$(4) takes the Whittaker datum $(B(\R),X)$ to
-the principal orbit $G(\R)\cdot X\subset \Op\cap i\g(\R)$. 
+the principal orbit $G(\R)\cdot X$. 
  \end{lemma} 
 
 
-\medskip
 
-\noindent (1)$\leftrightarrow$(3)
-Suppose $\pi(\lambda)$ is a  discrete series representation. Choose a compact Cartan subgroup $T$, and let
-$\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$. Let $\Delta$ be the set of roots of $\t$ in $\g$, 
-let $\Delta^+(\lambda)=\{\alpha\mid \langle\lambda,\ch\alpha\rangle>0\}$,
-and let $S(\lambda)\in\Delta^+(\lambda)$ be the simple roots.
-For $\alpha\in \Delta$ let $\g_\alpha$ be the corresponding root space, and choose a non-zero element $X_\alpha\in\g_\alpha$ for each $\alpha$.
+\subsection{Connection between ((3) $\leftrightarrow$ (4)) and the Kostant--Sekiguchi correspondence } 
 
-\begin{lemma}[(1)$\leftrightarrow$(3)]
-Suppose $\pi$ is a large discrete series representation with Harish-Chandra parameter $\lambda\in\t^*$.
-Set
 
-\begin{equation}
-  \label{e:Epi}
-  E_\pi=\sum_{\alpha\in S(\lambda)}X_\alpha\in \N.
-\end{equation}
+\begin{lemma} The bijection (3)--(4) is induced by the Kostant--Sekiguchi correspondence.
+\end{lemma} 
 
-Then $E_\pi\in\s$ is a regular nilpotent element, and
-$$
-\AV(\pi)=\overline{K\cdot E_\pi}.
-$$
-\end{lemma}
+\begin{proof} If we allow ourselves to use deep results, then this is a particular case of the main theorem of~\cite{SV1} (Theorem 1.4). In a perfect world, we could also give a more elementary argument, using the description of the Kostant--Sekiguchi correspondence in~\cite{galois} and the descriptions of the actions above; but  I'm not sure it's possible to do it without encountering a basepoint issue.\end{proof}
 
-\begin{proof}
-If $\pi$ is any discrete series representation, with Harish-Chandra parameter $\lambda$, let
-$\n=\sum_{\alpha\in\Delta^+(\lambda)}\g_\alpha$.
-Then by \cite[Proposition 6.8]{vogan_irreducibility} $AV(\pi)=K\cdot(\n\cap\s)$. 
+As a consequence we can make the bijection (3) $\leftrightarrow$ (4) explicit, following \cite[Section~1]{avav}.
 
-Now assume $\pi$ is large. This implies $X_\alpha\in\s$ for all $\alpha\in S(\lambda)$, so $E_\pi\in \s$. 
-By \cite{kostant_tds} $E_\pi$ is a regular nilpotent element, so the closure of $K\cdot E_\pi$ in $\s$ is $K\cdot(\n\cap\s)$. 
-\end{proof}
 
-\medskip
-
-\noindent (3)$\leftrightarrow$(4)
-
-This is the Kostant-Sekiguchi correspondence. We make this explicit, following \cite[Section 1]{avav}.
-
-Suppose $E_\R\in \Op\cap i\g(\R)$. Then we may choose an $SL(2)$-triple $(H_\R,E_\R,F_\R)$ with $F_\R$  contained in $i\g(\R)$,
+Concerning the second point, suppose $E_\R\in \Op\cap i\g(\R)$. Then we may choose an $SL(2)$-triple $(H_\R,E_\R,F_\R)$ with $F_\R$  contained in $i\g(\R)$,
 which implies $H_\R\in \g(\R)$. 
 After conjugating by $G(\R)$ we may further assume $\theta(E_\R)=-F_\R$.
 The Sekiguchi correspondence takes
@@ -359,9 +357,44 @@ $$
 \Op\cap\s\ni E_\theta\mapsto E_\R=\frac i2(E_\theta-F_\theta-H_\theta)\in\N\cap i\g(\R).
 $$
 
-\medskip
 
-\noindent (1)$\leftrightarrow$(4)
+\subsection{From large discrete series to $K$-orbits ((1) $\leftrightarrow$ (3))}
+
+Suppose $\pi(\lambda)$ is a  discrete series representation. Choose a compact Cartan subgroup $T$, and let
+$\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$. Let $\Delta$ be the set of roots of $\t$ in $\g$, 
+let $\Delta^+(\lambda)=\{\alpha\mid \langle\lambda,\ch\alpha\rangle>0\}$,
+and let $S(\lambda)\in\Delta^+(\lambda)$ be the simple roots.
+For $\alpha\in \Delta$ let $\g_\alpha$ be the corresponding root space, and choose a non-zero element $X_\alpha\in\g_\alpha$ for each $\alpha$.
+
+\begin{lemma}[(1)$\leftrightarrow$(3)]\label{l:pi_to_av}
+Suppose $\pi$ is a large discrete series representation with Harish-Chandra parameter $\lambda\in\t^*$.
+Set
+
+\begin{equation}
+  \label{e:Epi}
+  E_\pi=\sum_{\alpha\in S(\lambda)}X_\alpha\in \N.
+\end{equation}
+
+Then $E_\pi\in\s$ is a regular nilpotent element, and
+$$
+\AV(\pi)=\overline{K\cdot E_\pi}.
+$$
+\end{lemma}
+
+\begin{proof}
+If $\pi$ is any discrete series representation, with Harish-Chandra parameter $\lambda$, let
+$\n_{\lambda}=\sum_{\alpha\in\Delta^+(\lambda)}\g_\alpha$.
+Then by \cite[Proposition 6.8]{vogan_irreducibility} $AV(\pi)=K\cdot(\n_\lambda\cap\s)$. 
+
+Now assume $\pi$ is large. This implies $X_\alpha\in\s$ for all $\alpha\in S(\lambda)$, so $E_\pi\in \s$. 
+By~\cite{kostant_tds} $E_\pi$ is a regular nilpotent element, so the closure of $K\cdot E_\pi$ in $\s$ is equal to $K\cdot(\n_\lambda\cap\s)$. 
+\end{proof}
+
+
+
+
+\subsection{From large discrete series to real orbits ((1) $\leftrightarrow$ (4))}
+
 
 There are several ways to describe this bijection. We choose to compose the maps (1)$\leftrightarrow$(3)$\leftrightarrow$(4).
 Here is the conclusion.
@@ -370,7 +403,7 @@ Here is the conclusion.
   Let $\pi$ be a large discrete series representation.
 Choose a compact Cartan subgroup $T$ and let $\lambda\in \t^*$ be the Harish-Chandra parameter of $\pi$.
 Define $E_\theta=E_\pi$ as in \eqref{e:Epi}, and choose an $SL(2)$-triple $(H_\theta,E_\theta,F_\theta)$ as usual.
-After conjugating by $K$ we may assume $\sigma(E_\theta)=F_\theta$.  Then
+After conjugating by $K$ we may assume $\sigma(E_\theta)=F_\theta$.  Then\footnote{AA 14-II-2023: no closure?}
 $$
 \WF(\pi)=G(\R)\cdot\frac i2(E_\theta-F_\theta-H_\theta)\in\N\cap i\g(\R)
 $$
@@ -387,7 +420,7 @@ $$
 Then $\pi$ is the discrete series representation in $\Pi$ whose Harish-Chandra parameter is dominant for $\Delta^+$. 
 \end{lemma}
 
-We can also express (1)$\mapsto$(4) using the {\it Kostant section}.
+We can also express (1)$\mapsto$(4) using the {\it Kostant section}.\footnote{14-II-2024: we could spell out the definition, it seems this can be done quickly as in Adams--Kaletha. }
 
 Suppose $\pi$ is a discrete series representation.
 Choose a compact Cartan subgroup $T$, and let $\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$.
@@ -401,8 +434,9 @@ Then $H_\pi$ is $G(\R)$-conjugate to an element of the Kostant section of $X$.
 \end{proposition}
 
 
-This confirms that  the corresponding statement  in the p-adic case \cite{debacker_reeder_generic} and \cite{kaletha_epipelagic}
+This confirms that  the corresponding statement  in the $p$-adic case \cite{debacker_reeder_generic, kaletha_epipelagic}
 applies to the real case as well.
+
 \bibliographystyle{plain}
 \bibliography{Refs}
 
