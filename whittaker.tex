@@ -132,6 +132,8 @@
 \newcommand{\AVann}{\mathrm{AV}_{\mathrm{ann}}}
 \newcommand{\GK}{\mathrm{GK}}
 \newcommand{\Op}{\O_p}
+\newcommand{\Kostant}[1]{\mathcal{K}(#1)}
+
 \begin{document}
 \title{Whittaker Models for Real Groups}
 \author{Jeffrey Adams + AA}
@@ -396,7 +398,7 @@ By~\cite{kostant_tds} $E_\pi$ is a regular nilpotent element, so the closure of 
 \subsection{From large discrete series to real orbits ((1) $\leftrightarrow$ (4))}
 
 
-There are several ways to describe this bijection. We choose to compose the maps (1)$\leftrightarrow$(3)$\leftrightarrow$(4).
+There are several ways to describe this bijection.\footnote{AA 23-II-2024: it might be nice to mention the version with the asymptotic cone of the orbit of~$H_\pi$, which is extremely clean and concrete. } We choose to compose the maps (1)$\leftrightarrow$(3)$\leftrightarrow$(4).
 Here is the conclusion.
 
 \begin{lemma}
@@ -420,7 +422,7 @@ $$
 Then $\pi$ is the discrete series representation in $\Pi$ whose Harish-Chandra parameter is dominant for $\Delta^+$. 
 \end{lemma}
 
-We can also express (1)$\mapsto$(4) using the {\it Kostant section}.\footnote{14-II-2024: we could spell out the definition, it seems this can be done quickly as in Adams--Kaletha. }
+We can also express (1)$\mapsto$(4) using the {\it Kostant section}. Recall that if~$X$ is a regular nilpotent element of~$\g$ and fits into an $\SL(2)$-triple $(X, H, Y)$, the Kostant section~$\Kostant{X}$ is the affine subspace $X + \mathrm{Cent}_{\g}(Y)$ of~$\g$. It depends on the choice of $\SL(2)$-triple, but if $X \in \g(\R)$, then the $G(\R)$-conjugacy class of~$\Kostant{X}$ depends only on the $G(\R)$-conjugacy class of~$X$. 
 
 Suppose $\pi$ is a discrete series representation.
 Choose a compact Cartan subgroup $T$, and let $\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$.
@@ -430,7 +432,7 @@ Identify $\lambda$ with an element $H_\pi\in i\t\subset i\g$ using the isomorphi
 Suppose $\pi$ is a generic discrete series representation. Then $\pi$ is $\w$-generic
 for a unique Whittaker datum $\w$.
 Write $\w=\w_X$ for some regular nilpotent element $X\in i\g(\R)$.
-Then $H_\pi$ is $G(\R)$-conjugate to an element of the Kostant section of $X$.
+Then $H_\pi$ is $G(\R)$-conjugate to an element of the Kostant section of $X$.\footnote{AA 23-II-2024: would probably be useful to explain the connection with $\pi \mapsto \WF(\pi)$ in more detail...}
 \end{proposition}
 
 
