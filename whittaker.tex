@@ -164,7 +164,7 @@ $\theta$ is an algebraic involution, commuting with~$\sigma$,
 and $G(\R)^\theta$ is a maximal compact subgroup of~$G(\R)$. Set $K=G^\theta$, $K(\R)=G(\R)^\theta=K^\sigma$.
 Let $\s$ be the $-1$ eigenspace of $\theta$ acting on~$\g$.
 
-Let $\N$ be the set of nilpotent elements of $G$ on $\g$.
+Let $\N$ be the set of nilpotent elements of $\g$.
 This is the closure of the principal nilpotent orbit $\Op$.
 
  \subsection{The invariants}
@@ -337,32 +337,32 @@ the principal orbit $G(\R)\cdot X$.
 \begin{lemma} The bijection (3)--(4) is induced by the Kostant--Sekiguchi correspondence.
 \end{lemma} 
 
-\begin{proof} If we allow ourselves to use deep results, then this is a particular case of the main theorem of~\cite{SV1} (Theorem 1.4). In a perfect world, we could also give a more elementary argument, using the description of the Kostant--Sekiguchi correspondence in~\cite{galois} and the descriptions of the actions above; but  I'm not sure it's possible to do it without encountering a basepoint issue.\end{proof}
+\begin{proof} If we allow ourselves to use deep results, then this is a particular case of the main theorem of~\cite{SV1} (Theorem 1.4). In a perfect world, we could also give a more elementary argument, using the description of the Kostant--Sekiguchi correspondence in~\cite{galois} and the descriptions of the actions above; but  I'm not sure it's possible to do it without encountering a basepoint issue. Another possibility, suggested by Jeff, is to extract it from some arguments in Adams--Kaletha (e.g. the fact that $\WF(\pi)$ is the asymptotic cone of the $G(\R)$-orbit of the HC parameter of~$\pi$, or the connection with the Kostant section). \end{proof}
 
 As a consequence we can make the bijection (3) $\leftrightarrow$ (4) explicit, following \cite[Section~1]{avav}.
 
 
-Concerning the second point, suppose $E_\R\in \Op\cap i\g(\R)$. Then we may choose an $SL(2)$-triple $(H_\R,E_\R,F_\R)$ with $F_\R$  contained in $i\g(\R)$,
+Suppose $E_\R\in \Op\cap i\g(\R)$. Then we may choose an $SL(2)$-triple $(H_\R,E_\R,F_\R)$ with $F_\R$  contained in $i\g(\R)$,
 which implies $H_\R\in \g(\R)$. 
-After conjugating by $G(\R)$ we may further assume $\theta(E_\R)=-F_\R$.
-The Sekiguchi correspondence takes
+After conjugating by~$G(\R)$ we may further assume $\theta(E_\R)=-F_\R$.
+The Sekiguchi correspondence takes the $G(\R)$-orbit of~$E_\R$ to the $K$-orbit of
 $$
-\Op\cap i\g(\R)\ni E_\R\mapsto E_\theta=\frac12(-iE_\R-iF_\R+H_\R)\in \N\cap \s.
+E_\theta=\frac12(-iE_\R-iF_\R+H_\R)\in \N\cap \s.
 $$
 
 
 Computing the map in the other direction goes as follows.
-$E_\theta\in \Op\cap\s$, choose $(H_\theta,E_\theta,F_\theta)$, with
+Suppose $E_\theta\in \Op\cap\s$. Choose an $SL(2)$-triple  $(E_\theta H_\theta,F_\theta)$ with
 $F_\theta\in\s$, which implies $H_\theta\in\k$. After conjugating by $K$ we may further assume $\sigma(E_\theta)=F_\theta$.
-The correspondence takes
+Then the Sekiguchi correspondence takes the $K$-orbit of $E_\theta$ to the $G(\R)$-orbit of 
 $$
-\Op\cap\s\ni E_\theta\mapsto E_\R=\frac i2(E_\theta-F_\theta-H_\theta)\in\N\cap i\g(\R).
+E_\R=\frac i2(E_\theta-F_\theta-H_\theta)\in\N\cap i\g(\R).
 $$
 
 
 \subsection{From large discrete series to $K$-orbits ((1) $\leftrightarrow$ (3))}
 
-Suppose $\pi(\lambda)$ is a  discrete series representation. Choose a compact Cartan subgroup $T$, and let
+Suppose $\pi$ is a  discrete series representation. Choose a compact Cartan subgroup $T$, and let
 $\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$. Let $\Delta$ be the set of roots of $\t$ in $\g$, 
 let $\Delta^+(\lambda)=\{\alpha\mid \langle\lambda,\ch\alpha\rangle>0\}$,
 and let $S(\lambda)\in\Delta^+(\lambda)$ be the simple roots.
