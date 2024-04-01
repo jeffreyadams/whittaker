@@ -1,7 +1,7 @@
 %edited starting 8/27/17 for re-submission to Duke
 \documentclass[10pt,leqno]{article}
 \usepackage{verbatim}
-\usepackage{amssymb}
+\usepackage{amssymb, amscd}
 \usepackage{mathtools}
 %\usepackage{amsrefs}
 \usepackage{rotating}
@@ -252,37 +252,85 @@ Before embarking on the proof, let us point out that the maps in the theorem are
 
 
 
-Let us now explain the strategy of the proof, which is mainly an exercise in putting together some references that are rather scattered in the literature. What we shall actually do is: introduce a finite group~$Q(G(\R))$, and point out that 
+Let us now explain the strategy of the proof, which is mainly an exercise in putting together some references that are rather scattered in the literature. What we shall actually do is: introduce a finite group~$Q_\sigma(G)$, and point out that 
 \begin{itemize}
 \item[(i)] it acts simply transitively on the sets~(1)--(4), and 
 \item[(ii)] the maps $\pi \mapsto \mathfrak{w}(\pi)$, $\pi \mapsto \AV^\flat(\pi)$ and $\pi\mapsto \WF^\flat(\pi)$  are equivariant for these actions.
 \end{itemize}
-The theorem follows immediately from these two observations. 
+The theorem follows immediately from these two observations.\footnote{AA 01-IV-2024 --- perhaps it would be reader-friendly to point out the basic fact on group actions that we are using here: suppose a group $Q$ acts on two sets $A, B$ and let $f\colon A \to B$ be an equivariant map. If $Q$ acts transitively on~$B$  then~$f$ is surjective, and if $Q$ acts transitively on~$A$ and freely on~$B$ then~$f$ is injective.  }
 
-\subsection{The group $Q(G(\R))$ and its actions} Let $Z=Z(G)$ be the center of $G$, and let $\Gad$ be the complex reductive group~$G/Z$.
-Then $Z$ and $\Gad$ are defined over $\R$, and $Z(\R)$ is equal to the center of $G(\R)$. We may view~$\Gad(\R)$ as the set of inner automorphisms of~$G$ which are defined over~$\R$, and this contains the group $G(\R)_{\mathrm{ad}}=G(\R)/Z(\R)$ as a normal subgroup of finite index\footnote{AA 15-II-2024: is there a trivial way to explain why finite index?}.
+\subsection{The groups $Q_\sigma(G)$ and $Q_{\theta}(G)$}
+
+\subsubsection{Definition of the two groups}Let $Z=Z(G)$ be the center of $G$, and let $\Gad$ be the complex reductive group~$G/Z$. The group $Z(\R)=Z^{\sigma}$ is equal to the center of $G(\R)$. The automorphism~$\sigma$ of~$G$ preserves $Z$, and descends to an automorphism~$\sigma_{\ad}$ of~$\Gad$. We set $\Gad(\R)=\Gad^{\sigma_{\ad}}$; we may view it as the set of inner automorphisms of~$G$ which are defined over~$\R$, and this contains the group $G(\R)_{\mathrm{ad}}=G(\R)/Z(\R)$ as a normal subgroup of finite index\footnote{AA 15-II-2024: is there a trivial way to explain why finite index?}.
 Define 
 $$
-Q(G(\R))=\Gad(\R)/G(\R)_{\mathrm{ad}}.
+Q_\sigma(G)=\Gad(\R)/G(\R)_{\mathrm{ad}}.
 $$
 This finite group may be viewed as a group of outer automorphisms of~$G(\R)$. 
 
-\paragraph*{$\bullet$ Action on~(1)} Since~$Q(G(\R))$ can be viewed as a group of automorphisms of~$G(\R)$,  it has a canonical action on equivalence classes of $(\g, K)$-modules.\footnote{AA 15-II-2024: probably better to spell out the action.} This action preserves  the property of being large\footnote{AA 15-II-2024: should say something about this using the fact that it comes from automorphisms, either here or in the section on large reps}. It also preserves $L$-packets by~\cite[Lemma 6.18]{Contragredient}.
+We shall need a variant of~$Q_{\sigma}(\R)$ in which we replace the real form~$\sigma$ by the Cartan involution~$\theta$. As above, since~$\theta$ is an automorphism of~$G$, it preserves~$Z$,  and induces an involution~$\theta_{\ad}$ of~$\Gad$. Recall $K=G^{\theta}$; consider the intersection $Z_K=Z \cap K$, and set  $K_{\ad}=K/Z_K$. The inclusion  $K \hookrightarrow G$ induces a map $K \to \Gad$, whose image is a subgroup of~$\Gad^{\theta_{\ad}}$ and whose kernel is~$Z_K$. Therefore it factors to an injective morphism $\iota\colon \Kad \hookrightarrow\Gad^{\theta_{\ad}} $, whose image is a normal subgroup of~$\Gad^{\theta_{\ad}}$. Using it we will identify $\Kad$ with a normal subgroup of $\Gad^{\theta_{\ad}}$. Define
+\[ Q_\theta(G) = \Gad^{\theta_{\ad}}/\Kad.\]
+Unlike $Q_{\sigma}(G)$, this group does not have an obvious action on~$G(\R)$. Nevertheless the groups $Q_{\sigma}(G)$ and $Q_{\theta}(G)$ are isomorphic. We will spell out an explicit isomorphism below, using group cohomology arguments.
 
-\paragraph*{$\bullet$ Action on~(2)}  By definition of Whittaker data, the action of~$Q(G(\R))$ on $G(\R)$ induces a canonical action on the set of Whittaker data. By \cite[(14.15)]{abv} this action is simply transitive. 
+\subsubsection{Interpretation in terms of group cohomology}
 
-It is an immediate consequence of the definitions that the map $\pi \mapsto \w(\pi)$, taking a large discrete series representation to the Whittaker datum for which it has a Whittaker model, is equivariant for the actions of $Q(G(\R))$ on (1) and (2). 
+The groups $Q_{\sigma}(G)$ and $Q_{\theta}(G)$ are instances of the following construction: if~$\tau$ is an involutive automorphism of~$G$, then it preserves~$Z$ and induces an involution~$\tau_{\ad}$ of~$\Gad$; we may then set $Q_{\tau}(G)=\Gad^{\tau_{\ad}}/(G^{\tau})_{\ad}$, where $(G^{\tau})_{\ad}$ is the image of~$G^{\tau}$ in~$\Gad$. In this situation~$Q_{\tau}(G)$ has a simple interpretation in Galois cohomology, which we now recall. 
+
+Let us first set up some notation. Let~$\Gamma$ be the Galois group~$\Z/2\Z$ of~$\R$. When~$A$ is a group and $\tau$ is an involutive automorphism of~$A$, we may consider the cohomology sets $H^0_\tau(\Gamma, A)$ and $H^1_\tau(\Gamma, A)$ attached to the action of~$\Gamma$ on~$G$ using~$\tau$.  These are pointed sets, and not groups in general if~$A$ isn't abelian. We may view $H^0_\tau(\Gamma, A)$ as the fixed-point-set $A^{\tau}$, and $H^1_\tau(\Gamma,A)$ as the quotient of $A^{-\tau} = \{ a \in A, a\tau(a)=1\}$ by the equivalence relation~$\sim$ generated by $a \sim x a \tau(x^{-1})$ for all $x \in G$. 
 
 
-\paragraph*{$\bullet$ Action on~(4)} The actions of $Q(G(\R))$ on (3) and (4) are quite similar, and the proof that they are simply transitive use an interpretation of $Q(G(\R))$ in terms of group cohomology. 
-We begin with the case of the wave-front set (4), because the argument a more familiar version of  Galois cohomology. 
+We now take~$A=G$, and continue to assume~$\tau$ is an involutive automorphism. Then the short exact sequence $1\rightarrow Z \rightarrow G \rightarrow \Gad\rightarrow 1$ 
+gives rise to a ``long" exact sequence of pointed sets:
+\begin{equation} \label{long_ptset}
+1\rightarrow Z^\tau \rightarrow G^\tau \rightarrow \Gad^{\tau_{\ad}} \rightarrow H^1_\tau(\Gamma,Z)\rightarrow H^1_\tau(\Gamma,G)\rightarrow H^1_{\tau_\ad}(\Gamma,\Gad).
+\end{equation}
+By definition the connecting map  $ \Gad^{\tau_{\ad}} \rightarrow H^1_\tau(\Gamma,Z)$ sends $g \in \Gad^{\tau_{\ad}}$ to the equivalence class of $g \tau_{\ad}(g^{-1})$ in $H^1_\tau(\Gamma, Z)$, and the meaning of all the other maps is obvious. 
+Going through the definitions we see that  two elements  $g_1, g_2$ have the same image if and only if $g_1 g_{2}\inv \in (G^\tau)_{\ad}$. 
+Therefore the image of the connecting map is in canonical bijection with $Q_\tau(G)$, and by exactness of~\eqref{long_ptset} we get a canonical bijection
+\begin{equation} \label{interp_q_cohomology} Q_{\tau}(G) \simeq \ker(H^1_\tau(\Gamma,Z)\rightarrow H^1_\tau(\Gamma,G)).\end{equation}
+The previous argument is in the category of pointed sets, and one should keep in mind on the right-hand side $H^1_\tau(\Gamma,G))$  is not a group in general, therefore~\eqref{interp_q_cohomology} is at first sight only a set-theoretic bijection. However, 
+$H^1_\tau(\Gamma,Z)$ is a group since $Z$ is abelian; therefore both sides of~\eqref{interp_q_cohomology} have canonical abelian group structures, and chasing definitions one easily sees that~\eqref{interp_q_cohomology} is actually an isomorphism of abelian groups.
+ 
 
-To define the action of~$Q(G(\R))$ on~(4), first observe that~$\Gad$ acts on~$\g$ by the adjoint action. This action preserves~$\Op$, and its restriction to~$\Gad(\R)$ preserves~$\Op\cap i\g(\R)$. Since elements on a given~$G(\R)_{\mathrm{ad}}$-orbit are in the same~$G(\R)$-orbit, this induces an action of $Q(G(\R))=\Gad(\R)/G(\R)_{\mathrm{ad}}$ on~$(\Op\cap i\g(\R))/G(\R)$.
+\subsubsection{Isomorphism between $Q_{\sigma}(G)$ and $Q_{\theta}(G)$}
+
+Using the group cohomology interpretation in the previous paragraph, we can construct a canonical  isomorphism between $Q_{\sigma}(G)$ and $Q_{\theta}(G)$. For this recall $\theta\sigma = \sigma\theta$ and $G^{\sigma\theta}$ is a compact real form of~$G$. Furthermore $\sigma$ and $\theta$ coincide on $G^{\sigma\theta}$, therefore  $H_{\sigma}(\Gamma, G^{\sigma\theta})$ and  $H_{\sigma}(\Gamma, G^{\sigma\theta})$ are the same set, which we will denote by  $H_{\sigma\mid\theta}(\Gamma, G^{\sigma\theta})$. Now the inclusion $G^{\sigma\theta} \hookrightarrow G$ induces canonical maps 
+\begin{equation} \label{bij_cohom} H^{1}_{\sigma}(\Gamma, G) \longleftarrow H_{\sigma\mid\theta}(\Gamma, G^{\sigma\theta}) \longrightarrow H^{1}_{\theta}(\Gamma, G).\end{equation}
+By \cite[Corollary~4.4 and Corollary 4.7]{galois}, both of these maps are \emph{bijections}. Replacing~$G$ by $Z$ we get bijections $H^{1}_{\sigma}(\Gamma, Z) \leftarrow H_{\sigma\mid\theta}(\Gamma, Z^{\sigma\theta}) \rightarrow H^{1}_{\theta}(\Gamma, Z)$, and these fit with the bijections~\eqref{bij_cohom} into a commutative diagram
+\[
+\begin{CD}
+H^{1}_{\sigma}(\Gamma, Z) @<<< H_{\sigma\mid\theta}(\Gamma, Z^{\sigma\theta})@>>> H^{1}_{\theta}(\Gamma, Z)
+ \\
+@V{\varphi_{\sigma}}VV @VVV @V{\varphi_{\theta}}VV  \\
+H^{1}_{\sigma}(\Gamma, G) @<<< H_{\sigma\mid\theta}(\Gamma, G^{\sigma\theta})@>>> H^{1}_{\theta}(\Gamma, G)
+\end{CD}
+\]
+where $\varphi_{\sigma}$ and $\varphi_{\theta}$ are induced by the inclusion $Z \hookrightarrow G$. Since the horizontal arrows are isomorphisms in the category of pointed sets, they induce a canonical bijection between the kernels of $\varphi_{\sigma}$ and $\varphi_{\theta}$; by~\eqref{interp_q_cohomology} this gives a canonical bijection 
+\[ Q_{\sigma}(G) \simeq Q_{\theta}(G).\] 
+As discussed after~\eqref{interp_q_cohomology}, this is actually an isomorphism of abelian groups. 
+
+
+
+
+\subsection{Actions of $Q_\sigma(G)$ on representations and invariants}
+
+
+\subsubsection*{On representations} 
+Since~$Q_\sigma(G)$ can be viewed as a group of automorphisms of~$G(\R)$,  it has a canonical action on equivalence classes of representations of~$G(\R)$, and therefore on~$(\g, K)$-modules. This action preserves  the property of being large\footnote{AA 15-II-2024: should say something about this using the fact that it comes from automorphisms, either here or in the section on large reps}. It also preserves $L$-packets by~\cite[Lemma 6.18]{Contragredient}, and acts transitively on an~$L$-packet\footnote{AA 01-IV-2023: this point was missing, I think it's easy using Harish-Chandra's parametrization, the fact that every element of~$Q_{\sigma}(G)$ has a representative in the Weyl group, plus the description of discrete series L-packets in the Congragredient paper. The point about the action preserving $L$-packets also follows from this, it's perhaps a better argument than [Contragredient, Lemma 6.18] which may be better suited to the $\theta$-version.}
+
+\subsubsection*{On~Whittaker data}  By definition of Whittaker data, the action of~$Q_{\sigma}(G)$ on $G(\R)$ induces a canonical action on the set of Whittaker data. By \cite[(14.15)]{abv} this action is simply transitive. 
+
+It is an immediate consequence of the definitions that the map $\pi \mapsto \w(\pi)$, taking a large discrete series representation to the Whittaker datum for which it has a Whittaker model, is equivariant for the actions of $Q_{\sigma}(G)$ on (1)--(2). 
+
+
+\subsubsection*{On real nilpotent orbits} 
+
+To define the action of~$Q_{\sigma}(G)$ on~(4), first observe that~$\Gad$ acts on~$\g$ by the adjoint action. This action preserves~$\Op$, and its restriction to~$\Gad(\R)$ preserves~$\Op\cap i\g(\R)$. Since elements on a given~$G(\R)_{\mathrm{ad}}$-orbit are in the same~$G(\R)$-orbit, this induces an action of $Q_{\sigma}(G)=\Gad(\R)/G(\R)_{\mathrm{ad}}$ on~$(\Op\cap i\g(\R))/G(\R)$.
 
 \begin{proposition}\label{prop:action_on_real_orbits}
 \begin{enumerate} 
-\item The action of~$Q(G(\R))$ on $(\Op\cap i\g(\R))/G(\R)$ is simply transitive.
-\item The map $\pi \mapsto \WF(\pi)$ is $Q(G(\R))$-equivariant.
+\item The action of~$Q_{\sigma}(G)$ on $(\Op\cap i\g(\R))/G(\R)$ is simply transitive.
+\item The map $\pi \mapsto \WF(\pi)$ is $Q_{\sigma}(G)$-equivariant.
 \end{enumerate}
 \end{proposition}
 
@@ -293,79 +341,48 @@ is $g\inv \sigma(g)\in \Stab_G(X)$.  Since $X$ is principal $\Stab_G(X)=ZU$ wher
 A standard fact is that $H^1(\sigma,U)=1$, and from this we see that, after multiplying $g$ on the right by an element of $u$, we can assume $g\inv \sigma(g)\in Z$. This is equivalent to: the image of $g$ in $\Gad$ is in $\Gad(\R)$. On the other hand $\omega=\omega'$ 
 if and only if $X'=\Ad(g)X$ for some $g\in G(\R)$. This competes the proof of (1).
 
-Part~(2) of the proposition is comes from general properties of the wavefront set in microlocal analysis, and from the fact that the action of $Q(G(\R))$ comes from automorphisms of~$G(\R)$. More precisely, if~$q$ is an element of~$Q(G(\R))$ and $\tilde{q}$ is a representative of~$q$ in $\Gad(\R)$, then the action of~$q$ on equivalence classes of $(\g, K)$-modules comes from the action of the automorphism $\mathrm{int}(\tilde{q})$ of~$G(\R)$ on $(\g, K)$-modules. Now the wavefront set of a distribution on a manifold satisfies general covariance properties under diffeomorphisms of the manifold: this follows from Hörmander's original definitions, see e.g. \cite[Section 2, p.~800]{HarrisHeOlafsson}. Applying this to the present situation, and going through the basics as in   \cite[Section 2]{HarrisHeOlafsson}, it immediately follows that $\pi \mapsto \WF(\pi)$ is equivariant under $Q(G(\R))$.
+Part~(2) of the proposition is comes from general properties of the wavefront set in microlocal analysis, and from the fact that the action of $Q_{\sigma}(G)$ comes from automorphisms of~$G(\R)$. More precisely, if~$q$ is an element of~$Q_{\sigma}(G)$ and $\tilde{q}$ is a representative of~$q$ in $\Gad(\R)$, then the action of~$q$ on equivalence classes of $(\g, K)$-modules comes from the action of the automorphism $\mathrm{int}(\tilde{q})$ of~$G(\R)$ on $(\g, K)$-modules. Now the wavefront set of a distribution on a manifold satisfies general covariance properties under diffeomorphisms of the manifold: this follows from Hörmander's original definitions, see e.g. \cite[Section 2, p.~800]{HarrisHeOlafsson}. Applying this to the present situation, and going through the basics as in   \cite[Section~2]{HarrisHeOlafsson}, it immediately follows that $\pi \mapsto \WF(\pi)$ is equivariant under $Q_{\sigma}(G)$.
 \end{proof}
 
-This can be said more succintly as follows.
-The exact sequence $1\rightarrow Z \rightarrow G \rightarrow \Gad\rightarrow 1$ gives 
-gives rise to a long exact cohomology sequence
-\begin{equation} \label{long_ptset}
-1\rightarrow Z(\R) \rightarrow G(\R) \rightarrow \Gad(\R) \rightarrow H^1_\sigma(\Gamma,Z)\rightarrow H^1_\sigma(\Gamma,G)\rightarrow H^1_\sigma(\Gamma,\Gad).
-\end{equation}
-Therefore
-$$
-Q(\R)=\ker(H^1_\sigma(\Gamma,Z)\rightarrow H^1_\sigma(\Gamma,G).
-$$
-Then:
+It may be interesting to point out a variant on the proof of~(1). Given $X \in \Op \cap i\g(\R)$, the map 
+\begin{align} \label{bij_q_2} (\Omega_{X} \cap i\g(\R))/G(\R) & \to \kernel\left(H^1_\sigma(\Gamma,\mathrm{Stab}_G(X))\rightarrow H^1_\sigma(\Gamma,G)\right) \\ \mathrm{Ad}(g) \cdot X & \mapsto \text{class of $ g\sigma(g^{-1})$ in $H^1_\sigma(\Gamma,\mathrm{Stab}_G(X))$} \nonumber \end{align} 
+is a bijection: see \cite[Lemma 5.2]{galois}. 
+Using this we get bijections
 $$
 \begin{aligned}
-(\Op\cap i\g(\R))/G(\R)&\leftrightarrow \ker(H^1_\sigma(\Gamma,\Stab_G(X))\rightarrow H^1_\sigma(\Gamma,G)\\
+(\Op\cap i\g(\R))/G(\R)&\simeq \ker(H^1_\sigma(\Gamma,\Stab_G(X))\rightarrow H^1_\sigma(\Gamma,G))\\
 &=
-\ker(H^1_\sigma(\Gamma,ZU)\rightarrow H^1_\sigma(\Gamma,G)\\
-&=
-\ker(H^1_\sigma(\Gamma,Z)\rightarrow H^1_\sigma(\Gamma,G)\\
-&=Q(G(\R))
+\ker(H^1_\sigma(\Gamma,Z)\rightarrow H^1_\sigma(\Gamma,G))\\
+&\simeq Q_{\sigma}(G)
 \end{aligned}
 $$
+where the middle line uses $H^1_\sigma(\Gamma,\Stab_G(X))=H^1_\sigma(\Gamma,ZU)=H^1_\sigma(\Gamma,Z)$ as explained in the proof. The resulting bijection  $(\Op\cap i\g(\R))/G(\R)\simeq Q_\sigma(\R)$ is equivariant (for the actions of $Q_\sigma(G)$ on $(\Op\cap i\g(\R))/G(\R)$ described above, and the action of  $Q_\sigma(G)$ on itself by multiplication), and this gives another proof of~(1). 
 
+\subsection{Actions of $Q_\theta(G)$ on representations and invariants}
+
+To discuss the map taking a $(\g, K)$-module to the associated variety, it seems better to use $Q_{\theta}(G)$ rather than~$Q_{\sigma}(G)$. 
+
+
+ \subsubsection*{On $(\g, K)$-modules} 
  
-\paragraph*{$\bullet$ Action on~(3)} We turn to the action of~$Q(G(\R))$ on $(\Op \cap \s)/K$, and to the associated variety. For this it is convenient to use an isomorphic variant of~$Q(G(\R))$, defined in terms of~$K$ rather than~$G(\R)$. 
-
-Since the Cartan involution $\theta$ is an automorphism of~$G$, it preserves the center~$Z=Z(G)$, and induces an involution~$\theta_{\ad}$ of~$\Gad=G/Z$. Let $Z_K$ be the intersection $Z \cap K$, and let $K_{\ad}$ be the quotient $K/Z_K$. The natural map $K \mapsto \Gad$, induced by the inclusion $K \hookrightarrow G$, maps~$K$ to a subgroup of~$\Gad^{\theta_{\ad}}$, and has kernel~$Z_K$. Therefore it factors to an injective morphism $\iota\colon \Kad \hookrightarrow\Gad^{\theta_{\ad}} $. The image of~$\iota$ is a normal subgroup of~$\Gad^{\theta_{\ad}}$; using it we will identify $\Kad$ with a normal subgroup of $\Gad^{\theta_{\ad}}$. Define
-\[ Q'(\R) = \Gad^{\theta_{\ad}}/\Kad.\]
-
-\begin{lemma}\label{lem:q_and_qprime}
-\begin{enumerate}
-\item Every element of $Q(R)=\Gad(\R)/G(\R)_{\ad}$ has a $\theta_\ad$-invariant representative in $\Gad(\R)$.
-\item Given $q \in Q(G(\R))$, and a $\theta_{\ad}$-invariant representative~$\tilde{q}$ of~$q$, the image of~$\tilde{q}$ in~$Q'(\R)$ depends only on~$q$ and not on the choice of~$\tilde{q}$. Denote this image by~$\Psi(q)$; then $q \mapsto \Psi(q)$ is an isomorphism between $Q(G(\R))$ and~$Q'(\R)$. 
-\end{enumerate}
-\end{lemma}
-
-\begin{proof} \textcolor{red}{TODO!}
-Here are the main points.
-
-$$
-\begin{aligned}
-Q_\sigma(G(\R))&=\ker(H^1_\sigma(\Gamma,Z)\rightarrow H^1_\sigma(\Gamma,G))\\
-Q_\theta(G(\R))&=\ker(H^1_\theta(\Gamma,Z)\rightarrow H^1_\theta(\Gamma,G))\\
-H^1_\sigma(\Gamma,Z)&\simeq H^1_\sigma(\Gamma,Z^{\sigma\theta})\simeq H^1_\theta(\Gamma,Z^{\sigma\theta})\simeq H^1_\theta(\Gamma,Z)\\
-H^1_\sigma(\Gamma,G)&\simeq H^1_\sigma(\Gamma,G^{\sigma\theta})\simeq H^1_\theta(\Gamma,G^{\sigma\theta})\simeq H^1_\theta(\Gamma,G)\\
-\end{aligned}
-$$
-The first and last isomorphisms in the last two rows are induced by inclusion $Z^{\sigma\theta}\hookrightarrow Z$ and $G^{\sigma\theta}\hookrightarrow G$.
-
-\end{proof}
+ Recall $Q_{\theta}(\R)=\Gad^{\theta_{\ad}}/\Kad$. By definition $\Gad^{\theta_{\ad}}$ is contained in the normalizer $\mathrm{Norm}_G(K)$; therefore it acts on~$(\g, K)$-modules. Any element of~$\Kad$ takes a $(\g,K)$-module to an equivalent one, therefore $Q_{\theta}(\R)$ acts on~$(\g, K)$-module. This preserves the property of being a discrete series, and of being large. Furthermore, by \cite[Lemma 6.18 and Remark 6.19]{Contragredient} the action preserves $L$-packets. Therefore $Q_{\theta}(\R)$ acts transitively on the large representations in a discrete series $L$-packet.
+  
+\subsubsection*{On nilpotent $K$-orbits.} 
 
 
 
-
-To define the  action of~$Q(G(\R))$ on $(\Op \cap \s)/K$, we point out that $Q'(\R)$ acts on $\Op \cap \s$ and that this action preserves the $K$-orbits. First, the adjoint action of~$\Gad$ on~$\g$ preserves both $\Op$ and~$\s$. Second, the action of~$K$ on $\Op \cap \s$ is trivial on~$Z_K$, and factors through an action of~$\Kad$. It is then easy to check that if two elements of $\Op \cap \s$ lie in on the same $\Kad$-orbit, then for every $g \in \Gad^{\theta_{\ad}}$, the elements  $\tilde{g} \cdot x$ and $\tilde{g} \cdot y$ lie on the same $\Kad$-orbit. This determines an action of~$Q'(\R)$ on~$(\Op \cap \s)/K$, and by Lemma~\ref{lem:q_and_qprime} we get an action of~$Q(G(\R))$ on~$(\Op \cap \s)/K$. This is the action featured in the following statement:
-
+Let us define an action of~$Q_{\theta}(G)$ on $(\Op \cap \s)/K$. First, the adjoint action of~$\Gad$ on~$\g$ preserves both $\Op$ and~$\s$. Second, the action of~$K=G^\theta$ on $\Op \cap \s$ is trivial on~$Z_K=Z^\theta$, and factors through an action of~$\Kad$. It is then easy to check that if two elements of $\Op \cap \s$ lie in on the same $\Kad$-orbit, then for every $g \in \Gad^{\theta_{\ad}}$, the elements  $\tilde{g} \cdot x$ and $\tilde{g} \cdot y$ lie on the same $\Kad$-orbit. This determines an action of~$Q_\theta(G)$ on $(\Op \cap \s)/K$, which is the one featured in the next statement.
 
 \begin{proposition}\label{prop:action_on_K_orbits}
 \begin{enumerate} 
-\item The action of~$Q(G(\R))$ on $(\Op \cap \s)/K$ is simply transitive.
-\item The map $\pi \mapsto \AV(\pi)$ is $Q(G(\R))$-equivariant.
+\item The action of~$Q_{\theta}(G)$ on $(\Op \cap \s)/K$ is simply transitive.
+\item The map $\pi \mapsto \AV(\pi)$ is $Q_{\theta}(G)$-equivariant.
 \end{enumerate}
 \end{proposition}
 
-The proof is similar to that of Proposition~\ref{prop:action_on_real_orbits}, but we need to use the version of Galois cohomology attached to the Cartan involution $\theta$. Taking up the above notation on Galois cohomology, the exact sequence $1\rightarrow Z \rightarrow G \rightarrow \Gad\rightarrow 1$ gives rise to a long exact sequence of pointed sets:
-\begin{equation} \label{long_ptset_theta}
-1\rightarrow Z_K \rightarrow K \rightarrow \Gad^{\theta_{\ad}} \rightarrow H^1_\theta(\Gamma,Z)\rightarrow H^1_\theta(\Gamma,G)\rightarrow H^1_{\theta_{\ad}}(\Gamma,\Gad).
-\end{equation}
-As in Lemma~\ref{l:Q}  this determines a bijection $Q'(\R) \leftrightarrow \kernel(H^1_\theta(\Gamma,Z)\rightarrow H^1_{\theta}(\Gamma,G))$. The argument for part~(1) of Proposition~\ref{prop:action_on_real_orbits} works seamlessly if we replace~$\sigma$ with~$\theta$, and proves that the action of~$Q'(\R)$ on $(\Op \cap \s)/K$ is simply transitive. Since the action of~$Q(G(\R))$ is defined by transport of structure from that of~$Q'(\R)$, this proves~(1). 
+The proof of~(1) is exactly the same as that  to that of Proposition~\ref{prop:action_on_real_orbits}(1), replacing~$\sigma$ by the Cartan involution $\theta$.
 
-As for~(2), it is again an immediate consequence of the precise definition of the associated variety. Stating this needs a little more care, since it is not obvious that $\Gad$ acts on representations of~$G(\R)$. However, the adjoint action of~$\Gad^{\theta_{\ad}}$ on $G$ preserves $K$; this this induces an action of~$\Gad^{\theta_{\ad}}$ on $(\g, K)$-modules. The restriction of that action to~$\Kad$ is trivial, and this gives an action of $Q'(\R)$ acts on equivalence classes of $(\g, K)$-modules. Now, the definition of the associated variety uses filtrations (see the Introduction of~\cite{vogan_bowdoin}) which are all invariant under $\Gad^{\theta_\ad}$, and inspecting the definitions it becomes clear that the map $\pi \mapsto \AV(\pi)$, taking a large discrete series $(\g,K)$-module  (or rather its equivalence class) to its associated variety, is equivariant under~$Q'(\R)$. In view of the relationship between the actions of $Q'(\R)$ and $Q(G(\R))$ on $(\Op \cap \s)/K$, this proves part~(2) of Proposition~\ref{prop:action_on_K_orbits}.
+As for~(2), it is a consequence of the precise definition of the associated variety. This uses filtrations of the universal enveloping algebra of~$\g$ which are all invariant under $\Gad^{\theta_{\ad}}$: see for instance the Introduction of~\cite{vogan_bowdoin}. Inspecting the definitions in \emph{loc. cit.} it becomes clear that the map $\pi \mapsto \AV(\pi)$, taking a large discrete series $(\g,K)$-module  (or rather its equivalence class) to its associated variety, is equivariant under~$Q_{\theta}(G)$, proving~(2). 
 \qed
 
 
