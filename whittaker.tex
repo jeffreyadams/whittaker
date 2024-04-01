@@ -286,17 +286,24 @@ gives rise to a ``long" exact sequence of pointed sets:
 \end{equation}
 By definition the connecting map  $ \Gad^{\tau_{\ad}} \rightarrow H^1_\tau(\Gamma,Z)$ sends $g \in \Gad^{\tau_{\ad}}$ to the equivalence class of $g \tau_{\ad}(g^{-1})$ in $H^1_\tau(\Gamma, Z)$, and the meaning of all the other maps is obvious. 
 Going through the definitions we see that  two elements  $g_1, g_2$ have the same image if and only if $g_1 g_{2}\inv \in (G^\tau)_{\ad}$. 
-Therefore the image of the connecting map is in canonical bijection with $Q_\tau(G)$, and by exactness of~\eqref{long_ptset} we get a canonical bijection
+Therefore the image of the connecting map is in canonical bijection with $Q_\tau(G)$. Since~\eqref{long_ptset} is exact we get a canonical bijection
 \begin{equation} \label{interp_q_cohomology} Q_{\tau}(G) \simeq \ker(H^1_\tau(\Gamma,Z)\rightarrow H^1_\tau(\Gamma,G)).\end{equation}
-The previous argument is in the category of pointed sets, and one should keep in mind on the right-hand side $H^1_\tau(\Gamma,G))$  is not a group in general, therefore~\eqref{interp_q_cohomology} is at first sight only a set-theoretic bijection. However, 
-$H^1_\tau(\Gamma,Z)$ is a group since $Z$ is abelian; therefore both sides of~\eqref{interp_q_cohomology} have canonical abelian group structures, and chasing definitions one easily sees that~\eqref{interp_q_cohomology} is actually an isomorphism of abelian groups.
+The previous argument is in the category of pointed sets, and on the right-hand side $H^1_\tau(\Gamma,G))$  is not a group in general. Therefore, at first sight, the map~\eqref{interp_q_cohomology} is only a set-theoretic bijection. However, 
+$H^1_\tau(\Gamma,Z)$ is a group since $Z$ is abelian; thus both sides of~\eqref{interp_q_cohomology} have canonical abelian group structures, and chasing definitions one easily sees that~\eqref{interp_q_cohomology} is actually an isomorphism of abelian groups.
  
 
 \subsubsection{Isomorphism between $Q_{\sigma}(G)$ and $Q_{\theta}(G)$}
 
-Using the group cohomology interpretation in the previous paragraph, we can construct a canonical  isomorphism between $Q_{\sigma}(G)$ and $Q_{\theta}(G)$. For this recall $\theta\sigma = \sigma\theta$ and $G^{\sigma\theta}$ is a compact real form of~$G$. Furthermore $\sigma$ and $\theta$ coincide on $G^{\sigma\theta}$, therefore  $H_{\sigma}(\Gamma, G^{\sigma\theta})$ and  $H_{\sigma}(\Gamma, G^{\sigma\theta})$ are the same set, which we will denote by  $H_{\sigma\mid\theta}(\Gamma, G^{\sigma\theta})$. Now the inclusion $G^{\sigma\theta} \hookrightarrow G$ induces canonical maps 
+Using the group cohomology interpretation in the previous paragraph, we can construct a canonical  isomorphism between $Q_{\sigma}(G)$ and $Q_{\theta}(G)$.
+For this recall $\theta\sigma = \sigma\theta$ and $G^{\sigma\theta}$ is a compact real form of~$G$.
+Furthermore $\sigma$ and $\theta$ coincide on $G^{\sigma\theta}$,
+therefore  $H_{\sigma}(\Gamma, G^{\sigma\theta})$ and  $H_{\sigma}(\Gamma, G^{\sigma\theta})$ are the same set,
+which we will denote by  $H_{\sigma\mid\theta}(\Gamma, G^{\sigma\theta})$.
+Now the inclusion $G^{\sigma\theta} \hookrightarrow G$ induces canonical maps 
 \begin{equation} \label{bij_cohom} H^{1}_{\sigma}(\Gamma, G) \longleftarrow H_{\sigma\mid\theta}(\Gamma, G^{\sigma\theta}) \longrightarrow H^{1}_{\theta}(\Gamma, G).\end{equation}
-By \cite[Corollary~4.4 and Corollary 4.7]{galois}, both of these maps are \emph{bijections}. Replacing~$G$ by $Z$ we get bijections $H^{1}_{\sigma}(\Gamma, Z) \leftarrow H_{\sigma\mid\theta}(\Gamma, Z^{\sigma\theta}) \rightarrow H^{1}_{\theta}(\Gamma, Z)$, and these fit with the bijections~\eqref{bij_cohom} into a commutative diagram
+By \cite[Corollary~4.4 and Corollary 4.7]{galois}, both of these maps are \emph{bijections}.
+Replacing~$G$ by $Z$ we get bijections $H^{1}_{\sigma}(\Gamma, Z) \leftarrow H_{\sigma\mid\theta}(\Gamma, Z^{\sigma\theta}) \rightarrow H^{1}_{\theta}(\Gamma, Z)$.
+These fit with the bijections~\eqref{bij_cohom} into a commutative diagram
 \[
 \begin{CD}
 H^{1}_{\sigma}(\Gamma, Z) @<<< H_{\sigma\mid\theta}(\Gamma, Z^{\sigma\theta})@>>> H^{1}_{\theta}(\Gamma, Z)
@@ -316,7 +323,7 @@ As discussed after~\eqref{interp_q_cohomology}, this is actually an isomorphism 
 
 
 \subsubsection*{On representations} 
-Since~$Q_\sigma(G)$ can be viewed as a group of automorphisms of~$G(\R)$,  it has a canonical action on equivalence classes of representations of~$G(\R)$, and therefore on~$(\g, K)$-modules. This action preserves  the property of being large\footnote{AA 15-II-2024: should say something about this using the fact that it comes from automorphisms, either here or in the section on large reps}. It also preserves $L$-packets by~\cite[Lemma 6.18]{Contragredient}, and acts transitively on an~$L$-packet\footnote{AA 01-IV-2023: this point was missing, I think it's easy using Harish-Chandra's parametrization, the fact that every element of~$Q_{\sigma}(G)$ has a representative in the Weyl group, plus the description of discrete series L-packets in the Congragredient paper. The point about the action preserving $L$-packets also follows from this, it's perhaps a better argument than [Contragredient, Lemma 6.18] which may be better suited to the $\theta$-version.}
+Since~$Q_\sigma(G)$ can be viewed as a group of automorphisms of~$G(\R)$,  it has a canonical action on equivalence classes of representations of~$G(\R)$, and therefore on~$(\g, K)$-modules. This action preserves  the property of being large\footnote{AA 15-II-2024: should say something about this using the fact that it comes from automorphisms, either here or in the section on large reps}. It also preserves $L$-packets by~\cite[Lemma 6.18]{Contragredient}, and acts transitively on an~$L$-packet\footnote{AA 01-IV-2023: this point was missing, and I think details should be included. I think the transitivity is easy using  the description of discrete series L-packets in the Congragredient paper in terms of Harish-Chandra parameters, plus the fact that every element of~$Q_{\sigma}(G)$ has a representative in the Weyl group of a given elliptic maximal torus. The point about the action preserving $L$-packets also follows from this, I think; and perhaps it gives a better argument for the preservation of $L$-packets than [Contragredient, Lemma 6.18], which may be better suited to the $\theta$-version.}.
 
 \subsubsection*{On~Whittaker data}  By definition of Whittaker data, the action of~$Q_{\sigma}(G)$ on $G(\R)$ induces a canonical action on the set of Whittaker data. By \cite[(14.15)]{abv} this action is simply transitive. 
 
