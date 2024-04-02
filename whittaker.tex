@@ -142,20 +142,35 @@
 \author{Jeffrey Adams \& Alexandre Afgoustidis}
 \maketitle
 
-Let $G$ be a connected complex reductive group, defined over $\R$, and suppose $G(\R)$ is quasisplit.
+Let $G$ be a connected complex reductive group, defined over $\R$, and consider the group $G(\R)$ of real points. 
 
+Suppose $\pi$ is an irreducible representation of~$G(\R)$. Recall $\pi$ \emph{has a Whittaker model} when there exists a pair $(B(\R), \chi)$ where 
+\begin{enumerate}[(i)]
+\item $B$ is a Borel subgroup of~$G$ defined over~$\R$, with real points $B(\R)$;
+\item $\eta$ is a character of the nilpotent radical~$N(\R)$ of~$B(\R)$, subject to the condition that~$\eta$ is nontrivial on each simple root space;
+\end{enumerate}
+such that~$\pi$ embeds into the induced representation $\mathrm{Ind}_{N(\R)}^{G(\R)}(\chi)$. Of course this can happen if and only if there exists a Borel subgroup $B \subset G$ satisfying~(i); by definition this means~$G$ is \emph{quasisplit}, which we assume from now on. 
 
-We assume $G(\R)$ has discrete series representations, and fix an L-packet $\Pi$ of discrete series representations.
+We also say~$\pi$ is \emph{generic} when it has a Whittaker model. In that case, the pair $(B, \chi)$ is not uniquely determined by~$\chi$. However the $G(\R)$-conjugacy class of $(B(\R), \eta)$ is uniquely determined by the equivalence class of~$\pi$. We will call it the Whittaker datum attached to~$\pi$, denoted $\mathfrak{w}(\pi)$. More generally, by a  {\it Whittaker datum} we will mean a $G(\R)$-conjugacy class of pairs  $(B(\R),\eta)$ satisfying (i)-(ii). 
 
-By a  {\it Whittaker datum} we mean a $G(\R)$-conjugacy class of pairs  $(B(\R),\eta)$ where $B(\R)$ is a
-Borel subgroup of $G(\R)$, 
-and $\eta$ is a non-degenerate character of the nilpotent radical $N(\R)$ of $B(\R)$. Non-degenerate means: non-trivial on each simple root space.
+We may view $\mathfrak{w}(\pi)$ as a useful invariant of generic representations. For instance, suppose~$\pi$ is a discrete series representation of~$G(\R)$. Then $\mathfrak{w}(\pi)$ singles out~$\pi$ among the discrete series representations of~$G(\R)$ having  the same infinitesimal and central characters. In the language of the local Langlands correspondence this means the Whittaker datum singles out~$\pi$ within its $L$-packet. 
 
-TODO: write about generic/large representations, and explain what's in the paper...
+More generally, Whittaker data play a subtle but key role in the local Langlands correspondence for reductive groups over arbitrary local fields (including the nonarchimedean case). For instance, given a Whittaker datum~$\mathfrak{w}$, it is expected that every tempered $L$-packet contains precisely one $\mathfrak{w}$-generic representation, which can be used as a basepoint for the internal structure of the $L$-packet. (Here insert refs to the work of Tasho and others.)
+
+Returning to real groups, there are of course other invariants that one may attach to an irreducible representation~$\pi$. We shall be concerned with two of them, defined using very different (and rather subtle) ideas. The first is the \emph{wavefront set}, which originally comes from microlocal analysis of the matrix coefficients. The second is the \emph{associated variety}, which is defined using algebro-geometric methods. Both consist of nilpotent elements of the dual of the Lie algebra of~$G$, and are defined as coadjoint orbits (of two different kinds). 
+
+Now suppose~$\pi$ is a generic discrete series representation of~$G(\R)$. Then the Whittaker datum $\mathfrak{w}(\pi)$, the wavefront set $\WF(\pi)$ and the associated variety $\AV(\pi)$ basically contain the same information: given one of the three invariants, it is possible to reconstruct the other two. This is well known to the experts, but not so easy to extract from the literature, especially not if one wants to be explicit about how to pass back and forth between the three invariants. We have felt it worthwhile to give an account of the matter here. 
+
+We shall do two things: 
+\begin{enumerate}
+\item Give an elementary proof that passage from~$\pi$ to $\mathfrak{w}(\pi)$, $\WF(\pi)$ and $\AV(\pi)$ defines bijections between generic discrete series in an $L$-packet for $G(\R)$, Whittaker data for $G(\R)$, and the appropriate sets of nilpotent orbits;
+\item Given one of the invariants $\mathfrak{w}(\pi)$, $\WF(\pi)$ and~$\AV(\pi)$, explain in the simplest possible terms how to reconstruct the other two. 
+\end{enumerate}
+Most statements in this note were already known, and we have tried to give new and simplified proofs for as many of them as we could. In the cases where we had to call on more difficult statements from the literature, we tried to give convenient references. 
 
 \section{Some invariants of irreducible $(\g, K)$-modules}
 
-
+\footnote{AA 02-IV-2024: should of course rewrite this section once the rest is stable.}
 
 Suppose $\pi$ is an irreducible $(\g,K)$-module. Then we can associate to~$\pi$ several invariants, which depend only on the equivalence class of~$\pi$: the associated variety, the Gelfand---Kirillov dimension, and the wavefront set.  We do not give full definitions, but try to point to convenient places in the literature.\footnote{AA 20-II-2024: of course if we write this, we should maybe add a few basic references for the notions.}
 
@@ -189,7 +204,7 @@ $$
 For all of these facts see \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
 
 Another invariant of an irreducible $(\g, K)$-module~$\pi$ is the \emph{wave-front set} of $\pi$, written $\WF(\pi)$. It is the union of a (finite) set of nilpotent $G(\R)$ orbits in
-$i\g(\R)^*=i\Hom_\R(\g(\R),\R)$. See \cite{howe_wave_front}, \cite{bv_local_structure}.\footnote{AA 14-II-2024: another convenient reference  for definitions re~$\WF(\pi)$ seems to be  Harris--He--Olafsson (Duke 2016).}
+$i\g(\R)^*=i\Hom_\R(\g(\R),\R)$. See \cite{howe_wave_front}, \cite{bv_local_structure}, \cite{HarrisHeOlafsson}.
 
 \subsection{Large representations} Set $N=\dim(\N)=\dim(G)-\mathrm{rank}(G)$. The maximal Gelfand--Kirillov dimension of a representation is $N/2$.
 We say $\pi$ is {\it large} if $\GK(\pi)=N/2$. See \cite[Section~6]{Vogan78}. 
@@ -234,7 +249,7 @@ Part~(b) is one of the main results of~\cite{vogan_bowdoin}: see \cite[Theorem ?
 Part~(c) follows from~\cite{rossmann_limit_orbits}.\footnote{AA 14-II-2024: maybe a little more detail would be welcome, the Rossmann paper does not seem to state the result in these terms.}
 \end{proof}
 
-Given a large discrete series representation~$\pi$ we consider the invariants of~$\pi$ defined by the Proposition: a Whittaker datum  $\mathfrak{w}(\pi) \in \mathfrak{W}(G(\R))$, a $K$-orbit $\AV^\flat(\pi) \in (\mathcal{O}_p \cap \mathfrak{s})/K$  and a nilpotent $G(\R)$-orbit $\WF^\flat(\pi) \in (\mathcal{O}_p \cap  i \g(\R))/G(\R)$. 
+Given a large discrete series representation~$\pi$ we consider the invariants of~$\pi$ defined by the Proposition: a Whittaker datum  $\mathfrak{w}(\pi)$, a $K$-orbit $\AV^\flat(\pi) \in (\mathcal{O}_p \cap \mathfrak{s})/K$  and a nilpotent $G(\R)$-orbit $\WF^\flat(\pi) \in (\mathcal{O}_p \cap  i \g(\R))/G(\R)$. 
 
 Here is our main statement.
 
@@ -351,7 +366,7 @@ if and only if $X'=\Ad(g)X$ for some $g\in G(\R)$. This competes the proof of (1
 Part~(2) of the proposition is comes from general properties of the wavefront set in microlocal analysis, and from the fact that the action of $Q_{\sigma}(G)$ comes from automorphisms of~$G(\R)$. More precisely, if~$q$ is an element of~$Q_{\sigma}(G)$ and $\tilde{q}$ is a representative of~$q$ in $\Gad(\R)$, then the action of~$q$ on equivalence classes of $(\g, K)$-modules comes from the action of the automorphism $\mathrm{int}(\tilde{q})$ of~$G(\R)$ on $(\g, K)$-modules. Now the wavefront set of a distribution on a manifold satisfies general covariance properties under diffeomorphisms of the manifold: this follows from Hörmander's original definitions, see e.g. \cite[Section 2, p.~800]{HarrisHeOlafsson}. Applying this to the present situation, and going through the basics as in   \cite[Section~2]{HarrisHeOlafsson}, it follows that $\pi \mapsto \WF(\pi)$ is equivariant under $Q_{\sigma}(G)$.
 \end{proof}
 
-It may be interesting to point out a variant on the proof of~(1). Given $X \in \Op \cap i\g(\R)$, the map 
+It may be interesting to point out a variant on the proof of~(1).\footnote{AA 01-IV-2024: well, is it interesting to keep it in the paper, or should we comment it out...? } Given $X \in \Op \cap i\g(\R)$, the map 
 \begin{align} \label{bij_q_2} (\Omega_{X} \cap i\g(\R))/G(\R) & \to \kernel\left(H^1_\sigma(\Gamma,\mathrm{Stab}_G(X))\rightarrow H^1_\sigma(\Gamma,G)\right) \\ \mathrm{Ad}(g) \cdot X & \mapsto \text{class of $ g\sigma(g^{-1})$ in $H^1_\sigma(\Gamma,\mathrm{Stab}_G(X))$} \nonumber \end{align} 
 is a bijection: see \cite[Lemma 5.2]{galois}. 
 Using this we get bijections
@@ -363,7 +378,7 @@ $$
 &\simeq Q_{\sigma}(G)
 \end{aligned}
 $$
-where the middle line uses $H^1_\sigma(\Gamma,\Stab_G(X))=H^1_\sigma(\Gamma,ZU)=H^1_\sigma(\Gamma,Z)$ as explained in the proof. The resulting bijection  $(\Op\cap i\g(\R))/G(\R)\simeq Q_\sigma(\R)$ is equivariant (for the actions of $Q_\sigma(G)$ on $(\Op\cap i\g(\R))/G(\R)$ described above, and the action of  $Q_\sigma(G)$ on itself by multiplication), and this gives another proof of~(1). 
+where the middle line uses the equality $H^1_\sigma(\Gamma,\Stab_G(X))=H^1_\sigma(\Gamma,Z)$, which comes from the fact that $\Stab_G(X)=ZU$  as explained in the proof. The resulting bijection  $(\Op\cap i\g(\R))/G(\R)\simeq Q_\sigma(\R)$ is equivariant (for the actions of $Q_\sigma(G)$ on $(\Op\cap i\g(\R))/G(\R)$ described above, and the action of  $Q_\sigma(G)$ on itself by multiplication), and this gives another proof of~(1). 
 
 \subsection{Actions of $Q_\theta(G)$ on representations and invariants}
 
