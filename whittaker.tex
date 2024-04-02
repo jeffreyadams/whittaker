@@ -144,7 +144,7 @@
 
 Let $G$ be a connected complex reductive group, defined over $\R$, and consider the group $G(\R)$ of real points. 
 
-Suppose $\pi$ is an irreducible representation of~$G(\R)$. Recall $\pi$ \emph{has a Whittaker model} when there exists a pair $(B(\R), \chi)$ where 
+Suppose $\pi$ is an irreducible representation of~$G(\R)$. Recall $\pi$ has a \emph{Whittaker model} when there exists a pair $(B(\R), \chi)$ where 
 \begin{enumerate}[(i)]
 \item $B$ is a Borel subgroup of~$G$ defined over~$\R$, with real points $B(\R)$;
 \item $\eta$ is a character of the nilpotent radical~$N(\R)$ of~$B(\R)$, subject to the condition that~$\eta$ is nontrivial on each simple root space;
@@ -153,9 +153,9 @@ such that~$\pi$ embeds into the induced representation $\mathrm{Ind}_{N(\R)}^{G(
 
 We also say~$\pi$ is \emph{generic} when it has a Whittaker model. In that case, the pair $(B, \chi)$ is not uniquely determined by~$\chi$. However the $G(\R)$-conjugacy class of $(B(\R), \eta)$ is uniquely determined by the equivalence class of~$\pi$. We will call it the Whittaker datum attached to~$\pi$, denoted $\mathfrak{w}(\pi)$. More generally, by a  {\it Whittaker datum} we will mean a $G(\R)$-conjugacy class of pairs  $(B(\R),\eta)$ satisfying (i)-(ii). 
 
-We may view $\mathfrak{w}(\pi)$ as a useful invariant of generic representations. For instance, suppose~$\pi$ is a discrete series representation of~$G(\R)$. Then $\mathfrak{w}(\pi)$ singles out~$\pi$ among the discrete series representations of~$G(\R)$ having  the same infinitesimal and central characters. In the language of the local Langlands correspondence this means the Whittaker datum singles out~$\pi$ within its $L$-packet. 
+We may view $\mathfrak{w}(\pi)$ as a useful invariant of generic representations. For instance, suppose~$\pi$ is a discrete series representation of~$G(\R)$. Then $\mathfrak{w}(\pi)$ singles out~$\pi$ among the discrete series representations of~$G(\R)$ having  the same infinitesimal and central characters. In the language of the local Langlands correspondence \cite{Langlands_CIRRAC, Contragredient}, this means the Whittaker datum singles out~$\pi$ within its $L$-packet. 
 
-More generally, Whittaker data play a subtle but key role in the local Langlands correspondence for reductive groups over arbitrary local fields (including the nonarchimedean case). For instance, given a Whittaker datum~$\mathfrak{w}$, it is expected that every tempered $L$-packet contains precisely one $\mathfrak{w}$-generic representation, which can be used as a basepoint for the internal structure of the $L$-packet. (Here insert refs to the work of Tasho and others.)
+More generally, Whittaker data play a subtle but key role in the local Langlands correspondence for reductive groups over arbitrary local fields \cite{Borel, Kaletha_Taibi}, including the nonarchimedean case. For instance, given a Whittaker datum~$\mathfrak{w}$, it is expected that every tempered $L$-packet contains precisely one $\mathfrak{w}$-generic representation, which can be used as a basepoint for the internal structure of the $L$-packet~\cite{Kaletha_genericity}.
 
 Returning to real groups, there are of course other invariants that one may attach to an irreducible representation~$\pi$. We shall be concerned with two of them, defined using very different (and rather subtle) ideas. The first is the \emph{wavefront set}, which originally comes from microlocal analysis of the matrix coefficients. The second is the \emph{associated variety}, which is defined using algebro-geometric methods. Both consist of nilpotent elements of the dual of the Lie algebra of~$G$, and are defined as coadjoint orbits (of two different kinds). 
 
@@ -224,15 +224,13 @@ We say $\pi$ is {\it large} if $\GK(\pi)=N/2$. See \cite[Section~6]{Vogan78}.
 \end{lemma}
 See \cite{vogan_bowdoin}.
 
-
-\section{The dictionary for large discrete series}
-
-
-\subsection{Statement of the results}  
+\subsection{The invariants for large discrete series} 
 
 
-The following uses rather deep results of representation theory:
-\begin{proposition} Let~$\pi$ be the $(\g, K)$-module for a large discrete series representation of~$G(\R)$.  
+The following uses rather deep results of representation theory.
+
+\begin{proposition} \label{invariants_ds}
+Let~$\pi$ be the $(\g, K)$-module for a large discrete series representation of~$G(\R)$.  
 \begin{enumerate}[(a)]
 \item There is a unique Whittaker datum~$\mathfrak{w}$ such that~$\pi$ is $\mathfrak{w}$-generic.
 \item $\AV(\pi)$ is the closure of a single $K$-orbit on~$\mathcal{O}_p \cap \mathfrak{s}$.
@@ -249,7 +247,16 @@ Part~(b) is one of the main results of~\cite{vogan_bowdoin}: see \cite[Theorem ?
 Part~(c) follows from~\cite{rossmann_limit_orbits}.\footnote{AA 14-II-2024: maybe a little more detail would be welcome, the Rossmann paper does not seem to state the result in these terms.}
 \end{proof}
 
-Given a large discrete series representation~$\pi$ we consider the invariants of~$\pi$ defined by the Proposition: a Whittaker datum  $\mathfrak{w}(\pi)$, a $K$-orbit $\AV^\flat(\pi) \in (\mathcal{O}_p \cap \mathfrak{s})/K$  and a nilpotent $G(\R)$-orbit $\WF^\flat(\pi) \in (\mathcal{O}_p \cap  i \g(\R))/G(\R)$. 
+
+
+\section{The dictionary for large discrete series}
+
+
+\subsection{Statement of the results}  
+
+
+
+Given a large discrete series representation~$\pi$ we consider the invariants of~$\pi$ defined by Proposition~\ref{invariants_ds}: a Whittaker datum  $\mathfrak{w}(\pi)$, a $K$-orbit $\AV^\flat(\pi)$ in $\mathcal{O}_p \cap \mathfrak{s}$, and a $G(\R)$-orbit $\WF^\flat(\pi)$ in $(\mathcal{O}_p \cap  i \g(\R))$.
 
 Here is our main statement.
 
@@ -312,7 +319,7 @@ $H^1_\tau(\Gamma,Z)$ is a group since $Z$ is abelian; thus both sides of~\eqref{
 Using the group cohomology interpretation in the previous paragraph, we can construct a canonical  isomorphism between $Q_{\sigma}(G)$ and $Q_{\theta}(G)$.
 For this recall $\theta\sigma = \sigma\theta$ and $G^{\sigma\theta}$ is a compact real form of~$G$.
 Furthermore $\sigma$ and $\theta$ coincide on $G^{\sigma\theta}$,
-therefore  $H_{\sigma}(\Gamma, G^{\sigma\theta})$ and  $H_{\sigma}(\Gamma, G^{\sigma\theta})$ are the same set,
+therefore  $H_{\sigma}(\Gamma, G^{\sigma\theta})$ and  $H_{\theta}(\Gamma, G^{\sigma\theta})$ are the same set,
 which we will denote by  $H_{\sigma\mid\theta}(\Gamma, G^{\sigma\theta})$.
 Now the inclusion $G^{\sigma\theta} \hookrightarrow G$ induces canonical maps 
 \begin{equation} \label{bij_cohom} H^{1}_{\sigma}(\Gamma, G) \longleftarrow H_{\sigma\mid\theta}(\Gamma, G^{\sigma\theta}) \longrightarrow H^{1}_{\theta}(\Gamma, G).\end{equation}
