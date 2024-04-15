@@ -146,10 +146,10 @@ Let $G$ be a connected complex reductive group, defined over $\R$, and consider 
 
 Suppose $\pi$ is an irreducible representation of~$G(\R)$. Recall $\pi$ has a \emph{Whittaker model} when there exists a pair $(B(\R), \chi)$ where 
 \begin{enumerate}[(i)]
-\item $B$ is a Borel subgroup of~$G$ defined over~$\R$, with real points $B(\R)$;
-\item $\eta$ is a character of the nilpotent radical~$N(\R)$ of~$B(\R)$, subject to the condition that~$\eta$ is nontrivial on each simple root space;
+\item $B$ is a Borel subgroup of~$G$ defined over~$\R$, with real points $B(\R)$,
+\item $\eta$ is a character of the nilpotent radical~$N(\R)$ of~$B(\R)$, subject to the condition that~$\eta$ is nontrivial on each simple root space,
 \end{enumerate}
-such that~$\pi$ embeds into the induced representation $\mathrm{Ind}_{N(\R)}^{G(\R)}(\chi)$. Of course this can happen if and only if there exists a Borel subgroup $B \subset G$ satisfying~(i); by definition this means~$G$ is \emph{quasisplit}, which we assume from now on. 
+such that~$\pi$ embeds into the induced representation $\mathrm{Ind}_{N(\R)}^{G(\R)}(\chi)$. Of course this can happen if and only if there exists a Borel subgroup $B \subset G$ satisfying~(i); by definition this condition means~$G$ is \emph{quasisplit}, which we assume from now on. 
 
 We also say~$\pi$ is \emph{generic} when it has a Whittaker model. In that case, the pair $(B, \chi)$ is not uniquely determined by~$\chi$. However the $G(\R)$-conjugacy class of $(B(\R), \eta)$ is uniquely determined by the equivalence class of~$\pi$. We will call it the Whittaker datum attached to~$\pi$, denoted $\mathfrak{w}(\pi)$. More generally, by a  {\it Whittaker datum} we will mean a $G(\R)$-conjugacy class of pairs  $(B(\R),\eta)$ satisfying (i)-(ii). 
 
@@ -159,7 +159,7 @@ More generally, Whittaker data play a subtle but key role in the local Langlands
 
 Returning to real groups, there are of course other invariants that one may attach to an irreducible representation~$\pi$. We shall be concerned with two of them, defined using very different (and rather subtle) ideas. The first is the \emph{wavefront set}, which originally comes from microlocal analysis of the matrix coefficients. The second is the \emph{associated variety}, which is defined using algebro-geometric methods. Both consist of nilpotent elements of the dual of the Lie algebra of~$G$, and are defined as coadjoint orbits (of two different kinds). 
 
-Now suppose~$\pi$ is a generic discrete series representation of~$G(\R)$. Then the Whittaker datum $\mathfrak{w}(\pi)$, the wavefront set $\WF(\pi)$ and the associated variety $\AV(\pi)$ basically contain the same information: given one of the three invariants, it is possible to reconstruct the other two. This is well known to the experts, but not so easy to extract from the literature, especially not if one wants to be explicit about how to pass back and forth between the three invariants. We have felt it worthwhile to give an account of the matter here. 
+Now suppose~$\pi$ is a generic discrete series representation of~$G(\R)$. Then the Whittaker datum $\mathfrak{w}(\pi)$, the wavefront set $\WF(\pi)$ and the associated variety $\AV(\pi)$ basically contain the same information: given one of the three invariants, it is possible to reconstruct the other two. This is well known to the experts, but some aspects of this discussion are not  easy to extract from the literature, especially not if one wants to be explicit about how to pass back and forth between the three invariants. We have felt it worthwhile to give an account of the matter here. 
 
 We shall do two things: 
 \begin{enumerate}
@@ -170,7 +170,7 @@ Most statements in this note were already known, and we have tried to give new a
 
 \section{Some invariants of irreducible $(\g, K)$-modules}
 
-\footnote{AA 02-IV-2024: should of course rewrite this section once the rest is stable.}
+\footnote{AA 02-IV-2024: I didn't make any effort at polishing this in recent weeks; we should of course rewrite this section once the rest is stable.}
 
 Suppose $\pi$ is an irreducible $(\g,K)$-module. Then we can associate to~$\pi$ several invariants, which depend only on the equivalence class of~$\pi$: the associated variety, the Gelfand---Kirillov dimension, and the wavefront set.  We do not give full definitions, but try to point to convenient places in the literature.\footnote{AA 20-II-2024: of course if we write this, we should maybe add a few basic references for the notions.}
 
@@ -550,8 +550,10 @@ Consider the principal nilpotent element~$E_\pi$ defined in~\eqref{e:Epi}. We de
 
 By Lemma~\ref{lem:matumoto} it is enough to check that $\pi$ is $\w$-generic for the Whittaker datum $\w$ corresponding to~$E_\R$. By Proposition~\ref{JeffTasho_criterion} this is the case if and only if the Kostant section $\Kostant{E_\R}$ meets $\mathcal{O}_\pi$. 
 
-Now, we know that $\Kostant{E_\R}=E_\R+\mathrm{Cent}_\g(F_\R)$ contains $E_\R-F_\R = H_\theta$\footnote{AA 2024-IV-15: insert the correct version once we've checked the Sekiguchi formulas in the previous paragraph. }
-. In general the orbits $\mathcal{O}_\pi$ and $G(\R) \cdot H_\theta$ are disjoint. Nevertheless $H_{\lambda}$ and $H_\theta=[E_\theta, F_\theta]$ are in the same Weyl chamber. Therefore the result follows from:  
+Now, we know that $\Kostant{E_\R}=E_\R+\mathrm{Cent}_\g(F_\R)$ contains $E_\R-F_\R = H_\theta$\footnote{AA 2024-IV-15: insert the correct version once we've checked the Sekiguchi formulas in the previous paragraph. }.
+In general the orbits $\mathcal{O}_\pi$ and $G(\R) \cdot H_\theta$ are disjoint. 
+Nevertheless $H_{\lambda}$ and $H_\theta=[E_\theta, F_\theta]$ are in the same Weyl chamber\footnote{AA 2024-IV-15: should probably explain a bit more why this is correct.}.
+Therefore the result follows from:  
 
 \begin{proposition}\label{prop:AC_chamber} Let $\mathcal{C} \subset \t$ be a large open Weyl chamber.
 If $H$ and $H'$ are  points of~$\mathcal{C}$ and $\mathcal{O}, \mathcal{O}'$ are the   $G(\R)$-orbits of $H$ and $H'$, then $\AC(\mathcal{O})=\AC(\mathcal{O}')$.
@@ -563,6 +565,7 @@ We shall prove this in the rest of this section, based on the following lemma.
 \end{lemma}
 \begin{proof} See if we spell it  out (one direction is in Adams--Kaletha, but parts of the arguments are similar so it might be more convenient include both directions...). Maybe it's actually possible just refer to Fresse--Mehdi with pointers. \end{proof}
 
+The connection between Lemma~\ref{lem:Kost_and_AC} and Proposition~\ref{prop:AC_chamber} is that Lemma~\ref{lem:Kost_and_AC}  implies the  following observation on the behavior of the asymptotic cone of regular semisimple orbits: 
 
 \begin{lemma}\label{lem:AC_containment} Let~$\Omega$ be a regular nilpotent $G(\R)$-orbit, and let $\mathcal{E}_\Omega \subset \g$ be the union of all regular semisimple orbits~$\mathcal{O}$ such that $\AC(\mathcal{O})$ contains~$\Omega$. Then $\mathcal{E}_\Omega$ is open. 
 \end{lemma}
