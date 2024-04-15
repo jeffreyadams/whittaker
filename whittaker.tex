@@ -517,17 +517,17 @@ applies to the real case as well.
 
 Theorem~\ref{th:main} gives a bijection between the set $(\Op \cap \s)/K$ of principal nilpotent~$K$-orbits and the set $(\Op \cap i\g(\R))/G(\R)$ of principal nilpotent~$G(\R)$-orbits. 
 
-It is well known that a natural bijection between nilpotent $K$-orbits and nilpotent $G(\R)$-orbits can be defined in more elementary terms. This is the Kostant--Sekiguchi correspondence~\cite{}. Furthermore, it is a deep result of Schmid and Vilonen (the main result of~\cite{SV1}) that the wavefront set and the associated variety are exchanged by this correspondence. (As a historical aside, the Kostant--Sekiguchi correspondence was discovered on the basis that the correspondence $\AV(\pi) \leftrightarrow \WF(\pi)$ might be expressed in elementary terms.)
+It is well known that a natural bijection between nilpotent $K$-orbits and nilpotent $G(\R)$-orbits can be defined in more elementary terms. This is the Kostant--Sekiguchi correspondence~\cite{sekiguchi}. Furthermore, it is a deep theorem of Schmid and Vilonen (the main result of~\cite{SV1}) that the wavefront set and the associated variety are exchanged by this correspondence. (As a historical aside, the Kostant--Sekiguchi correspondence was discovered on the basis that the correspondence $\AV(\pi) \leftrightarrow \WF(\pi)$ might be expressed in elementary terms.)
 
 Therefore, a particular case of Schmid and Vilonen's theorem says: 
 \begin{proposition} \label{Sekiguchi_result} The bijection (3)--(4) is induced by the Kostant--Sekiguchi correspondence.
 \end{proposition} 
-We shall do two things here. First, we will quote a result of \cite{AVAV} which makes this case of the Kostant--Sekiguchi correspondence completely explicit. Second, we shall give a new and elementary proof of Proposition~\ref{Sekiguchi_result}: this avoids the use of Schmid and Vilonen's difficult results, and instead uses the results above (in particular Proposition~\ref{JeffTasho_criterion}). 
+We shall do two things here. First, we will quote a result of \cite{AVAV} which makes this case of the Kostant--Sekiguchi correspondence completely explicit. Second, we shall give a new and elementary proof of Proposition~\ref{Sekiguchi_result}: this avoids the use of Schmid and Vilonen's difficult results, and instead uses the results above (in particular Proposition~\ref{JeffTasho_criterion}) as the main ingredients. 
 
 
-\subsubsection{The Sekiguchi correspondence for principal nilpotent orbits}
-
-Let spell out the special case of the Sekiguchi correspondence which is of interest here. 
+\subsubsection{The Sekiguchi correspondence for principal nilpotent orbits}\label{sec:concrete_sek}
+\footnote{AA 2024-IV-15: should correct the formulas here.}
+Let us spell out the special case of the Sekiguchi correspondence which is of interest here. 
 Suppose $E_\R\in \Op\cap i\g(\R)$. Then we may choose an $SL(2)$-triple $(H_\R,E_\R,F_\R)$ with $F_\R$  contained in $i\g(\R)$,
 which implies $H_\R\in \g(\R)$. 
 After conjugating by~$G(\R)$ we may further assume $\theta(E_\R)=-F_\R$.
@@ -544,23 +544,24 @@ Then the Sekiguchi correspondence takes the $K$-orbit of $E_\theta$ to the $G(\R
 E_\R=\frac i2(E_\theta-F_\theta-H_\theta)\in\N\cap i\g(\R).
 \end{equation}
 
-\subsubsection{A simple proof of Proposition~\ref{Sekiguchi_result}}
+\subsubsection{A simple proof of Proposition~\ref{Sekiguchi_result}}\label{sec:sekiguchi_proof}
 
-Consider the principal nilpotent element~$E_\pi$ defined in~\eqref{e:Epi}. We define another regular nilpotent element  $E_\R$ by using $E_\pi$ as $E_\theta$ in~\eqref{def_E_R}. We know that the associated variety of $\pi$ is the closure of $K \cdot E_\pi$ (Proposition~\ref{}), so the image of $\AV(\pi)$ by the Sekiguchi correspondence is the closure of the $G(\R)$-orbit of $E_\R$. We want to check that $\WF(\pi)$ 
+Consider the principal nilpotent element~$E_\pi$ defined in~\eqref{e:Epi}. We define another regular nilpotent element  $E_\R$ by using $E_\pi$ as $E_\theta$ in~\eqref{def_E_R}. We know that the associated variety of $\pi$ is the closure of $K \cdot E_\pi$ (Lemma~\ref{l:pi_to_av}), so the image of $\AV(\pi)$ by the Sekiguchi correspondence is the closure of the $G(\R)$-orbit of $E_\R$. We want to check that $\WF(\pi)$ 
 
 By Lemma~\ref{lem:matumoto} it is enough to check that $\pi$ is $\w$-generic for the Whittaker datum $\w$ corresponding to~$E_\R$. By Proposition~\ref{JeffTasho_criterion} this is the case if and only if the Kostant section $\Kostant{E_\R}$ meets $\mathcal{O}_\pi$. 
 
-Now, we know that $\Kostant{E_\R}=E_\R+\mathrm{Cent}_\g(F_\R)$ contains $E_\R-F_\R = H_\theta$. In general the orbits $\mathcal{O}_\pi$ and $G(\R) \cdot H_\theta$ are disjoint. Nevertheless $H_{\lambda}$ and $H_\theta=[E_\theta, F_\theta]$ are in the same Weyl chamber. Therefore the result follows from:  
+Now, we know that $\Kostant{E_\R}=E_\R+\mathrm{Cent}_\g(F_\R)$ contains $E_\R-F_\R = H_\theta$\footnote{AA 2024-IV-15: insert the correct version once we've checked the Sekiguchi formulas in the previous paragraph. }
+. In general the orbits $\mathcal{O}_\pi$ and $G(\R) \cdot H_\theta$ are disjoint. Nevertheless $H_{\lambda}$ and $H_\theta=[E_\theta, F_\theta]$ are in the same Weyl chamber. Therefore the result follows from:  
 
 \begin{proposition}\label{prop:AC_chamber} Let $\mathcal{C} \subset \t$ be a large open Weyl chamber.
-If $H$ and $H'$ are two points of~$\mathcal{C}$ and if $\mathcal{O}, \mathcal{O}'$ are the   $G(\R)$-orbits of $H$ and $H'$, then $\AC(\mathcal{O})=\AC(\mathcal{O}')$.
+If $H$ and $H'$ are  points of~$\mathcal{C}$ and $\mathcal{O}, \mathcal{O}'$ are the   $G(\R)$-orbits of $H$ and $H'$, then $\AC(\mathcal{O})=\AC(\mathcal{O}')$.
 \end{proposition}
 
 We shall prove this in the rest of this section, based on the following lemma.
 
 \begin{lemma}\label{lem:Kost_and_AC} Let $\mathcal{O}$ be a regular semisimple orbit and  let $X$ be a regular nilpotent element. Then $\Kostant{X}$ meets~$\mathcal{O}$ if and only if $X$ is in the asymptotic cone~$\AC(\mathcal{O})$. 
 \end{lemma}
-\begin{proof} \textcolor{red}{See if we spell it all out (keeping in mind that half of it is in the paper with Tasho, but should probably be included for convenience since part of the arguments are similar). Or maybe it's actually possible to give just a reference to Fresse--Mehdi.} \end{proof}
+\begin{proof} See if we spell it  out (one direction is in Adams--Kaletha, but parts of the arguments are similar so it might be more convenient include both directions...). Maybe it's actually possible just refer to Fresse--Mehdi with pointers. \end{proof}
 
 
 \begin{lemma}\label{lem:AC_containment} Let~$\Omega$ be a regular nilpotent $G(\R)$-orbit, and let $\mathcal{E}_\Omega \subset \g$ be the union of all regular semisimple orbits~$\mathcal{O}$ such that $\AC(\mathcal{O})$ contains~$\Omega$. Then $\mathcal{E}_\Omega$ is open. 
@@ -578,9 +579,7 @@ which implies that $\Omega = G(\R) \cdot F$ is contained in $\AC(\mathcal{O}')$.
 This proves that $\mathcal{E}_\Omega$ contains an open neighborhood of any of its points, hence is open.   \end{proof}
 
 
-Let us prove Proposition~\ref{prop:AC_chamber}. 
-
-Given an element $H$ of $\mathcal{C}$ we shall write $\mathcal{O}_H$ for the $G(\R)$-orbit of~$H$. For any regular nilpotent orbit~$\Omega$ let $E^{\mathcal{C}}_\Omega$  denote the set of $H \in \mathcal{C}$ such that $\AC(\mathcal{O}_H)$ contains $\Omega$; byLemma~\ref{lem:AC_containment}  we know that   $E^{\mathcal{C}}_\Omega$ is an open subset of~$\mathcal{C}$. 
+Let us prove Proposition~\ref{prop:AC_chamber}. Given an element $H$ of $\mathcal{C}$ we shall write $\mathcal{O}_H$ for the $G(\R)$-orbit of~$H$. For any regular nilpotent orbit~$\Omega$ let $E^{\mathcal{C}}_\Omega$  denote the set of $H \in \mathcal{C}$ such that $\AC(\mathcal{O}_H)$ contains $\Omega$; by Lemma~\ref{lem:AC_containment}  we know that   $E^{\mathcal{C}}_\Omega$ is an open subset of~$\mathcal{C}$. 
 
 Now let $\mathcal{S}$ be the unit sphere of $\t$ for the norm induced by the Killing form, and $\mathcal{S} \cap \mathcal{C}$ be the intersection of $\mathcal{S}$ with the given chamber. This is an open subset of $\mathcal{S}$. The previous arguments show that the the radial projection $\mathcal{S}_{\Omega}$ of  $E^{\mathcal{C}}_\Omega$ on $\mathcal{S}$ is an open subset of $\mathcal{S} \cap \mathcal{C}$. 
 
@@ -591,11 +590,10 @@ Now consider the set $\Sigma$ of all points on $\mathcal{S} \cap \mathcal{C}$ wh
 We conclude that if $\Omega \neq \Omega'$, then $\mathcal{S}_\Omega$ and $\mathcal{S}_\Omega$ are disjoint, and therefore $\mathcal{E}^\t_{\Omega}$ and $\mathcal{E}^t_{\Omega'}$ are disjoint open subsets of~$\mathcal{C}$. Since $\mathcal{C}$ is connected and equal to the union of all subsets $\mathcal{E}^{\mathcal{C}}_{\Omega}$, the chamber $\mathcal{C}$ must be equal to a single $\mathcal{E}^\t_\Omega$. This concludes the proof of Proposition~\ref{prop:AC_chamber}, and therefore also of Proposition~\ref{Sekiguchi_result}.
 
 
-\subsection{Where to put this, if we keep it?}
+\subsubsection{Where to put this, if we keep it?}
 
 
-There are several ways to describe this bijection.\footnote{AA 23-II-2024: I think we should mention the version with the asymptotic cone of the orbit of~$H_\pi$, which is extremely clean and concrete. } We choose to compose the maps (1)$\leftrightarrow$(3)$\leftrightarrow$(4).
-Here is the conclusion.
+As we saw the correspondence $\pi \leftrightarrow \WF(\pi)$ can be described using the asymptotic cone of the semisimple orbit of the Harish-Chandra parameter. We used this in the proof of Proposition~\ref{Sekiguchi_result}. Now, the results of Sections~\ref{sec:concrete_sek} and~\ref{sec:sekiguchi_proof} provide another description of $\WF(\pi)$ from the Harish-Chandra parameter: we can compose the maps (1)$\leftrightarrow$(3)$\leftrightarrow$(4). This gives the following rather concrete conclusion.
 
 \begin{lemma}
   Let $\pi$ be a large discrete series representation.
