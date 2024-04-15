@@ -404,7 +404,7 @@ To discuss the map taking a $(\g, K)$-module to the associated variety, it seems
 
 
 
-Let us define an action of~$Q_{\theta}(G)$ on $(\Op \cap \s)/K$. First, the adjoint action of~$\Gad$ on~$\g$ preserves both $\Op$ and~$\s$. Second, the action of~$K=G^\theta$ on $\Op \cap \s$ is trivial on~$Z_K=Z^\theta$, and factors through an action of~$\Kad$. It is then easy to check that if two elements of $\Op \cap \s$ lie in on the same $\Kad$-orbit, then for every $g \in \Gad^{\theta_{\ad}}$, the elements  $\tilde{g} \cdot x$ and $\tilde{g} \cdot y$ lie on the same $\Kad$-orbit. This determines an action of~$Q_\theta(G)$ on $(\Op \cap \s)/K$, which is the one featured in the next statement.
+Let us define an action of~$Q_{\theta}(G)$ on $(\Op \cap \s)/K$. First, the adjoint action of~$\Gad$ on~$\g$ preserves both $\Op$ and~$\s$. Second, the action of~$K=G^\theta$ on $\Op \cap \s$ is trivial on~$Z_K=Z^\theta$, and factors through an action of~$\Kad$. It is then easy to check that if two elements of $\Op \cap \s$ lie in on the same $\Kad$-orbit, then for every $g \in \Gad^{\theta_{\ad}}$, the elements  ${g} \cdot x$ and ${g} \cdot y$ lie on the same $\Kad$-orbit. This determines an action of~$Q_\theta(G)$ on $(\Op \cap \s)/K$, which is the one featured in the next statement.
 
 \begin{proposition}\label{prop:action_on_K_orbits}
 \begin{enumerate} 
@@ -415,13 +415,13 @@ Let us define an action of~$Q_{\theta}(G)$ on $(\Op \cap \s)/K$. First, the adjo
 
 The proof of~(1) is exactly the same as that  to that of Proposition~\ref{prop:action_on_real_orbits}(1), replacing~$\sigma$ by the Cartan involution $\theta$.
 
-As for~(2), it is a consequence of the precise definition of the associated variety. This uses filtrations of the universal enveloping algebra of~$\g$ which are all invariant under $\Gad^{\theta_{\ad}}$: see for instance the Introduction of~\cite{vogan_bowdoin}. Inspecting the definitions in \emph{loc. cit.} it becomes clear that the map $\pi \mapsto \AV(\pi)$, taking a large discrete series $(\g,K)$-module  (or rather its equivalence class) to its associated variety, is equivariant under~$Q_{\theta}(G)$, proving~(2). 
+As for~(2), it follows directly from the definition of the associated variety. This uses filtrations of the universal enveloping algebra of~$\g$ which are all invariant under $\Gad^{\theta_{\ad}}$: see for instance the Introduction of~\cite{vogan_bowdoin}. Inspecting the definitions in \emph{loc. cit.} it becomes clear that the map $\pi \mapsto \AV(\pi)$, taking a large discrete series $(\g,K)$-module  (or rather its equivalence class) to its associated variety, is equivariant under~$Q_{\theta}(G)$, proving~(2). 
 \qed
 
 
 \section{Explicit versions of the dictionary}\label{sec:explicit}
 
-\subsection{From Whittaker data to real orbits ((2) $\leftrightarrow$ (4))}
+\subsection{Whittaker data to real orbits ((2) $\leftrightarrow$ (4))}
 
 First we describe the set of Whittaker data more explicitly.
 Let $B$ be a Borel subgroup of $G$. Let $N$ be the nilradical of $B$, and $\overline N$ the opposite
@@ -439,43 +439,14 @@ In this case we write $(B(\R),X)$ for the Whittaker datum $(B(\R),\psi_X)$.
 It is clear that $(B(\R),X)\mapsto G(\R)\cdot X$ is a bijection between Whittaker data and
 $(\Op(\R)\cap i\g(\R))/G(\R)$. The main result of \cite{matumoto} (Theorem A) says:
 
-\begin{lemma}
+\begin{lemma}\label{lem:matumoto}
 The bijection (2)$\leftrightarrow$(4) takes the Whittaker datum $(B(\R),X)$ to
 the principal orbit $G(\R)\cdot X$. 
  \end{lemma} 
 
 
 
-\subsection{Connection between ((3) $\leftrightarrow$ (4)) and the Kostant--Sekiguchi correspondence } 
-
-
-\begin{lemma} The bijection (3)--(4) is induced by the Kostant--Sekiguchi correspondence.
-\end{lemma} 
-
-\begin{proof} If we allow ourselves to use deep results, then this is a particular case of the main theorem of~\cite{SV1} (Theorem 1.4). In a perfect world, we could also give a more elementary argument, using the description of the Kostant--Sekiguchi correspondence in~\cite{galois} and the descriptions of the actions above; but  I'm not sure it's possible to do it without encountering a basepoint issue. Another possibility, suggested by Jeff, is to extract it from  arguments in Adams--Kaletha (e.g. the fact that $\WF(\pi)$ is the asymptotic cone of the $G(\R)$-orbit of the HC parameter of~$\pi$, and the connection with the Kostant section). \textcolor{red}{AA (27-III-2024): I think this last strategy should indeed work, but there are details to discuss with Jeff to complete the argument, and if everything turns out OK then  I'll write up the proof here.}\end{proof}
-
-As a consequence we can make the bijection (3) $\leftrightarrow$ (4) explicit, following \cite[Section~1]{avav}.
-
-
-Suppose $E_\R\in \Op\cap i\g(\R)$. Then we may choose an $SL(2)$-triple $(H_\R,E_\R,F_\R)$ with $F_\R$  contained in $i\g(\R)$,
-which implies $H_\R\in \g(\R)$. 
-After conjugating by~$G(\R)$ we may further assume $\theta(E_\R)=-F_\R$.
-The Sekiguchi correspondence takes the $G(\R)$-orbit of~$E_\R$ to the $K$-orbit of
-$$
-E_\theta=\frac12(-iE_\R-iF_\R+H_\R)\in \N\cap \s.
-$$
-
-
-Computing the map in the other direction goes as follows.
-Suppose $E_\theta\in \Op\cap\s$. Choose an $SL(2)$-triple  $(E_\theta H_\theta,F_\theta)$ with
-$F_\theta\in\s$, which implies $H_\theta\in\k$. After conjugating by $K$ we may further assume $\sigma(E_\theta)=F_\theta$.
-Then the Sekiguchi correspondence takes the $K$-orbit of $E_\theta$ to the $G(\R)$-orbit of 
-$$
-E_\R=\frac i2(E_\theta-F_\theta-H_\theta)\in\N\cap i\g(\R).
-$$
-
-
-\subsection{From large discrete series to $K$-orbits ((1) $\leftrightarrow$ (3))}
+\subsection{Large discrete series to $K$-orbits ((1) $\leftrightarrow$ (3))}
 
 Suppose $\pi$ is a  discrete series representation. Choose a compact Cartan subgroup $T$, and let
 $\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$. Let $\Delta$ be the set of roots of $\t$ in $\g$, 
@@ -510,7 +481,117 @@ By~\cite{kostant_tds} $E_\pi$ is a regular nilpotent element, so the closure of 
 
 
 
-\subsection{From large discrete series to real orbits ((1) $\leftrightarrow$ (4))}
+\subsection{Large discrete series to real orbits ((1) $\leftrightarrow$ (4))}
+
+
+Suppose $\pi$ is a discrete series representation.
+Choose a compact Cartan subgroup $T$, and let $\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$.
+Identify $\lambda$ with an element $H_\pi\in i\t\subset i\g$ using the isomorphism $\t\simeq \t^*$ induced by the Killing form. 
+Define
+\begin{equation} \label{semisimple_orbit_HC} \mathcal{O}_{\pi}=\quad \text{$G(\R)$-orbit of the Harish-Chandra parameter $H_\pi$}.\end{equation}
+
+Consider the \emph{asymptotic cone} of $\mathcal{O}_\pi$:
+\[ \AC(\mathcal{O}_\pi) = \dots \]
+
+\begin{lemma} \label{lem:WF_and_AC}
+Let~$\pi$ be a discrete series representation of $G(\R)$. The wave-front set $\WF(\pi)$ is equal to the asymptotic cone $\AC(\mathcal{O}_\pi)$.
+\end{lemma}
+
+\subsection{Large discrete series to Whittaker data ((1) $\leftrightarrow$ (2))}
+
+
+We recall a recent result of the first author (JDA) and Kaletha, which spells out the connection between large discrete series and Whittaker data using  {\it Kostant sections}. Let~$X$ be a regular nilpotent element of~$\g$, and suppose~$X$ fits into an $\SL(2)$-triple $(X, H, Y)$. The Kostant section~$\Kostant{X}$ is the affine subspace $X + \mathrm{Cent}_{\g}(Y)$ of~$\g$. It depends on the choice of $\SL(2)$-triple, but if $X \in \g(\R)$, then the $G(\R)$-conjugacy class of~$\Kostant{X}$ depends only on the $G(\R)$-conjugacy class of~$X$. 
+
+
+\begin{proposition}[\cite{adams_kaletha}]\label{JeffTasho_criterion}
+Suppose $\pi$ is a generic discrete series representation of~$G(\R)$. Suppose~$\pi$ be a Whittaker datum for~$G(\R)$, and let~$X \in i\g(\R)$ be a regular nilpotent element such that $\w = \w_X$. 
+Then $\pi$ is $\w$-generic if and only if $\Kostant{X}$ meets $\mathcal{O}_\pi$. 
+\end{proposition}
+
+
+This confirms that  the corresponding statement  in the $p$-adic case \cite{debacker_reeder_generic, kaletha_epipelagic}
+applies to the real case as well.
+
+
+\subsection{Connection between ((3) $\leftrightarrow$ (4)) and the Kostant--Sekiguchi correspondence } 
+
+Theorem~\ref{th:main} gives a bijection between the set $(\Op \cap \s)/K$ of principal nilpotent~$K$-orbits and the set $(\Op \cap i\g(\R))/G(\R)$ of principal nilpotent~$G(\R)$-orbits. 
+
+It is well known that a natural bijection between nilpotent $K$-orbits and nilpotent $G(\R)$-orbits can be defined in more elementary terms. This is the Kostant--Sekiguchi correspondence~\cite{}. Furthermore, it is a deep result of Schmid and Vilonen (the main result of~\cite{SV1}) that the wavefront set and the associated variety are exchanged by this correspondence. (As a historical aside, the Kostant--Sekiguchi correspondence was discovered on the basis that the correspondence $\AV(\pi) \leftrightarrow \WF(\pi)$ might be expressed in elementary terms.)
+
+Therefore, a particular case of Schmid and Vilonen's theorem says: 
+\begin{proposition} \label{Sekiguchi_result} The bijection (3)--(4) is induced by the Kostant--Sekiguchi correspondence.
+\end{proposition} 
+We shall do two things here. First, we will quote a result of \cite{AVAV} which makes this case of the Kostant--Sekiguchi correspondence completely explicit. Second, we shall give a new and elementary proof of Proposition~\ref{Sekiguchi_result}: this avoids the use of Schmid and Vilonen's difficult results, and instead uses the results above (in particular Proposition~\ref{JeffTasho_criterion}). 
+
+
+\subsubsection{The Sekiguchi correspondence for principal nilpotent orbits}
+
+Let spell out the special case of the Sekiguchi correspondence which is of interest here. 
+Suppose $E_\R\in \Op\cap i\g(\R)$. Then we may choose an $SL(2)$-triple $(H_\R,E_\R,F_\R)$ with $F_\R$  contained in $i\g(\R)$,
+which implies $H_\R\in \g(\R)$. 
+After conjugating by~$G(\R)$ we may further assume $\theta(E_\R)=-F_\R$.
+The Sekiguchi correspondence takes the $G(\R)$-orbit of~$E_\R$ to the $K$-orbit of
+$$
+E_\theta=\frac12(-iE_\R-iF_\R+H_\R)\in \N\cap \s.
+$$
+
+Computing the map in the other direction goes as follows.
+Suppose $E_\theta\in \Op\cap\s$. Choose an $SL(2)$-triple  $(E_\theta H_\theta,F_\theta)$ with
+$F_\theta\in\s$, which implies $H_\theta\in\k$. After conjugating by $K$ we may further assume $\sigma(E_\theta)=F_\theta$.
+Then the Sekiguchi correspondence takes the $K$-orbit of $E_\theta$ to the $G(\R)$-orbit of 
+\begin{equation}\label{def_E_R}
+E_\R=\frac i2(E_\theta-F_\theta-H_\theta)\in\N\cap i\g(\R).
+\end{equation}
+
+\subsubsection{A simple proof of Proposition~\ref{Sekiguchi_result}}
+
+Consider the principal nilpotent element~$E_\pi$ defined in~\eqref{e:Epi}. We define another regular nilpotent element  $E_\R$ by using $E_\pi$ as $E_\theta$ in~\eqref{def_E_R}. We know that the associated variety of $\pi$ is the closure of $K \cdot E_\pi$ (Proposition~\ref{}), so the image of $\AV(\pi)$ by the Sekiguchi correspondence is the closure of the $G(\R)$-orbit of $E_\R$. We want to check that $\WF(\pi)$ 
+
+By Lemma~\ref{lem:matumoto} it is enough to check that $\pi$ is $\w$-generic for the Whittaker datum $\w$ corresponding to~$E_\R$. By Proposition~\ref{JeffTasho_criterion} this is the case if and only if the Kostant section $\Kostant{E_\R}$ meets $\mathcal{O}_\pi$. 
+
+Now, we know that $\Kostant{E_\R}=E_\R+\mathrm{Cent}_\g(F_\R)$ contains $E_\R-F_\R = H_\theta$. In general the orbits $\mathcal{O}_\pi$ and $G(\R) \cdot H_\theta$ are disjoint. Nevertheless $H_{\lambda}$ and $H_\theta=[E_\theta, F_\theta]$ are in the same Weyl chamber. Therefore the result follows from:  
+
+\begin{proposition}\label{prop:AC_chamber} Let $\mathcal{C} \subset \t$ be a large open Weyl chamber.
+If $H$ and $H'$ are two points of~$\mathcal{C}$ and if $\mathcal{O}, \mathcal{O}'$ are the   $G(\R)$-orbits of $H$ and $H'$, then $\AC(\mathcal{O})=\AC(\mathcal{O}')$.
+\end{proposition}
+
+We shall prove this in the rest of this section, based on the following lemma.
+
+\begin{lemma}\label{lem:Kost_and_AC} Let $\mathcal{O}$ be a regular semisimple orbit and  let $X$ be a regular nilpotent element. Then $\Kostant{X}$ meets~$\mathcal{O}$ if and only if $X$ is in the asymptotic cone~$\AC(\mathcal{O})$. 
+\end{lemma}
+\begin{proof} \textcolor{red}{See if we spell it all out (keeping in mind that half of it is in the paper with Tasho, but should probably be included for convenience since part of the arguments are similar). Or maybe it's actually possible to give just a reference to Fresse--Mehdi.} \end{proof}
+
+
+\begin{lemma}\label{lem:AC_containment} Let~$\Omega$ be a regular nilpotent $G(\R)$-orbit, and let $\mathcal{E}_\Omega \subset \g$ be the union of all regular semisimple orbits~$\mathcal{O}$ such that $\AC(\mathcal{O})$ contains~$\Omega$. Then $\mathcal{E}_\Omega$ is open. 
+\end{lemma}
+
+\begin{proof}
+Let $F$ be an element of~$\Omega$, and let $\mathcal{O}$  be a regular semisimple orbit such that $\AC(\mathcal{O})$ contains~$\Omega$.
+Then $\Kostant{F}$ meets $\mathcal{O}$ by  Lemma~\ref{lem:Kost_and_AC}. 
+Fix $X$ in $\mathcal{O} \cap \Kostant{F}$.
+We have $X =F+Y$ where $Y$ belongs to the centralizer $\mathrm{Cent}_\g(F)$.
+Since this centralizer is transverse to the $G(\R)$-orbits and has dimension $\dim(\g(\R))-\dim(\t(\R))$,
+there exists an open neighborhood of~$X$ consisting of (regular semisimple) orbits  which meet $\Kostant(F)$.
+Using Lemma~\ref{lem:Kost_and_AC} again, we see that all those orbits $\mathcal{O}'$ satisfy $F \in \AC(\mathcal{O}')$,
+which implies that $\Omega = G(\R) \cdot F$ is contained in $\AC(\mathcal{O}')$.
+This proves that $\mathcal{E}_\Omega$ contains an open neighborhood of any of its points, hence is open.   \end{proof}
+
+
+Let us prove Proposition~\ref{prop:AC_chamber}. 
+
+Given an element $H$ of $\mathcal{C}$ we shall write $\mathcal{O}_H$ for the $G(\R)$-orbit of~$H$. For any regular nilpotent orbit~$\Omega$ let $E^{\mathcal{C}}_\Omega$  denote the set of $H \in \mathcal{C}$ such that $\AC(\mathcal{O}_H)$ contains $\Omega$; byLemma~\ref{lem:AC_containment}  we know that   $E^{\mathcal{C}}_\Omega$ is an open subset of~$\mathcal{C}$. 
+
+Now let $\mathcal{S}$ be the unit sphere of $\t$ for the norm induced by the Killing form, and $\mathcal{S} \cap \mathcal{C}$ be the intersection of $\mathcal{S}$ with the given chamber. This is an open subset of $\mathcal{S}$. The previous arguments show that the the radial projection $\mathcal{S}_{\Omega}$ of  $E^{\mathcal{C}}_\Omega$ on $\mathcal{S}$ is an open subset of $\mathcal{S} \cap \mathcal{C}$. 
+
+Given regular nilpotent orbits $\Omega$ and $\Omega'$, we deduce that $\mathcal{S}_\Omega \cap \mathcal{S}_{\Omega'}$ is an open subset of the $\mathcal{S} \cap \mathcal{C}$.
+
+Now consider the set $\Sigma$ of all points on $\mathcal{S} \cap \mathcal{C}$ which arise as the radial projection of the Harish-Chandra parameter~$H$ of some large discrete series representation. Since the Harish-Chandra parameters for discrete series are (a translate of) an integral lattice, the set $\Sigma$ is dense in $\mathcal{S} \cap \mathcal{C}$. Therefore if the open set $\mathcal{S}_\Omega \cap \mathcal{S}_{\Omega'}$ is nonempty, there must exist at least one large discrete series representation~$\pi$ whose Harish-Chandra projects to $\mathcal{S}_\Omega \cap \mathcal{S}_{\Omega'}$. By Lemma~\ref{lem:WF_and_AC} this means $\Omega$ and $\Omega'$ must be contained in $\WF(\pi)$, which implies $\Omega = \Omega'$ since the wavefront set is the closure of a single orbit. 
+
+We conclude that if $\Omega \neq \Omega'$, then $\mathcal{S}_\Omega$ and $\mathcal{S}_\Omega$ are disjoint, and therefore $\mathcal{E}^\t_{\Omega}$ and $\mathcal{E}^t_{\Omega'}$ are disjoint open subsets of~$\mathcal{C}$. Since $\mathcal{C}$ is connected and equal to the union of all subsets $\mathcal{E}^{\mathcal{C}}_{\Omega}$, the chamber $\mathcal{C}$ must be equal to a single $\mathcal{E}^\t_\Omega$. This concludes the proof of Proposition~\ref{prop:AC_chamber}, and therefore also of Proposition~\ref{Sekiguchi_result}.
+
+
+\subsection{Where to put this, if we keep it?}
 
 
 There are several ways to describe this bijection.\footnote{AA 23-II-2024: I think we should mention the version with the asymptotic cone of the orbit of~$H_\pi$, which is extremely clean and concrete. } We choose to compose the maps (1)$\leftrightarrow$(3)$\leftrightarrow$(4).
@@ -536,23 +617,6 @@ $$
 $$
 Then $\pi$ is the discrete series representation in $\Pi$ whose Harish-Chandra parameter is dominant for $\Delta^+$. 
 \end{lemma}
-
-We can also express (1)$\mapsto$(4) using the {\it Kostant section}. Recall that if~$X$ is a regular nilpotent element of~$\g$ and fits into an $\SL(2)$-triple $(X, H, Y)$, the Kostant section~$\Kostant{X}$ is the affine subspace $X + \mathrm{Cent}_{\g}(Y)$ of~$\g$. It depends on the choice of $\SL(2)$-triple, but if $X \in \g(\R)$, then the $G(\R)$-conjugacy class of~$\Kostant{X}$ depends only on the $G(\R)$-conjugacy class of~$X$. 
-
-Suppose $\pi$ is a discrete series representation.
-Choose a compact Cartan subgroup $T$, and let $\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$.
-Identify $\lambda$ with an element $H_\pi\in i\t\subset i\g$ using the isomorphism $\t\simeq \t^*$ induced by the Killing form. 
-
-\begin{proposition}[\cite{adams_kaletha}]
-Suppose $\pi$ is a generic discrete series representation. Then $\pi$ is $\w$-generic
-for a unique Whittaker datum $\w$.
-Write $\w=\w_X$ for some regular nilpotent element $X\in i\g(\R)$.
-Then $H_\pi$ is $G(\R)$-conjugate to an element of the Kostant section of $X$.\footnote{AA 23-II-2024: would probably be useful to explain the connection with $\pi \mapsto \WF(\pi)$ in more detail...\\ AA 27-III-2024: furthermore, if the Kostant section is used in the proof that $\AV \leftrightarrow \WF$ coincides with Sekiguchi, then we should move this subsection to an earlier place, and then probably this discussion will have to be reworked.  }
-\end{proposition}
-
-
-This confirms that  the corresponding statement  in the $p$-adic case \cite{debacker_reeder_generic, kaletha_epipelagic}
-applies to the real case as well.
 
 \bibliographystyle{plain}
 \bibliography{Refs}
