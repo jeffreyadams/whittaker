@@ -136,7 +136,7 @@
 \newcommand{\GK}{\mathrm{GK}}
 \newcommand{\Op}{\O_p}
 \newcommand{\Kostant}[1]{\mathcal{K}(#1)}
-
+\newcommand{\ECom}{\mathcal{E}^{\mathcal{C}}_\Omega}
 \begin{document}
 \title{Whittaker Models for Real Groups}
 \author{Jeffrey Adams \& Alexandre Afgoustidis}
@@ -490,12 +490,14 @@ Identify $\lambda$ with an element $H_\pi\in i\t\subset i\g$ using the isomorphi
 Define
 \begin{equation} \label{semisimple_orbit_HC} \mathcal{O}_{\pi}=\quad \text{$G(\R)$-orbit of the Harish-Chandra parameter $H_\pi$}.\end{equation}
 
-Consider the \emph{asymptotic cone} of $\mathcal{O}_\pi$:
-\[ \AC(\mathcal{O}_\pi) = \dots \]
+Consider the \emph{asymptotic cone} of $\mathcal{O}_\pi$ (see e.g. \cite[Section 3]{AVAV}) :
+\[ \AC(\mathcal{O}_\pi) = \left\{ v \in \g \ : \ \text{$\exists (\varepsilon_n, x_n)\in (\R_+ \times \mathcal{O}_\pi)^\mathbb{N}$ such that $\varepsilon_n \to 0$ and $\varepsilon_n x_n \to v$}  \right\}. \]
 
 \begin{lemma} \label{lem:WF_and_AC}
 Let~$\pi$ be a discrete series representation of $G(\R)$. The wave-front set $\WF(\pi)$ is equal to the asymptotic cone $\AC(\mathcal{O}_\pi)$.
 \end{lemma}
+
+In Section~\ref{sec:alternate_WF} below we will  give another simple description of~$\WF(\pi)$, based on the description of $\AV(\pi)$ in the previous paragraph and on the Sekiguchi correspondence. 
 
 \subsection{Large discrete series to Whittaker data ((1) $\leftrightarrow$ (2))}
 
@@ -527,7 +529,8 @@ We shall do two things here. First, we will quote a result of \cite{AVAV} which 
 
 \subsubsection{The Sekiguchi correspondence for principal nilpotent orbits}\label{sec:concrete_sek}
 \footnote{AA 2024-IV-15: should correct the formulas here.}
-Let us spell out the special case of the Sekiguchi correspondence which is of interest here. 
+Let us spell out the special case of the Sekiguchi correspondence which is of interest here. We follow~\cite[Section~2]{AVAV}.
+
 Suppose $E_\R\in \Op\cap i\g(\R)$. Then we may choose an $SL(2)$-triple $(H_\R,E_\R,F_\R)$ with $F_\R$  contained in $i\g(\R)$,
 which implies $H_\R\in \g(\R)$. 
 After conjugating by~$G(\R)$ we may further assume $\theta(E_\R)=-F_\R$.
@@ -582,18 +585,18 @@ which implies that $\Omega = G(\R) \cdot F$ is contained in $\AC(\mathcal{O}')$.
 This proves that $\mathcal{E}_\Omega$ contains an open neighborhood of any of its points, hence is open.   \end{proof}
 
 
-Let us prove Proposition~\ref{prop:AC_chamber}. Given an element $H$ of $\mathcal{C}$ we shall write $\mathcal{O}_H$ for the $G(\R)$-orbit of~$H$. For any regular nilpotent orbit~$\Omega$ let $E^{\mathcal{C}}_\Omega$  denote the set of $H \in \mathcal{C}$ such that $\AC(\mathcal{O}_H)$ contains $\Omega$; by Lemma~\ref{lem:AC_containment}  we know that   $E^{\mathcal{C}}_\Omega$ is an open subset of~$\mathcal{C}$. 
+Let us prove Proposition~\ref{prop:AC_chamber}. Given an element $H$ of $\mathcal{C}$ we shall write $\mathcal{O}_H$ for the $G(\R)$-orbit of~$H$. For any regular nilpotent orbit~$\Omega$ let $\ECom$  denote the set of $H \in \mathcal{C}$ such that $\AC(\mathcal{O}_H)$ contains $\Omega$; by Lemma~\ref{lem:AC_containment}  we know that   $\ECom$ is an open subset of~$\mathcal{C}$. 
 
 Now let $\mathcal{S}$ be the unit sphere of $\t$ for the norm induced by the Killing form, and $\mathcal{S} \cap \mathcal{C}$ be the intersection of $\mathcal{S}$ with the given chamber. This is an open subset of $\mathcal{S}$. The previous arguments show that the the radial projection $\mathcal{S}_{\Omega}$ of  $E^{\mathcal{C}}_\Omega$ on $\mathcal{S}$ is an open subset of $\mathcal{S} \cap \mathcal{C}$. 
 
 Given regular nilpotent orbits $\Omega$ and $\Omega'$, we deduce that $\mathcal{S}_\Omega \cap \mathcal{S}_{\Omega'}$ is an open subset of the $\mathcal{S} \cap \mathcal{C}$.
 
-Now consider the set $\Sigma$ of all points on $\mathcal{S} \cap \mathcal{C}$ which arise as the radial projection of the Harish-Chandra parameter~$H$ of some large discrete series representation. Since the Harish-Chandra parameters for discrete series are (a translate of) an integral lattice, the set $\Sigma$ is dense in $\mathcal{S} \cap \mathcal{C}$. Therefore if the open set $\mathcal{S}_\Omega \cap \mathcal{S}_{\Omega'}$ is nonempty, there must exist at least one large discrete series representation~$\pi$ whose Harish-Chandra projects to $\mathcal{S}_\Omega \cap \mathcal{S}_{\Omega'}$. By Lemma~\ref{lem:WF_and_AC} this means $\Omega$ and $\Omega'$ must be contained in $\WF(\pi)$, which implies $\Omega = \Omega'$ since the wavefront set is the closure of a single orbit. 
+Now consider the set $\Sigma$ of all points on $\mathcal{S} \cap \mathcal{C}$ which arise as the radial projection of the Harish-Chandra parameter~$H$ of some large discrete series representation. Since the Harish-Chandra parameters for discrete series are (a translate of) an integral lattice, the set $\Sigma$ is dense in $\mathcal{S} \cap \mathcal{C}$. Therefore if the open set $\mathcal{S}_\Omega \cap \mathcal{S}_{\Omega'}$ is nonempty, there must exist at least one large discrete series representation~$\pi$ whose Harish-Chandra projects to $\mathcal{S}_\Omega \cap \mathcal{S}_{\Omega'}$. By Lemma~\ref{lem:WF_and_AC} this means $\Omega$ and $\Omega'$ must be contained in $\WF(\pi)$, which implies $\Omega = \Omega'$ since the wavefront set is the closure of a single orbit if $\pi$ is a large discrete series. 
 
-We conclude that if $\Omega \neq \Omega'$, then $\mathcal{S}_\Omega$ and $\mathcal{S}_\Omega$ are disjoint, and therefore $\mathcal{E}^\t_{\Omega}$ and $\mathcal{E}^t_{\Omega'}$ are disjoint open subsets of~$\mathcal{C}$. Since $\mathcal{C}$ is connected and equal to the union of all subsets $\mathcal{E}^{\mathcal{C}}_{\Omega}$, the chamber $\mathcal{C}$ must be equal to a single $\mathcal{E}^\t_\Omega$. This concludes the proof of Proposition~\ref{prop:AC_chamber}, and therefore also of Proposition~\ref{Sekiguchi_result}.
+We conclude that if $\Omega \neq \Omega'$, then $\mathcal{S}_\Omega$ and $\mathcal{S}_\Omega$ are disjoint, and therefore $\ECom$ and $\mathcal{E}^{\mathcal{C}}_{\Omega'}$ are disjoint open subsets of~$\mathcal{C}$. Since $\mathcal{C}$ is connected and equal to the union of all subsets $\mathcal{E}^{\mathcal{C}}_{\Omega}$, the chamber $\mathcal{C}$ must be equal to a single $\ECom$. This concludes the proof of Proposition~\ref{prop:AC_chamber}, and therefore also of Proposition~\ref{Sekiguchi_result}.
 
 
-\subsubsection{Where to put this, if we keep it?}
+\subsubsection{A simple description of the wavefront set}\label{sec:alternate_WF}
 
 
 As we saw the correspondence $\pi \leftrightarrow \WF(\pi)$ can be described using the asymptotic cone of the semisimple orbit of the Harish-Chandra parameter. We used this in the proof of Proposition~\ref{Sekiguchi_result}. Now, the results of Sections~\ref{sec:concrete_sek} and~\ref{sec:sekiguchi_proof} provide another description of $\WF(\pi)$ from the Harish-Chandra parameter: we can compose the maps (1)$\leftrightarrow$(3)$\leftrightarrow$(4). This gives the following rather concrete conclusion.
