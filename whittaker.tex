@@ -212,6 +212,19 @@ This is the closure of the principal nilpotent orbit $\Op$.
 
 We work main in the setting of $(\g,K)$-modules.
 
+\subsubsection*{Representations} 
+
+We work mostly in the  algebraic setting of
+$(\g,K)$-modules. However, mainly for the analytic wave front set
+invariant we need to consider representations of $G(\R)$ on a Banach
+space. Suppose $(\pi,V)$ is an irreducible representation of $G(\R)$ 
+ where $V$ is a Banach space. The underlying
+$(\g,K)$-module is on the space of $K$-finite vectors in
+$V$. Conversely if $\pi$ is an irreducible $(\g,K)$-module it can be
+realized as the $K$-finite vectors of some  Banach space
+representation.
+
+
  \subsection{The invariants}
 
 
@@ -230,8 +243,15 @@ $$
 
 For all of these facts see \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
 
-Another invariant of an irreducible $(\g, K)$-module~$\pi$ is the \emph{wave-front set} of $\pi$, written $\WF(\pi)$. It is the union of a (finite) set of nilpotent $G(\R)$ orbits in
-$i\g(\R)^*=i\Hom_\R(\g(\R),\R)$. See \cite{howe_wave_front}, \cite{bv_local_structure}, \cite{HarrisHeOlafsson}.
+Now suppose $(\pi,V)$ is an irreducible representation of $G(\R)$. 
+See \cite{howe_wave_front}, \cite{bv_local_structure},
+\cite{HarrisHeOlafsson} for the definition of the \emph{wave-front
+  set} $\WF(\pi)$. This is an analytic invariant determined by the
+singularities of the global character of $\pi$ near the identity. 
+It is a closed $G(\R)$-invariant subset of the nilpotent cone in
+$i\g(\R)^*$. As such it is the union of a finite number of nilpotent $G(\R)$-orbits.
+
+
 
 \subsection{The invariants for generic discrete series} 
 
@@ -334,6 +354,19 @@ This is a group of outer automorphisms of $K$.
 An important fact is that $Q_\sigma(G)$ and $Q_\theta(G)$ are canonically isomorphic. This is a generalization of the well known fact that
 $G(\R)/G(\R)_0\simeq K/K_0$ where the subscript $0$ denotes identity component.
 
+\begin{lemma}
+There is a canonical isomorphism $\phi:Q_\sigma(G)\simeq Q_\theta(G)$ defined as follows.
+Suppose $x\in Q_\sigma(G)=(\Gad)^\sigma/(G^\sigma)_\ad$.
+We can choose a representative $g\in (\Gad)^\sigma$ of $x$ which is also in $(\Gad)^\theta$.
+Define $\phi(x)$ to be the image of $g$ in $Q_\theta(G)=(\Gad)^\theta/(G^\theta)_\ad$.
+This is independent of the choice of $g$ and $\phi$ is an isomorphism of pointed sets.
+\end{lemma}
+
+Based on the Lemma we define $Q(G)$ to be $Q_\sigma(G)$ or $Q_\theta(G)$, depending on the setting.
+
+[This is an explicit version of the group cohomology argument. Some detail here...]
+
+
 \subsubsection{Interpretation in terms of group cohomology}
 
 The groups $Q_{\sigma}(G)$ and $Q_{\theta}(G)$ are instances of the following construction: if~$\tau$ is an involutive automorphism of~$G$, then it preserves~$Z$ and induces an involution~$\tau_{\ad}$ of~$\Gad$; we may then set $Q_{\tau}(G)=\Gad^{\tau_{\ad}}/(G^{\tau})_{\ad}$, where $(G^{\tau})_{\ad}$ is the image of~$G^{\tau}$ in~$\Gad$. In this situation~$Q_{\tau}(G)$ has a simple interpretation in Galois cohomology, which we now recall. 
@@ -381,10 +414,13 @@ As discussed after~\eqref{interp_q_cohomology}, this is actually an isomorphism 
 
 
 
-\subsection{Actions of $Q_\sigma(G)$ on representations and invariants}
+\subsection{Action of $Q(G)$ on representations and invariants}
 
 
-\subsubsection*{On representations} 
+
+
+
+
 Since~$Q_\sigma(G)$ can be viewed as a group of automorphisms of~$G(\R)$,  it has a canonical action on equivalence classes of representations of~$G(\R)$, and therefore on~$(\g, K)$-modules. This action preserves  the property of being large\footnote{AA 15-II-2024: should say something about this using the fact that it comes from automorphisms, either here or in the section on large reps}. It also preserves $L$-packets by~\cite[Lemma 6.18]{Contragredient}, and acts transitively on an~$L$-packet\footnote{AA 01-IV-2023: this point was missing, and I think details should be included. I think the transitivity is easy using  the description of discrete series L-packets in the Congragredient paper in terms of Harish-Chandra parameters, plus the fact that every element of~$Q_{\sigma}(G)$ has a representative in the Weyl group of a given elliptic maximal torus. The point about the action preserving $L$-packets also follows from this, I think; and perhaps it gives a better argument for the preservation of $L$-packets than [Contragredient, Lemma 6.18], which looks better suited to the $\theta$-version.}.
 
 \subsubsection*{On~Whittaker data}  By definition of Whittaker data, the action of~$Q_{\sigma}(G)$ on $G(\R)$ induces a canonical action on the set of Whittaker data. By \cite[(14.15)]{abv} this action is simply transitive. 
