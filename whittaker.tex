@@ -130,6 +130,7 @@
 \newcommand{\s}{\mathfrak s}
 \newcommand{\w}{\mathfrak w}
 \newcommand{\AV}{\mathrm{AV}}
+\newcommand{\Wh}{\mathrm{Wh}}
 \newcommand{\WF}{\mathrm{WF}}
 \newcommand{\AC}{\mathrm{AC}}
 \newcommand{\AVann}{\mathrm{AV}_{\mathrm{ann}}}
@@ -144,46 +145,72 @@
 
 Let $G$ be a connected complex reductive group, defined over $\R$, and consider the group $G(\R)$ of real points. 
 
-Suppose $\pi$ is an irreducible representation of~$G(\R)$. Recall $\pi$ has a \emph{Whittaker model} when there exists a pair $(B(\R), \chi)$ where 
+Suppose $\pi$ is an irreducible representation of~$G(\R)$.
+We say $\pi$ has a {\it Whittaker model}, or is {\it generic},  if
+$\pi$ embeds into the induced
+representation $\mathrm{Ind}_{N(\R)}^{G(\R)}(\chi)$ for some $(B,\eta)$ satisfying:
+We consider pairs
 \begin{enumerate}[(i)]
 \item $B$ is a Borel subgroup of~$G$ defined over~$\R$, with real points $B(\R)$,
-\item $\eta$ is a character of the nilpotent radical~$N(\R)$ of~$B(\R)$, subject to the condition that~$\eta$ is nontrivial on each simple root space,
+\item $\eta$ is a character of the nilpotent radical~$N(\R)$ of~$B(\R)$, subject to the condition that~$\eta$ is nontrivial on each simple root space.
 \end{enumerate}
-such that~$\pi$ embeds into the induced representation $\mathrm{Ind}_{N(\R)}^{G(\R)}(\chi)$. Of course this can happen if and only if there exists a Borel subgroup $B \subset G$ satisfying~(i); by definition this condition means~$G$ is \emph{quasisplit}, which we assume from now on. 
+The existence of a Borel subgroup satisfying (i) is the definition of $G$ being quasisplit, which we assume holds from now on.
+Clearly this condition only depends on the conjugacy class of the pair
+so we refer to consider pairs $(B,\eta)$ modulo conjugation by $G(\R)$, and refer to such a conjugacy class as a 
+as a {\it Whittaker datum}.
+This is a small finite set.
+If $\w$ is a Whittaker datum, it makes sense to talk about $\pi$ having a $\w$-Whittaker model. We let $\Wh(\pi)$  be the set of
+Whittaker data $\w$ such that $\pi$ has a $\w$-Whittaker model.
 
-We also say~$\pi$ is \emph{generic} when it has a Whittaker model. In that case, the pair $(B, \chi)$ is not uniquely determined by~$\chi$. However the $G(\R)$-conjugacy class of $(B(\R), \eta)$ is uniquely determined by the equivalence class of~$\pi$. We will call it the Whittaker datum attached to~$\pi$, denoted $\mathfrak{w}(\pi)$. More generally, by a  {\it Whittaker datum} we will mean a $G(\R)$-conjugacy class of pairs  $(B(\R),\eta)$ satisfying (i)-(ii). 
+The set $\Wh(\pi)$ is
+a useful invariant of generic representations.
+For instance if $\Pi$ is a tempered $L$-packet for $G(\R)$ and $\w$ is a Whittaker datum then $\Pi$ contains a unique representation $\pi$
+having a $\w$-Whittaker model. This plays a role in describing the internal structure of $L$-packets.
+If $\Pi$ is a discrete series $L$-packet then each generic representation in the packet has a unique
+Whittaker model, so the generic representation in $\Pi$ are parametrized by their Whittaker models.
+It is conjectured that these properties hold in the $p$-adic case as well, and this is known in many cases.
 
-We may view $\mathfrak{w}(\pi)$ as a useful invariant of generic representations. For instance, suppose~$\pi$ is a discrete series representation of~$G(\R)$. Then $\mathfrak{w}(\pi)$ singles out~$\pi$ among the discrete series representations of~$G(\R)$ having  the same infinitesimal and central characters. In the language of the local Langlands correspondence \cite{Langlands_CIRRAC, Contragredient}, this means the Whittaker datum singles out~$\pi$ within its $L$-packet. 
+In the case of real groups there are other invariants attached to an
+irreducible representation $\pi$.  We will be concerned with two of
+them, defined very differently. The first is the \emph{wavefront set} $\WF(\pi)$
+which is an analytic invariant determined by the global character of $\pi$ near the identity.
+The second is the \emph{associated variety} $\AV(\pi)$, which is
+defined  algebraically.
+Both consist of nilpotent elements of the dual of the Lie algebra of~$G$, and are defined as
+coadjoint orbits (of two different kinds).
+The invariants $\Wh(\pi), \WF(\pi)$ and $\AV(\pi)$ are closely related to each other.
 
-More generally, Whittaker data play a subtle but key role in the local Langlands correspondence for reductive groups over arbitrary local fields \cite{Borel, Kaletha_Taibi}, including the nonarchimedean case. For instance, given a Whittaker datum~$\mathfrak{w}$, it is expected that every tempered $L$-packet contains precisely one $\mathfrak{w}$-generic representation, which can be used as a basepoint for the internal structure of the $L$-packet~\cite{Kaletha_genericity}.
+We now focus on the case of a generic discrete series representation
+$\pi$ of $G(\R)$, so $\Wh(\pi)$ is a single Whittaker datum.  In this
+case the invariants $\Wh(\pi), \WF(\pi)$ and $\AV(\pi)$ determine each
+other. This is well known to experts, but not so easy to to extract
+from the literature, especially not if one wants to be explicit about
+how to pass back and forth between the three invariants. The purpose
+of this paper is to give a self-contained account of these matters.
 
-Returning to real groups, there are of course other invariants that one may attach to an irreducible representation~$\pi$. We shall be concerned with two of them, defined using very different (and rather subtle) ideas. The first is the \emph{wavefront set}, which originally comes from microlocal analysis of the matrix coefficients. The second is the \emph{associated variety}, which is defined using algebro-geometric methods. Both consist of nilpotent elements of the dual of the Lie algebra of~$G$, and are defined as coadjoint orbits (of two different kinds). 
-
-Now suppose~$\pi$ is a generic discrete series representation of~$G(\R)$. Then the Whittaker datum $\mathfrak{w}(\pi)$, the wavefront set $\WF(\pi)$ and the associated variety $\AV(\pi)$ basically contain the same information: given one of the three invariants, it is possible to reconstruct the other two. This is well known to the experts, but some aspects of this discussion are not  easy to extract from the literature, especially not if one wants to be explicit about how to pass back and forth between the three invariants. We have felt it worthwhile to give an account of the matter here. 
-
-We shall do two things: 
+More precisely, we will do two things:
 \begin{enumerate}
 \item Give an elementary proof that passage from~$\pi$ to $\mathfrak{w}(\pi)$, $\WF(\pi)$ and $\AV(\pi)$ defines bijections between generic discrete series in an $L$-packet for $G(\R)$, Whittaker data for $G(\R)$, and the appropriate sets of nilpotent orbits;
-\item Given one of the invariants $\mathfrak{w}(\pi)$, $\WF(\pi)$ and~$\AV(\pi)$, explain in the simplest possible terms how to reconstruct the other two. 
+\item Given one of the invariants $\Wh(\pi)$, $\WF(\pi)$ or $\AV(\pi)$, explain in the simplest possible terms how to explicitly reconstruct the other two.
 \end{enumerate}
-Most statements in this note were already known, and we have tried to give new and simplified proofs for as many of them as we could. In the cases where we had to call on more difficult statements from the literature, we tried to give convenient references. 
+Many results in this note are well known. We have tried to give new and simplified proofs for as many of them as we could, and otherwise give convenient references.
 
-\section{Some invariants of irreducible $(\g, K)$-modules}
-
-\footnote{AA 02-IV-2024: I didn't make any effort at polishing this in recent weeks; we should of course rewrite this section once the rest is stable.}
-
-Suppose $\pi$ is an irreducible $(\g,K)$-module. Then we can associate to~$\pi$ several invariants, which depend only on the equivalence class of~$\pi$: the associated variety, the Gelfand---Kirillov dimension, and the wavefront set.  We do not give full definitions, but try to point to convenient places in the literature.\footnote{AA 20-II-2024: of course if we write this, we should maybe add a few basic references for the notions.}
+\section{Some invariants of irreducible representations}
 
 \subsection{Some notation}
 
-Let~$\sigma$ be the anti-holomorphic involution defining~$G(\R)$. 
-Let $\g=\Lie(G), \g(\R)=\Lie(G(\R))$. Choose a Cartan involution $\theta$ for $G$. This means:
+Let~$\sigma$ be the anti-holomorphic involution defining~$G(\R)$.
+Let $\g=\Lie(G), \g(\R)=\Lie(G(\R))$. 
+Choose a Cartan involution $\theta$ for $G$. This means:
 $\theta$ is an algebraic involution, commuting with~$\sigma$,
 and $G(\R)^\theta$ is a maximal compact subgroup of~$G(\R)$. Set $K=G^\theta$, $K(\R)=G(\R)^\theta=K^\sigma$.
-Let $\s$ be the $-1$ eigenspace of $\theta$ acting on~$\g$.
+Let $\s$ be the $-1$ eigenspace of $\theta$ acting on~$\g$
+(we use the same notation for $\sigma,\theta$ lifted to $\g$). 
 
 Let $\N$ be the set of nilpotent elements of $\g$.
 This is the closure of the principal nilpotent orbit $\Op$.
+
+We work main in the setting of $(\g,K)$-modules.
 
  \subsection{The invariants}
 
@@ -206,35 +233,14 @@ For all of these facts see \cite{vogan_bowdoin}, in particular Corollary 4.7 and
 Another invariant of an irreducible $(\g, K)$-module~$\pi$ is the \emph{wave-front set} of $\pi$, written $\WF(\pi)$. It is the union of a (finite) set of nilpotent $G(\R)$ orbits in
 $i\g(\R)^*=i\Hom_\R(\g(\R),\R)$. See \cite{howe_wave_front}, \cite{bv_local_structure}, \cite{HarrisHeOlafsson}.
 
-\subsection{Large representations} Set $N=\dim(\N)=\dim(G)-\mathrm{rank}(G)$. The maximal Gelfand--Kirillov dimension of a representation is $N/2$.
-We say $\pi$ is {\it large} if $\GK(\pi)=N/2$. See \cite[Section~6]{Vogan78}. 
-
-
-\begin{lemma}
-  \label{l:large}
-  The following conditions are equivalent.
-  \begin{enumerate}
-    \item $\pi$ is large;
-\item $\AVann(\pi)=\N=\overline{\Op}$;
-\item $\dim(\AVann(\pi))=N$;
-  \item $\dim(\AV(\pi))=N/2$;
-\item $\GK(\pi)=N/2$;
-
-\end{enumerate}
-\end{lemma}
-See \cite{vogan_bowdoin}.
-
-\subsection{The invariants for large discrete series} 
-
-
-The following uses rather deep results of representation theory.
+\subsection{The invariants for generic discrete series} 
 
 \begin{proposition} \label{invariants_ds}
-Let~$\pi$ be the $(\g, K)$-module for a large discrete series representation of~$G(\R)$.  
+  Suppose $\pi$ is a generic discrete series representation of $G(\R)$. Then:
 \begin{enumerate}[(a)]
-\item There is a unique Whittaker datum~$\mathfrak{w}$ such that~$\pi$ is $\mathfrak{w}$-generic.
-\item $\AV(\pi)$ is the closure of a single $K$-orbit on~$\mathcal{O}_p \cap \mathfrak{s}$.
-\item  $\WF(\pi)$ is the closure of a single $G(\R)$-orbit on $\mathcal{O}_p \cap  i \g(\R)$.
+\item $\Wh(\pi)$ is a single Whittaker datum;
+\item $\AV(\pi)$ is the closure of a single $K$-orbit on~$\mathcal{O}_p \cap \mathfrak{s}$;
+\item  $\WF(\pi)$ is the closure of a single $G(\R)$-orbit on $\mathcal{O}_p \cap  i \g(\R)^*$.
 \end{enumerate}
 \end{proposition}
 
@@ -247,26 +253,49 @@ Part~(b) is one of the main results of~\cite{vogan_bowdoin}: see \cite[Theorem ?
 Part~(c) follows from~\cite{rossmann_limit_orbits}.\footnote{AA 14-II-2024: maybe a little more detail would be welcome, the Rossmann paper does not seem to state the result in these terms.}
 \end{proof}
 
+Because of this result we abuse notation slightly as follows. We say $AV(\pi)=\O$ if $AV(\pi)$ is the closure of the $K$-orbit $\O\subset \s$.
+Similarly we write $\WF(\pi)=\O$ to indicate that $\WF(\pi)$ is the closure of the $G(\R)$-orbit $\O\subset i\g(\R)^*$.
 
 
-\section{The dictionary for large discrete series}
+\subsection{Large representations} Set $N=\dim(\N)=\dim(G)-\mathrm{rank}(G)$. The maximal Gelfand--Kirillov dimension of a representation is $N/2$.
+We say $\pi$ is {\it large} if $\GK(\pi)=N/2$. See \cite[Section~6]{Vogan78}. 
+
+
+\begin{lemma}
+  \label{l:large}
+  The following conditions are equivalent.
+  \begin{enumerate}
+    \item $\pi$ is large;
+\item $\AVann(\pi)=\N=\overline{\Op}$;
+\item $\dim(\AVann(\pi))=N$;
+  \item $\dim(\AV(\pi))=N/2$;
+  \item $\GK(\pi)=N/2$;
+    \item $\pi$ is generic.
+
+\end{enumerate}
+\end{lemma}
+See \cite{vogan_bowdoin}.
+
+
+
+\section{The dictionary for generic discrete series}
 
 
 \subsection{Statement of the results}  
 
 
 
-Given a large discrete series representation~$\pi$ we consider the invariants of~$\pi$ defined by Proposition~\ref{invariants_ds}: a Whittaker datum  $\mathfrak{w}(\pi)$, a $K$-orbit $\AV^\flat(\pi)$ in $\mathcal{O}_p \cap \mathfrak{s}$, and a $G(\R)$-orbit $\WF^\flat(\pi)$ in $(\mathcal{O}_p \cap  i \g(\R))$.
+Given a generic discrete series representation~$\pi$ we consider the invariants of~$\pi$ defined by Proposition~\ref{invariants_ds}: a Whittaker datum  $\Wh(\pi)$, a $K$-orbit $\AV(\pi)$ in $\mathcal{O}_p \cap \mathfrak{s}$, and a $G(\R)$-orbit $\WF(\pi)$ in $(\mathcal{O}_p \cap  i \g(\R))$.
 
 Here is our main statement.
 
 \begin{theorem} \label{th:main} Suppose~$\Pi$ is an $L$-packet of discrete series for~$G(\R)$. 
-The maps $\pi \mapsto \mathfrak{w}(\pi)$, $\pi \mapsto \AV^\flat(\pi)$ and $\pi\mapsto \WF^\flat(\pi)$ induce bijections between:
+The maps $\pi \mapsto \Wh(\pi)$, $\pi \mapsto \AV(\pi)$ and $\pi\mapsto \WF(\pi)$ induce bijections between:
 \begin{enumerate}
-\item[(1)] The set~$\Pi_{\mathrm{large}}$ of large discrete series representations in~$\Pi$ ;
+\item[(1)] The set~$\Pi_{\mathrm{gen}}$ of generic discrete series representations in~$\Pi$ ;
 \item[(2)] The set of Whittaker data for $G(\R)$ ;
-\item[(3)] The set $(\Op \cap \s)/K$ of~$K$-orbits on $\mathcal{O}_p \cap \s$.
-\item[(4)] The set $(\Op \cap i\g(\R))/G(\R)$ of~$G(\R)$-orbits on $\mathcal{O}_p \cap  i \g(\R)$.
+\item[(3)] The set of~$K$-orbits on $\mathcal{O}_p \cap \s$.
+\item[(4)] The set of~$G(\R)$-orbits on $\mathcal{O}_p \cap  i \g(\R)^*$.
 \end{enumerate}
 \end{theorem}
 
@@ -277,22 +306,33 @@ Before embarking on the proof, let us point out that the maps in the theorem are
 Let us now explain the strategy of the proof, which is mainly an exercise in putting together some references that are rather scattered in the literature. What we shall actually do is: introduce a finite group~$Q_\sigma(G)$, and point out that 
 \begin{itemize}
 \item[(i)] it acts simply transitively on the sets~(1)--(4), and 
-\item[(ii)] the maps $\pi \mapsto \mathfrak{w}(\pi)$, $\pi \mapsto \AV^\flat(\pi)$ and $\pi\mapsto \WF^\flat(\pi)$  are equivariant for these actions.
+\item[(ii)] the maps $\pi \mapsto \Wh(\pi)$, $\pi \mapsto \AV(\pi)$ and $\pi\mapsto \WF(\pi)$  are equivariant for these actions.
 \end{itemize}
 The theorem follows immediately from these two observations.\footnote{AA 01-IV-2024 --- perhaps it would be reader-friendly to point out the basic fact on group actions that we are using here: suppose a group $Q$ acts on two sets $A, B$ and let $f\colon A \to B$ be an equivariant map. If $Q$ acts transitively on~$B$  then~$f$ is surjective, and if $Q$ acts transitively on~$A$ and freely on~$B$ then~$f$ is injective.  }
 
 \subsection{The groups $Q_\sigma(G)$ and $Q_{\theta}(G)$}
 
-\subsubsection{Definition of the two groups}Let $Z=Z(G)$ be the center of $G$, and let $\Gad$ be the complex reductive group~$G/Z$. The group $Z(\R)=Z^{\sigma}$ is equal to the center of $G(\R)$. The automorphism~$\sigma$ of~$G$ preserves $Z$, and descends to an automorphism~$\sigma_{\ad}$ of~$\Gad$. We set $\Gad(\R)=\Gad^{\sigma_{\ad}}$; we may view it as the set of inner automorphisms of~$G$ which are defined over~$\R$, and this contains the group $G(\R)_{\mathrm{ad}}=G(\R)/Z(\R)$ as a normal subgroup of finite index\footnote{AA 15-II-2024: is there a trivial way to explain why finite index?}.
-Define 
+\subsubsection{Definition of the two groups}Let $Z=Z(G)$ be the center of $G$, and let $\Gad$ be the complex reductive group~$G/Z$.
+Then $Z(\R)=Z^\sigma$ is the center of $G(\R)$, so we set $\G(\R)_\ad=G(\R)/Z(\R)$.
+On the other hand  $\sigma$ factors to an automorphism, still denoted $\sigma$, of $\Gad$, and we let  $\Gad(\R)=(\Gad)^\sigma$.
+The canononical map $G\rightarrow G/Z$ restricts to a map $G^\sigma\rightarrow (G/Z)^\sigma$, with kernel $Z^\sigma$.
+Hence there is a
+natural injective map $(G^\sigma)_\ad\hookrightarrow (\Gad)^\sigma$, and we define
 $$
-Q_\sigma(G)=\Gad(\R)/G(\R)_{\mathrm{ad}}.
+Q_\sigma(G)=(\Gad)^\sigma/(G^\sigma)_\ad=\Gad(\R)/\G(\R)_\ad.
 $$
-This finite group may be viewed as a group of outer automorphisms of~$G(\R)$. 
+This finite group may be viewed as a group of outer automorphisms of~$G(\R)$.
 
-We shall need a variant of~$Q_{\sigma}(\R)$ in which we replace the real form~$\sigma$ by the Cartan involution~$\theta$. As above, since~$\theta$ is an automorphism of~$G$, it preserves~$Z$,  and induces an involution~$\theta_{\ad}$ of~$\Gad$. Recall $K=G^{\theta}$; consider the intersection $Z_K=Z \cap K$, and set  $K_{\ad}=K/Z_K$. The inclusion  $K \hookrightarrow G$ induces a map $K \to \Gad$, whose image is a subgroup of~$\Gad^{\theta_{\ad}}$ and whose kernel is~$Z_K$. Therefore it factors to an injective morphism $\iota\colon \Kad \hookrightarrow\Gad^{\theta_{\ad}} $, whose image is a normal subgroup of~$\Gad^{\theta_{\ad}}$. Using it we will identify $\Kad$ with a normal subgroup of $\Gad^{\theta_{\ad}}$. Define
-\[ Q_\theta(G) = \Gad^{\theta_{\ad}}/\Kad.\]
-Unlike $Q_{\sigma}(G)$, this group does not have an obvious action on~$G(\R)$. Nevertheless the groups $Q_{\sigma}(G)$ and $Q_{\theta}(G)$ are isomorphic. We will spell out an explicit isomorphism below, using group cohomology arguments.
+A similar discussion applies to the involution $\theta$.
+Then $Z^\theta$ is the center of $K=G^\theta$ and  $\theta$ factors to $\Gad$.
+We define $(G^\theta)_\ad=G^\theta/Z^\theta$ and
+$$
+Q_\theta(G)=(\Gad)^\theta/(G^\theta)_\ad =(\Gad)^\theta/\Kad.
+$$
+This is a group of outer automorphisms of $K$.
+
+An important fact is that $Q_\sigma(G)$ and $Q_\theta(G)$ are canonically isomorphic. This is a generalization of the well known fact that
+$G(\R)/G(\R)_0\simeq K/K_0$ where the subscript $0$ denotes identity component.
 
 \subsubsection{Interpretation in terms of group cohomology}
 
