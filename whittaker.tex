@@ -84,6 +84,7 @@
 \newcommand{\Cent}{\mathrm{Cent}}
 \newcommand{\Stab}{\mathrm{Stab}}
 \newcommand{\I}{\mathcal I}
+\newcommand{\mH}{\mathcal H}
 \renewcommand{\O}{\mathcal O}
 \newcommand{\R}{\mathbb R}
 \newcommand{\C}{\mathbb C}
@@ -145,7 +146,7 @@
 
 Let $G$ be a connected complex reductive group, defined over $\R$, and consider the group $G(\R)$ of real points. 
 
-We consider pairs
+We consider pairs $(B,\eta)$ where 
 \begin{enumerate}[(i)]
 \item $B$ is a Borel subgroup of~$G$ defined over~$\R$, with real points $B(\R)$,
 \item $\eta$ is a character of the nilpotent radical~$N(\R)$ of~$B(\R)$, subject to the condition that~$\eta$ is nontrivial on each simple root space.
@@ -171,7 +172,7 @@ It is conjectured that these properties hold in the $p$-adic case as well, and t
 In the case of real groups there are other invariants attached to an
 irreducible representation $\pi$.  We will be concerned with two of
 them, defined very differently. The first is the \emph{wavefront set} $\WF(\pi)$
-which is an analytic invariant determined by the global character of $\pi$ near the identity.
+which is an analytic invariant.
 The second is the \emph{associated variety} $\AV(\pi)$, which is
 defined  algebraically.
 Both consist of nilpotent elements of the dual of the Lie algebra of~$G$, and are defined as
@@ -182,13 +183,12 @@ We now focus on the case of a generic discrete series representation
 $\pi$ of $G(\R)$, so $\Wh(\pi)$ is a single Whittaker datum.  In this
 case the invariants $\Wh(\pi), \WF(\pi)$ and $\AV(\pi)$ determine each
 other. This is well known to experts, but not so easy to to extract
-from the literature, especially not if one wants to be explicit about
-how to pass back and forth between the three invariants. The purpose
+from the literature. The purpose
 of this paper is to give a self-contained account of these matters.
 
 More precisely, we will do two things:
 \begin{enumerate}
-\item Give an elementary proof that passage from~$\pi$ to $\mathfrak{w}(\pi)$, $\WF(\pi)$ and $\AV(\pi)$ defines bijections between generic discrete series in an $L$-packet for $G(\R)$, Whittaker data for $G(\R)$, and the appropriate sets of nilpotent orbits;
+\item Give an elementary proof that  passage from~$\pi$ to $\mathfrak{w}(\pi)$, $\WF(\pi)$ and $\AV(\pi)$ defines bijections between generic discrete series in an $L$-packet for $G(\R)$, Whittaker data for $G(\R)$, and the appropriate sets of nilpotent orbits;
 \item Given one of the invariants $\Wh(\pi)$, $\WF(\pi)$ or $\AV(\pi)$, explain in the simplest possible terms how to explicitly reconstruct the other two.
 \end{enumerate}
 Many results in this note are well known. We have tried to give new and simplified proofs for as many of them as we could, and otherwise give convenient references.
@@ -210,24 +210,27 @@ This is the closure of the principal nilpotent orbit $\Op$.
 
 \subsubsection*{Representations} 
 
-We need to pass back and forth between representations of $G(\R)$ and $(\g,K)$-modules. 
-See ? for details. 
+We need to pass back and forth between representations of $G(\R)$ and $(\g,K)$-modules.
+See \cite{greenbook} for details.
 
-Suppose $(\pi,V)$ is an irreducible representation of $G(\R)$  on a Hilbert space. 
+Suppose $\pi$ is an irreducible admissible representation of $G(\R)$  on a Hilbert space. 
 The underlying
 $(\g,K)$-module is on the space of $K$-finite vectors in
 $V$. Conversely if $\pi$ is an irreducible $(\g,K)$-module it can be
-realized as the $K$-finite vectors of a Hilbert space representation, which we 
+realized as the $K$-finite vectors of a Hilbert space representation, which we
 refer to as the Hilbert space globalization of $\pi$.
 
 \subsection{The invariants}
+We recall some results from,  \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
 
+Suppose $\pi$ is an irreducible $(\g,KL)$-module.
 Let $I_\pi$ be the annihlator of $\pi$ in the universal enveloping algebra.
-Let $\AVann(\pi)$ be the associated variety of $I_\pi$. 
+Let $\AVann(\pi)$ be the associated variety of $I_\pi$.
 This is the closure of a single complex nilpotent orbit $\O$.
+The associated variety of $\pi$, denoted $\AV(\pi)$, is a closed, $K$-invariant set in $\s$, so it is a finite union of
+nilpotent $K$-orbits on $\s$.
 
-The associated variety of $\pi$, denoted $\AV(\pi)$, is the  the union of a set of
-$K$-orbits on $\O\cap\s$.
+
 
 The Gelfand---Kirillov dimension~$\GK(\pi)$ of~$\pi$ can be defined in several different ways~\cite{vogan-gelfand-kirillov}; but one of them is
 $$
@@ -235,9 +238,7 @@ GK(\pi)=\dim(\AV(\pi))=\frac12\dim(\AVann(\pi)).
 $$
 (All dimensions are complex unless otherwise stated.)
 
-For all of these facts see \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
-
-Now suppose $(\pi,V)$ is an irreducible representation of $G(\R)$ on a Hilbert space. 
+Now suppose $\pi$ is an irreducible admissible representation of $G(\R)$ on a Hilbert space $\mH$. 
 See \cite{howe_wave_front}, \cite{bv_local_structure},
 \cite{HarrisHeOlafsson} for the definition of the \emph{wave-front
   set} $\WF(\pi)$. This is an analytic invariant determined by the
@@ -245,15 +246,14 @@ singularities of the global character of $\pi$ near the identity.
 It is a closed $G(\R)$-invariant subset of the nilpotent cone in
 $i\g(\R)^*$. As such it is the union of a finite number of nilpotent $G(\R)$-orbits.
 
+We consider the space $\mH^\infty$ of smooth vectors in $\mH$, and its dual $\mH^{-\infty}$. We say $\pi$ has a $(B,\eta)$-Whittaker model
+if there exists $v\in \mH^{-\infty}$ such that $\pi(n)(v)=\eta(n)v$ for all $n$ in the nilradical $N(\R)$ of $B(\R)$.
+See \cite{matumoto}. 
+
 If $\pi$ is an irreducible $(\g,K)$-module we define $\WF(\pi)$ to be the wave-front set of 
-the Hilbert space globalization of $\pi$. 
-In the other direction if $\pi$ is an irreducible representation of $G(\R)$ we define $\AV(\pi)$ to be the associated variety 
+the Hilbert space globalization of $\pi$, and similarly $\Wh(\pi)$. 
+In the other direction if $\pi$ is an irreducible Hilbert space representation of $G(\R)$ we define $\AV(\pi)$ to be the associated variety 
 of its underlying $(\g,K)$-module. 
-
-[Need a paragraph explaining $\Wh(\pi)$, following Matsumoto]
-
-
-
 
 \subsection{The invariants for generic discrete series} 
 
@@ -368,8 +368,8 @@ This is independent of the choice of $g$ and $\phi$ is an isomorphism of pointed
 
 [This is an explicit version of the group cohomology argument. Some detail here...]
 
-Note that $Q_\sigma(G)$ is a set of automorphisms of $G(\R)$. It therefore acts on representations of $G(\R)$. 
-Similarly $Q_\theta(G)$ is a set of automorphisms of $(\g,K)$, and acts on $(\g,K)$-modules. 
+Note that $Q_\sigma(G)$ is a group of automorphisms of $G(\R)$. It therefore acts on representations of $G(\R)$. 
+Similarly $Q_\theta(G)$ is a group of automorphisms of $(\g,K)$, and acts on $(\g,K)$-modules. 
 
 \begin{lemma}
 Suppose $\pi$ is an irreducible  Hilbert space representation of $G(\R)$.
@@ -425,24 +425,9 @@ H^{1}_{\sigma}(\Gamma, G) @<<< H_{\sigma\mid\theta}(\Gamma, G^{\sigma\theta})@>>
 \end{CD}
 \]
 where $\varphi_{\sigma}$ and $\varphi_{\theta}$ are induced by the inclusion $Z \hookrightarrow G$. Since the horizontal arrows are isomorphisms in the category of pointed sets, they induce a canonical bijection between the kernels of $\varphi_{\sigma}$ and $\varphi_{\theta}$; by~\eqref{interp_q_cohomology} this gives a canonical bijection 
-\[ Q_{\sigma}(G) \simeq Q_{\theta}(G).\] 
-As discussed after~\eqref{interp_q_cohomology}, this is actually an isomorphism of abelian groups. 
-
-
-
-
-\subsection{Action of $Q(G)$ on representations and invariants}
-
-
-
-
-
-
-Since~$Q_\sigma(G)$ can be viewed as a group of automorphisms of~$G(\R)$,  it has a canonical action on equivalence classes of representations of~$G(\R)$, and therefore on~$(\g, K)$-modules. This action preserves  the property of being large\footnote{AA 15-II-2024: should say something about this using the fact that it comes from automorphisms, either here or in the section on large reps}. It also preserves $L$-packets by~\cite[Lemma 6.18]{Contragredient}, and acts transitively on an~$L$-packet\footnote{AA 01-IV-2023: this point was missing, and I think details should be included. I think the transitivity is easy using  the description of discrete series L-packets in the Congragredient paper in terms of Harish-Chandra parameters, plus the fact that every element of~$Q_{\sigma}(G)$ has a representative in the Weyl group of a given elliptic maximal torus. The point about the action preserving $L$-packets also follows from this, I think; and perhaps it gives a better argument for the preservation of $L$-packets than [Contragredient, Lemma 6.18], which looks better suited to the $\theta$-version.}.
-
-\subsubsection*{On~Whittaker data}  By definition of Whittaker data, the action of~$Q_{\sigma}(G)$ on $G(\R)$ induces a canonical action on the set of Whittaker data. By \cite[(14.15)]{abv} this action is simply transitive. 
-
-It is an immediate consequence of the definitions that the map $\pi \mapsto \w(\pi)$, taking a large discrete series representation to the Whittaker datum for which it has a Whittaker model, is equivariant for the actions of $Q_{\sigma}(G)$ on (1)--(2). 
+\[ Q_{\sigma}(G) \simeq Q_{\theta}(G).\]
+This action preserves $L$-packets by 
+by~\cite[Lemma 6.18]{Contragredient}.
 
 
 \subsubsection*{On real nilpotent orbits} 
@@ -480,29 +465,13 @@ $$
 $$
 where the middle line uses the equality $H^1_\sigma(\Gamma,\Stab_G(X))=H^1_\sigma(\Gamma,Z)$, which comes from the fact that $\Stab_G(X)=ZU$  as explained in the proof. The resulting bijection  $(\Op\cap i\g(\R))/G(\R)\simeq Q_\sigma(\R)$ is equivariant (for the actions of $Q_\sigma(G)$ on $(\Op\cap i\g(\R))/G(\R)$ described above, and the action of  $Q_\sigma(G)$ on itself by multiplication), and this gives another proof of~(1). 
 
-\subsection{Actions of $Q_\theta(G)$ on representations and invariants}
-
-To discuss the map taking a $(\g, K)$-module to the associated variety, it seems better to use $Q_{\theta}(G)$ rather than~$Q_{\sigma}(G)$. 
-
-
- \subsubsection*{On $(\g, K)$-modules} 
- 
- Recall $Q_{\theta}(\R)=\Gad^{\theta_{\ad}}/\Kad$. By definition $\Gad^{\theta_{\ad}}$ is contained in the normalizer $\mathrm{Norm}_G(K)$; this determines a canonical action of $\Gad^{\theta_{\ad}}$ on~$(\g, K)$-modules.
- Any element of~$\Kad$ takes a $(\g,K)$-module to an equivalent one, and this gives an action of $Q_{\theta}(\R)$ on equivalence classes of irreducible $(\g, K)$-modules.
- This preserves the property of being a discrete series, and of being large.
- Furthermore, by \cite[Lemma 6.18 and Remark 6.19]{Contragredient} the action preserves $L$-packets.
- Therefore $Q_{\theta}(\R)$ acts transitively on the large representations in a discrete series $L$-packet.
-  
-\subsubsection*{On nilpotent $K$-orbits.} 
-
-
-
-Let us define an action of~$Q_{\theta}(G)$ on $(\Op \cap \s)/K$. First, the adjoint action of~$\Gad$ on~$\g$ preserves both $\Op$ and~$\s$. Second, the action of~$K=G^\theta$ on $\Op \cap \s$ is trivial on~$Z_K=Z^\theta$, and factors through an action of~$\Kad$. It is then easy to check that if two elements of $\Op \cap \s$ lie in on the same $\Kad$-orbit, then for every $g \in \Gad^{\theta_{\ad}}$, the elements  ${g} \cdot x$ and ${g} \cdot y$ lie on the same $\Kad$-orbit. This determines an action of~$Q_\theta(G)$ on $(\Op \cap \s)/K$, which is the one featured in the next statement.
+On the other hand $Q(G)$, realized as $Q_\theta(G)$ is a group of automorphisms of $(\g,K)$.
+It induces actions on $\s$, $\Op$ and $\Op\cap\s$, and on $(\g,K)$-modules.
 
 \begin{proposition}\label{prop:action_on_K_orbits}
 \begin{enumerate} 
-\item The action of~$Q_{\theta}(G)$ on $(\Op \cap \s)/K$ is simply transitive.
-\item The map $\pi \mapsto \AV(\pi)$ is $Q_{\theta}(G)$-equivariant.
+\item The action of~$Q(G)$ on $(\Op \cap \s)/K$ is simply transitive.
+\item The map $\pi \mapsto \AV(\pi)$ is $Q(G)$-equivariant.
 \end{enumerate}
 \end{proposition}
 
