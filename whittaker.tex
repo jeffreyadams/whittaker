@@ -153,7 +153,7 @@ We consider pairs $(B,\eta)$ where
 \end{enumerate}
 The existence of a Borel subgroup satisfying (i) is the definition of $G$ being quasisplit, which we assume holds from now on.
 
-We recall what it means for a representation $\pi$ to have a $(B,\eta)$-Whittaker model in Section ?.
+We recall what it means for a representation $\pi$ to have a $(B,\eta)$-Whittaker model in Section~\ref{sec:invariants}.
 This condition only depends on the conjugacy class of the pair, 
 so we  consider pairs $(B,\eta)$ modulo conjugation by $G(\R)$, and refer to such a conjugacy class as a 
 as a {\it Whittaker datum}.
@@ -197,6 +197,9 @@ Many results in this note are well known. We have tried to give new and simplifi
 
 \subsection{Some notation}
 
+\subsubsection*{Involutions} 
+
+
 Let~$\sigma$ be the anti-holomorphic involution defining~$G(\R)$.
 Let $\g=\Lie(G), \g(\R)=\Lie(G(\R))$. 
 Choose a Cartan involution $\theta$ for $G$. This means:
@@ -204,6 +207,9 @@ $\theta$ is an algebraic involution, commuting with~$\sigma$,
 and $G(\R)^\theta$ is a maximal compact subgroup of~$G(\R)$. Set $K=G^\theta$, $K(\R)=G(\R)^\theta=K^\sigma$.
 Let $\s$ be the $-1$ eigenspace of $\theta$ acting on~$\g$
 (we use the same notation for $\sigma,\theta$ lifted to $\g$). 
+
+\subsubsection*{Nilpotent orbits} 
+
 
 Let $\N$ be the set of nilpotent elements of $\g$.
 This is the closure of the principal nilpotent orbit $\Op$.
@@ -220,10 +226,14 @@ $V$. Conversely if $\pi$ is an irreducible $(\g,K)$-module it can be
 realized as the $K$-finite vectors of a Hilbert space representation, which we
 refer to as the Hilbert space globalization of $\pi$.
 
-\subsection{The invariants}
+\subsection{The invariants}\label{sec:invariants}
+
+
+\subsubsection*{Associated variety and Gelfand--Kirillov dimension}
+
 We recall some results from,  \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
 
-Suppose $\pi$ is an irreducible $(\g,KL)$-module.
+Suppose $\pi$ is an irreducible $(\g,K)$-module.
 Let $I_\pi$ be the annihlator of $\pi$ in the universal enveloping algebra.
 Let $\AVann(\pi)$ be the associated variety of $I_\pi$.
 This is the closure of a single complex nilpotent orbit $\O$.
@@ -238,22 +248,34 @@ GK(\pi)=\dim(\AV(\pi))=\frac12\dim(\AVann(\pi)).
 $$
 (All dimensions are complex unless otherwise stated.)
 
+
+If we do not start with a $(\g, K)$-module but with a Hilbert space representation~$\pi$ of $G(\R)$,  we define $\AV(\pi)$ to be the associated variety 
+of its underlying $(\g,K)$-module.
+
+
+\subsubsection*{Wavefront set}
+
 Now suppose $\pi$ is an irreducible admissible representation of $G(\R)$ on a Hilbert space $\mH$. 
-See \cite{howe_wave_front}, \cite{bv_local_structure},
-\cite{HarrisHeOlafsson} for the definition of the \emph{wave-front
-  set} $\WF(\pi)$. This is an analytic invariant determined by the
-singularities of the global character of $\pi$ near the identity. 
+The \emph{wave-front
+  set} $\WF(\pi)$ is an analytic invariant determined by the
+singularities of the global character of $\pi$ near the identity. See \cite{howe_wave_front}, \cite{bv_local_structure},
+\cite{HarrisHeOlafsson} for the definition. 
 It is a closed $G(\R)$-invariant subset of the nilpotent cone in
 $i\g(\R)^*$. As such it is the union of a finite number of nilpotent $G(\R)$-orbits.
+
+If $\pi$ is an irreducible $(\g,K)$-module we define $\WF(\pi)$ to be the wave-front set of 
+the Hilbert space globalization of $\pi$.
+
+\subsubsection*{Whittaker models}
 
 We consider the space $\mH^\infty$ of smooth vectors in $\mH$, and its dual $\mH^{-\infty}$. We say $\pi$ has a $(B,\eta)$-Whittaker model
 if there exists $v\in \mH^{-\infty}$ such that $\pi(n)(v)=\eta(n)v$ for all $n$ in the nilradical $N(\R)$ of $B(\R)$.
 See \cite{matumoto}. 
 
-If $\pi$ is an irreducible $(\g,K)$-module we define $\WF(\pi)$ to be the wave-front set of 
-the Hilbert space globalization of $\pi$, and similarly $\Wh(\pi)$. 
-In the other direction if $\pi$ is an irreducible Hilbert space representation of $G(\R)$ we define $\AV(\pi)$ to be the associated variety 
-of its underlying $(\g,K)$-module. 
+
+We write $\Wh(\pi)$ for the set of Whittaker data~$\w$ such that If $\pi$ is an irreducible $(\g,K)$-module we define $\Wh(\pi)$ to be the set of 
+the Hilbert space globalization of $\pi$.
+
 
 \subsection{The invariants for generic discrete series} 
 
@@ -275,12 +297,12 @@ Part~(b) is one of the main results of~\cite{vogan_bowdoin}: see \cite[Theorem ?
 Part~(c) follows from~\cite{rossmann_limit_orbits}.\footnote{AA 14-II-2024: maybe a little more detail would be welcome, the Rossmann paper does not seem to state the result in these terms.}
 \end{proof}
 
-Because of this result we abuse notation slightly as follows. We say $AV(\pi)=\O$ if $AV(\pi)$ is the closure of the $K$-orbit $\O\subset \s$.
+Because of this result we abuse notation slightly as follows. If~$\pi$ is a generic discrete series representation of~$G(\R)$, we write $AV(\pi)=\O$ to indicate that $AV(\pi)$ is the closure of the $K$-orbit $\O\subset \s$.
 Similarly we write $\WF(\pi)=\O$ to indicate that $\WF(\pi)$ is the closure of the $G(\R)$-orbit $\O\subset i\g(\R)^*$.
 
 
-\subsection{Large representations} Set $N=\dim(\N)=\dim(G)-\mathrm{rank}(G)$. The maximal Gelfand--Kirillov dimension of a representation is $N/2$.
-We say $\pi$ is {\it large} if $\GK(\pi)=N/2$. See \cite[Section~6]{Vogan78}. 
+\subsection{Large representations} Set $N=\dim(G)-\mathrm{rank}(G)$. This is the dimension of the nilpotent cone~$\N$. The maximal Gelfand--Kirillov dimension of a representation is $N/2$.
+We say $\pi$ is {\it large} if $\GK(\pi)=N/2$. See \cite[Section~6]{vogan-gelfand-kirillov}. 
 
 
 \begin{lemma}
@@ -303,13 +325,12 @@ See \cite{vogan_bowdoin}.
 \section{The dictionary for generic discrete series}
 
 
-\subsection{Statement of the results}  
+\subsection{Statement of the dictionary}  
 
 
 
 Given a generic discrete series representation~$\pi$ we consider the invariants of~$\pi$ defined by Proposition~\ref{invariants_ds}: a Whittaker datum  $\Wh(\pi)$, a $K$-orbit $\AV(\pi)$ in $\mathcal{O}_p \cap \mathfrak{s}$, and a $G(\R)$-orbit $\WF(\pi)$ in $(\mathcal{O}_p \cap  i \g(\R))$.
 
-Here is our main statement.
 
 \begin{theorem} \label{th:main} Suppose~$\Pi$ is an $L$-packet of discrete series for~$G(\R)$. 
 The maps $\pi \mapsto \Wh(\pi)$, $\pi \mapsto \AV(\pi)$ and $\pi\mapsto \WF(\pi)$ induce bijections between:
@@ -325,21 +346,30 @@ Before embarking on the proof, let us point out that the maps in the theorem are
 
 
 
-Let us now explain the strategy of the proof, which is mainly an exercise in putting together some references that are rather scattered in the literature. What we shall actually do is: introduce a finite group~$Q_\sigma(G)$, and point out that 
+Let us now explain the strategy of the proof, which is mainly an exercise in putting together some references that are rather scattered in the literature. What we shall actually do is: introduce a finite group~$Q(G)$, and point out that 
 \begin{itemize}
-\item[(i)] it acts simply transitively on the sets~(1)--(4), and 
+\item[(i)] it acts transitively on~(1), and simply transitively on (2)--(4);
 \item[(ii)] the maps $\pi \mapsto \Wh(\pi)$, $\pi \mapsto \AV(\pi)$ and $\pi\mapsto \WF(\pi)$  are equivariant for these actions.
 \end{itemize}
-The theorem follows immediately from these two observations.\footnote{AA 01-IV-2024 --- perhaps it would be reader-friendly to point out the basic fact on group actions that we are using here: suppose a group $Q$ acts on two sets $A, B$ and let $f\colon A \to B$ be an equivariant map. If $Q$ acts transitively on~$B$  then~$f$ is surjective, and if $Q$ acts transitively on~$A$ and freely on~$B$ then~$f$ is injective.  }
+The theorem follows immediately from these two observations, and from the following basic fact on group actions.
+
+\begin{lemma} Suppose a group $Q$ acts on two sets $A, B$ and let $f\colon A \to B$ be an equivariant map. 
+\begin{itemize}
+\item[(a)] If $Q$ acts transitively on~$B$  then~$f$ is surjective;
+\item[(b)] If $Q$ acts transitively on~$A$ and freely on~$B$, then~$f$ is injective.
+\end{itemize}
+In particular, if~$Q$ acts transitively on~$A$ and simply transitively on~$B$, then~$f$ is a bijection and the action of~$Q$ on~$A$ is simply transitive.
+\end{lemma}
 
 \subsection{The groups $Q_\sigma(G)$ and $Q_{\theta}(G)$}
 
-\subsubsection{Definition of the two groups}Let $Z=Z(G)$ be the center of $G$, and let $\Gad$ be the complex reductive group~$G/Z$.
-Then $Z(\R)=Z^\sigma$ is the center of $G(\R)$, so we set $\G(\R)_\ad=G(\R)/Z(\R)$.
-On the other hand  $\sigma$ factors to an automorphism, still denoted $\sigma$, of $\Gad$, and we let  $\Gad(\R)=(\Gad)^\sigma$.
-The canononical map $G\rightarrow G/Z$ restricts to a map $G^\sigma\rightarrow (G/Z)^\sigma$, with kernel $Z^\sigma$.
-Hence there is a
-natural injective map $(G^\sigma)_\ad\hookrightarrow (\Gad)^\sigma$, and we define
+\subsubsection{Definition of the two groups, and canonical isomorphism}
+
+Let $Z=Z(G)$ be the center of $G$, and let $\Gad$ be the complex reductive group~$G/Z$.
+Then $Z(\R)=Z^\sigma$ is the center of $G(\R)$. We set $\G(\R)_\ad=G(\R)/Z(\R)$.
+On the other hand  $\sigma$ factors to an automorphism  of $\Gad$, still denoted~$\sigma$, and we let  $\Gad(\R)=(\Gad)^\sigma$.
+The projection $G\rightarrow \Gad$ restricts to a map $G^\sigma\rightarrow (G/Z)^\sigma$, with kernel $Z^\sigma$.
+This induces a canonical injection $(G^\sigma)_\ad\hookrightarrow (\Gad)^\sigma$, and we define
 $$
 Q_\sigma(G)=(\Gad)^\sigma/(G^\sigma)_\ad=\Gad(\R)/\G(\R)_\ad.
 $$
@@ -351,27 +381,91 @@ We define $(G^\theta)_\ad=G^\theta/Z^\theta$ and
 $$
 Q_\theta(G)=(\Gad)^\theta/(G^\theta)_\ad =(\Gad)^\theta/\Kad.
 $$
-This is a group of outer automorphisms of $K$.
+This is a group of outer automorphisms of $K$. 
 
 An important fact is that $Q_\sigma(G)$ and $Q_\theta(G)$ are canonically isomorphic. This is a generalization of the well known fact that
-$G(\R)/G(\R)_0\simeq K/K_0$ where the subscript $0$ denotes identity component.
+$G(\R)/G(\R)_0\simeq K/K_0$ where the subscript $0$ denotes identity component. 
 
-\begin{lemma}
-There is a canonical isomorphism $\phi:Q_\sigma(G)\simeq Q_\theta(G)$ defined as follows.
-Suppose $x\in Q_\sigma(G)=(\Gad)^\sigma/(G^\sigma)_\ad$.
-We can choose a representative $g\in (\Gad)^\sigma$ of $x$ which is also in $(\Gad)^\theta$.
-Define $\phi(x)$ to be the image of $g$ in $Q_\theta(G)=(\Gad)^\theta/(G^\theta)_\ad$.
-This is independent of the choice of $g$ and $\phi$ is an isomorphism of pointed sets.
+\begin{lemma}\label{lem:iso_q}
+\begin{itemize}
+\item[(a)] 
+Every element of $Q_\sigma(G)=(\Gad)^\sigma/(G^\sigma)_\ad$ has a representative in $(\Gad)^\sigma$ which is also in $(\Gad)^\theta$.
+\item[(b)] Given $x \in Q_{\sigma}(G)$, and a representative $g\in (\Gad)^\sigma \cap (\Gad)^\theta$ as in~(a), the image of~$g$ in  $Q_\theta(G)$ depends only on~$x$, and not on  the choice of~$g$. The corresponding map $x \mapsto \phi(x)$, from $Q_{\sigma}(G)$ to $Q_{\theta}(G)$, is a group isomorphism. 
+\end{itemize}
 \end{lemma}
 
 
+The proof uses an interpretation of $Q_\sigma(G)$ and $Q_\theta(G)$ in terms of group cohomology, which we now spell out. 
 
-[This is an explicit version of the group cohomology argument. Some detail here...]
+\subsubsection{Interpretation in terms of group cohomology}
+
+The groups $Q_{\sigma}(G)$ and $Q_{\theta}(G)$ are instances of the following construction: if~$\tau$ is an involutive automorphism of~$G$, then it preserves~$Z$ and induces an involution of~$\Gad$, still denoted $\tau$; we may then set $Q_{\tau}(G)=(\Gad)^{\tau}/(G^{\tau})_{\ad}$, where $(G^{\tau})_{\ad}$ is the image of~$G^{\tau}$ in~$\Gad$. In this situation~$Q_{\tau}(G)$ has a simple interpretation in Galois cohomology, which we now recall. 
+
+Let us first set up some general notation. When~$A$ is a group and $\tau$ is an involutive automorphism of~$A$, consider the cohomology sets $H^0(\tau, A)$ and $H^1(\tau, A)$ attached to the action of $\Z/2\Z$ on~$A$ by~$\tau$. We shall view   $H^0(\tau, A)$ as the fixed-point-set $A^{\tau}$, and $H^1(\tau,A)$ as the quotient of $A^{-\tau} = \{ a \in A, \tau(a)=a^{-1}\}$ by the equivalence relation $a \sim x a \tau(x^{-1})$ for all $x \in A$. The set $H^1(\tau, A)$ has a distinguished point $1$, coming from the identity of~$A$; but in general it just a pointed set, and not a group if~$A$ is nonabelian. 
+
+
+We now take~$A=G$, and continue to assume~$\tau$ is an involutive automorphism. Then the short exact sequence $1\rightarrow Z \rightarrow G \rightarrow \Gad\rightarrow 1$ 
+gives rise to a ``long" exact sequence of pointed sets:
+\begin{equation} \label{long_ptset}
+1\rightarrow Z^\tau \rightarrow G^\tau \rightarrow \Gad^{\tau} \overset{\psi_\tau}{\longrightarrow} H^1(\tau,Z)\to H^1(\tau,G)\rightarrow H^1(\tau,\Gad).
+\end{equation}
+In~\eqref{long_ptset} the connecting map  $ \psi_\tau\colon \Gad^{\tau} \rightarrow H^1(\tau,Z)$ is defined as follows: if $\gamma \in \Gad^{\tau}$ is the coset $gZ$, then $g\tau(g^{-1}) \in Z^{-\tau}$, and the connecting map sends~$\gamma$ to the class of $g \tau(g^{-1})$ in $H^1(\tau, Z)$. The kernel of~$\psi_\tau$ is $(G^\tau)_{\ad}$. Since~\eqref{long_ptset} is exact we deduce that $\psi_\tau$ induces a canonical  bijection
+\begin{equation} \label{interp_q_cohomology} Q_{\tau}(G) \to  \ker\left(H^1(\tau,Z)\overset{\varphi_\tau}{\longrightarrow} H^1(\tau,G)\right)\end{equation}
+where $\varphi_\tau$ is induced by the inclusion $Z^{-\tau} \hookrightarrow G^{-\tau}$. 
+
+%The previous argument is in the category of pointed sets, and on the right-hand side $H^1(\tau,G)$  is not a group in general. Therefore, at first sight, the map~\eqref{interp_q_cohomology} is only a set-theoretic bijection. However, 
+%$H^1(\tau,Z)$ is a group since $Z$ is abelian; thus both sides of~\eqref{interp_q_cohomology} have canonical abelian group structures, and chasing definitions one easily sees that~\eqref{interp_q_cohomology} is actually an isomorphism of abelian groups.
+
+%We can spell out the inverse of~\eqref{interp_q_cohomology} as follows. Suppose~$\zeta \in H^1(\tau, Z)$ is the equivalence class of  $z \in Z^{-\tau}$. By definition we have $\varphi_\tau(\zeta)=1$ if and only if there exists $g \in G$ such that $z = g \tau(g^{-1})$.  In that case $\tau(g) =z^{-1}g$, therefore the projection of~$g$ in $\Gad=G/Z$ is an element $\tilde{q}$ of~$\Gad^{\tau}$. It follows immediately from the definitions that the class of $\tilde{q}$ in $Q_{\tau}(G)=\Gad^\tau/(G^\tau)_\ad$ depends only on $\zeta$ and not on the choice of $g$ or $z$. If $q$ denotes this equivalence class, then the map $\zeta \to q$ is the inverse of~\eqref{interp_q_cohomology}. 
+ 
+
+\subsubsection{Proof of Lemma~\ref{lem:iso_q}}
+
+The proof of Lemma~\ref{lem:iso_q} uses Galois cohomology for the compact real form.  Recall $\theta\sigma = \sigma\theta$, and $G^{\sigma\theta}$ is a compact real form of~$G$. 
+The involutions $\sigma$ and $\theta$ coincide on $G^{\sigma\theta}$,
+therefore  $H^1(\sigma, G^{\sigma\theta})$ and  $H^1(\theta, G^{\sigma\theta})$ are the same set,
+which we will denote by  $H(\ast, G^{\sigma\theta})$.
+Now the inclusion $G^{\sigma\theta} \hookrightarrow G$ induces canonical maps 
+\begin{equation} \label{bij_cohom} H^{1}(\sigma,  G) \longleftarrow H(\ast, G^{\sigma\theta}) \longrightarrow H^{1}(\theta,  G).\end{equation}
+By \cite[Corollary~4.4 and Corollary 4.7]{galois}, both of these maps are \emph{bijections}.
+Replacing~$G$ by $Z$ we get bijections $H^{1}(\sigma, Z) \leftarrow H(\ast, Z^{\sigma\theta}) \rightarrow H^{1}_{\theta}(\Gamma, Z)$.
+These fit with the bijections~\eqref{bij_cohom} into a commutative diagram
+\[
+\begin{CD}
+H^{1}(\sigma, Z) @<<< H^1(\ast, Z^{\sigma\theta})@>>> H^{1}(\theta, Z)
+ \\
+@V{\varphi_{\sigma}}VV @VVV @V{\varphi_{\theta}}VV  \\
+H^{1}(\sigma, G) @<<< H^1(\ast, G^{\sigma\theta})@>>> H^{1}(\theta,  G)
+\end{CD}
+\]
+where $\varphi_\sigma$, $\varphi_\theta$ are the maps in \eqref{interp_q_cohomology}.
+
+Let us now prove part~(a) of Lemma~\ref{lem:iso_q}. Let $\gamma$ be an element of $(\Gad)^\sigma$; what we need to show is that there exists $\gamma_0 \in (G^\sigma)_{\ad}$ such that $\gamma \gamma_0^{-1}$ is $\theta$-invariant. 
+
+Let $g$ be an element of $G$ such that $\gamma = gZ$; then $z=g \sigma(g^{-1})$ is an element of $Z^{-\sigma}$. Let $\zeta$ be its class in $H^{1}(\theta, Z)$. Let $\zeta_c$ be the inverse image of $\zeta$ under the bijection $H(\ast, Z^{\sigma\theta})\to H^{1}(\sigma, Z) $, and let $z_c\in (Z^{\sigma\theta})^{-\sigma}$ be a representative of $\zeta_c$. By definition there exists $z_0 \in Z$ such that $z = z_0 z_c \sigma(z_0^{-1})$. Since $\zeta_c$ is in the kernel of the map $H^1(\ast, Z^{\sigma\theta}) \to H^1(\ast, G^{\sigma\theta})$, there must exist  $k \in G^{\sigma\theta}$  such that $z_c = k \sigma(k^{-1})$. We see that $z = g \sigma(g)^{-1}$ is equal to $z_0 k \sigma((z_0k)^{-1})$, in other words 
+\[ z_0^{-1} k^{-1} g \in G^{\sigma}.\]
+Let $\gamma_0$ be the image of $z_0^{-1} k^{-1} g$ in $\Gad$. Then $\gamma_0 \in (G^{\sigma})_\ad$, and $\gamma_0$ is equal to the image of $k^{-1} g$ in $\Gad$. The element $\kappa=\gamma \gamma_0^{-1}$ of $\Gad$  is therefore $\sigma$-invariant, and since $\kappa=kZ$, we also have $(\theta\sigma)(\kappa)=\kappa$; we conclude that $\theta(\kappa) = \kappa$, q.e.d. 
+
+\textcolor{red}{TODO: prove that this induces a map $Q_{\sigma}(G)\to Q_{\theta}(G)$. Once this is done the  inverse map is clear, so it is a bijection.}
+
+%where $\varphi_{\sigma}$ and $\varphi_{\theta}$ are induced by the inclusion $Z \hookrightarrow G$. Since the horizontal arrows are isomorphisms in the category of pointed sets, they induce a canonical bijection between the kernels of $\varphi_{\sigma}$ and $\varphi_{\theta}$. 
+%
+%; by~\eqref{interp_q_cohomology} this gives a canonical bijection 
+%\[ Q_{\sigma}(G) \simeq Q_{\theta}(G).\]
+
+
+\subsection{Actions of~$Q(G)$}
+
+
+\subsubsection*{On representations} 
+
+
 
 Note that $Q_\sigma(G)$ is a group of automorphisms of $G(\R)$. It therefore acts on representations of $G(\R)$. 
-Similarly $Q_\theta(G)$ is a group of automorphisms of $(\g,K)$, and acts on $(\g,K)$-modules. 
+Similarly $Q_\theta(G)$ is a group of automorphisms of $(\g,K)$, and acts on $(\g,K)$-modules.\footnote{AA 30-IV-2024: shouldn't this be:  $\Gad^\sigma$ and $\Gad^\theta$  act on $G(\R)$-representations or $(\g,K)$-modules respectively, and this induces actions of $Q_{\sigma}(G)$ and $Q_{\theta}(G)$ on equivalence classes...?}
+These two actions are intertwined by the isomorphism of Lemma~\ref{lem:iso_q}:
 
-\begin{lemma}
+\begin{lemma}\label{lem:action_q}
 Suppose $\pi$ is an irreducible  Hilbert space representation of $G(\R)$.
 Suppose $g\in Q_\sigma(G)$. 
 Then $(\pi^g)_K\simeq (\pi_K)^{\phi(g)}$.
@@ -381,53 +475,8 @@ Then $(\pi^g)_K\simeq (\pi_K)^{\phi(g)}$.
 straightforward
 \end{proof}
 
-Based on these two Lemmas we write $Q(G)$ for the group $Q_\sigma(G)$ or $Q_\theta(G)$, depending on the situation.
+Because of Lemmas~\ref{lem:iso_q} and \ref{lem:action_q}, we write $Q(G)$ for the group $Q_\sigma(G)$ or $Q_\theta(G)$, depending on the situation.
 
-
-\subsubsection{Interpretation in terms of group cohomology}
-
-The groups $Q_{\sigma}(G)$ and $Q_{\theta}(G)$ are instances of the following construction: if~$\tau$ is an involutive automorphism of~$G$, then it preserves~$Z$ and induces an involution~$\tau_{\ad}$ of~$\Gad$; we may then set $Q_{\tau}(G)=\Gad^{\tau_{\ad}}/(G^{\tau})_{\ad}$, where $(G^{\tau})_{\ad}$ is the image of~$G^{\tau}$ in~$\Gad$. In this situation~$Q_{\tau}(G)$ has a simple interpretation in Galois cohomology, which we now recall. 
-
-Let us first set up some notation. Let~$\Gamma$ be the Galois group~$\Z/2\Z$ of~$\R$. When~$A$ is a group and $\tau$ is an involutive automorphism of~$A$, we may consider the cohomology sets $H^0_\tau(\Gamma, A)$ and $H^1_\tau(\Gamma, A)$ attached to the action of~$\Gamma$ on~$G$ using~$\tau$.  These are pointed sets, and not groups in general if~$A$ isn't abelian. We may view $H^0_\tau(\Gamma, A)$ as the fixed-point-set $A^{\tau}$, and $H^1_\tau(\Gamma,A)$ as the quotient of $A^{-\tau} = \{ a \in A, a\tau(a)=1\}$ by the equivalence relation~$\sim$ generated by $a \sim x a \tau(x^{-1})$ for all $x \in G$. 
-
-
-We now take~$A=G$, and continue to assume~$\tau$ is an involutive automorphism. Then the short exact sequence $1\rightarrow Z \rightarrow G \rightarrow \Gad\rightarrow 1$ 
-gives rise to a ``long" exact sequence of pointed sets:
-\begin{equation} \label{long_ptset}
-1\rightarrow Z^\tau \rightarrow G^\tau \rightarrow \Gad^{\tau_{\ad}} \rightarrow H^1_\tau(\Gamma,Z)\rightarrow H^1_\tau(\Gamma,G)\rightarrow H^1_{\tau_\ad}(\Gamma,\Gad).
-\end{equation}
-By definition the connecting map  $ \Gad^{\tau_{\ad}} \rightarrow H^1_\tau(\Gamma,Z)$ sends $g \in \Gad^{\tau_{\ad}}$ to the equivalence class of $g \tau_{\ad}(g^{-1})$ in $H^1_\tau(\Gamma, Z)$, and the meaning of all the other maps is obvious. 
-Going through the definitions we see that  two elements  $g_1, g_2$ have the same image if and only if $g_1 g_{2}\inv \in (G^\tau)_{\ad}$. 
-Therefore the image of the connecting map is in canonical bijection with $Q_\tau(G)$. Since~\eqref{long_ptset} is exact we get a canonical bijection
-\begin{equation} \label{interp_q_cohomology} Q_{\tau}(G) \simeq \ker(H^1_\tau(\Gamma,Z)\rightarrow H^1_\tau(\Gamma,G)).\end{equation}
-The previous argument is in the category of pointed sets, and on the right-hand side $H^1_\tau(\Gamma,G))$  is not a group in general. Therefore, at first sight, the map~\eqref{interp_q_cohomology} is only a set-theoretic bijection. However, 
-$H^1_\tau(\Gamma,Z)$ is a group since $Z$ is abelian; thus both sides of~\eqref{interp_q_cohomology} have canonical abelian group structures, and chasing definitions one easily sees that~\eqref{interp_q_cohomology} is actually an isomorphism of abelian groups.
- 
-
-\subsubsection{Isomorphism between $Q_{\sigma}(G)$ and $Q_{\theta}(G)$}
-
-Using the group cohomology interpretation in the previous paragraph, we can construct a canonical  isomorphism between $Q_{\sigma}(G)$ and $Q_{\theta}(G)$.
-For this recall $\theta\sigma = \sigma\theta$ and $G^{\sigma\theta}$ is a compact real form of~$G$.
-Furthermore $\sigma$ and $\theta$ coincide on $G^{\sigma\theta}$,
-therefore  $H_{\sigma}(\Gamma, G^{\sigma\theta})$ and  $H_{\theta}(\Gamma, G^{\sigma\theta})$ are the same set,
-which we will denote by  $H_{\sigma\mid\theta}(\Gamma, G^{\sigma\theta})$.
-Now the inclusion $G^{\sigma\theta} \hookrightarrow G$ induces canonical maps 
-\begin{equation} \label{bij_cohom} H^{1}_{\sigma}(\Gamma, G) \longleftarrow H_{\sigma\mid\theta}(\Gamma, G^{\sigma\theta}) \longrightarrow H^{1}_{\theta}(\Gamma, G).\end{equation}
-By \cite[Corollary~4.4 and Corollary 4.7]{galois}, both of these maps are \emph{bijections}.
-Replacing~$G$ by $Z$ we get bijections $H^{1}_{\sigma}(\Gamma, Z) \leftarrow H_{\sigma\mid\theta}(\Gamma, Z^{\sigma\theta}) \rightarrow H^{1}_{\theta}(\Gamma, Z)$.
-These fit with the bijections~\eqref{bij_cohom} into a commutative diagram
-\[
-\begin{CD}
-H^{1}_{\sigma}(\Gamma, Z) @<<< H_{\sigma\mid\theta}(\Gamma, Z^{\sigma\theta})@>>> H^{1}_{\theta}(\Gamma, Z)
- \\
-@V{\varphi_{\sigma}}VV @VVV @V{\varphi_{\theta}}VV  \\
-H^{1}_{\sigma}(\Gamma, G) @<<< H_{\sigma\mid\theta}(\Gamma, G^{\sigma\theta})@>>> H^{1}_{\theta}(\Gamma, G)
-\end{CD}
-\]
-where $\varphi_{\sigma}$ and $\varphi_{\theta}$ are induced by the inclusion $Z \hookrightarrow G$. Since the horizontal arrows are isomorphisms in the category of pointed sets, they induce a canonical bijection between the kernels of $\varphi_{\sigma}$ and $\varphi_{\theta}$; by~\eqref{interp_q_cohomology} this gives a canonical bijection 
-\[ Q_{\sigma}(G) \simeq Q_{\theta}(G).\]
-This action preserves $L$-packets by 
-by~\cite[Lemma 6.18]{Contragredient}.
 
 
 \subsubsection*{On real nilpotent orbits} 
@@ -445,25 +494,25 @@ To define the action of~$Q_{\sigma}(G)$ on~(4), first observe that~$\Gad$ acts o
 The proof of~(1) is a standard argument in group cohomology. Suppose $\omega,\omega'$ are $G(\R)$ orbits in $\Op\cap i\g(\R)$,
 and choose $X\in \omega,X'\in\omega'$. Then there exists $g\in G$ such that $\Ad(g)(X)=X'$. Since $X\in \g(\R)$ the condition $X'\in i\g(\R)$ 
 is $g\inv \sigma(g)\in \Stab_G(X)$.  Since $X$ is principal $\Stab_G(X)=ZU$ where $U$ is a unipotent group. 
-A standard fact is that $H^1_\sigma(\Gamma,U)=1$ \cite[Chap.~III, Proposition~6]{Serre_Galois}, and from this we see that, after multiplying $g$ on the right by an element of $u$, we can assume $g\inv \sigma(g)\in Z$. This is equivalent to: the image of $g$ in $\Gad$ is in $\Gad(\R)$. On the other hand $\omega=\omega'$ 
+A standard fact is that $H^1(\sigma, U)=1$ \cite[Chap.~III, Proposition~6]{Serre_Galois}, and from this we see that, after multiplying $g$ on the right by an element of $u$, we can assume $g\inv \sigma(g)\in Z$. This is equivalent to: the image of $g$ in $\Gad$ is in $\Gad(\R)$. On the other hand $\omega=\omega'$ 
 if and only if $X'=\Ad(g)X$ for some $g\in G(\R)$. This competes the proof of (1).
 
 Part~(2) of the proposition is comes from general properties of the wavefront set in microlocal analysis, and from the fact that the action of $Q_{\sigma}(G)$ comes from automorphisms of~$G(\R)$. More precisely, if~$q$ is an element of~$Q_{\sigma}(G)$ and $\tilde{q}$ is a representative of~$q$ in $\Gad(\R)$, then the action of~$q$ on equivalence classes of $(\g, K)$-modules comes from the action of the automorphism $\mathrm{int}(\tilde{q})$ of~$G(\R)$ on $(\g, K)$-modules. Now the wavefront set of a distribution on a manifold satisfies general covariance properties under diffeomorphisms of the manifold: this follows from Hörmander's original definitions, see e.g. \cite[Section 2, p.~800]{HarrisHeOlafsson}. Applying this to the present situation, and going through the basics as in   \cite[Section~2]{HarrisHeOlafsson}, it follows that $\pi \mapsto \WF(\pi)$ is equivariant under $Q_{\sigma}(G)$.
 \end{proof}
 
-It may be interesting to point out a variant on the proof of~(1).\footnote{AA 01-IV-2024: well, is it interesting to keep it in the paper, or should we comment it out...? } Given $X \in \Op \cap i\g(\R)$, the map 
-\begin{align} \label{bij_q_2} (\Omega_{X} \cap i\g(\R))/G(\R) & \to \kernel\left(H^1_\sigma(\Gamma,\mathrm{Stab}_G(X))\rightarrow H^1_\sigma(\Gamma,G)\right) \\ \mathrm{Ad}(g) \cdot X & \mapsto \text{class of $ g\sigma(g^{-1})$ in $H^1_\sigma(\Gamma,\mathrm{Stab}_G(X))$} \nonumber \end{align} 
-is a bijection: see \cite[Lemma 5.2]{galois}. 
-Using this we get bijections
-$$
-\begin{aligned}
-(\Op\cap i\g(\R))/G(\R)&\simeq \ker(H^1_\sigma(\Gamma,\Stab_G(X))\rightarrow H^1_\sigma(\Gamma,G))\\
-&=
-\ker(H^1_\sigma(\Gamma,Z)\rightarrow H^1_\sigma(\Gamma,G))\\
-&\simeq Q_{\sigma}(G)
-\end{aligned}
-$$
-where the middle line uses the equality $H^1_\sigma(\Gamma,\Stab_G(X))=H^1_\sigma(\Gamma,Z)$, which comes from the fact that $\Stab_G(X)=ZU$  as explained in the proof. The resulting bijection  $(\Op\cap i\g(\R))/G(\R)\simeq Q_\sigma(\R)$ is equivariant (for the actions of $Q_\sigma(G)$ on $(\Op\cap i\g(\R))/G(\R)$ described above, and the action of  $Q_\sigma(G)$ on itself by multiplication), and this gives another proof of~(1). 
+%It may be interesting to point out a variant on the proof of~(1).\footnote{AA 01-IV-2024: well, is it interesting to keep it in the paper, or should we comment it out...? } Given $X \in \Op \cap i\g(\R)$, the map 
+%\begin{align} \label{bij_q_2} (\Omega_{X} \cap i\g(\R))/G(\R) & \to \kernel\left(H^1_\sigma(\Gamma,\mathrm{Stab}_G(X))\rightarrow H^1_\sigma(\Gamma,G)\right) \\ \mathrm{Ad}(g) \cdot X & \mapsto \text{class of $ g\sigma(g^{-1})$ in $H^1_\sigma(\Gamma,\mathrm{Stab}_G(X))$} \nonumber \end{align} 
+%is a bijection: see \cite[Lemma 5.2]{galois}. 
+%Using this we get bijections
+%$$
+%\begin{aligned}
+%(\Op\cap i\g(\R))/G(\R)&\simeq \ker(H^1_\sigma(\Gamma,\Stab_G(X))\rightarrow H^1_\sigma(\Gamma,G))\\
+%&=
+%\ker(H^1_\sigma(\Gamma,Z)\rightarrow H^1_\sigma(\Gamma,G))\\
+%&\simeq Q_{\sigma}(G)
+%\end{aligned}
+%$$
+%where the middle line uses the equality $H^1_\sigma(\Gamma,\Stab_G(X))=H^1_\sigma(\Gamma,Z)$, which comes from the fact that $\Stab_G(X)=ZU$  as explained in the proof. The resulting bijection  $(\Op\cap i\g(\R))/G(\R)\simeq Q_\sigma(\R)$ is equivariant (for the actions of $Q_\sigma(G)$ on $(\Op\cap i\g(\R))/G(\R)$ described above, and the action of  $Q_\sigma(G)$ on itself by multiplication), and this gives another proof of~(1). 
 
 On the other hand $Q(G)$, realized as $Q_\theta(G)$ is a group of automorphisms of $(\g,K)$.
 It induces actions on $\s$, $\Op$ and $\Op\cap\s$, and on $(\g,K)$-modules.
