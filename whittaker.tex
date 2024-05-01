@@ -169,7 +169,7 @@ If $\Pi$ is a discrete series $L$-packet then each generic representation in the
 Whittaker model, so the generic representation in $\Pi$ are parametrized by their Whittaker models.
 It is conjectured that these properties hold in the $p$-adic case as well, and this is known in many cases.
 
-In the case of real groups there are other invariants attached to an
+There are other invariants attached to an
 irreducible representation $\pi$.  We will be concerned with two of
 them, defined very differently. The first is the \emph{wavefront set} $\WF(\pi)$
 which is an analytic invariant.
@@ -195,7 +195,7 @@ Many results in this note are well known. We have tried to give new and simplifi
 
 \section{Some invariants of irreducible representations}
 
-\subsection{Some notation}
+\subsection{Basic notation}
 
 \subsubsection*{Involutions} 
 
@@ -212,7 +212,7 @@ Let $\s$ be the $-1$ eigenspace of $\theta$ acting on~$\g$
 
 
 Let $\N$ be the set of nilpotent elements of $\g$.
-This is the closure of the principal nilpotent orbit $\Op$.
+This is the closure of the principal nilpotent orbit $\Op$.\footnote{(AA 2024-V-1) Todo: give nice references...}
 
 \subsubsection*{Representations} 
 
@@ -226,19 +226,22 @@ $V$. Conversely if $\pi$ is an irreducible $(\g,K)$-module it can be
 realized as the $K$-finite vectors of a Hilbert space representation, which we
 refer to as the Hilbert space globalization of $\pi$.
 
+\footnote{(AA 2024-V-1) Todo: add notation $\pi_K$ and quickly discuss notions of equivalence?}
+
 \subsection{The invariants}\label{sec:invariants}
 
 
 \subsubsection*{Associated variety and Gelfand--Kirillov dimension}
 
-We recall some results from,  \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
 
 Suppose $\pi$ is an irreducible $(\g,K)$-module.
 Let $I_\pi$ be the annihlator of $\pi$ in the universal enveloping algebra.
 Let $\AVann(\pi)$ be the associated variety of $I_\pi$.
 This is the closure of a single complex nilpotent orbit $\O$.
 The associated variety of $\pi$, denoted $\AV(\pi)$, is a closed, $K$-invariant set in $\s$, so it is a finite union of
-nilpotent $K$-orbits on $\s$.
+nilpotent $K$-orbits on $\s$.\footnote{(AA 2024-V-1) Todo: give nice references, Vogan's Bowdoin paper and others...}.
+
+
 
 
 
@@ -292,9 +295,12 @@ the Hilbert space globalization of $\pi$.
 a representation $\pi$ is large if and only if it admits a Whittaker model for some Whittaker datum,
 and by \cite[Lemma 14.14]{abv} a  large discrete series representation admits a unique Whittaker datum.
 
-Part~(b) is one of the main results of~\cite{vogan_bowdoin}: see \cite[Theorem ?]{vogan_bowdoin}.\footnote{AA 19-II-2024: I'd welcome some help in navigating~\cite{vogan_bowdoin}: the relevant places seem to be  Sections 4, 5 and 8, but I have a few questions.}
+Part~(b) is one of the main results of~\cite{vogan_bowdoin}: see \cite[Theorem ?]{vogan_bowdoin}.
 
-Part~(c) follows from~\cite{rossmann_limit_orbits}.\footnote{AA 14-II-2024: maybe a little more detail would be welcome, the Rossmann paper does not seem to state the result in these terms.}
+Part~(c) follows from~\cite{rossmann_limit_orbits}. (Where?)
+
+\footnote{\textcolor{red}{(AA, 2024-V-1) : TODO -- find the right references, I tried but quickly got lost...}}
+
 \end{proof}
 
 Because of this result we abuse notation slightly as follows. If~$\pi$ is a generic discrete series representation of~$G(\R)$, we write $AV(\pi)=\O$ to indicate that $AV(\pi)$ is the closure of the $K$-orbit $\O\subset \s$.
@@ -318,7 +324,8 @@ We say $\pi$ is {\it large} if $\GK(\pi)=N/2$. See \cite[Section~6]{vogan-gelfan
 
 \end{enumerate}
 \end{lemma}
-See \cite{vogan_bowdoin}.
+See \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
+
 
 
 
@@ -466,13 +473,13 @@ Similarly $Q_\theta(G)$ is a group of automorphisms of $(\g,K)$, and acts on $(\
 These two actions are intertwined by the isomorphism of Lemma~\ref{lem:iso_q}:
 
 \begin{lemma}\label{lem:action_q}
-Suppose $\pi$ is an irreducible  Hilbert space representation of $G(\R)$.
-Suppose $g\in Q_\sigma(G)$. 
-Then $(\pi^g)_K\simeq (\pi_K)^{\phi(g)}$.
+Suppose $\pi$ is the equivalence class of an irreducible Hilbert space representation of $G(\R)$. 
+Suppose $q\in Q_\sigma(G)$. 
+Then $(\pi^q)_K\simeq (\pi_K)^{\phi(g)}$.
 \end{lemma}
 
 \begin{proof}
-straightforward
+Immediate from Lemma~\ref{lem:iso_q} and the definition of the actions.
 \end{proof}
 
 Because of Lemmas~\ref{lem:iso_q} and \ref{lem:action_q}, we write $Q(G)$ for the group $Q_\sigma(G)$ or $Q_\theta(G)$, depending on the situation.
