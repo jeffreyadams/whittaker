@@ -740,6 +740,28 @@ $$
 Then $\pi$ is the discrete series representation in $\Pi$ whose Harish-Chandra parameter is dominant for $\Delta^+$. 
 \end{lemma}
 
+
+\subsection{Missing ingredient?}
+
+We want to know that if $\pi_1=\pi(\lambda_1),\pi_2=\pi(\lambda_2)$ are large discrete series, then $\Wh(\pi_1)=\Wh(\pi_2)$ if and only $\lambda_1,\lambda_2$
+are in the same Weyl chamber.
+
+More precisely, $W$ and $W_K=\Norm_K(T)$ act on $T$, and $\pi(\lambda)=\pi(w\lambda)$ if and only if $\lambda\in W_K$.
+So the correct statement is: $\Wh(\pi_1)=\Wh(\pi_2)$ if and only if the Weyl chambers of $\lambda_1,\lambda_2$ are conjugate by $W_K$.
+
+One direction is easy. We need to show:
+$\Wh(\pi(\lambda_1))=\Wh(\pi(\lambda_2)\Rightarrow \mathcal C(\lambda_1)$ is $W_K$-conjugate to  $\mathcal C(\lambda_2)$.
+
+We may as well assume $\pi(\lambda_1),\pi(\lambda_2)$ are in the same $L$-packet, i.e. $\lambda_2=w\lambda_1$ for some $w\in W$.
+We know that $Q$ acts simply transitively on the large discrete series in the $L$-packet, and on principal nilpotent orbits.
+Also: this action is given by the action of $W$, i.e. if $g\in Q$ then $\pi(\lambda)^g=\pi(g\lambda)=\pi(w\lambda)$ for some $w\in W$.
+So
+$$
+\Wh(\pi_1)=\Wh(\pi_2)\Leftrightarrow \pi_1\simeq \pi_2\Leftrightarrow \lambda_1\sim_{W_K}\lambda_2\Leftrightarrow \mathcal C_1\sim_{W_K}\mathcal C_2
+$$
+
+
+
 \bibliographystyle{plain}
 \bibliography{Refs}
 
