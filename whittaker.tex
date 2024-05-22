@@ -646,7 +646,7 @@ We shall do two things here. First, we will quote a result of \cite{AVAV} which 
 
 
 \subsubsection{The Sekiguchi correspondence for principal nilpotent orbits}\label{sec:concrete_sek}
-\footnote{AA 2024-IV-15: should correct the formulas here.}
+\footnote{JA These formulas should be right now, see the Appendix}
 Let us spell out the special case of the Sekiguchi correspondence which is of interest here. We follow~\cite[Section~2]{AVAV}.
 
 Suppose $E_\R\in \Op\cap i\g(\R)$. Then we may choose an $SL(2)$-triple $(H_\R,E_\R,F_\R)$ with $F_\R$  contained in $i\g(\R)$,
@@ -654,15 +654,15 @@ which implies $H_\R\in \g(\R)$.
 After conjugating by~$G(\R)$ we may further assume $\theta(E_\R)=-F_\R$.
 The Sekiguchi correspondence takes the $G(\R)$-orbit of~$E_\R$ to the $K$-orbit of
 $$
-E_\theta=\frac12(-iE_\R-iF_\R+H_\R)\in \N\cap \s.
+E_\theta=\frac12(E_\R-F_\R+H_\R)\in \N\cap \s.
 $$
 
 Computing the map in the other direction goes as follows.
-Suppose $E_\theta\in \Op\cap\s$. Choose an $SL(2)$-triple  $(E_\theta H_\theta,F_\theta)$ with
+Suppose $E_\theta\in \Op\cap\s$. Choose an $SL(2)$-triple  $(E_\theta, H_\theta,F_\theta)$ with
 $F_\theta\in\s$, which implies $H_\theta\in\k$. After conjugating by $K$ we may further assume $\sigma(E_\theta)=F_\theta$.
 Then the Sekiguchi correspondence takes the $K$-orbit of $E_\theta$ to the $G(\R)$-orbit of 
 \begin{equation}\label{def_E_R}
-E_\R=\frac i2(E_\theta-F_\theta-H_\theta)\in\N\cap i\g(\R).
+E_\R=\frac 12(E_\theta-F_\theta-H_\theta)\in\N\cap i\g(\R).
 \end{equation}
 
 \subsubsection{A simple proof of Proposition~\ref{Sekiguchi_result}}\label{sec:sekiguchi_proof}
@@ -741,23 +741,56 @@ Then $\pi$ is the discrete series representation in $\Pi$ whose Harish-Chandra p
 \end{lemma}
 
 
-\subsection{Missing ingredient?}
+\subsection{Appendix: $SL(2,\R)$ calculation}
 
-We want to know that if $\pi_1=\pi(\lambda_1),\pi_2=\pi(\lambda_2)$ are large discrete series, then $\Wh(\pi_1)=\Wh(\pi_2)$ if and only $\lambda_1,\lambda_2$
-are in the same Weyl chamber.
-
-More precisely, $W$ and $W_K=\Norm_K(T)$ act on $T$, and $\pi(\lambda)=\pi(w\lambda)$ if and only if $\lambda\in W_K$.
-So the correct statement is: $\Wh(\pi_1)=\Wh(\pi_2)$ if and only if the Weyl chambers of $\lambda_1,\lambda_2$ are conjugate by $W_K$.
-
-One direction is easy. We need to show:
-$\Wh(\pi(\lambda_1))=\Wh(\pi(\lambda_2)\Rightarrow \mathcal C(\lambda_1)$ is $W_K$-conjugate to  $\mathcal C(\lambda_2)$.
-
-We may as well assume $\pi(\lambda_1),\pi(\lambda_2)$ are in the same $L$-packet, i.e. $\lambda_2=w\lambda_1$ for some $w\in W$.
-We know that $Q$ acts simply transitively on the large discrete series in the $L$-packet, and on principal nilpotent orbits.
-Also: this action is given by the action of $W$, i.e. if $g\in Q$ then $\pi(\lambda)^g=\pi(g\lambda)=\pi(w\lambda)$ for some $w\in W$.
-So
+This is not for publication, just to make sure we have the formulas in Section \ref{sec:concrete_sek} correct.
+These are:
 $$
-\Wh(\pi_1)=\Wh(\pi_2)\Leftrightarrow \pi_1\simeq \pi_2\Leftrightarrow \lambda_1\sim_{W_K}\lambda_2\Leftrightarrow \mathcal C_1\sim_{W_K}\mathcal C_2
+E_\theta=\frac12(E_\R-F_\R+H_\R)\in \N\cap \s.
+$$
+and
+$$
+E_\R=\frac 12(E_\theta-F_\theta-H_\theta)\in\N\cap i\g(\R).
+$$
+
+Recall $\sigma(X)=\overline X$ and $\theta(X)=-X^t$.
+
+Take
+$$
+E_\R=\begin{pmatrix}0&i\\0&0\end{pmatrix},
+F_\R=\begin{pmatrix}0&0\\-i&0\end{pmatrix},
+H_\R=\begin{pmatrix}1&0\\0&-1\end{pmatrix}
+$$
+These satisfy the standard $SL(2)$ commutation relations, and $E_\R,F_\R$ are in the $-1$-eigenspace of $\sigma$,
+and $\theta(E_\R)=F_\R, \theta(H_\R)=-H_\R$.
+
+Set $g=\frac 1{\sqrt 2}\begin{pmatrix}1&i\\i&1
+\end{pmatrix}$, and take $E_\theta,F_\theta,H_\theta$ be the conjugates of $E_\R,F_\R,H_\R$ by $g$:
+$$
+E_\theta=\frac12\begin{pmatrix}1&i\\i&-1\end{pmatrix},
+F_\theta=\frac12\begin{pmatrix}1&-i\\-i&-1\end{pmatrix},
+H_\theta=\begin{pmatrix}0&-i\\i&0\end{pmatrix},
+$$
+
+
+These satisfy the standard $SL(2)$ commutation relations, and $E_\theta,F_\theta$ are in the $-1$-eigenspace of $\theta$.
+Also $\sigma(E_\theta)=F_\theta,\sigma(H_\theta)=-H_\theta$.
+
+Furthermore:
+$$
+\begin{aligned}
+  E_\theta&=\frac12(E_\R-F_\R+H_\R)\\
+  F_\theta&=\frac12(-E_\R+F_\R+H_\R)\\
+  H_\theta&=-E_\R-F_\R
+\end{aligned}
+$$
+and
+$$
+\begin{aligned}
+  E_\R&=\frac12(E_\theta-F_\theta-H_\theta)\\
+  F_\R&=\frac12(-E_\theta+F_\theta-H_\theta)\\
+  H_\R&=E_\theta+F_\theta
+\end{aligned}
 $$
 
 
@@ -766,9 +799,3 @@ $$
 \bibliography{Refs}
 
 \end{document}
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: t
-%%% End: s_{1}:0 -> -1 6
-
-
