@@ -298,7 +298,7 @@ and by \cite[Lemma 14.14]{abv} a  large discrete series representation admits a 
 Part~(b) is one of the main results of~\cite{vogan_bowdoin}: see \cite[Theorem ?]{vogan_bowdoin}.\footnote{\textcolor{red}{(AA, 2024-V-1) : TODO -- find the right references, I tried but quickly got lost...}}
 
 
-Part~(c) follows from~\cite{rossmann_limit_orbits}.  Update May 1: it seems the right place is Lemma B, and to go from that to the statement is a matter of chasing definitions and using the asymptotic cone. \textcolor{blue}{Update May 29: by Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{h}^+$ is the large Weyl chamber containing the HC parameter of~$\pi$, then $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ is a single orbit---where $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ is defined in Rossmann's paper. What we have to check is that the closure of this $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains $\WF(\pi)$. Now, I think that  the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} easily implies that the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains the asymptotic cone of the orbit of the HC parameter, so the claim seems to follow from the relationship between $\WF(\pi)$ and the asymptotic cone.}
+Part~(c) follows from~\cite{rossmann_limit_orbits}.  Update May 1: it seems the right place is Lemma B, and to go from that to the statement is a matter of chasing definitions and using the asymptotic cone. \textcolor{blue}{Update May 29: by Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{h}^+$ is the large Weyl chamber containing the HC parameter of~$\pi$, then $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ is a single orbit---where $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ is defined in Rossmann's paper. What we have to check is that the closure of this $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains $\WF(\pi)$. Now, I think that  the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} easily implies that the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains the asymptotic cone of the orbit of the HC parameter, so the claim seems to follow from the relationship between $\WF(\pi)$ and the asymptotic cone (Lemma~\ref{lem:WF_and_AC}).}
 
 
 \end{proof}
@@ -615,6 +615,8 @@ Consider the \emph{asymptotic cone} of $\mathcal{O}_\pi$ (see e.g. \cite[Section
 Let~$\pi$ be a discrete series representation of $G(\R)$. The wave-front set $\WF(\pi)$ is equal to the asymptotic cone $\AC(\mathcal{O}_\pi)$.
 \end{lemma}
 
+For this see \cite{HarrisHeOlafsson}; in our case the result is due to Rossmann and can be extracted from \cite{RossmannPicard}, Theorem B and C. \qed
+
 In Section~\ref{sec:alternate_WF} below we will  give another simple description of~$\WF(\pi)$, based on the description of $\AV(\pi)$ in the previous paragraph and on the Sekiguchi correspondence. 
 
 \subsection{Large discrete series to Whittaker data ((1) $\leftrightarrow$ (2))}
@@ -740,6 +742,29 @@ $$
 Then $\pi$ is the discrete series representation in $\Pi$ whose Harish-Chandra parameter is dominant for $\Delta^+$. 
 \end{lemma}
 
+\subsection{Bonus}
+
+This section uses the arguments above to deduce the ``folklore fact'' stated by  Jeff and Tasho with a reference to the present paper for the proof. \footnote{AA 2024-VI-7: I don't remember whether this was the most up-to-date version  of our understanding; I seem to remember that we wanted to know that $Q$ acts simply transitively on the large Weyl chambers, and I haven't thought yet about what the relationship this has with what is written below...}
+
+
+We want to know that if $\pi_1=\pi(\lambda_1),\pi_2=\pi(\lambda_2)$ are large discrete series, then $\Wh(\pi_1)=\Wh(\pi_2)$ if and only $\lambda_1,\lambda_2$
+are in the same Weyl chamber.
+
+More precisely, $W$ and $W_K=\Norm_K(T)$ act on $T$, and $\pi(\lambda)=\pi(w\lambda)$ if and only if $\lambda\in W_K$.
+So the correct statement is: $\Wh(\pi_1)=\Wh(\pi_2)$ if and only if the Weyl chambers of $\lambda_1,\lambda_2$ are conjugate by $W_K$.
+
+One direction is easy using the above results: we have seen that if $\lambda_1,\lambda_2$
+are in the same Weyl chamber then the wavefront set, therefore the Whittaker model, are the same. 
+
+What we need to show:
+$\Wh(\pi(\lambda_1))=\Wh(\pi(\lambda_2)\Rightarrow \mathcal C(\lambda_1)$ is $W_K$-conjugate to  $\mathcal C(\lambda_2)$.
+
+We may as well assume $\pi(\lambda_1),\pi(\lambda_2)$ are in the same $L$-packet, i.e. $\lambda_2=w\lambda_1$ for some $w\in W$.We know that $Q$ acts simply transitively on the large discrete series in the $L$-packet, and on principal nilpotent orbits.
+Also: this action is given by the action of $W$, i.e. if $g\in Q$ then $\pi(\lambda)^g=\pi(g\lambda)=\pi(w\lambda)$ for some $w\in W$.
+So
+$$
+\Wh(\pi_1)=\Wh(\pi_2)\Leftrightarrow \pi_1\simeq \pi_2\Leftrightarrow \lambda_1\sim_{W_K}\lambda_2\Leftrightarrow \mathcal C_1\sim_{W_K}\mathcal C_2
+$$
 
 \subsection{Appendix: $SL(2,\R)$ calculation}
 
