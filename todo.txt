@@ -1,0 +1,28 @@
+--------
+
+J: in Proposition 1, find a good reference for the fact that the AV of a large DS is the closure of a single orbit (either by a good reference to the appropriate place in Vogan's Bowdoin paper, to one of Trapa's paper; it might even be that the appendix to AV1 is enough). 
+
+-------- 
+
+J: Fix the various formulas which currently have sign problems: 
+
+- in Lemma 13 (formula for the AV), the element E_pi should probably have the X_{-\alpha}, see the appendix to AV1
+- in Section 3.5.1 on Sekiguchi, check that the new formulas are consistent with the above change; the main point is that in the discussion before Proposition 20 a few lines later, the element H_{theta} (coming from an SL2-triple) should be in the same Weyl chamber as the element H_lambda coming from the HC parameter  
+
+---------
+
+J: Think about a way to complete the argument for the following bonus result: if $\pi_1=\pi(\lambda_1),\pi_2=\pi(\lambda_2)$ are large discrete series, then $\Wh(\pi_1)=\Wh(\pi_2)$ if and only $\lambda_1,\lambda_2$
+are in the same Weyl chamber.
+
+The "if" part is easy from what we have. Using our other results, we reduced the remaining statement direction to the fact that Q acts simply transitively on the large Weyl chambers. It is an argument for the last fact which is still missing.
+
+
+
+--------- 
+
+A:  in the proof of Proposition 1, turn the current discussion of part (c) into a formal one (this is the argument for the fact that Rossmann's Lemma B implies that the WF is the closure of a single orbit).
+
+--------- 
+
+A: decide what to write for the proof Lemma 21 (we have the details already: it's a matter of choosing between writing down everything, referring to Fresse--Mehdi for parts of it, or something else). 
+
