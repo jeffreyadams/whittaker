@@ -304,9 +304,12 @@ Hilbert space globalization.
 \begin{proof} For (a), by \cite{vogan-gelfand-kirillov} and \cite{kostant_whittaker}
 a representation $\pi$ is large if and only if it admits a Whittaker model for some Whittaker datum,
 and by \cite[Lemma 14.14]{abv} a  large discrete series representation admits a unique Whittaker datum.
+
 For (b) see \cite[Proposition A.9]{AV1}.
 
-Part~(c) follows from~\cite{rossmann_limit_orbits}.  Update May 1: it seems the right place is Lemma B, and to go from that to the statement is a matter of chasing definitions and using the asymptotic cone. \textcolor{blue}{Update May 29: by Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{h}^+$ is the large Weyl chamber containing the HC parameter of~$\pi$, then $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ is a single orbit---where $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ is defined in Rossmann's paper. What we have to check is that the closure of this $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains $\WF(\pi)$. Now, I think that  the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} easily implies that the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains the asymptotic cone of the orbit of the HC parameter, so the claim seems to follow from the relationship between $\WF(\pi)$ and the asymptotic cone (Lemma~\ref{lem:WF_and_AC}).}
+Part~(c) follows from~\cite[Lemma B]{rossmann_limit_orbits}. Let us briefly explain how to go from there to  assertion~(c), using standard facts on the asymptotic cone recalled below in Section~\ref{sec:asymp_cone} below.
+
+Let~$\mathfrak{h}^+$ be a Weyl chamber in~$\mathfrak{h}$ containing a representative for the Harish-Chandra parameter of~$\pi$. Write $\lim_{x \to 0(\mathfrak{h}^+)} G(\R)\cdot x$ for the set of all elements $y \in \g$ such that every $G$-invariant neighborhood of~$y$ contains all elements of~$\mathfrak{h}^+$ sufficiently close to zero. By Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{h}^+$ is a large Weyl chamber, then $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ is a single $G$-orbit.  Since this does happen when~$\pi$ is a generic discrete series representation, to prove assertion~(c)  it is enough to check the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains $\WF(\pi)$ in that case. Now, the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} immediately imply that the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains the asymptotic cone of the orbit of the Harish-Chandra parameter (see  Section~\ref{sec:asymp_cone} below). Therefore assertion~(c) follows from the fact that this asymptotic cone is equal to  $\WF(\pi)$  (Lemma~\ref{lem:WF_and_AC} below).
 
 
 \end{proof}
@@ -601,7 +604,7 @@ See
 \cite[Propositions A.7 and A.9]{AV1}.
 
 
-\subsection{Large discrete series to real orbits ((1) $\leftrightarrow$ (4))}
+\subsection{Large discrete series to real orbits ((1) $\leftrightarrow$ (4))}\label{sec:asymp_cone}
 
 
 Suppose $\pi$ is a discrete series representation.
