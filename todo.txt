@@ -28,7 +28,7 @@ The "if" part is easy from what we have. Using our other results, we reduced the
 
 (For Alexandre:)
 
-In the proof of Proposition 1, turn the current discussion of part (c) into a formal one (this is the argument for the fact that Rossmann's Lemma B implies that the WF is the closure of a single orbit).
+Do some polishing around the proof of the fact that the AV of a large DS is the closure of a single orbit.
 
 --------- 
 
