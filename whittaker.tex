@@ -214,11 +214,12 @@ Let $\N$ be the set of nilpotent elements of $\g$.
 
 We need to pass to the dual Lie algebra $\g^*$. We follow  \cite[Section 2]{AVAV}.
 Define $\N^*\subset \g^*$ to be the set of elements whose orbit is a cone.
-We identify $\g$ and $\g^*$ using  a non-degenerate invariant form on $\g$.
+We identify $\g$ and $\g^*$ using  a non-degenerate invariant bilinear form on $\g$. Given an element~$X$ in $\g$ we sometimes write $X^\ast$ for the corresponding element of~$\g^\ast$. 
+
 This restricts to an isomorphism $\N\simeq \N^*$. Although this isomorphism depends on the choice of form,
 the bijection on the level of $G$-orbits is canonical.
 
-We define $\O_p$ to be the principal nilpotent orbit in $\N^*$: this is the unique orbit such that $\overline{\O_p}=\N^*$.
+We define $\O_p$ to be the \emph{principal nilpotent orbit} in $\N^*$: this is the unique orbit whose closure is  $\N^*$.
 
 In the $\theta$-picture we have an analogous construction. We may assume the form is orthogonal with respect to $\theta$.
 Consequently the decomposition $\g=\mathfrak k+\s$ also gives $\g^*=\mathfrak k^*\oplus \s^*$, and this induces
@@ -226,18 +227,19 @@ a canonical bijection between $K$-orbits on $\s$ and on $\s^*$.
 
 
 \subsubsection*{Representations} 
-
 We need to pass back and forth between representations of $G(\R)$ and $(\g,K)$-modules.
 See \cite{greenbook} for details.
 
 Suppose $\pi$ is an irreducible admissible representation of $G(\R)$  on a Hilbert space. 
 The underlying
 $(\g,K)$-module is on the space of $K$-finite vectors in
-$V$. Conversely if $\pi$ is an irreducible $(\g,K)$-module it can be
+$V$; we will denote it by~$\pi_K$ in this paper. 
+
+Conversely if $\pi$ is an irreducible $(\g,K)$-module it can be
 realized as the $K$-finite vectors of a Hilbert space representation, which we
 refer to as the Hilbert space globalization of $\pi$.
 
-\footnote{(AA 2024-V-1) Todo: add notation $\pi_K$ and quickly discuss notions of equivalence?}
+The notion of equivalence of $(\g, K)$-modules is defined in such a way that two equivalent $(\g, K)$-modules have equivalent Hilbert space globalizations, and that any two equivalent admissible representations of~$G$ have equivalent underlying $(\g, K)$-modules.
 
 \subsection{The invariants}\label{sec:invariants}
 
@@ -251,7 +253,7 @@ Let $\AVann(\pi)\subset\N^*\subset \g^*$ be the associated variety of $I_\pi$.
 This is the closure of a single complex nilpotent orbit $\O$
 See \cite[Section 1, Theorem 4.7]{vogan_bowdoin}.
 
-The associated variety of $\pi$, denoted $\AV(\pi)$, is a closed, $K$-invariant set in $\s^*$, so it is a finite union of
+The associated variety of $\pi$, denoted $\AV(\pi)$, is a closed, $K$-invariant set in~$\s^*$; so it is a finite union of
 nilpotent $K$-orbits on $\s^*$. See \cite[Section 5]{vogan_bowdoin}.
 
 The Gelfand---Kirillov dimension~$\GK(\pi)$ of~$\pi$ can be defined in several different ways~\cite{vogan-gelfand-kirillov}; but one of them is
@@ -289,35 +291,6 @@ We define the Whittaker data  of a $(\g,K)$-module to be that of its
 Hilbert space globalization.
 
 
-
-\subsection{The invariants for generic discrete series} 
-
-\begin{proposition} \label{invariants_ds}
-  Suppose $\pi$ is a generic discrete series representation of $G(\R)$. Then:
-\begin{enumerate}[(a)]
-\item $\Wh(\pi)$ is a single Whittaker datum;
-\item $\AV(\pi)$ is the closure of a single $K$-orbit on~$\mathcal{O}_p \cap \s^*$;
-\item  $\WF(\pi)$ is the closure of a single $G(\R)$-orbit on $\mathcal{O}_p \cap  i \g(\R)^*$.
-\end{enumerate}
-\end{proposition}
-
-\begin{proof} For (a), by \cite{vogan-gelfand-kirillov} and \cite{kostant_whittaker}
-a representation $\pi$ is large if and only if it admits a Whittaker model for some Whittaker datum,
-and by \cite[Lemma 14.14]{abv} a  large discrete series representation admits a unique Whittaker datum.
-
-For (b) see \cite[Proposition A.9]{AV1}.
-
-Part~(c) follows from~\cite[Lemma B]{rossmann_limit_orbits}. Let us briefly explain how to go from there to  assertion~(c), using standard facts on the asymptotic cone recalled below in Section~\ref{sec:asymp_cone} below.
-
-Let~$\mathfrak{h}^+$ be a Weyl chamber in~$\mathfrak{h}$ containing a representative for the Harish-Chandra parameter of~$\pi$. Write $\lim_{x \to 0(\mathfrak{h}^+)} G(\R)\cdot x$ for the set of all elements $y \in \g$ such that every $G$-invariant neighborhood of~$y$ contains all elements of~$\mathfrak{h}^+$ sufficiently close to zero. By Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{h}^+$ is a large Weyl chamber, then $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ is a single $G$-orbit.  Since this does happen when~$\pi$ is a generic discrete series representation, to prove assertion~(c)  it is enough to check the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains $\WF(\pi)$ in that case. Now, the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} immediately imply that the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains the asymptotic cone of the orbit of the Harish-Chandra parameter (see  Section~\ref{sec:asymp_cone} below). Therefore assertion~(c) follows from the fact that this asymptotic cone is equal to  $\WF(\pi)$  (Lemma~\ref{lem:WF_and_AC} below).
-
-
-\end{proof}
-
-Because of this result we abuse notation slightly as follows. If~$\pi$ is a generic discrete series representation of~$G(\R)$, we write $AV(\pi)=\O$ to indicate that $AV(\pi)$ is the closure of the $K$-orbit $\O\subset \s^*$.
-Similarly we write $\WF(\pi)=\O$ to indicate that $\WF(\pi)$ is the closure of the $G(\R)$-orbit $\O\subset i\g(\R)^*$.
-
-
 \subsection{Large representations} Set $N=\dim(G)-\mathrm{rank}(G)$. This is the dimension of the nilpotent cone~$\N$. The maximal Gelfand--Kirillov dimension of a representation is $N/2$.
 We say $\pi$ is {\it large} if $\GK(\pi)=N/2$. See \cite[Section~6]{vogan-gelfand-kirillov}. 
 
@@ -339,6 +312,44 @@ See \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
 
 
 
+\subsection{Discrete series and Harish-Chandra parameters} 
+
+Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup. From now on, we assume $G(\R)$ does have discrete series representation, and fix a compact Cartan subgroup $H(\R)$ of~$G(\R)$, with complexified Lie algebra~$\mathfrak{h} \subset \g$. 
+
+With this choice, any discrete series representation of~$G(\R)$ has a \emph{Harish-Chandra parameter}. Etc etc.
+\begin{itemize}
+\item Harish-Chandra parameter, $W$ and $W_K$
+\item Notion of large Weyl chamber 
+\end{itemize}
+
+\subsection{The invariants for generic discrete series} 
+
+\begin{proposition} \label{invariants_ds}
+  Suppose $\pi$ is a generic discrete series representation of $G(\R)$. Then:
+\begin{enumerate}[(a)]
+\item $\Wh(\pi)$ is a single Whittaker datum;
+\item $\AV(\pi)$ is the closure of a single $K$-orbit on~$\mathcal{O}_p \cap \s^*$;
+\item  $\WF(\pi)$ is the closure of a single $G(\R)$-orbit on $\mathcal{O}_p \cap  i \g(\R)^*$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof} For (a), by \cite{vogan-gelfand-kirillov} and \cite{kostant_whittaker}
+a representation $\pi$ is large if and only if it admits a Whittaker model for some Whittaker datum,
+and by \cite[Lemma 14.14]{abv} a  large discrete series representation admits a unique Whittaker datum.
+
+For (b) see \cite[Proposition A.9]{AV1}.
+
+Part~(c) follows from~\cite[Lemma B]{rossmann_limit_orbits}. Let us explain how to go from there to  assertion~(c), using standard facts on the asymptotic cone recalled below (\S\,{}\ref{sec:asymp_cone}).
+
+Let~$\mathfrak{h}^+$ be a Weyl chamber in~$\mathfrak{h}$ containing a representative for the Harish-Chandra parameter of~$\pi$. Write $\lim_{x \to 0(\mathfrak{h}^+)} G(\R)\cdot x$ for the set of all elements $y \in \g$ such that every $G$-invariant neighborhood of~$y$ contains all elements of~$\mathfrak{h}^+$ sufficiently close to zero. By Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{h}^+$ is a large Weyl chamber, then $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ is a single $G$-orbit.  Since this does happen when~$\pi$ is a generic discrete series representation, to prove assertion~(c)  it is enough to check the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains $\WF(\pi)$ in that case. Now, the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} immediately imply that the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains the asymptotic cone of the orbit of the Harish-Chandra parameter (see  Section~\ref{sec:asymp_cone} below). Therefore assertion~(c) follows from the fact that this asymptotic cone is equal to  $\WF(\pi)$  (Lemma~\ref{lem:WF_and_AC} below).
+
+
+\end{proof}
+
+Because of this result we abuse notation slightly as follows. If~$\pi$ is a generic discrete series representation of~$G(\R)$, we write $AV(\pi)=\O$ to indicate that $AV(\pi)$ is the closure of the $K$-orbit $\O\subset \s^*$.
+Similarly we write $\WF(\pi)=\O$ to indicate that $\WF(\pi)$ is the closure of the $G(\R)$-orbit $\O\subset i\g(\R)^*$.
+
+
 
 \section{The dictionary for generic discrete series}
 
@@ -358,7 +369,7 @@ The maps $\pi \mapsto \Wh(\pi)$, $\pi \mapsto \AV(\pi)$ and $\pi\mapsto \WF(\pi)
 \item[(3)] The set of~$K$-orbits on $\mathcal{O}_p \cap \s^*$.
 \item[(4)] The set of~$G(\R)$-orbits on $\mathcal{O}_p \cap  i \g(\R)^*$.
 \end{enumerate}
-In particular if $\pi$ is a large discrete series represenation then each of these three invariants of $\pi$ determines the other $2$. 
+In particular if $\pi$ is a large discrete series representation then each of these three invariants of $\pi$ determines the other two. 
 \end{theorem}
 
 Before embarking on the proof, let us point out that the maps in the Theorem are defined using rather deep results of representation theory. However, we shall show in Section~\ref{sec:explicit} that all bijections $(i) \leftrightarrow (j)$, for $i,j \in \{(1), \dots, (4)\}$, can be spelled out in elementary terms. Furthermore we shall prove, using elementary arguments, that (3) $\leftrightarrow$ (4) coincides with the Kostant--Sekiguchi correspondence.  
@@ -593,10 +604,10 @@ Set
   F_\pi=\sum_{\alpha\in S(\lambda)}X_{-\alpha}\in \N.
 \end{equation}
 
-Then $F_\pi\in\s$ is a regular nilpotent element. Let $\xi_\pi\in \N^*$ be the corresponding element (cf. Section \ref{s:nilpotentorbits}).
+Then $F_\pi\in\s$ is a regular nilpotent element. Let $F_\pi^\ast\in \N^*$ be the corresponding element (cf. Section \ref{s:nilpotentorbits}).
 Then 
 $$
-\AV(\pi)=\overline{K\cdot \xi_\pi}.
+\AV(\pi)=\overline{K\cdot F_\pi^\ast}.
 $$
 \end{lemma}
 
