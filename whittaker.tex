@@ -342,7 +342,7 @@ For (b) see \cite[Proposition A.9]{AV1}.
 
 Part~(c) follows from~\cite[Lemma B]{rossmann_limit_orbits}. Let us explain how to go from there to  assertion~(c), using standard facts on the asymptotic cone recalled below (\S\,{}\ref{sec:asymp_cone}).
 
-Let~$\mathfrak{h}^+$ be a Weyl chamber in~$\mathfrak{h}$ containing a representative for the Harish-Chandra parameter of~$\pi$. Write $\lim_{x \to 0(\mathfrak{h}^+)} G(\R)\cdot x$ for the set of all elements $y \in \g$ such that every $G$-invariant neighborhood of~$y$ contains all elements of~$\mathfrak{h}^+$ sufficiently close to zero. By Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{h}^+$ is a large Weyl chamber, then $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ is a single $G$-orbit.  Since this does happen when~$\pi$ is a generic discrete series representation, to prove assertion~(c)  it is enough to check the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains $\WF(\pi)$ in that case. Now, the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} immediately imply that the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains the asymptotic cone of the orbit of the Harish-Chandra parameter (see  Section~\ref{sec:asymp_cone} below). Therefore assertion~(c) follows from the fact that this asymptotic cone is equal to  $\WF(\pi)$  (Lemma~\ref{lem:WF_and_AC} below).
+Let~$\mathfrak{h}^+$ be a Weyl chamber in~$\mathfrak{h}$ containing a representative for the Harish-Chandra parameter of~$\pi$. Write $\lim_{x \to 0(\mathfrak{h}^+)} G(\R)\cdot x$ for the set of all elements $y \in \g$ such that every $G$-invariant neighborhood of~$y$ contains all elements of~$\mathfrak{h}^+$ sufficiently close to zero. By Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{h}^+$ is a large Weyl chamber, then $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ is a single $G$-orbit.  Since this does happen when~$\pi$ is a generic discrete series representation, to prove assertion~(c)  it is enough to check the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains $\WF(\pi)$ in that case. Now, the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} implies that the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains the asymptotic cone of the orbit of the Harish-Chandra parameter (see  Section~\ref{sec:asymp_cone} below). Therefore assertion~(c) follows from the fact that this asymptotic cone is equal to  $\WF(\pi)$  (Lemma~\ref{lem:WF_and_AC} below).
 
 
 \end{proof}
@@ -639,7 +639,7 @@ In Section~\ref{sec:alternate_WF} below we will  give another simple description
 \subsection{Large discrete series to Whittaker data ((1) $\leftrightarrow$ (2))}
 
 
-We recall a recent result of the first author and Tasho Kaletha, which spells out the connection between large discrete series and Whittaker data using  {\it Kostant sections}. Let~$X$ be a regular nilpotent element of~$\g$, and choose an  $\SL(2)$-triple $(X, H, Y)$. The Kostant section~$\Kostant{X}$ is the affine subspace $X + \mathrm{Cent}_{\g}(Y)$ of~$\g$. This depends on the choice of $\SL(2)$-triple, but if $X \in \g(\R)^*$, then the $G(\R)$-conjugacy class of~$\Kostant{X}$ depends only on the $G(\R)$-conjugacy class of~$X$. 
+We recall a recent result of the first author and Tasho Kaletha, which spells out the connection between large discrete series and Whittaker data using  {\it Kostant sections}. Let~$X$ be a regular nilpotent element of~$\g$, and choose elements $H, Y \in \g$ such that $(X,H,Y)$ is an  $\SL(2)$-triple. The Kostant section~$\Kostant{X}$ is the affine subspace $X + \mathrm{Cent}_{\g}(Y)$ of~$\g$. This depends on the choice of $\SL(2)$-triple, but if $X \in \g(\R)$, then the $G(\R)$-conjugacy class of~$\Kostant{X}$ depends only on the $G(\R)$-conjugacy class of~$X$. 
 
 
 \begin{proposition}[\cite{adams_kaletha}]\label{JeffTasho_criterion}
@@ -665,39 +665,40 @@ We shall do two things here. First, we will quote a result of \cite{AVAV} which 
 
 
 \subsubsection{The Sekiguchi correspondence for principal nilpotent orbits}\label{sec:concrete_sek}
-\footnote{JA These formulas should be right now, see the Appendix}
 Let us spell out the special case of the Sekiguchi correspondence which is of interest here. We follow~\cite[Section~2]{AVAV}.
 
-{\bf Note:} Need some $*$'s here.
 
-Suppose $F_\R\in \Op\cap i\g(\R)$. Then we may choose an $SL(2)$-triple $(H_\R,E_\R,F_\R)$ with $E_\R$  contained in $i\g(\R)$,
+Suppose $\xi_\R\in \Op\cap i\g(\R)^\ast$, and write $\xi_\R = F_\R^\ast$ where $F_\R$ is a principal nilpotent element. We may choose $H_\R, E_\R \in \g$ such that $(H_\R,E_\R,F_\R)$ is an $\mathrm{SL}(2)$-triple and  $E_\R$  contained in $i\g(\R)$,
 which implies $H_\R\in \g(\R)$. 
-After conjugating by~$G(\R)$ we may further assume $\theta(E_\R)=-F_\R$.
-The Sekiguchi correspondence takes the $G(\R)$-orbit of~$E_\R$ to the $K$-orbit of
-$$
-F_\theta=\frac12(-E_\R+F_\R+H_\R)\in \N\cap \s.
-$$
+After conjugating by~$G(\R)$ we may further assume $\theta(E_\R)=-F_\R$. Set 
+\[   F_\theta=\frac12(-E_\R+F_\R+H_\R).\]
+Then the Sekiguchi correspondence takes the $G(\R)$-orbit of~$\xi_\R$ to the $K$-orbit of $\xi_\theta=F_\theta^\ast$. 
 
 Computing the map in the other direction goes as follows.
-Suppose $F_\theta\in \Op\cap\s$. Choose an $SL(2)$-triple  $(E_\theta, H_\theta,F_\theta)$ with
-$E_\theta\in\s$, which implies $H_\theta\in\k$. After conjugating by $K$ we may further assume $\sigma(E_\theta)=F_\theta$.
-Then the Sekiguchi correspondence takes the $K$-orbit of $E_\theta$ to the $G(\R)$-orbit of 
+Suppose $\xi_\theta \in \Op\cap \s^\ast$, and let $F_\theta \in \s$ be such that $\xi_\theta=F_\theta^\ast$. Choose $E_\theta, H_\theta \in \g$ such that $(E_\theta, H_\theta, F_\theta)$ is an $SL(2)$-triple with $E_\theta \in \s$,  which implies $H_\theta\in\k$. After conjugating by $K$ we may further assume $\sigma(E_\theta)=F_\theta$.
+Define 
 \begin{equation}\label{def_F_R}
-F_\R=\frac 12(-E_\theta+F_\theta-H_\theta)\in\N\cap i\g(\R).
+  F_\R=\frac12(-E_\theta+F_\theta-H_\theta)\\
 \end{equation}
+Then the Sekiguchi correspondence takes the $K$-orbit of $\xi_\theta$ to the $G(\R)$-orbit of $\xi_\R = F_\R^\ast$. 
 
 \subsubsection{A simple proof of Proposition~\ref{Sekiguchi_result}}\label{sec:sekiguchi_proof}
 
-Consider the principal nilpotent element~$F_\pi$ defined in~\eqref{e:Fpi}. We define another regular nilpotent element  $F_\R$ using 
-\eqref{def_F_R} using $F_\theta=F_\pi$ on the right hand side. 
+Consider the principal nilpotent element~$F_\pi$ defined in~\eqref{e:Fpi}. Let us use this as~$F_\theta$ in the previous subsection: define $E_\theta = \sum_{\alpha \in S(\lambda)}X_\alpha$ and $H_\theta  = [E_\theta, F_\theta]$; then $E_\theta \in \s$ and $(E_\theta, H_\theta, F_\theta)$ is an $\mathrm{SL}(2)$-triple. Define another $\mathrm{SL}(2)$-triple $(E_\R, F_\R, H_\R)$ by
+\[ \begin{aligned}
+  F_\R&=\frac12(-E_\theta+F_\theta-H_\theta)\\
+  E_\R&=\frac12(E_\theta-F_\theta-H_\theta)\\
+  H_\R&=E_\theta+F_\theta.
+\end{aligned}\]
+ 
 We know that  $\AV(\pi)=K \cdot \xi_\pi$ (where $\xi_\pi\in\g^*$ corresponds to $F_\pi$, see Lemma~\ref{l:pi_to_av}), so the image of $\AV(\pi)$ by the Sekiguchi correspondence is 
- $G(\R)\cdot F_\R$. We want to check that $\WF(\pi)$ 
+ $G(\R)\cdot F_\R$. We want to check that this is equal to $\WF(\pi)$. 
 
 By Lemma~\ref{lem:matumoto} it is enough to check that $\pi$ is $\w$-generic for the Whittaker datum $\w$ corresponding to~$F_\R$. By Proposition~\ref{JeffTasho_criterion} this is the case if and only if the Kostant section $\Kostant{F_\R}$ meets $\mathcal{O}_\pi$. 
 
-Now, we know that $\Kostant{F_\R}=F_\R+\mathrm{Cent}_\g(F_\R)$ contains $F_\R-F_\R = H_\theta$\footnote{AA 2024-IV-15: insert the correct version once we've checked the Sekiguchi formulas in the previous paragraph. }.
-In general the orbits $\mathcal{O}_\pi$ and $G(\R) \cdot H_\theta$ are disjoint. 
-Nevertheless $H_{\lambda}$ and $H_\theta=[F_\theta, F_\theta]$ are in the same Weyl chamber\footnote{AA 2024-IV-15: should probably explain a bit more why this is correct.}.
+Now, we know that $\Kostant{F_\R}=F_\R+\mathrm{Cent}_\g(E_\R)$ contains $F_\R+E_\R = -H_\theta$.
+In general the orbits $\mathcal{O}_\pi$ and $G(\R) \cdot (-H_\theta)$ are disjoint. 
+Nevertheless $H_{\lambda}$ and $-H_\theta=[F_\theta, E_\theta] = \sum_{\alpha \in S(\lambda)} [X_{-\alpha,} X_\alpha]H_\alpha$ are in the same Weyl chamber. 
 Therefore the result follows from:  
 
 \begin{proposition}\label{prop:AC_chamber} Let $\mathcal{C} \subset \t$ be a large open Weyl chamber.
@@ -849,11 +850,14 @@ E_\R=\begin{pmatrix}0&i\\0&0\end{pmatrix},
 F_\R=\begin{pmatrix}0&0\\-i&0\end{pmatrix},
 H_\R=\begin{pmatrix}1&0\\0&-1\end{pmatrix}
 $$
-These satisfy the standard $SL(2)$ commutation relations, and $E_\R,F_\R$ are in the $-1$-eigenspace of $\sigma$,
-and $\theta(E_\R)=F_\R, \theta(H_\R)=-H_\R$.
+These satisfy the standard $SL(2)$ commutation relations: 
+\[ [E_\R, F_\R] = H_\R, \quad [H_\R, E_\R] = 2E_\R, \quad [H_\R, F_\R] = -2F_\R. \]
+
+Furthermore $E_\R,F_\R$ are in the $-1$-eigenspace of $\sigma$,
+and  we have $\theta(E_\R)=F_\R$ and $\theta(H_\R)=-H_\R$.
 
 Set $g=\frac 1{\sqrt 2}\begin{pmatrix}1&i\\i&1
-\end{pmatrix}$, and take $E_\theta,F_\theta,H_\theta$ be the conjugates of $E_\R,F_\R,H_\R$ by $g$:
+\end{pmatrix}$, and take $E_\theta,F_\theta,H_\theta$ be the conjugates of $E_\R,F_\R,H_\R$ by~$g$:
 $$
 E_\theta=\frac12\begin{pmatrix}1&i\\i&-1\end{pmatrix},
 F_\theta=\frac12\begin{pmatrix}1&-i\\-i&-1\end{pmatrix},
