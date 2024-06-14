@@ -315,11 +315,11 @@ See \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
 
 \subsection{Discrete series and Harish-Chandra parameters} 
 
-Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup. From now on, we assume $G(\R)$ does have discrete series representation, and fix a compact Cartan subgroup $H(\R)$ of~$G(\R)$, with complexified Lie algebra~$\mathfrak{h} \subset \g$. 
+Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup. From now on, we assume $G(\R)$ does have discrete series representation; fix a compact Cartan subgroup $T(\R)$ of~$G(\R)$, and let~$\mathfrak{t} \subset \g$ be the corresponding Cartan subalgebra of~$\g$ (the complexified Lie algebra of~$T(\R)$). 
 
 With this choice, any discrete series representation of~$G(\R)$ has a \emph{Harish-Chandra parameter}. Etc etc.
 \begin{itemize}
-\item Harish-Chandra parameter, $W$ and $W_K$
+\item Harish-Chandra parameter, notation $\pi(\lambda)$, discussion of $W$ and $W_K$
 \item Notion of large Weyl chamber 
 \end{itemize}
 
@@ -715,16 +715,19 @@ Consequently each of the three invariants $\Wh(\pi),\AV(\pi)$ and $\WF(\pi)$ are
 If $X\in \AC(\mathcal O)$ then $\Kostant{X}$ meets $\mathcal O$ by \cite[Lemma 3.2.3]{adams_kaletha}.
 
 Suppose $\Kostant{X}$ meets $\mathcal O$.
-This means there is an $SL(2)$-triple $(H,Y,X)$, and $Z\in \Cent(Y)$ such that $X+Z\in \O$. 
-By the representation theory of $SL(2)$ we know that $Z=\sum_{j=0}^n Z_j$ with $[H,Z_j]=-jZ_j$. 
-Then 
-$$
-\Ad(e^{tH})(X+Z)=e^{2t}(X) + \sum_j e^{-tj}Z_j
-$$
-Taking the limit as $t\rightarrow 0$ gives $\Ad(e^{tH})(X+Z)\rightarrow e^{2t}X$. Therefore
-$$
-\lim_{t\rightarrow 0}e^{-2t}\Ad(e^{tH})(X+Z)=X
-$$ which implies the result.
+This means there is an $SL(2)$-triple $(X,H,Y)$, and an element $Z\in \Cent_\g(Y)$ such that $W=X+Z \in \O$. 
+By \cite{Kostant59}, the centralizer  $\mathrm{Cent}_{\g}(Y)$ is abelian; furthermore there exists a Cartan subalgebra $\mathfrak{h} \subset \g$, and a positive system $\Delta$ for the roots of $\mathfrak{h}$ in $\g$, such that $E$ is contained in the sum of $\Delta$-positive root spaces, while $\mathrm{Cent}_{\g}(F)$ is contained in the sum of $\Delta$-negative roots.  Therefore, if we set $h(t) = \exp(tH)$ for $t \in \R_+$, then 
+\[\begin{cases} \mathrm{Ad}(h(t)) \cdot F \longrightarrow 0 & \text{as $t \to +\infty$, while} \\
+ \mathrm{Ad}(h(t)) \cdot E = f(t) E & \text{ with $f(t) >0$ and $f(t)\to +\infty$ as $t \to \infty$.}\end{cases}\]
+Set $Y(t) = \mathrm{Ad}(h(t)) Y$; then $f(t) \left[ E + Y(t) \right] = \mathrm{Ad}(h(t)) W$ lies on the orbit~$\mathcal{O}$. Thus there exists a continuous path in $\R^+ \cdot \mathcal{O}$ with $E=X$ as a limit point; by definition this means $X \in \AC(\mathcal{O})$.%By the representation theory of $SL(2)$ we know that $Z=\sum_{j=0}^n Z_j$ with $[H,Z_j]=-jZ_j$. 
+%Then 
+%$$
+%\Ad(e^{tH})(X+Z)=e^{2t}(X) + \sum_j e^{-tj}Z_j
+%$$
+%Taking the limit as $t\rightarrow 0$ gives $\Ad(e^{tH})(X+Z)\rightarrow e^{2t}X$. Therefore
+%$$
+%\lim_{t\rightarrow 0}e^{-2t}\Ad(e^{tH})(X+Z)=X
+%$$ which implies the result.
 \end{proof}
 
 For a closely related result see \cite[Proposition 3.5]{fm}.
