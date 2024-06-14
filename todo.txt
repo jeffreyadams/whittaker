@@ -1,17 +1,11 @@
 
-
-(For Alexandre:)
-
 1) Write a small section about discrete series: HC parameter, W_K, and notion of large Weyl chamber
 
 2) Go over the section which spells out Sekiguchi (5.3.1), insert the appropriate *s and check the formulas
 
-3)  Fix the beginning of Section 3.5.2 to see if everything now fits together
+---> June 14: this should now be OK, we need to proofread it
 
-4) Once everything about Sekiguchi seems OK, fix
+3)  Fix the beginning of Section 3.5.2 to see if everything now fits together, and update Section 3.5.3 once everything about Sekiguchi looks OK
 
-5) Isolate the result about Whittaker VS chamber of the HC parameter in a very short section
-
-6) Go over Jeff's recent changes and do some tinkering
-
+---> June 14: this should now be OK, we need to proofread it
 
