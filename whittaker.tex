@@ -765,25 +765,25 @@ As we saw the correspondence $\pi \leftrightarrow \WF(\pi)$ can be described usi
 \begin{lemma}
   Let $\pi$ be a large discrete series representation.
 Choose a compact Cartan subgroup $T$ and let $\lambda\in \t^*$ be the Harish-Chandra parameter of $\pi$.
-Define $F_\theta=F_\pi$ as in \eqref{e:Fpi}, and choose an $SL(2)$-triple $(H_\theta,E_\theta,F_\theta)$ as usual.
-After conjugating by $K$ we may assume $\sigma(E_\theta)=F_\theta$.  Then\footnote{AA 14-II-2023: no closure?}
+Define $F_\theta=F_\pi$ as in \eqref{e:Fpi}, and choose  $E_\theta$, $H_\theta$ such that $(H_\theta,E_\theta,F_\theta)$ is an $\mathrm{SL}(2)$-triple with $\sigma(E_\theta)=F_\theta$.  Then
 $$
-\WF(\pi)=G(\R)\cdot\frac i2(E_\theta-F_\theta-H_\theta)\in\N\cap i\g(\R)
-$$
-Conversely if $E_\R\in \Op\cap i\g(\R)$, choose an $SL(2)$-triple $(H_\R,E_\R,F_\R)$ which (after conjugating by $G(\R)$) satisfies $\theta(E_\R)=-F_\R$.
+\WF(\pi)=G(\R)\cdot F_\R^\ast, \quad \text{where $F_\R = \frac i2(-E_\theta+F_\theta-H_\theta)\in\N\cap i\g(\R)$.}
+$$\end{lemma}
+Conversely, assume we are given an $L$-packet~$\Pi$ of generic discrete series, and consider a regular semisimple orbit~$\Omega$ in~$\Op \cap i\g(\R)^\ast$. We can determine the unique element~$\pi \in \Pi$ with $\WF(\pi)=\Omega$ as follows. Fix~$\xi_\R \in \Omega$, write $\xi_\R=F_\R^\ast$ with $F_\R \in \g$ and let $E_\R, H_\R \in \g$ be such that $(E_\R, H_\R, F_\R$ is an  $\mathrm{SL}(2)$-triple with $\theta(E_\R)=-F_\R$. Set
 Let
 $$
 H_\theta=E_\R-F_\R.
 $$
-Then $H_\theta\in\k$ is a regular semisimple element.
-Set $\t=\Cent_{\g}(H_\theta)$, and let
+Then $H_\theta$ is a regular semisimple element, and belongs to~$\k$.
+Define a Cartan subalgebra~$\t$ of~$\g$ by $\t=\Cent_{\g}(H_\theta)$, and a set of positive roots by
 $$
-\Delta^+=\{\alpha\in\Delta(T,G)\mid  \alpha(H_\theta)>0\}
+\Delta^+=\{\alpha\in\Delta(\t,\g)\mid  \alpha(H_\theta)>0\}.
 $$
 Then $\pi$ is the discrete series representation in $\Pi$ whose Harish-Chandra parameter is dominant for $\Delta^+$. 
-\end{lemma}
 
-Here is another application of Proposition \ref{prop:AC_chamber}.
+\subsection{Application: Whittaker model and Weyl chamber of the Harish-Chandra parameter}
+
+As an application of the above results, here is a simple proof of a result which is well known to the experts, but not easy to locate in the literature.
 
 \begin{lemma}
 \label{l:equalWhittaker}
@@ -794,7 +794,7 @@ $W_K$).
 \end{lemma}
 
 \begin{proof}
-If $\lambda,\lambda'$ are in the same Weyl chamber the $\Wh(\pi)=\WF(\pi')$ by Lemma \ref{lem:Kost_and_AC}.
+If $\lambda,\lambda'$ are in the same Weyl chamber the $\Wh(\pi)=\WF(\pi')$ by Lemma~\ref{lem:Kost_and_AC}.
 
 For the other direction, by Theorem \ref{th:main} we can replace
 $\Wh(\pi)$ in the statement with $\WF(\pi)$.  So suppose
