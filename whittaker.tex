@@ -313,15 +313,19 @@ See \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
 
 
 
-\subsection{Discrete series and Harish-Chandra parameters} 
+\subsection{Discrete series and Harish-Chandra parameters} \label{sec:discrete_series}
 
-Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup. From now on, we assume $G(\R)$ does have discrete series representation; fix a compact Cartan subgroup $T(\R)$ of~$G(\R)$, and let~$\mathfrak{t} \subset \g$ be the corresponding Cartan subalgebra of~$\g$ (the complexified Lie algebra of~$T(\R)$). 
+Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup, i.e. there exists a $\theta$-stable Cartan subgroup~$T$ of~$G$  such that~$T(\R) \cap G_d$ is  compact, where $G_d$ is the derived group of~$G$. From now on, we assume $G(\R)$ does have discrete series representation: we fix  a Cartan subgroup $T \subset G$ satisfying the conditions above, and let~$\mathfrak{t}$ denote the Lie algebra of~$T$, which is a Cartan subalgebra of~$\g$. 
 
-With this choice, any discrete series representation of~$G(\R)$ has a \emph{Harish-Chandra parameter}. Etc etc.
-\begin{itemize}
-\item Harish-Chandra parameter, notation $\pi(\lambda)$, discussion of $W$ and $W_K$
-\item Notion of large Weyl chamber 
-\end{itemize}
+Choose a  positive system~$\Delta^+$  for the roots of~$\t$ in~$\g$, and let~$\rho \in \mathfrak{t}^\ast$ be the half-sum of positive roots. Let~$\Lambda \subset \mathfrak{t}^\ast$ be the set of elements~$\lambda \in \mathfrak{t}^\ast$ which are \emph{regular} (i.e. the linear form $\lambda$ does not vanish on any coroot) and such that $\lambda-\rho$  is the differential of a character of~$T(\R)$. The action of the Weyl group~$W=W(\g, \t)$ preserves~$\Lambda$. Let~$W_K\subset W$ be the subgroup $\mathrm{Norm}_K(T)/T$. 
+
+
+Then any discrete series representation of~$G(\R)$ has a \emph{Harish-Chandra parameter}, which is an element of~$\Lambda/W_K$.\footnote{AA 2024-VI-14: perhaps we should add that if $\pi$ is a discrete series representation, then the Harish-Chandra parameter and the central character are enough to specify~$\pi$ completely, and refer to \cite[Section 8]{AV1} and \cite{Contragredient} for full details on the parametrization.   }
+
+Recall that the \emph{Weyl chambers} of~$\mathfrak{t}^\ast$ are the connected components of the set of regular elements. Each Weyl chamber specifies a positive root system for the roots of $\mathfrak{t}$ in~$\g$, and we say a Weyl chamber is \emph{large} if the corresponding simple roots are all noncompact. 
+
+If~$\lambda \in \mathfrak{t}^\ast$ is a representative for the Harish-Chandra parameter of a discrete series representation $\pi$, then~$\pi$ is generic if and only if the Weyl chamber containing~$\lambda$ is large. See~\cite[Section 6]{vogan-gelfand-kirillov}.
+
 
 \subsection{The invariants for generic discrete series} 
 
@@ -342,7 +346,7 @@ For (b) see \cite[Proposition A.9]{AV1}.
 
 Part~(c) follows from~\cite[Lemma B]{rossmann_limit_orbits}. Let us explain how to go from there to  assertion~(c), using standard facts on the asymptotic cone recalled below (\S\,{}\ref{sec:asymp_cone}).
 
-Let~$\mathfrak{h}^+$ be a Weyl chamber in~$\mathfrak{h}$ containing a representative for the Harish-Chandra parameter of~$\pi$. Write $\lim_{x \to 0(\mathfrak{h}^+)} G(\R)\cdot x$ for the set of all elements $y \in \g$ such that every $G$-invariant neighborhood of~$y$ contains all elements of~$\mathfrak{h}^+$ sufficiently close to zero. By Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{h}^+$ is a large Weyl chamber, then $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ is a single $G$-orbit.  Since this does happen when~$\pi$ is a generic discrete series representation, to prove assertion~(c)  it is enough to check the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains $\WF(\pi)$ in that case. Now, the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} implies that the closure of $\lim_{x \to 0(\mathfrak{h}^+)} G\cdot x$ contains the asymptotic cone of the orbit of the Harish-Chandra parameter (see  Section~\ref{sec:asymp_cone} below). Therefore assertion~(c) follows from the fact that this asymptotic cone is equal to  $\WF(\pi)$  (Lemma~\ref{lem:WF_and_AC} below).
+Let~$\mathfrak{t}^+$ be a Weyl chamber in~$\mathfrak{t}$ containing a representative for the Harish-Chandra parameter of~$\pi$. Write $\lim_{x \to 0(\mathfrak{t}^+)} G(\R)\cdot x$ for the set of all elements $y \in \g$ such that every $G$-invariant neighborhood of~$y$ contains all elements of~$\mathfrak{t}^+$ sufficiently close to zero. By Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{t}^+$ is a large Weyl chamber, then $\lim_{x \to 0(\mathfrak{t}^+)} G\cdot x$ is a single $G$-orbit.  Since this does happen when~$\pi$ is a generic discrete series representation, to prove assertion~(c)  it is enough to check the closure of $\lim_{x \to 0(\mathfrak{t}^+)} G\cdot x$ contains $\WF(\pi)$ in that case. Now, the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} implies that the closure of $\lim_{x \to 0(\mathfrak{t}^+)} G\cdot x$ contains the asymptotic cone of the orbit of the Harish-Chandra parameter (see  Section~\ref{sec:asymp_cone} below). Therefore assertion~(c) follows from the fact that this asymptotic cone is equal to  $\WF(\pi)$  (Lemma~\ref{lem:WF_and_AC} below).
 
 
 \end{proof}
@@ -590,8 +594,8 @@ the principal orbit $G(\R)\cdot X$.
 
 \subsection{Large discrete series to $K$-orbits ((1) $\leftrightarrow$ (3))}
 
-Suppose $\pi$ is a  discrete series representation. Choose a compact Cartan subgroup $T$, and let
-$\lambda\in\t^*$ be the Harish-Chandra parameter of $\pi$. Let $\Delta$ be the set of roots of $\t$ in $\g$, 
+Suppose $\pi$ is a  discrete series representation. Let
+$\lambda\in\t^*$ be a representative for the Harish-Chandra parameter of $\pi$ (Section~\ref{sec:discrete_series}). Let $\Delta$ be the set of roots of $\t$ in $\g$, 
 let $\Delta^+(\lambda)=\{\alpha\mid \langle\lambda,\ch\alpha\rangle>0\}$,
 and let $S(\lambda)\in\Delta^+(\lambda)$ be the simple roots.
 For $\alpha\in \Delta$ let $\g_\alpha$ be the corresponding root space, and choose a non-zero element $X_\alpha\in\g_\alpha$ for each $\alpha$.
