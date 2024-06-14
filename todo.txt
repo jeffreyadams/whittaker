@@ -1,9 +1,11 @@
 
 1) Write a small section about discrete series: HC parameter, W_K, and notion of large Weyl chamber
 
+---> June 14: wrote a first draft, which will need some adjustments and polishing
+
 2) Go over the section which spells out Sekiguchi (5.3.1), insert the appropriate *s and check the formulas
 
----> June 14: this should now be OK, we need to proofread it
+---> June 14: hopefully this should now be OK, we need to proofread it
 
 3)  Fix the beginning of Section 3.5.2 to see if everything now fits together, and update Section 3.5.3 once everything about Sekiguchi looks OK
 
