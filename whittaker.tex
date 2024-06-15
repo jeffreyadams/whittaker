@@ -789,53 +789,28 @@ Then $\pi$ is the discrete series representation in $\Pi$ whose Harish-Chandra p
 
 \subsection{Application: Whittaker model and Weyl chamber of the Harish-Chandra parameter}
 
-As an application of the above results, here is a simple proof of a result which is well known to the experts, but not easy to locate in the literature.
+As an application of the above results, here is a simple proof of a fact which is well known to the experts, but not easy to locate in the literature.
 
 \begin{lemma}
 \label{l:equalWhittaker}
-Suppose $\pi=\pi(\lambda),\pi'=\pi(\lambda')$ are large discrete series
-representations. Then $\Wh(\pi)=\Wh(\pi')$ if and only if
-$\lambda,\lambda'$ are in the same Weyl chamber (up to the action of
-$W_K$).
+Suppose $\pi$, $\pi'$ are large discrete series representations of~$G(\R)$. Let~$\lambda, \lambda'$ be representatives for the Harish-Chandra parameters of~$\pi, \pi'$ respectively, and let $\mathscr{C}, \mathscr{C}'$ be the corresponding Weyl chambers. 
+
+Then $\Wh(\pi)=\Wh(\pi')$ if and only if $\mathscr{C}, \mathscr{C}'$ are in the same $W_K$-orbit. 
 \end{lemma}
 
 \begin{proof}
-If $\lambda,\lambda'$ are in the same Weyl chamber the $\Wh(\pi)=\WF(\pi')$ by Lemma~\ref{lem:Kost_and_AC}.
+If  $\mathscr{C}, \mathscr{C}'$ are in the same $W_K$-orbit, then the Harish-Chandra parameters of $\pi$, $\pi'$ have representatives in the same Weyl chamber; therefore $\Wh(\pi)=\Wh(\pi')$ by Lemma~\ref{lem:Kost_and_AC}.
 
 For the other direction, by Theorem \ref{th:main} we can replace
 $\Wh(\pi)$ in the statement with $\WF(\pi)$.  So suppose
 $\WF(\pi)=\WF(\pi')$. By Lemma \ref{lem:Kost_and_AC} we may assume
 $\lambda=w\lambda'$ for some $w\in W$, i.e. $\pi,\pi'$ are contained
-in the same $L$-packet $\Pi$. By Theorem \ref{th:main} 
+in the same $L$-packet $\Pi$. In that case, by Theorem \ref{th:main} 
 we know $\Wh(\pi)=\Wh(\pi')$ if and only if $\pi\simeq \pi'$.
 This holds if and only if $\lambda'=w\lambda$ with $w\in W_K$, 
-i.e. $\mathcal C(\lambda)$ are $\mathcal C(\lambda')$ are $W_K$-conjugate.
+i.e. $\mathscr{C}$ and $\mathscr{C}'$ are $W_K$-conjugate.
 \end{proof}
-\begin{comment}
-\subsection{Bonus}
 
-This section uses the arguments above to deduce the ``folklore fact'' stated by  Jeff and Tasho with a reference to the present paper for the proof. \footnote{AA 2024-VI-7: I don't remember whether this was the most up-to-date version  of our understanding; I seem to remember that we wanted to know that $Q$ acts simply transitively on the large Weyl chambers, and I haven't thought yet about what the relationship this has with what is written below...}
-
-
-We want to know that if $\pi_1=\pi(\lambda_1),\pi_2=\pi(\lambda_2)$ are large discrete series, then $\Wh(\pi_1)=\Wh(\pi_2)$ if and only $\lambda_1,\lambda_2$
-are in the same Weyl chamber.
-
-More precisely, $W$ and $W_K=\Norm_K(T)$ act on $T$, and $\pi(\lambda)=\pi(w\lambda)$ if and only if $\lambda\in W_K$.
-So the correct statement is: $\Wh(\pi_1)=\Wh(\pi_2)$ if and only if the Weyl chambers of $\lambda_1,\lambda_2$ are conjugate by $W_K$.
-
-One direction is easy using the above results: we have seen that if $\lambda_1,\lambda_2$
-are in the same Weyl chamber then the wavefront set, therefore the Whittaker model, are the same. 
-
-What we need to show:
-$\Wh(\pi(\lambda_1))=\Wh(\pi(\lambda_2)\Rightarrow \mathcal C(\lambda_1)$ is $W_K$-conjugate to  $\mathcal C(\lambda_2)$.
-
-We may as well assume $\pi(\lambda_1),\pi(\lambda_2)$ are in the same $L$-packet, i.e. $\lambda_2=w\lambda_1$ for some $w\in W$.We know that $Q$ acts simply transitively on the large discrete series in the $L$-packet, and on principal nilpotent orbits.
-Also: this action is given by the action of $W$, i.e. if $g\in Q$ then $\pi(\lambda)^g=\pi(g\lambda)=\pi(w\lambda)$ for some $w\in W$.
-So
-$$
-\Wh(\pi_1)=\Wh(\pi_2)\Leftrightarrow \pi_1\simeq \pi_2\Leftrightarrow \lambda_1\sim_{W_K}\lambda_2\Leftrightarrow \mathcal C_1\sim_{W_K}\mathcal C_2
-$$
-\end{comment}
 \subsection{Appendix: $SL(2,\R)$ calculation}
 
 This is not for publication, just to make sure we have the formulas in Section \ref{sec:concrete_sek} correct.
