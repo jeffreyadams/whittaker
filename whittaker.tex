@@ -668,19 +668,23 @@ We shall do two things here. First, we will quote a result of \cite{AVAV} which 
 Let us spell out the special case of the Sekiguchi correspondence which is of interest here. We follow~\cite[Section~2]{AVAV}.
 
 
-Suppose $\xi_\R\in \Op\cap i\g(\R)^\ast$, and write $\xi_\R = F_\R^\ast$ where $F_\R$ is a principal nilpotent element. We may choose $H_\R, E_\R \in \g$ such that $(H_\R,E_\R,F_\R)$ is an $\mathrm{SL}(2)$-triple and  $E_\R$  contained in $i\g(\R)$,
+Suppose $\xi_\R\in \Op\cap i\g(\R)^\ast$, and write $\xi_\R = E_\R^\ast$ where $E_\R$ is a principal nilpotent element. We may choose $H_\R, E_\R \in \g$ such that $(H_\R,E_\R,F_\R)$ is an $\mathrm{SL}(2)$-triple and  $E_\R$  contained in $i\g(\R)$,
 which implies $H_\R\in \g(\R)$. 
 After conjugating by~$G(\R)$ we may further assume $\theta(E_\R)=-F_\R$. Set 
-\[   F_\theta=\frac12(-E_\R+F_\R+H_\R).\]
-Then the Sekiguchi correspondence takes the $G(\R)$-orbit of~$\xi_\R$ to the $K$-orbit of $\xi_\theta=F_\theta^\ast$. 
+\[   E_\theta=\frac12(E_\R-F_\R+H_\R)\quad
+F_\theta=\frac12(-E_\R+F_\R+H_\R)
+\]
+Then $E^\ast_\theta,F^\ast_\theta\in \Op\cap \s$, and the Sekiguchi correspondence takes the $G(\R)$-orbit of~$E^*_\R$ to the $K$-orbit of $E_\theta^\ast$. 
+Equivalently, it takes the $G(\R)$-orbit of $F^*_\R$ to the $K$-orbits of $F_\theta^\ast$.
 
 Computing the map in the other direction goes as follows.
-Suppose $\xi_\theta \in \Op\cap \s^\ast$, and let $F_\theta \in \s$ be such that $\xi_\theta=F_\theta^\ast$. Choose $E_\theta, H_\theta \in \g$ such that $(E_\theta, H_\theta, F_\theta)$ is an $SL(2)$-triple with $E_\theta \in \s$,  which implies $H_\theta\in\k$. After conjugating by $K$ we may further assume $\sigma(E_\theta)=F_\theta$.
+Suppose $\xi_\theta \in \Op\cap \s^\ast$, and write $\xi_\theta=E_\theta^\ast$. Choose $F_\theta, H_\theta \in \g$ such that $(E_\theta, H_\theta, F_\theta)$ is an $SL(2)$-triple with $F_\theta \in \s$,  which implies $H_\theta\in\k$. After conjugating by $K$ we may further assume $\sigma(E_\theta)=F_\theta$.
 Define 
 \begin{equation}\label{def_F_R}
-  F_\R=\frac12(-E_\theta+F_\theta-H_\theta)\\
+E_\R=\frac12(E_\theta-F_\theta-H_\theta)\quad
+F_\R=\frac12(-E_\theta+F_\theta-H_\theta).
 \end{equation}
-Then the Sekiguchi correspondence takes the $K$-orbit of $\xi_\theta$ to the $G(\R)$-orbit of $\xi_\R = F_\R^\ast$. 
+Then the Sekiguchi correspondence takes the $K$-orbit of $E^*_\theta$ (resp. $F^*_\theta$) to the $G(\R)$-orbit of $E_\R^\ast$ (resp. $F_\R^\ast$).
 
 \subsubsection{A simple proof of Proposition~\ref{Sekiguchi_result}}\label{sec:sekiguchi_proof}
 
@@ -693,7 +697,7 @@ Consider the principal nilpotent element~$F_\pi$ defined in~\eqref{e:Fpi}. Let u
   H_\R&=E_\theta+F_\theta.
 \end{aligned}\]
  
-We know that  $\AV(\pi)=K \cdot F_\pi$, so the image of $\AV(\pi)$ by the Sekiguchi correspondence is 
+We know that  $\AV(\pi)=K \cdot F^*_\pi$, so the image of $\AV(\pi)$ by the Sekiguchi correspondence is 
  $G(\R)\cdot F_\R$. We want to check that this is equal to $\WF(\pi)$. 
 
 By Lemma~\ref{lem:matumoto} it is enough to check that $\pi$ is $\w$-generic for the Whittaker datum $\w$ corresponding to~$F_\R$. By Proposition~\ref{JeffTasho_criterion} this is the case if and only if the Kostant section $\Kostant{F_\R}$ meets $\mathcal{O}_\pi$. 
@@ -792,7 +796,7 @@ As an application of the above results, here is a simple proof of a fact which i
 \label{l:equalWhittaker}
 Suppose $\pi$, $\pi'$ are large discrete series representations of~$G(\R)$. Let~$\lambda, \lambda'$ be representatives for the Harish-Chandra parameters of~$\pi, \pi'$ respectively, and let $\mathscr{C}, \mathscr{C}'$ be the corresponding Weyl chambers. 
 
-Then $\Wh(\pi)=\Wh(\pi')$ if and only if $\mathscr{C}, \mathscr{C}'$ are in the same $W_K$-orbit. 
+Then $\Wh(\pi)=\Wh(\pi')$ if and only if $\mathscr{C}, \mathscr{C}'$ are conjugate by $W_K$.
 \end{lemma}
 
 \begin{proof}
@@ -862,6 +866,156 @@ $$
   H_\R&=E_\theta+F_\theta
 \end{aligned}
 $$
+
+\subsection{The example of $\text{SL}_2$}
+
+We illustrate the constructions of the previous section the case of $G=\SL(2,\R)$. 
+
+The complexified Lie algebra $\g$ is the space of $2x2$ complex matrices of trace $0$. Let $\s(\C)=\{t_z\mid z\in\C\}\subset \g$ where
+$$
+t_z=\begin{pmatrix}0&z\\-z&0
+\end{pmatrix}
+$$
+Then $\s(\R)=\{t_x\mid x\in\R\}$.
+
+For $z\in \C$ define $\lambda_z\in \s(\C)^*$ by $\lambda_z(t_x)=xz$.
+The positive root can be taken to be   $\alpha(t_z)=2iz$, i.e.
+$\alpha=\lambda_{2i}$ so $\rho=\frac12\alpha=\lambda_i$.
+Note that $\alpha(\ch\alpha)=2$ gives
+$$
+\ch\alpha=t_{-i}
+$$
+i.e.
+$$
+\langle \lambda_{ik},\ch\alpha\rangle=\lambda_{ik}(t_{-i})=k
+$$
+Viewing $\ch\alpha$ as a map from $\C$ to $\ch{\mathfrak t}$ this says
+$$
+\ch\alpha(z)=t_{-iz}\quad (z\in \C).
+$$
+Also $\ch\rho=t_{-i/2}$
+and
+$$
+\ch\rho(-i)=t_{-\frac 12}=\begin{pmatrix}0&-\frac 12\\\frac 12&0
+\end{pmatrix}
+$$
+
+
+
+
+The Killing form satisfies
+$$
+\kappa(t_x,t_y)=-8xy.
+$$
+Define $H_{\lambda}\in \s(\C)$ so that $\kappa(H_\lambda,t_x)=\lambda(t_x)$. Then $H_\lambda=t_w$ for some $w$; so
+$$
+\kappa(H_{\lambda_z},t_x)=\lambda_z(t_x)=zx,\quad \kappa(t_w,t_x)=-8xw
+$$
+gives
+$$
+H_{\lambda_z}=t_{-\frac z8}.
+$$
+In particular
+$$
+H_{\pm \rho}=H_{\lambda_{\mp i}}=\begin{pmatrix}0&-\frac {\mp i}8\\\frac {\mp i}8&0
+\end{pmatrix}
+$$
+Let $\pi(\lambda_{ik})$ be the discrete series representation with Harish-Chandra parameter $\lambda_{ik}$ $(k\in \Z_{\ne 0})$, so
+$$
+H_{\pi(\lambda_{ik})}=H_{\lambda_{ik}}=
+\begin{pmatrix}0&-\frac{ik}8\\\frac{ik}8&0
+\end{pmatrix}
+$$
+For an $SL(2)$-triple we can take $\{X_\alpha,X_{-\alpha},t_{-i}\}$ where
+$$
+X_\alpha=\frac12\begin{pmatrix}1&i\\i&-1
+\end{pmatrix}, \quad X_{-\alpha}=\overline{X_\alpha}, \quad t_{-i}=\begin{pmatrix}0&-i\\i&0
+\end{pmatrix}
+$$
+That is
+$$
+[t_z,X_\alpha]=\alpha(t_z)X_\alpha=\lambda_{2i}(t_z)X_\alpha=2izX_\alpha
+$$
+In particular
+$$
+[t_{-i},X_\alpha]=2X_\alpha
+$$
+
+Let's compute $\AV(\pi(\lambda_{ik})$ using  \eqref{e:Fpi}.
+Suppose $k>0$. Then $\langle \lambda_{ik},\ch\alpha\rangle=k$, so $\Delta^+=\{\alpha\}$, and
+$F_{\pi_{ik}}=X_{-\alpha}$. 
+By \eqref{e:Fpi} $\AV(\pi_{ik})$ is the $K$-orbit of $X_{-\alpha}^\ast$.
+Thus in general
+$$
+\AV(\pi_{ik})=K\cdot X^*_{-\sgn(k)\alpha}
+$$
+Note: this only uses \eqref{e:Fpi}, which comes directly from \cite{AV1}.
+
+Conjugating $H_{\pi(\lambda_{ik})}$ by $\mathrm{diag}(x,\frac 1x)$ takes it to
+$\begin{pmatrix}0&-x^2\frac{ik}8\\\frac{ik}{x^2}&0
+\end{pmatrix}$,
+and taking the limit we see
+$$
+\WF(\pi(\lambda_{ik}))=\AC(G(\R)\cdot H_{\pi(\lambda_{ik}}))=
+G(\R)\cdot \begin{pmatrix}0&-\sgn(k)i\\0&0
+\end{pmatrix}
+$$
+Note: this only uses  \cite{HarrisHeOlafsson}.
+
+Note that the $G(\R)$ orbit of $\begin{pmatrix}0&i\\0&0
+\end{pmatrix}$ contains $\begin{pmatrix}0&i\R^+\\0&0
+\end{pmatrix}$,
+so in particular $G(\R)\cdot \begin{pmatrix}0&ix\\0&0
+\end{pmatrix}=G(\R)\cdot \begin{pmatrix}0&iy\\0&0
+\end{pmatrix}$ if and only if $\sgn(x)=\sgn(y)$.
+In particular
+$$
+\WF(\pi_{ik})=\WF(\pi_{i\ell})\Leftrightarrow \sgn(k)=\sgn(\ell)
+$$
+
+Finally let's compute $\Wh(\pi_{\lambda_{ik}})$ in two ways.
+First of all by Lemma \ref{lem:matumoto}, which comes directly from \cite[Theorem A]{matumoto}
+$$
+\Wh(\pi_{\lambda_{ik}})=\WF(\pi_{\lambda_{ik}})=G(\R)\cdot \begin{pmatrix}0&-\sgn(k)i\\0&0
+\end{pmatrix}
+$$
+
+
+
+Alternatively we apply Proposition \ref{JeffTasho_criterion}, which comes from 
+\cite{adams_kaletha}. Note that
+
+$$
+\O_{\pi_{\lambda_{ik}}}=G(\R)\cdot H_{\lambda_{ik}}=G(\R)\cdot \begin{pmatrix}0&-\frac{ik}8\\\frac{ik}8&0
+\end{pmatrix}
+$$
+
+
+
+
+Note that
+$$
+\K
+\begin{pmatrix}0&\pm i\\0&0
+\end{pmatrix}=\{\begin{pmatrix}0&\pm i\\z&0
+\end{pmatrix}\mid z\in\C\}
+$$
+so, with $\epsilon=\pm 1$, 
+$$
+H_{\lambda_{ik}}\in \K\begin{pmatrix}0&\epsilon i\\0&0
+\end{pmatrix}\Leftrightarrow \epsilon=\sgn(k).
+$$
+
+
+By Proposition \ref{JeffTasho_criterion}
+we conclude (again) that
+$$
+\Wh(\pi_{\lambda_{ik}})=G(\R)\cdot\begin{pmatrix}0&-\sgn(k)i\\0&0
+\end{pmatrix}
+$$
+
+
+
 
 
 
