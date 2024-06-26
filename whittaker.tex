@@ -974,8 +974,56 @@ $$
 \WF(\pi_{ik})=\WF(\pi_{i\ell})\Leftrightarrow \sgn(k)=\sgn(\ell).
 $$
 
-Finally let's compute $\Wh(\pi_{\lambda_{ik}})$ in two ways.
+Finally let's compute $\Wh(\pi_{\lambda_{ik}})$ in three ways.
+
+We can directly compute it as follows. Consider the  holomorphic discrete series $\pi_{in}$ with $n\ge 1$.
+This has a basis 
+ $\{v_j\}$ where $j=(n+1)+2i$ $(i\ge 0)$. 
+The complex Lie algebra acts on this basis by
+$$
+\begin{aligned}
+  H_\theta v_j&=jv_j\\
+  E_\theta v_j&= \frac 12(n+(j+1))v_{j+2}\\
+  F_\theta v_j&= \frac 12(n-(j-1))v_{j-2}\\
+\end{aligned}
+$$
+Change basis: let $w_i=v_{n+1}+2i$ $(0\le i)$. Then
+$$
+\begin{aligned}
+    H_\theta w_i&=(n+1+2i)w_i\\
+  E_\theta w_i&=(n+1+i)w_{i+1}\\
+  F_\theta w_i&= -iw_{i-1}
+\end{aligned}
+$$
+Let's try to find a $\lambda$-eigenvector for $F_\theta$.
+Solve
+$$
+F_\theta(\sum_{i=0}^\infty a_iw_i=\lambda\sum_{i=0}^\infty a_iw_i
+$$
+A short calculation gives
+$$
+a_{i+1}=-\frac{\lambda}{i+1}
+$$
+and this says that
+$$
+v=\sum_{i=0}^\infty \frac{\lambda^k}{(k+1)!}w_k
+$$
+is a $\lambda$-eigenvector.
+This is not an element of the $(\g,K)$-module, but lives in its completion.
+For details see [Howe-Tan].
+
+On the other hand an $E_\theta$-eigenvector would be something like (I'm not sure the calculation is correct in all details)
+$$
+v=\sum_{i=0}^\infty \frac{n^{\bar i}}{\lambda^i} w_i
+$$
+where $n^{\bar i}=(n+1)(n+2)\dots (n+i)$.
+This doesn't converge to give an element of any completion of $\pi$. 
+
 First of all by Lemma \ref{lem:matumoto}, which comes directly from \cite[Theorem A]{matumoto}:
+
+
+
+
 $$
 \Wh(\pi_{\lambda_{ik}})=\WF(\pi_{\lambda_{ik}})=G(\R)\cdot \begin{pmatrix}0&-\sgn(k)i\\0&0
 \end{pmatrix}.
