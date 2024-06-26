@@ -620,8 +620,9 @@ See
 
 
 Suppose $\pi$ is a discrete series representation of~$G(\R)$, and let $\lambda\in\t^*$ be a representative of the Harish-Chandra parameter of $\pi$.
-Define\footnote{AA 2024-VI-14: should perhaps think about consistency in notation, and decide if we fix a large chamber from the start and take the HC parameter to live there, or add a few words about independence of choices...}
+Define
 \begin{equation} \label{semisimple_orbit_HC} \mathcal{O}_{\pi}=G(\R)\cdot\lambda.\end{equation}
+This depends only on~$\pi$, and not on the choice of representative~$\lambda$. 
 
 Consider the \emph{asymptotic cone} of $\mathcal{O}_\pi$ (see e.g. \cite[Section 3]{AVAV}) :
 \[ \AC(\mathcal{O}_\pi) = \left\{ v \in \g^* \ : \ \text{$\exists (\varepsilon_n, x_n)\in (\R_+ \times \mathcal{O}_\pi)^\mathbb{N}$ such that $\varepsilon_n \to 0$ and $\varepsilon_n x_n \to v$}\}  \right\}. \]
@@ -871,10 +872,10 @@ $$
 
 We illustrate the constructions of the previous section the case of $G=\SL(2,\R)$. 
 
-The complexified Lie algebra $\g$ is the space of $2x2$ complex matrices of trace $0$. Let $\s(\C)=\{t_z\mid z\in\C\}\subset \g$ where
+The complexified Lie algebra $\g$ is the space of $2\times 2$ complex matrices of trace~$0$. Let $\s(\C)=\{t_z\mid z\in\C\}\subset \g$ where
 $$
 t_z=\begin{pmatrix}0&z\\-z&0
-\end{pmatrix}
+\end{pmatrix}.
 $$
 Then $\s(\R)=\{t_x\mid x\in\R\}$.
 
@@ -924,24 +925,24 @@ Let $\pi(\lambda_{ik})$ be the discrete series representation with Harish-Chandr
 $$
 H_{\pi(\lambda_{ik})}=H_{\lambda_{ik}}=
 \begin{pmatrix}0&-\frac{ik}8\\\frac{ik}8&0
-\end{pmatrix}
+\end{pmatrix}.
 $$
 For an $SL(2)$-triple we can take $\{X_\alpha,X_{-\alpha},t_{-i}\}$ where
 $$
 X_\alpha=\frac12\begin{pmatrix}1&i\\i&-1
 \end{pmatrix}, \quad X_{-\alpha}=\overline{X_\alpha}, \quad t_{-i}=\begin{pmatrix}0&-i\\i&0
-\end{pmatrix}
+\end{pmatrix}.
 $$
 That is
 $$
-[t_z,X_\alpha]=\alpha(t_z)X_\alpha=\lambda_{2i}(t_z)X_\alpha=2izX_\alpha
+[t_z,X_\alpha]=\alpha(t_z)X_\alpha=\lambda_{2i}(t_z)X_\alpha=2izX_\alpha.
 $$
 In particular
 $$
-[t_{-i},X_\alpha]=2X_\alpha
+[t_{-i},X_\alpha]=2X_\alpha.
 $$
 
-Let's compute $\AV(\pi(\lambda_{ik})$ using  \eqref{e:Fpi}.
+Let's compute $\AV(\pi(\lambda_{ik}))$ using  \eqref{e:Fpi}.
 Suppose $k>0$. Then $\langle \lambda_{ik},\ch\alpha\rangle=k$, so $\Delta^+=\{\alpha\}$, and
 $F_{\pi_{ik}}=X_{-\alpha}$. 
 By \eqref{e:Fpi} $\AV(\pi_{ik})$ is the $K$-orbit of $X_{-\alpha}^\ast$.
@@ -956,7 +957,7 @@ $\begin{pmatrix}0&-x^2\frac{ik}8\\\frac{ik}{x^2}&0
 \end{pmatrix}$,
 and taking the limit we see
 $$
-\WF(\pi(\lambda_{ik}))=\AC(G(\R)\cdot H_{\pi(\lambda_{ik}}))=
+\WF(\pi(\lambda_{ik}))=\AC(G(\R)\cdot H_{\pi(\lambda_{ik})})=
 G(\R)\cdot \begin{pmatrix}0&-\sgn(k)i\\0&0
 \end{pmatrix}
 $$
@@ -970,14 +971,14 @@ so in particular $G(\R)\cdot \begin{pmatrix}0&ix\\0&0
 \end{pmatrix}$ if and only if $\sgn(x)=\sgn(y)$.
 In particular
 $$
-\WF(\pi_{ik})=\WF(\pi_{i\ell})\Leftrightarrow \sgn(k)=\sgn(\ell)
+\WF(\pi_{ik})=\WF(\pi_{i\ell})\Leftrightarrow \sgn(k)=\sgn(\ell).
 $$
 
 Finally let's compute $\Wh(\pi_{\lambda_{ik}})$ in two ways.
-First of all by Lemma \ref{lem:matumoto}, which comes directly from \cite[Theorem A]{matumoto}
+First of all by Lemma \ref{lem:matumoto}, which comes directly from \cite[Theorem A]{matumoto}:
 $$
 \Wh(\pi_{\lambda_{ik}})=\WF(\pi_{\lambda_{ik}})=G(\R)\cdot \begin{pmatrix}0&-\sgn(k)i\\0&0
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
 
@@ -987,13 +988,9 @@ Alternatively we apply Proposition \ref{JeffTasho_criterion}, which comes from
 
 $$
 \O_{\pi_{\lambda_{ik}}}=G(\R)\cdot H_{\lambda_{ik}}=G(\R)\cdot \begin{pmatrix}0&-\frac{ik}8\\\frac{ik}8&0
-\end{pmatrix}
+\end{pmatrix}.
 $$
-
-
-
-
-Note that
+On the other hand
 $$
 \K
 \begin{pmatrix}0&\pm i\\0&0
@@ -1011,8 +1008,9 @@ By Proposition \ref{JeffTasho_criterion}
 we conclude (again) that
 $$
 \Wh(\pi_{\lambda_{ik}})=G(\R)\cdot\begin{pmatrix}0&-\sgn(k)i\\0&0
-\end{pmatrix}
+\end{pmatrix}.
 $$
+Alexandre: the proof of Proposition~\ref{JeffTasho_criterion} uses Lemma~\ref{lem:matumoto}.
 
 
 
