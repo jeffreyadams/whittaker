@@ -219,17 +219,16 @@ Let $\s$ be the $-1$ eigenspace of $\theta$ acting on~$\g$
 \label{s:dual}
 Let $\N$ be the set of nilpotent elements of $\g$. 
 
-We need to pass to the dual Lie algebra $\g^*$.
+We need to pass to the dual Lie algebra $\g^*$, and it is important to do this as canonically as possible, i.e. independent of a choice
+of isomorphism $\g\simeq\g^*$. First we define the nilpotent cone in $\g^*$ as follows. 
 We say an element of $\g^*$ is nilpotent if its $G$-orbit is a (weak) cone, i.e. closed under multiplication by $\C^*$,
-and \emph{regular} if $\dim_{\Cent(G)}(X)=\mathrm{rank}(G)$.  
-The principal nilpotent orbit $\O_p\in \g^*$ is the set of regular nilpotent elements.
+and \emph{regular} if $\dim_{\Cent(G)}(X)=\mathrm{rank}(G)$.
+Let $\N^*$ be the set of nilpotent elements.
+The principal nilpotent orbit $\O_p\in \N^*$ is the set of regular nilpotent elements, and $\overline{\O_p}=\N^*$.
 
-
-The statements of the main results do not require the choice of an isomorphism $\g\simeq \g^*$.
-In several places we do need to make such a choice;
-with the exception of (?) this choice will not matter.
-
-So we fix a non-degenerate, $G(\R)$-invariant bilinear form $\kappa$ on $\g(\R)$. This is equivalent to having a non-degenerate, $G(\C)$ and Galois invariant
+The statements of the main results do not require the choice of an isomorphism $\g\simeq \g^*$. However such a choice appears in the proofs so we spell this out.
+Having a $G(\R)$-invariant bilinear form on $\g(\R)$ is equivalent to having a $G(\R)$-equivariant isomorphism $\g(\R)\simeq \g^*(\R)$. 
+Suppose we fix a non-degenerate, $G(\R)$-invariant bilinear form $\kappa$ on $\g(\R)$. This is equivalent to having a non-degenerate, $G(\C)$ and Galois invariant
 bilinear form on $\g$. The restriction of the form each simple factor
 is unique up to a non-zero constant. For example we can use the Killing form on $\gder$, extended arbitrarily by a non-degenerate form on the center.
 
@@ -240,8 +239,7 @@ $$
 $$
 
 Using $\psi_\kappa$ we transfer the asymptotic cone, Kostant section, and Kostant Sekiguchi corresondence to $\g^*$. In each case these constructions are independent of the
-choice of $\kappa$. See (?).
-
+choice of $\kappa$. See Section \ref{sec:Sekiguchi}.
 In Section \ref{s:AV} we need to be more precise: we choose  $\kappa$ to be the Killing form. (More generally, we could take any non-degenerate
 invariant form which is negative definite on the Lie algebra of a maximal compact subgroup.)
 
@@ -809,11 +807,11 @@ i.e. $\mathscr{C}$ and $\mathscr{C}'$ are $W_K$-conjugate.
 
 Theorem~\ref{th:main} gives a bijection between the set $(\Op \cap \s^*)/K$ of principal nilpotent~$K$-orbits and the set $(\Op \cap i\g(\R)^*)/G(\R)$ of principal nilpotent~$G(\R)$-orbits. 
 
-It is well known that a natural bijection between nilpotent $G(\R)$-orbits on $\g(\R)$ and nilpotent $K$ orbits on $\s$. 
+It is well known that there is a natural bijection between nilpotent $G(\R)$-orbits on $\g(\R)$ and nilpotent $K$ orbits on $\s$. 
 This is the Kostant--Sekiguchi
 correspondence~\cite{sekiguchi}, which we write as $\KS(\O)$. It is a deep theorem of
 Schmid and Vilonen (the main result of~\cite{SV1}) that the wavefront
-set and the associated variety are exchanged by this
+set and the associated variety are related by this
 correspondence. (As a historical aside, the Kostant--Sekiguchi
 correspondence was discovered on the basis that the correspondence
 $\AV(\pi) \leftrightarrow \WF(\pi)$ might be expressed in elementary
@@ -834,7 +832,6 @@ Suppose $\pi$ is a generic discrete series representation. Then
 $$
 \KS(\AV(\pi))=\WF(\pi)
 $$
-In other words the bijection (3)--(4) is induced by the Kostant--Sekiguchi correspondence.
 \end{proposition}
 
 We shall do two things here. First, we will quote a result of \cite{AVAV} which makes this case of the Kostant--Sekiguchi correspondence completely explicit. Second, we shall give a new and elementary proof of Proposition~\ref{Sekiguchi_result}: this avoids the use of Schmid and Vilonen's difficult results, and instead uses the results above (in particular Proposition~\ref{JeffTasho_criterion}) as the main ingredients. 
@@ -889,12 +886,13 @@ We use this as~$F_\theta$ in the previous subsection: define $E_\theta = \sum_{\
   H_\R&=E_\theta+F_\theta.
 \end{aligned}\]
 By the discussion in the previous section $\KS(K\cdot \psi(F_\theta))=\psi(\KS(K\cdot F_\theta))=\psi(G(\R)\cdot (-E_\R))=G(\R)\cdot \psi(-E_\R)$.
-We need to show this equals $\WF(\pi)$. By Corollary \ref{cor:matumoto} it is enough to show $\Wh(\pi)=\w_{\psi(-E-\R)}$; by 
+We need to show this equals $\WF(\pi)$. By Corollary \ref{cor:matumoto} it is enough to show $\Wh(\pi)=\w_{\psi(-E_
+  \R)}$; by 
   by Lemma \ref{lem:Kost_and_AC} this is equivalent to $\K(\psi(-E_\R))$ meets $G(\R)\cdot\lambda$. 
 
 We compute $\K(\psi(-E_\R))=\psi(\K(-E_\R))\ni -E_\R-F_\R=H_\theta$ (by \eqref{def_F_R}).
 Thus $\K(\psi(-E_\R))$ meets $\psi(H_\theta)$. 
-Since  $\Psi(H_{\theta})$ and $\lambda$ are in the same Weyl chamber, by Proposition \ref{prop:AC_chamber} we conclude 
+Since  $\psi(H_{\theta})$ and $\lambda$ are in the same Weyl chamber, by Proposition \ref{prop:AC_chamber} we conclude 
 $\K(\psi(-E_\R))$ meets $\lambda$ as required.
 
 \subsubsection{A simple description of the wavefront set}\label{sec:alternate_WF}
@@ -921,6 +919,8 @@ $$
 Then $\pi$ is the discrete series representation in $\Pi$ whose Harish-Chandra parameter is dominant for $\Delta^+$. 
 
 \subsection{Appendix: $SL(2,\R)$ calculation}
+
+We illustrate these results with the illustrative example of $SL(2,\R)$,.
 
 
 The  Lie algebra $\g(\R)$  of $G=SL(2,\R)$  is the space of $2\times 2$  matrices of trace~$0$.
@@ -1148,20 +1148,21 @@ Therefore
 \end{cases}
 \end{equation}
 
-Let's check Proposition \ref{Sekiguchi_result} in this case.
+Let's check Proposition \ref{Sekiguchi_result} in this case, which says $\KS(\AV(\pi))=\WF(\pi)$.
 Suppose $\pi=\pi(\lambda_{ik})$. First assume $k>0$ and compute
 $$
 \begin{aligned}
 \KS(\AV(\pi))&=  \KS(K\cdot E_\theta^*)\quad \text{by \eqref{e:AV}}\\
 &=  \psi_c(\KS(K\cdot \psi_c\inv (E_\theta^*)))\\
   &=  \psi_c(\KS(K\cdot \frac 1c F_\theta))\\
-&=\psi_C(G(\R)\cdot \frac 1c(-E_\R))\quad\text{(by \eqref{e:KS})}\\
+&=\psi_c(G(\R)\cdot \frac 1c(-E_\R))\quad\text{(by \eqref{e:KS})}\\
 &=  G(\R)\cdot \psi_c(\frac{-1}c F_\R))\\
 &=G(\R)\cdot (-E_\R^*)\\
 &=\WF(\pi)\quad \text{(by \ref{e:WF})}
 \end{aligned}
 $$
 which agrees with 
+Proposition \ref{Sekiguchi_result}. If $k<0$ replace $E_\theta^*$ with $F_\theta^*$, and conclude $\KS(\AV(\pi))=G(\R)\cdot E_\R^*$, in accordance with
 Proposition \ref{Sekiguchi_result}.
 
 Next, let's check Proposition \ref{p:Kostant}, 
@@ -1181,9 +1182,10 @@ $$
 $$
 That is 
 $$
-\K(-E_\R^*)\cap G(\R)\cdot 2H_{\theta}^*\ne\emptyset
+\K(-E_\R^*)\cap G(\R)\cdot 2H_{\theta}^*\ne\emptyset\quad (k<0).
 $$
-
+The case $k<0$ is similar; we conclude
+$\Wh(\pi_{\lambda_ik})=G(\R)E_\R^*$, and $\K(E_\R^*)\cap G(\R)\cdot (-2H_\theta)\ne \emptyset$.
 
 
 
