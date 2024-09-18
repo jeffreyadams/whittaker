@@ -137,7 +137,7 @@
 \newcommand{\s}{\mathfrak s}
 \newcommand{\w}{\mathfrak w}
 \newcommand{\AV}{\mathrm{AV}}
-\newcommand{\KS}{\mathcal{KS}}
+\newcommand{\KS}{\mathrm{KS}}
 \newcommand{\Wh}{\mathrm{Wh}}
 \newcommand{\WF}{\mathrm{WF}}
 \newcommand{\AC}{\mathrm{AC}}
@@ -162,7 +162,7 @@ The existence of a Borel subgroup satisfying (i) is the definition of $G$ being 
 
 Recall that a representation $\pi$ of~$G(\R)$ is said to {have a $(B,\eta)$-Whittaker model} if it has a nonzero distribution vector on which $N(\R)$ acts by $\eta$ (for a more careful statement of the definition see Section~\ref{sec:invariants}).
 This condition only depends on the conjugacy class of the pair, 
-so we  consider pairs $(B,\eta)$ modulo conjugation by $G(\R)$, and refer to such a conjugacy class as a 
+so we  consider pairs $(B,\eta)$ modulo conjugation by $G(\R)$, and refer to such a conjugacy class
 as a {\it Whittaker datum}.
 If $\w$ is a Whittaker datum, it makes sense to talk about $\pi$ having a $\w$-Whittaker model. We let $\Wh(\pi)$  be the set of
 Whittaker data $\w$ such that $\pi$ has a $\w$-Whittaker model. This is a small finite set.
@@ -170,7 +170,7 @@ We say $\pi$ is {\it generic} if $\Wh(\pi)$ is non-empty.
 
 The set $\Wh(\pi)$ is
 a useful invariant of generic representations.
-For instance if $\Pi$ is a tempered $L$-packet for $G(\R)$ and $\w$ is a Whittaker datum, then $\Pi$ contains a unique representation $\pi$
+For instance, in the local Langlands correspondence, if $\Pi$ is a tempered $L$-packet for $G(\R)$ and $\w$ is a Whittaker datum, then $\Pi$ contains a unique representation
 having a $\w$-Whittaker model. This plays a role in describing the internal structure of $L$-packets.
 If $\Pi$ is a discrete series $L$-packet then each generic representation in the packet has a unique
 Whittaker model, so the generic representations in $\Pi$ are parametrized by their Whittaker models.
@@ -178,7 +178,7 @@ It is conjectured that these properties hold in the $p$-adic case as well, and t
 
 There are other invariants attached to an
 irreducible representation $\pi$.  We will be concerned with two of
-them, defined very differently. The first is the \emph{wavefront set} $\WF(\pi)$
+them, defined very differently. The first is the \emph{wavefront set} $\WF(\pi)$,
 which is an analytic invariant.
 The second is the \emph{associated variety} $\AV(\pi)$, which is
 defined  algebraically.
@@ -208,39 +208,38 @@ Many results in this note are well known. We  tried to give new and simplified p
 
 
 Let~$\sigma$ be the anti-holomorphic involution defining~$G(\R)$.
-Let $\g=\Lie(G), \g(\R)=\Lie(G(\R))$. 
+Set $\g=\Lie(G)$ and $\g(\R)=\Lie(G(\R))$. 
 Choose a Cartan involution $\theta$ for $G$. This means:
 $\theta$ is an algebraic involution, commuting with~$\sigma$,
-and $G(\R)^\theta$ is a maximal compact subgroup of~$G(\R)$. Set $K=G^\theta$, $K(\R)=G(\R)^\theta=K^\sigma$.
-Let $\s$ be the $-1$ eigenspace of $\theta$ acting on~$\g$
-(we use the same notation for $\sigma,\theta$ lifted to $\g$). 
+and $G(\R)^\theta$ is a maximal compact subgroup of~$G(\R)$. Set $K=G^\theta$ and $K(\R)=G(\R)^\theta=K^\sigma$.
+Let $\s$ be the $-1$ eigenspace of $\theta$ acting on~$\g$, where we use the notation $\sigma, \theta$ also for the automorphisms of~$\g$ induced by the above involutions.
 
 \subsubsection*{Nilpotent orbits in $\g^*$} 
 \label{s:dual}
-Let $\N$ be the set of nilpotent elements of $\g$. 
+Let $\N$ be the set of nilpotent elements of $\g$. Several of the invariants below are related to~$\N$, but are more naturally defined as subsets of the dual vector space~$\g^\ast$.
+Therefore we need to pass to the dual Lie algebra $\g^*$, and it is important to do this as canonically as possible, i.e. in a manner as independent as possible of a choice
+of isomorphism $\g\simeq\g^*$. 
 
-We need to pass to the dual Lie algebra $\g^*$, and it is important to do this as canonically as possible, i.e. independent of a choice
-of isomorphism $\g\simeq\g^*$. First we define the nilpotent cone in $\g^*$ as follows. 
-We say an element of $\g^*$ is nilpotent if its $G$-orbit is a (weak) cone, i.e. closed under multiplication by $\C^*$,
+First we define the nilpotent cone in $\g^*$ as follows. 
+We say an element of~$\g^*$ is \emph{nilpotent} if its $G$-orbit is a (weak) cone, i.e. closed under multiplication by~$\C^*$,
 and \emph{regular} if $\dim_{\Cent(G)}(X)=\mathrm{rank}(G)$.
 Let $\N^*$ be the set of nilpotent elements.
 The principal nilpotent orbit $\O_p\in \N^*$ is the set of regular nilpotent elements, and $\overline{\O_p}=\N^*$.
 
-The statements of the main results do not require the choice of an isomorphism $\g\simeq \g^*$. However such a choice appears in the proofs so we spell this out.
+The statements of the main results below do not require the choice of an isomorphism $\g\simeq \g^*$. However such a choice appears in the proofs, so we spell this out.
 Having a $G(\R)$-invariant bilinear form on $\g(\R)$ is equivalent to having a $G(\R)$-equivariant isomorphism $\g(\R)\simeq \g^*(\R)$. 
-Suppose we fix a non-degenerate, $G(\R)$-invariant bilinear form $\kappa$ on $\g(\R)$. This is equivalent to having a non-degenerate, $G(\C)$ and Galois invariant
-bilinear form on $\g$. The restriction of the form each simple factor
-is unique up to a non-zero constant. For example we can use the Killing form on $\gder$, extended arbitrarily by a non-degenerate form on the center.
+Suppose we fix a non-degenerate, $G(\R)$-invariant bilinear form $\kappa$ on $\g(\R)$. This is equivalent to having a non-degenerate bilinear form on~$\g$ which is both $G(\C)$- and Galois-invariant. The restriction of the form to each simple factor
+is unique up to a nonzero constant. For example we can use the Killing form on $\gder=[\g, \g]$, extended arbitrarily by a non-degenerate form on the center.
 
-Given $\kappa$ we define
+Given such a non-degenerate bilinear form $\kappa$, we define
 $\psi_\kappa: \g\rightarrow \g^*$ as usual:
 $$
 \psi_\kappa(X)(Y)=\kappa(X,Y)\quad (X,Y\in\g).
 $$
 
-Using $\psi_\kappa$ we transfer the asymptotic cone, Kostant section, and Kostant Sekiguchi corresondence to $\g^*$. In each case these constructions are independent of the
-choice of $\kappa$. See Section \ref{sec:Sekiguchi}.
-In Section \ref{s:AV} we need to be more precise: we choose  $\kappa$ to be the Killing form. (More generally, we could take any non-degenerate
+Using $\psi_\kappa$ we shall transfer to $\g^\ast$ several notions usually defined on $\g$: the asymptotic cone, the Kostant section, and the Kostant--Sekiguchi corresondence. In each case the resulting notions are independent of the
+choice of $\kappa$. See Section~\ref{sec:Sekiguchi}.
+In Section~\ref{s:AV} we need to be more precise: we choose  $\kappa$ to be the Killing form. (More generally, we could take any non-degenerate
 invariant form which is negative definite on the Lie algebra of a maximal compact subgroup.)
 
 \subsubsection*{Representations} 
@@ -272,7 +271,7 @@ nilpotent $K$-orbits on $\s^*$. For the definition, and many properties, see \ci
 
 A related invariant is the associated variety of the annihilator $I_\pi$ of $\pi$ in the universal enveloping algebra, 
 denoted $\AVann(\pi)$.
-This is a subset of $\N^*\subset\g^*$, and is the closure of a single complex nilpotent orbit: see \cite[Section 1, Theorem 4.7]{vogan_bowdoin}.
+This is a subset of $\N^*\subset\g^*$, and is the closure of a single complex nilpotent orbit: see \cite[Section 1, Theorem 4.7]{vogan_bowdoin}. Both $\AV(\pi)$ and $\AVann(\pi)$ depend only on the equivalence class of~$\pi$.
 
 The Gelfand--Kirillov dimension~$\GK(\pi)$ of~$\pi$ can be defined in several different ways~\cite{vogan-gelfand-kirillov}; but one of them is
 $$
@@ -291,15 +290,15 @@ The \emph{wave-front
   set} $\WF(\pi)$ is an analytic invariant determined by the
 singularities of the global character of $\pi$ near the identity. See \cite{howe_wave_front, bv_local_structure, HarrisHeOlafsson} for the definition. 
 The set~$\WF(\pi)$  is a closed $G(\R)$-invariant subset of the nilpotent cone in
-$i\g(\R)^*$. As such it is the union of a finite number of nilpotent $G(\R)$-orbits.
+$i\g(\R)^*$. As such it is the union of a finite number of nilpotent $G(\R)$-orbits. Again, this depends only on the equivalence class of~$\pi$.
 
 We define the wave front set of a $(\g,K)$-module to be that of its 
-Hilbert space globalization.
+Hilbert space globalization. 
 
 \subsubsection*{Whittaker models}
 
-Suppose again that $\pi$ is an irreducible admissible representation of $G(\R)$ on a Hilbert space $\mH$. We consider the attached representations of~$\pi$ on the space $\mH^\infty$ of smooth vectors in $\mH$, and on its dual $\mH^{-\infty}$. Let~$(B, \eta)$ be a pair satisfying conditions (i)-(ii) of the Introduction. We say $\pi$ has a $(B,\eta)$-Whittaker model
-if there exists a nonzero element $v$ in $\mH^{-\infty}$ such that $\pi(n)(v)=\eta(n)v$ for all $n$ in the nilradical $N(\R)$ of $B(\R)$. See \cite{matumoto}. If~$\w$ is the corresponding Whittaker datum, i.e. the $G(\R)$-conjugacy class of the pair $(B, \eta)$, we say~$\pi$ has a $\w$-Whittaker model.  
+Suppose again that $\pi$ is an irreducible admissible representation of $G(\R)$ on a Hilbert space $\mH$. We consider the corresponding actions of $G(\R)$ on the space~$\mH^\infty$ of smooth vectors in $\mH$, and on its dual $\mH^{-\infty}$; and we still denote them by~$\pi$. Let~$(B, \eta)$ be a pair satisfying conditions (i)-(ii) of the Introduction. We say $\pi$ has a $(B,\eta)$-Whittaker model
+if there exists a nonzero element $v$ in~$\mH^{-\infty}$ such that $\pi(n)(v)=\eta(n)v$ for all $n$ in the nilradical $N(\R)$ of $B(\R)$. See~\cite{matumoto}. If~$\w$ is the corresponding Whittaker datum, i.e. the $G(\R)$-conjugacy class of the pair $(B, \eta)$, we say~$\pi$ has a $\w$-Whittaker model.  
 
 We write $\Wh(\pi)$ for the set of Whittaker data~$\w$ such that $\pi$ has a $\w$-Whittaker model.
 If $\pi$ has a unique Whittaker datum $\w$ we write $\Wh(\pi)=\w$.
@@ -316,12 +315,12 @@ We say $\pi$ is {\it large} if $\GK(\pi)=N/2$. See \cite[Section~6]{vogan-gelfan
   \label{l:large}
   The following conditions are equivalent.
   \begin{enumerate}
-  \item $\pi$ is large;
-        \item $\pi$ is generic.
-\item $\AVann(\pi)=\N^*=\overline{\Op}$;
-\item $\dim(\AVann(\pi))=N$;
-  \item $\dim(\AV(\pi))=N/2$;
-  \item $\GK(\pi)=N/2$;
+  \item $\pi$ is large\textup{;}
+        \item $\pi$ is generic\textup{;}
+\item $\AVann(\pi)=\N^*=\overline{\Op}$\textup{;}
+\item $\dim(\AVann(\pi))=N$\textup{;}
+  \item $\dim(\AV(\pi))=N/2$\textup{;}
+  \item $\GK(\pi)=N/2$.
 \end{enumerate}
 \end{lemma}
 See \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
@@ -336,7 +335,7 @@ Recall $G(\R)$ has relative discrete series representations if and only if it ha
 Choose a  positive system~$\Delta^+$  for the roots of~$\t$ in~$\g$, and let~$\rho \in \mathfrak{t}^\ast$ be the half-sum of positive roots. Let~$\Lambda \subset \mathfrak{t}^\ast$ be the set of elements~$\lambda \in \mathfrak{t}^\ast$ which are \emph{regular} (i.e. the linear form $\lambda$ does not vanish on any coroot), and such that $\lambda-\rho$  is the differential of a character of~$T(\R)$. The action of the Weyl group~$W=W(\g, \t)$ preserves~$\Lambda$. Let~$W_K\subset W$ be the subgroup $\mathrm{Norm}_K(T)/T$. 
 
 
-Then any discrete series representation of~$G(\R)$ has a \emph{Harish-Chandra parameter}, which is an element of~$\Lambda/W_K$. In fact, suppose~$\lambda$ is an element of~$\Lambda$ and $\zeta$ is a character of the center~$Z(\R)$ of~$G(\R)$ whose differential agrees with~$\lambda-\rho$ on the intersection $T(\R) \cap Z(\R)$; then the pair $(\lambda, \zeta)$  determines a discrete series representation~$\pi_{\lambda, \zeta}$ of~$G(\R)$. Every discrete series representation arises in this way, and $\pi_{\lambda, \zeta}=\pi_{\lambda', \zeta'}$ if and only if $\zeta=\zeta'$ and $\lambda, \lambda'$ are $W_K$-conjugate. See  \cite[Section 8]{AV1} and \cite{Contragredient} for more on the parametrization.  
+Then any discrete series representation of~$G(\R)$ has a \emph{Harish-Chandra parameter}, which is an element of~$\Lambda/W_K$. In fact, suppose~$\lambda$ is an element of~$\Lambda$ and suppose $\zeta$ is a character of the center~$Z(\R)$ of~$G(\R)$ whose differential agrees with~$\lambda-\rho$ on the intersection $T(\R) \cap Z(\R)$; then the pair $(\lambda, \zeta)$  determines a discrete series representation~$\pi_{\lambda, \zeta}$ of~$G(\R)$. Every discrete series representation arises in this way, and $\pi_{\lambda, \zeta}=\pi_{\lambda', \zeta'}$ if and only if $\zeta=\zeta'$ and $\lambda, \lambda'$ are $W_K$-conjugate. See  \cite[Section 8]{AV1} and \cite{Contragredient} for more on the parametrization.  
 
 Recall that the \emph{Weyl chambers} of~$\mathfrak{t}^\ast$ are the connected components of the set of regular elements. Each Weyl chamber specifies a positive root system for the roots of $\mathfrak{t}$ in~$\g$, and we say a Weyl chamber is \emph{large} if the corresponding simple roots are all noncompact. 
 
@@ -346,11 +345,11 @@ If~$\lambda \in \mathfrak{t}^\ast$ is a representative for the Harish-Chandra pa
 \subsection{The invariants for generic discrete series} 
 
 \begin{proposition} \label{invariants_ds}
-  Suppose $\pi$ is a generic discrete series representation of $G(\R)$. Then:
+  Suppose $\pi$ is a generic discrete series representation of $G(\R)$. Then\textup{:}
 \begin{enumerate}[(a)]
-\item $\Wh(\pi)$ is a single Whittaker datum;
-\item $\AV(\pi)$ is the closure of a single $K$-orbit on~$\mathcal{O}_p \cap \s^*$;
-\item  $\WF(\pi)$ is the closure of a single $G(\R)$-orbit on $\mathcal{O}_p \cap  i \g(\R)^*$.
+\item $\Wh(\pi)$ is a single Whittaker datum\textup{;}
+\item $\AV(\pi)$ is the closure of a single $K$-orbit on~$\mathcal{O}_p \cap \s^*$\textup{;}
+\item  $\WF(\pi)$ is the closure of a single $G(\R)$-orbit on $\mathcal{O}_p \cap  i \g(\R)^*$\textup{.}
 \end{enumerate}
 \end{proposition}
 
@@ -365,8 +364,8 @@ Part~(c) follows from~\cite[Lemma B]{rossmann_limit_orbits}. Let us explain how 
 Let~$\mathfrak{t}^+$ be a Weyl chamber in~$\mathfrak{t}^\ast$ containing a representative~$\lambda$ for the Harish-Chandra parameter of~$\pi$. Write $\lim_{x \to 0(\mathfrak{t}^+)}\left[ G(\R)\cdot x\right]$ for the set of all elements $y \in i\g(\R)^\ast$ such that every $G(\R)$-invariant neighborhood of~$y$ contains all elements of~$\mathfrak{t}^+$ sufficiently close to zero. By Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{t}^+$ is a large Weyl chamber, then $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ is a single $G(\R)$-orbit.  Since this does happen when~$\pi$ is a generic discrete series representation, to prove assertion~(c)  it is enough to check the closure of $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ contains $\WF(\pi)$ in that case. Now, the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} implies that the closure of $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ contains the asymptotic cone of the orbit $G(\R)\cdot \lambda$  (see  Section~\ref{sec:asymp_cone} below). Therefore assertion~(c) follows from the fact that this asymptotic cone is equal to  $\WF(\pi)$  (Lemma~\ref{lem:WF_and_AC} below).
 \end{proof}
 
-Because of Proposition~\ref{invariants_ds} we will abuse notation slightly, as follows. If~$\pi$ is a generic discrete series representation of~$G(\R)$, we write $AV(\pi)=\O$ to indicate that $AV(\pi)$ is the closure of the $K$-orbit $\O\subset \s^*$.
-Similarly we write $\WF(\pi)=\O$ to indicate that $\WF(\pi)$ is the closure of the $G(\R)$-orbit $\O\subset i\g(\R)^*$.
+Because of Proposition~\ref{invariants_ds} we will abuse notation slightly, as follows. If~$\pi$ is a generic discrete series representation of~$G(\R)$ and~$\O$ is a $K$-orbit in~$\s^\ast$, we write $AV(\pi)=\O$ to indicate that $AV(\pi)$ is the closure of the $K$-orbit $\O$. 
+Similarly, if $\O\subset i\g(\R)^*$ is a $G(\R)$-orbit, we write $\WF(\pi)=\O$ to indicate that $\WF(\pi)$ is the closure of~$\O$. 
 
 
 
@@ -408,7 +407,7 @@ Let us now explain the strategy of the proof, which is mainly an exercise in put
 \end{itemize}
 The theorem follows immediately from these two observations, and from the following basic fact on group actions.
 
-\begin{lemma} Suppose a group $Q$ acts on two sets $A, B$ and let $f\colon A \to B$ be a~$Q$-equivariant map. 
+\begin{lemma} Suppose a group $Q$ acts on two sets $A, B$ and let $f\colon A \to B$ be a $Q$-equivariant map. 
 \begin{itemize}
 \item[(a)] If $Q$ acts transitively on~$B$,  then~$f$ is surjective\textup{;}
 \item[(b)] If $Q$ acts transitively on~$A$ and freely on~$B$, then~$f$ is injective.
@@ -516,21 +515,18 @@ Let us prove~(b). To show that when $g\in (\Gad)^\sigma \cap (\Gad)^\theta$ is a
 
 
 
-The adjoint action of $\Gad^\sigma$ on~$G(\R)$ induces an action on $G(\R)$-representations, which descends to an action of  $Q_\sigma(G)$ on equivalence class of $G(\R)$-reoresentations. If~$q$ is an element of~$Q_\sigma(G)$, we write $\pi \mapsto \pi^q$ for the action of~$q$ on equivalence classes of $G(\R)$-representations. 
+The adjoint action of $\Gad^\sigma$ on~$G(\R)$ induces an action on $G(\R)$-representations, which descends to an action of  $Q_\sigma(G)$ on equivalence class of $G(\R)$-representations. If~$q$ is an element of~$Q_\sigma(G)$, we write $\pi \mapsto \pi^q$ for the action of~$q$ on equivalence classes of $G(\R)$-representations. 
 
 Similarly the actions of $\Gad^\theta$ on~$\g$ and~$K$ induce an action of $Q_\theta(G)$ on equivalence classes of $(\g,K)$-modules, for which we use analogous notation.
 
-These two actions are intertwined by the isomorphism of Lemma~\ref{lem:iso_q}:
+These two actions are intertwined by the isomorphism of Lemma~\ref{lem:iso_q} (this follows immediately from the definitions of the actions and of that isomorphism): 
 
 \begin{lemma}\label{lem:action_q}
 Suppose $\pi$ is the equivalence class of an irreducible Hilbert space representation of $G(\R)$. 
 Suppose $q\in Q_\sigma(G)$. 
-Then $(\pi^q)_K\simeq (\pi_K)^{\phi(g)}$.
+Then $(\pi^q)_K\simeq (\pi_K)^{\varphi(g)}$.
 \end{lemma}
 
-\begin{proof}
-Immediate from Lemma~\ref{lem:iso_q} and the definition of the actions.
-\end{proof}
 
 
 Because of Lemmas~\ref{lem:iso_q} and \ref{lem:action_q}, we write $Q(G)$ for the group $Q_\sigma(G)$ or $Q_\theta(G)$, depending on the situation.
@@ -551,8 +547,8 @@ To define the action of~$Q_{\sigma}(G)$ on~(4), first observe that~$\Gad$ acts o
 \begin{proof}
 The proof of~(1) is a standard argument in group cohomology. Suppose $\omega,\omega'$ are $G(\R)$ orbits in $\Op\cap i\g(\R)^*$,
 and choose $X\in \omega,X'\in\omega'$. Then there exists $g\in G$ such that $\Ad(g)(X)=X'$. Since $X\in \g(\R)^*$ the condition $X'\in i\g(\R)^*$ 
-is $g\inv \sigma(g)\in \Stab_G(X)$.  Since $X$ is principal $\Stab_G(X)=ZU$ where $U$ is a unipotent group. 
-A standard fact is that $H^1(\sigma, U)=1$ \cite[Chap.~III, Proposition~6]{Serre_Galois}, and from this we see that, after multiplying $g$ on the right by an element of $u$, we can assume $g\inv \sigma(g)\in Z$. This is equivalent to: the image of $g$ in $\Gad$ is in $\Gad(\R)$. On the other hand $\omega=\omega'$ 
+is $g\inv \sigma(g)\in \Stab_G(X)$.  Since $X$ is principal, we have $\Stab_G(X)=ZU$ where $U$ is a unipotent group. 
+A standard fact is that $H^1(\sigma, U)=1$ \cite[Chap.~III, Proposition~6]{Serre_Galois}, and from this we see that, after multiplying $g$ on the right by an element of $u$, we may assume $g\inv \sigma(g)\in Z$. This is equivalent to: the image of $g$ in $\Gad$ is in $\Gad(\R)$. On the other hand $\omega=\omega'$ 
 if and only if $X'=\Ad(g)X$ for some $g\in G(\R)$. This competes the proof of (1).
 
 Part~(2) of the proposition is comes from general properties of the wavefront set in microlocal analysis, and from the fact that the action of $Q_{\sigma}(G)$ comes from automorphisms of~$G(\R)$. More precisely, if~$q$ is an element of~$Q_{\sigma}(G)$ and $\tilde{q}$ is a representative of~$q$ in $\Gad(\R)$, then the action of~$q$ on equivalence classes of $(\g, K)$-modules comes from the action of the automorphism $\mathrm{int}(\tilde{q})$ of~$G(\R)$ on $(\g, K)$-modules. Now the wavefront set of a distribution on a manifold satisfies general covariance properties under diffeomorphisms of the manifold: this follows from Hörmander's original definitions, see e.g. \cite[Section 2, p.~800]{HarrisHeOlafsson}. Applying this to the present situation, and going through the basics as in   \cite[Section~2]{HarrisHeOlafsson}, it follows that $\pi \mapsto \WF(\pi)$ is equivariant under $Q_{\sigma}(G)$.
@@ -572,7 +568,7 @@ Part~(2) of the proposition is comes from general properties of the wavefront se
 %$$
 %where the middle line uses the equality $H^1_\sigma(\Gamma,\Stab_G(X))=H^1_\sigma(\Gamma,Z)$, which comes from the fact that $\Stab_G(X)=ZU$  as explained in the proof. The resulting bijection  $(\Op\cap i\g(\R))/G(\R)\simeq Q_\sigma(\R)$ is equivariant (for the actions of $Q_\sigma(G)$ on $(\Op\cap i\g(\R))/G(\R)$ described above, and the action of  $Q_\sigma(G)$ on itself by multiplication), and this gives another proof of~(1). 
 
-On the other hand $Q(G)$, realized as $Q_\theta(G)$ is a group of automorphisms of $(\g,K)$.
+On the other hand $Q(G)$, realized as $Q_\theta(G)$, is a group of automorphisms of $(\g,K)$.
 It induces actions on $\s^*$, $\Op$ and $\Op\cap\s^*$, and on $(\g,K)$-modules.
 
 \begin{proposition}\label{prop:action_on_K_orbits}
@@ -600,9 +596,9 @@ and let $S(\lambda)\subset\Delta^+(\lambda)$ be the simple roots.
 For $\alpha\in \Delta$, let $\g_\alpha$ be the corresponding root space, and choose a non-zero element $X_\alpha\in\g_\alpha$ for each $\alpha$.
 
 In this section only we need to  choose a particular an isomorphism $\gder\simeq \gder^*$.
-For this we let $\kappa$ be the killing form, and define $\psi:\gder\rightarrow \gder^*$ by
+For this we let $\kappa$ be the killing form, and define $\psi_\kappa:\gder\rightarrow \gder^*$ by
 $$
-\psi(X)(Y)=\kappa(X,Y)\quad (X,Y\in \gder).
+\psi_\kappa(X)(Y)=\kappa(X,Y)\quad (X,Y\in \gder).
 $$
 
 \begin{lemma}
@@ -613,13 +609,11 @@ Set
 
 \begin{equation}
   \label{e:Fpi}
-  F_\pi=\sum_{\alpha\in S(\lambda)}X_{-\alpha}\in \N.
+  F_\pi=\sum_{\alpha\in S(\lambda)}X_{-\alpha}
 \end{equation}
-
-Then $F_\pi\in\s$ is a regular nilpotent element.
-Then 
+Then $F_\pi\in\s$ is a regular nilpotent element, belongs to~$\gder$, and satisfies: 
 $$
-\AV(\pi)=K\cdot \psi(F_\pi).
+\AV(\pi)=K\cdot \psi_\kappa(F_\pi).
 $$
 \end{lemma}
 See
@@ -646,7 +640,7 @@ This is a union of nilpotent $G(\R)$-orbits on $i\g(\R)^*$.
 Let~$\pi$ be a discrete series representation of $G(\R)$. The wave-front set $\WF(\pi)$ is equal to the asymptotic cone $\AC(\mathcal{O}_\pi)$.
 \end{lemma}
 
-For this see \cite{HarrisHeOlafsson}; in the special casea considered here, the result is due to Rossmann and can be extracted from \cite{RossmannPicard}, Theorems B and C. \qed
+For this see \cite{HarrisHeOlafsson}; in the special case considered here, the result is due to Rossmann and can be extracted from \cite{RossmannPicard}, Theorems B and C. \qed
 
 In Section~\ref{sec:alternate_WF} below we will give another simple
 description of~$\WF(\pi)$, based on the description of $\AV(\pi)$ in
@@ -654,15 +648,14 @@ the previous paragraph and on the Sekiguchi correspondence.
 
 \subsection{Whittaker data of generic discrete series}
 
-The following discussion is taken directly from \cite[Section~3.1]{adams_kaletha}.
+The following discussion summarizes results from \cite[Section~3]{adams_kaletha}.
 
 
 Suppose $X\in i\g(\R)^*\subset \g^*$ is a regular nilpotent element (see Section \ref{s:dual}).
-Let $\overline{\mathfrak b}(\R)$ be the kernel of $X$. 
-The corresponding Borel subgroup $B$ is defined over $\R$.
+Let $\overline{\mathfrak b}(\R)$ be the kernel of $X$. This is the Lie algebra of~$\overline{B}(\R)$, where$\overline{B}$ is a Borel subgroup of~$G$ defined over $\R$.
 Choose an $\R$-Cartan subgroup $T$ of
-$\overline B$, and let $B$ be the corresponding opposite Borel
-subgroup (characterized by $B\cap \overline B=T$). 
+$\overline B$, and let~$B$ be the  Borel
+subgroup opposite to~$\overline{B}$, characterized by $B\cap \overline B=T$.
 Then $X$ defines a unitary
 character of the nilradical  $N(\R)$  of $B(\R)$ by
 \[ 
@@ -679,9 +672,9 @@ We recall a recent result of the first author and Tasho Kaletha, which spells ou
 
 We define the Kostant section in $\g^*$ using an identification $\g\simeq \g^*$ as discussed in Section \ref{s:dual}. That is we fix an equivariant isomorphism $\psi$, and define
 $$
-\K(X)=\psi(\K(\psi\inv(X))\quad (X\in \g^*)
+\K(X)=\psi(\K(\psi\inv(X))\quad (X\in \g^*).
 $$
-Since $\psi$ is unique on each simple factor up to non-zero scalar, it is easy to see this definition is independent of the choice of $\psi$. See \cite[Section 3.2]{adams_kaletha}.
+Since $\psi$ is unique on each simple factor up to a non-zero scalar, it is easy to see this definition is independent of the choice of $\psi$. See \cite[Section 3.2]{adams_kaletha}.
 
 \begin{proposition}[\phantom{}{\cite[Proposition 3.3.3]{adams_kaletha}}]\label{JeffTasho_criterion}
   \label{p:Kostant}
@@ -695,13 +688,13 @@ applies to the real case as well.
 
 \begin{lemma}[\phantom{}{\cite[Lemma 3.3.4]{adams_kaletha}}]
 \label{lem:Kost_and_AC}
-Let $\mathcal{O}$ be a regular semisimple orbit and  let $X$ be a regular nilpotent element. Then $\Kostant{X}$ meets~$\mathcal{O}$ if and only if $X$ is in the asymptotic cone~$\AC(\mathcal{O})$. 
+Let $\mathcal{O} \subset i\g(\R)^\ast$ be a regular semisimple orbit and  let~$X \in \g^\ast$ be a regular nilpotent element. Then $\Kostant{X}$ meets~$\mathcal{O}$ if and only if $X$ is in the asymptotic cone~$\AC(\mathcal{O})$. 
 \end{lemma}
 
 For a closely related result see \cite[Proposition 3.5]{fm}.
 
-The Proposition, Lemma and Lemma \ref{lem:WF_and_AC} give the following result,
-which is a special case of the main result of \cite{matumoto} (Theorem A).
+The two statements above, combined with Lemma \ref{lem:WF_and_AC}, give the following result,
+which is a special case of the main result of \cite{matumoto} (Theorem A):
   
 \begin{corollary}\label{cor:matumoto}
 Suppose $\pi$ is a generic discrete series representation. Then
@@ -717,7 +710,7 @@ The same holds for the wave front set and Whittaker data by Theorem \ref{th:main
 using some geometric facts.
 
 
-Write $\O_H$ for the $G(\R)$-orbit of $H$.
+If~$H$ is an element of~$\g$, write $\O_H$ for the $G(\R)$-orbit of $H$.
 
 \begin{proposition}\label{prop:AC_chamber} Let $\mathcal{C} \subset \t$ be a large open Weyl chamber.
   If $H,H'\in\mathcal{C}$  then $\AC(\mathcal{O}_H)=\AC(\mathcal{O}_{H'})$.
@@ -742,7 +735,7 @@ Using Lemma~\ref{lem:Kost_and_AC} again, we see that all those orbits $\mathcal{
 which implies that $\Omega = G(\R) \cdot F$ is contained in $\AC(\mathcal{O}')$.
 This proves that $\mathcal{E}_\Omega$ contains an open neighborhood of any of its points, hence is open.   \end{proof}
 
-\begin{proof}[proof of the  Proposition]
+\begin{proof}[Proof of the  Proposition]
 For any regular nilpotent orbit~$\Omega$ let $\ECom$  denote the set of $H \in \mathcal{C}$ such that $\AC(\mathcal{O}_H)$ contains $\Omega$; by Lemma~\ref{lem:AC_containment}  we know that   $\ECom$ is an open subset of~$\mathcal{C}$. 
 
 Now let $\mathcal{S}$ be the unit sphere of $\t$ for the norm induced by the given invariant bilinear form on~$\g$, and let $\mathcal{S} \cap \mathcal{C}$ be the intersection of $\mathcal{S}$ with the given chamber. This is an open subset of $\mathcal{S}$. The previous arguments show that the the radial projection $\mathcal{S}_{\Omega}$ of  $E^{\mathcal{C}}_\Omega$ on $\mathcal{S}$ is an open subset of $\mathcal{S} \cap \mathcal{C}$. 
@@ -753,9 +746,7 @@ Now consider the set $\Sigma$ of all points on $\mathcal{S} \cap \mathcal{C}$ wh
 
 We conclude that if $\Omega \neq \Omega'$, then $\mathcal{S}_\Omega$ and $\mathcal{S}_\Omega$ are disjoint, and therefore $\ECom$ and $\mathcal{E}^{\mathcal{C}}_{\Omega'}$ are disjoint open subsets of~$\mathcal{C}$. Since $\mathcal{C}$ is connected and equal to the union of all subsets $\mathcal{E}^{\mathcal{C}}_{\Omega}$, the chamber $\mathcal{C}$ must be equal to a single $\ECom$.
 
-The second assertion is an immediate consequence of the first and Lemma \ref{lem:Kost_and_AC}
-
-\end{proof}
+This proves the first assertion in the Proposition; the second assertion follows from the first and Lemma~\ref{lem:Kost_and_AC}.\end{proof}
 
 \begin{corollary}
 \label{c:same}
@@ -803,13 +794,13 @@ i.e. $\mathscr{C}$ and $\mathscr{C}'$ are $W_K$-conjugate.
 
 
 
-\subsection{$\AV(\pi)$ and $\WF(\pi)$: the Kostant--Sekiguchi correspondence } \label{sec:Sekiguchi}
+\subsection{$\AV$ and $\WF$: the Kostant--Sekiguchi correspondence } \label{sec:Sekiguchi}
 
 Theorem~\ref{th:main} gives a bijection between the set $(\Op \cap \s^*)/K$ of principal nilpotent~$K$-orbits and the set $(\Op \cap i\g(\R)^*)/G(\R)$ of principal nilpotent~$G(\R)$-orbits. 
 
 It is well known that there is a natural bijection between nilpotent $G(\R)$-orbits on $\g(\R)$ and nilpotent $K$ orbits on $\s$. 
 This is the Kostant--Sekiguchi
-correspondence~\cite{sekiguchi}, which we write as $\KS(\O)$. It is a deep theorem of
+correspondence~\cite{sekiguchi}, which we write as $\O \mapsto \KS(\O)$. It is a deep theorem of
 Schmid and Vilonen (the main result of~\cite{SV1}) that the wavefront
 set and the associated variety are related by this
 correspondence. (As a historical aside, the Kostant--Sekiguchi
@@ -865,10 +856,10 @@ Then
 \KS(K\cdot E_\theta)=G(\R)\cdot E_\R\quad\KS(K\cdot F_\theta)=G(\R)\cdot(-E_\R)
 \end{equation}
 
-We need the corresponding result in $\g^*$. As discussed in Section \ref{s:dual} this uses a choice of an isomorphism $\g\simeq \g^*$, but the result is independent of this choice.
+We need the corresponding result in $\g^*$. As discussed in Section \ref{s:dual} this uses a choice of an isomorphism $\psi\colon \g\to \g^*$, but the result is independent of this choice.
 That is for $X\in \O_p\subset \g^*$ we have
 $$
-\KS(K\cdot X)=\psi_c(\KS(K\cdot \psi_c\inv(X)),
+\KS(K\cdot X)=\psi(\KS(K\cdot \psi\inv(X)),
 $$
 independent of the choice of $\psi$.
 
@@ -876,9 +867,9 @@ independent of the choice of $\psi$.
 \subsubsection{A simple proof of Proposition~\ref{Sekiguchi_result}}\label{sec:sekiguchi_proof}
 
 Let us fix a generic discrete representation~$\pi$ and let $\lambda$ be its Harish-Chandra parameter.
-As in Section \ref{s:AV} we let $\kappa$ be the Killing form and write $\psi:\gder\simeq \gder^*$ for the corresponding isomorphism.
+As in Section \ref{s:AV} we let $\kappa$ be the Killing form and $\psi\colon\gder\to \gder^*$ be the corresponding isomorphism.
 
-Consider the principal nilpotent element~$F_\pi$ defined in~\eqref{e:Fpi}, so by Lemma \ref{l:AV} $\AV(\pi)=K\cdot \psi(F_\pi)$. 
+Consider the principal nilpotent element~$F_\pi$ defined in~\eqref{e:Fpi}, so by Lemma~\ref{l:AV} $\AV(\pi)=K\cdot \psi(F_\pi)$. 
 We use this as~$F_\theta$ in the previous subsection: define $E_\theta = \sum_{\alpha \in S(\lambda)}X_\alpha$ and $H_\theta  = [E_\theta, F_\theta]$; then $E_\theta \in \s$ and $(E_\theta, H_\theta, F_\theta)$ is an $\mathrm{SL}(2)$-triple. Define another $\mathrm{SL}(2)$-triple $(E_\R, F_\R, H_\R)$ by
 \[ \begin{aligned}
   F_\R&=\frac12(-E_\theta+F_\theta-H_\theta)\\
@@ -888,7 +879,7 @@ We use this as~$F_\theta$ in the previous subsection: define $E_\theta = \sum_{\
 By the discussion in the previous section $\KS(K\cdot \psi(F_\theta))=\psi(\KS(K\cdot F_\theta))=\psi(G(\R)\cdot (-E_\R))=G(\R)\cdot \psi(-E_\R)$.
 We need to show this equals $\WF(\pi)$. By Corollary \ref{cor:matumoto} it is enough to show $\Wh(\pi)=\w_{\psi(-E_
   \R)}$; by 
-  by Lemma \ref{lem:Kost_and_AC} this is equivalent to $\K(\psi(-E_\R))$ meets $G(\R)\cdot\lambda$. 
+   Lemma \ref{lem:Kost_and_AC} this is equivalent to $\K(\psi(-E_\R))$ meets $G(\R)\cdot\lambda$. 
 
 We compute $\K(\psi(-E_\R))=\psi(\K(-E_\R))\ni -E_\R-F_\R=H_\theta$ (by \eqref{def_F_R}).
 Thus $\K(\psi(-E_\R))$ meets $\psi(H_\theta)$. 
@@ -918,26 +909,27 @@ $$
 $$
 Then $\pi$ is the discrete series representation in $\Pi$ whose Harish-Chandra parameter is dominant for $\Delta^+$. 
 
-\subsection{Appendix: $SL(2,\R)$ calculation}
+\section{Appendix: the case of $SL(2,\R)$}
 
-We illustrate these results with the illustrative example of $SL(2,\R)$,.
+We illustrate the results of Section~\ref{sec:explicit} by making the case of $SL(2,\R)$ fully explicit.
 
+\subsection{Notation}
 
 The  Lie algebra $\g(\R)$  of $G=SL(2,\R)$  is the space of $2\times 2$  matrices of trace~$0$.
 Let $\g=\sl(2,\C)$ be the complexified Lie algebra.
-Then $\g(\R)=\g(\C)^\sigma$ where $\sigma(X)=\overline X$. 
+Then $\g(\R)=\g(\C)^\sigma$ where $\sigma\colon X \to \overline X$ is complex conjugation. 
 Set $\theta(X)=X^t$, so $\g(\C)^\theta$  is the complexified Lie algebra of a maximal compact subgroup of $SL(2,\R)$.
 
-Define the following basis of $\g$:
+We begin by defining different bases of~$\g$. Start with the following basis:
 $$
 E_\R=\begin{pmatrix}0&i\\0&0\end{pmatrix},
 F_\R=\begin{pmatrix}0&0\\-i&0\end{pmatrix},
 H_\R=\begin{pmatrix}1&0\\0&-1\end{pmatrix}
 $$
-These satisfy the standard $SL(2)$ commutation relations: 
+These elements satisfy the standard $SL(2)$ commutation relations: 
 \[ [E_\R, F_\R] = H_\R, \quad [H_\R, E_\R] = 2E_\R, \quad [H_\R, F_\R] = -2F_\R. \]
 
-Furthermore $E_\R,F_\R$ are in the $-1$-eigenspace of $\sigma$,
+Furthermore $E_\R,F_\R$ are in the $-1$-eigenspace of $\sigma$, and we have
 $\theta(E_\R)=F_\R$ and $\theta(H_\R)=-H_\R$.
 
 It is helpful to keep in mind that $E_\R,F_\R$ are $G(\R)$-conjugate,
@@ -966,21 +958,24 @@ $$
 \begin{aligned}
   E_\R&=\frac12(E_\theta-F_\theta-H_\theta)\\
   F_\R&=\frac12(-E_\theta+F_\theta-H_\theta)\\
-  H_\R&=E_\theta+F_\theta
+  H_\R&=E_\theta+F_\theta.
 \end{aligned}
 $$
-
-Let $\t(\C)=\{t_z\mid z\in\C\}$ where
-$$
-t_z=\begin{pmatrix}0&z\\-z&0
-\end{pmatrix}.
-$$
-Then $\t(\R)=\{t_x\mid x\in\R\}$ is the Lie algebra of a compact Cartan subalgebra of $G$ (this is also a maximal compact subgroup).
-
 
 Define the dual basis
  $\{E_\R^*,F_\R^*,H_\R^*\}$ of $\g^*$ as usual,  i.e. $E_\R^*(E_\R)=1$, $E_\R^*(F_\R)=E_\R^*(H_\R)=0$, etc. Define 
  $\{E_\theta^*,F_\theta^*,H_\theta^*\}$ similarly.
+ 
+\medskip
+
+
+We now introduce notation for tori and roots. Let $\t(\C)=\{t_z\mid z\in\C\}$ where
+$$
+t_z=\begin{pmatrix}0&z\\-z&0
+\end{pmatrix}.
+$$
+Then $\t(\R)=\{t_x\mid x\in\R\}$ is the Lie algebra of a compact Cartan subalgebra of $\g$ (the corresponding Cartan subgroup of~$G(\R)$ is also a maximal compact subgroup).
+
 
 
 
@@ -992,23 +987,25 @@ $c=-iz$:
 \label{e:lambdaz}
 \lambda_z=-izH_\theta^*.
 \end{equation}
-In particular
+In particular, for $k \in \Z$ we have
 \begin{equation}
 \label{e:lambdai}
-\lambda_{ik}=kH_\theta^*
+\lambda_{ik}=kH_\theta^*.
 \end{equation}
 
 
-The positive root can be taken to be   $\alpha(t_z)=2iz$, i.e.
-$\alpha=\lambda_{2i}$ so $\rho=\frac12\alpha=\lambda_i$.
-Note that $\alpha(\ch\alpha)=2$ gives
+The positive root can be taken to be   $\alpha\colon t_z \to 2iz$, i.e.
+$\alpha=\lambda_{2i}$; therefore $\rho=\frac12\alpha$ is~$\lambda_i$.
+Since the coroot~$\ch\alpha$ satisfies $\alpha(\ch\alpha)=2$, we have
 $$
 \ch\alpha=t_{-i}
 $$
-i.e.
+therefore
 $$
 \langle \lambda_{ik},\ch\alpha\rangle=\lambda_{ik}(t_{-i})=k
 $$
+for $k \in \Z$. 
+
 Viewing $\ch\alpha$ as a map from $\C$ to $\ch{\mathfrak t}$ this says
 $$
 \ch\alpha(z)=t_{-iz}\quad (z\in \C).
@@ -1046,20 +1043,20 @@ The result is
 \begin{aligned}
 \psi_c(H_\R)&=2cH_\R^*\\
 \psi_c(E_\R)&=cF_\R^*\\
-\psi_c(F_\R)&=cE_\R^*
+\psi_c(F_\R)&=cE_\R^*.
 \end{aligned}
 \end{equation}
-Since we obtained the $\theta$ basis by conjugating, the formulas in this basis are the same:
+Since we obtained the ``$\theta$-basis" by conjugating, the formulas in this basis are the same:
 \begin{equation}
 \label{e:psic2}
 \begin{aligned}
 \psi_c(H_\theta)&=2cH_\theta^*\\
 \psi_c(E_\theta)&=cF_\theta^*\\
-\psi_c(F_\theta)&=cE_\theta^*
+\psi_c(F_\theta)&=cE_\theta^*.
 \end{aligned}
 \end{equation}
 
-Recall that for $\mu\in \g^*$
+Recall that for $\mu\in \g^*$, we have
 $$
 \AC(\mu)=\psi_c^{-1}(\AC(\psi_c(\mu)))
 $$
@@ -1075,16 +1072,16 @@ independent of $c$.
 
 
 
-\subsection{$\WF(\pi)$}
+\subsection{Wave-front set}
 
-Let's compute $\WF(\pi_{\lambda_{ik}})$ by  \cite{HarrisHeOlafsson}, which says:
+Suppose~$k \in \Z_{\neq 0}$. Let us compute $\WF(\pi_{\lambda_{ik}})$ by  \cite{HarrisHeOlafsson}, which says:
 $$
 \WF(\pi(\lambda_{ik}))=\AC(G(\R)\cdot \lambda_{ik}).
 $$
 
-First let's compute $\AC(G(\R)\cdot kH_\theta)=\AC(G(\R)\cdot\begin{pmatrix}0&-ik\\ik&0
+First let us compute $\AC(G(\R)\cdot kH_\theta)=\AC(G(\R)\cdot\begin{pmatrix}0&-ik\\ik&0
 \end{pmatrix})$ for $k\in \Z_{\ne 0}$.
-Here we're taking the real asymptotic cone; since $kH_\theta\in i\g(\R)$ this is a subset of $i\g(\R)$. 
+Here we are taking the real asymptotic cone; since $kH_\theta\in i\g(\R)$ this is a subset of $i\g(\R)$. 
 Taking the limit as $x\rightarrow \infty$ in 
 $$
 \begin{pmatrix}
@@ -1101,7 +1098,6 @@ we see
 $$
 \AC(G(\R)\cdot kH_\theta)=-G(\R)\cdot\sgn(k)E_\R.
 $$
-
 Now we carry out this computation over to $i\g(\R)^*$:
 $$
 \begin{aligned}
@@ -1110,11 +1106,11 @@ $$
 &=\psi_c(-G(\R)\cdot\sgn(\frac k{2c})E_\R)\\
 &=-G(\R)\cdot\sgn(\frac k{2c})cF_\R^*\\
 &=-G(\R)\cdot\sgn(k)F_\R^*\\
-&=G(\R)\cdot(-\sgn(k)E_\R^*)\\
+&=G(\R)\cdot(-\sgn(k)E_\R^*).
 \end{aligned}
 $$
-Note that $c$ canceled as expected.
-In the last line we've used that $E_\R^*,F_\R^*$ are $G(\R)$-conjugate.
+In the last line we used the fact that $E_\R^*,F_\R^*$ are $G(\R)$-conjugate.
+Note that $c$ disappeared from the end result, as expected.
 
 Therefore by 
 \cite{HarrisHeOlafsson} we have
@@ -1128,16 +1124,16 @@ $$
 \Wh(\pi(\lambda_{ik}))=\w_X\Leftrightarrow X\sim_{G(\R)} -\sgn(k)E_\R^*.
 $$
 
-\subsection{$\AV(\pi(\lambda_{ik}))$}
+\subsection{Associated variety}
 
 We apply Lemma \ref{l:AV}. It is easy to see
 $$
 F_{\pi(\lambda_{ik})}=
-\begin{cases} F_\theta&k>0\\
-  E_\theta&k<0
+\begin{cases} F_\theta&\text{ if $k>0$;}\\
+  E_\theta& \text{ if $k<0$.}
 \end{cases}
 $$
-Recall (Section \ref{s:AV}) $\psi$ is defined using the Killing form $\kappa_4$, which satisfies
+Recall that in Section \ref{s:AV} we use the isomorphism $\psi$ defined using the Killing form $\kappa_4$, which satisfies
 $\psi(F_\theta)=4E^*_\theta, \psi(E_\theta)=4F^*_\theta$. 
 Therefore
 \begin{equation}
@@ -1148,7 +1144,8 @@ Therefore
 \end{cases}
 \end{equation}
 
-Let's check Proposition \ref{Sekiguchi_result} in this case, which says $\KS(\AV(\pi))=\WF(\pi)$.
+Let us see that this computation and that of the previous section agree with Proposition \ref{Sekiguchi_result}, which says $\KS(\AV(\pi))=\WF(\pi)$ in that case.
+
 Suppose $\pi=\pi(\lambda_{ik})$. First assume $k>0$ and compute
 $$
 \begin{aligned}
@@ -1162,29 +1159,31 @@ $$
 \end{aligned}
 $$
 which agrees with 
-Proposition \ref{Sekiguchi_result}. If $k<0$ replace $E_\theta^*$ with $F_\theta^*$, and conclude $\KS(\AV(\pi))=G(\R)\cdot E_\R^*$, in accordance with
+Proposition \ref{Sekiguchi_result}. If $k<0$, replace $E_\theta^*$ with $F_\theta^*$, and conclude $\KS(\AV(\pi))=G(\R)\cdot E_\R^*$, in accordance with
 Proposition \ref{Sekiguchi_result}.
 
-Next, let's check Proposition \ref{p:Kostant}, 
+\subsection{Whittaker model}
+
+
+Finally, let us check Proposition \ref{p:Kostant}, 
 which says $\Wh(\pi)=\w_X\Leftrightarrow \K(X)\cap\O_\pi\ne \emptyset$. 
-Assume $k>0$. Then 
+Assume $k>0$. Then
 $$
 \Wh(\pi(\lambda_{ik}))=G(\R)\cdot(-E_\R^*).
 $$
-So we compute
+On the other hand, we can compute
 $$
 \begin{aligned}
 \K(-E_\R^*)&=\psi_c(\K(\psi_c\inv(-E_\R^*)))\\
-&=\psi_c(\K( -\frac 1cF_\R))\\
-&\ni \psi_c\frac 1c(-F_\R-E_\R)\\
-&=\psi_c(\frac 1cH_\theta)=2H_\theta^*
-\end{aligned}
+&=\psi_c(\K( -\frac 1cF_\R)).\end{aligned}$$
+This contains
+$$ \psi_c\left(\frac 1c(-F_\R-E_\R)\right)=\psi_c(\frac 1cH_\theta)=2H_\theta^*.
 $$
-That is 
+So we do have
 $$
-\K(-E_\R^*)\cap G(\R)\cdot 2H_{\theta}^*\ne\emptyset\quad (k<0).
+\K(-E_\R^*)\cap G(\R)\cdot 2H_{\theta}^*\ne\emptyset\quad (k>0).
 $$
-The case $k<0$ is similar; we conclude
+The case $k<0$ is similar; in that case we conclude
 $\Wh(\pi_{\lambda_ik})=G(\R)E_\R^*$, and $\K(E_\R^*)\cap G(\R)\cdot (-2H_\theta)\ne \emptyset$.
 
 
