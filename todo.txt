@@ -1,13 +1,2 @@
 
-1) Write a small section about discrete series: HC parameter, W_K, and notion of large Weyl chamber
-
----> June 14: wrote a first draft, which will need some adjustments and polishing
-
-2) Go over the section which spells out Sekiguchi (5.3.1), insert the appropriate *s and check the formulas
-
----> June 14: hopefully this should now be OK, we need to proofread it
-
-3)  Fix the beginning of Section 3.5.2 to see if everything now fits together, and update Section 3.5.3 once everything about Sekiguchi looks OK
-
----> June 14: this should now be OK, we need to proofread it
-
+A (2024-09-18) : for the very last subsection (on Whittaker models in the case of SL(2)), are we checking the Proposition about the Kostant section, or using it to calculate Wh(\pi)? If it's the first, then we probably need some argument to explain why Wh(\pi) is what we wrote. If it's the second, then what's written is enough (up to a permutation of sentences).
