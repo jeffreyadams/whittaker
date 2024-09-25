@@ -922,9 +922,9 @@ Set $\theta(X)=X^t$, so $\g(\C)^\theta$  is the complexified Lie algebra of a ma
 
 We begin by defining different bases of~$\g$. Start with the following basis:
 $$
-E_\R=\begin{pmatrix}0&i\\0&0\end{pmatrix},
-F_\R=\begin{pmatrix}0&0\\-i&0\end{pmatrix},
-H_\R=\begin{pmatrix}1&0\\0&-1\end{pmatrix}
+E_\R=\begin{pmatrix}0&i\\0&0\end{pmatrix},\quad 
+F_\R=\begin{pmatrix}0&0\\-i&0\end{pmatrix},\quad
+H_\R=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
 $$
 These elements satisfy the standard $SL(2)$ commutation relations: 
 \[ [E_\R, F_\R] = H_\R, \quad [H_\R, E_\R] = 2E_\R, \quad [H_\R, F_\R] = -2F_\R. \]
@@ -938,9 +938,9 @@ and for $c\in \R^*$ $cE_\R$ is $G(\R)$-conjugate to $E_\R$ if and only if $c>0$.
 Set $g=\frac 1{\sqrt 2}\begin{pmatrix}1&i\\i&1
 \end{pmatrix}$, and take $E_\theta,F_\theta,H_\theta$ be the conjugates of $E_\R,F_\R,H_\R$ by~$g$:
 $$
-E_\theta=\frac12\begin{pmatrix}1&i\\i&-1\end{pmatrix},
-F_\theta=\frac12\begin{pmatrix}1&-i\\-i&-1\end{pmatrix},
-H_\theta=\begin{pmatrix}0&-i\\i&0\end{pmatrix},
+E_\theta=\frac12\begin{pmatrix}1&i\\i&-1\end{pmatrix}, \quad
+F_\theta=\frac12\begin{pmatrix}1&-i\\-i&-1\end{pmatrix},\quad
+H_\theta=\begin{pmatrix}0&-i\\i&0\end{pmatrix}.
 $$
 These also satisfy the standard $SL(2)$ commutation relations; $E_\theta,F_\theta$ are in the $-1$-eigenspace of $\theta$; 
 and  $\sigma(E_\theta)=F_\theta,\sigma(H_\theta)=-H_\theta$.
@@ -1098,7 +1098,7 @@ we see
 $$
 \AC(G(\R)\cdot kH_\theta)=-G(\R)\cdot\sgn(k)E_\R.
 $$
-Now we carry out this computation over to $i\g(\R)^*$:
+Now we carry this computation over to $i\g(\R)^*$:
 $$
 \begin{aligned}
 \AC(G(\R)\cdot\lambda_{ik})&=\AC(G(\R)\cdot kH_\theta^*)\\
@@ -1139,8 +1139,8 @@ Therefore
 \begin{equation}
   \label{e:AV}
 \AV(\pi(\lambda_{ik}))=
-\begin{cases}K\cdot E_\theta^*&k>0\\
-  K\cdot F_\theta^*&k<0\\
+\begin{cases}K\cdot E_\theta^*&k>0;\\
+  K\cdot F_\theta^*&k<0.\\
 \end{cases}
 \end{equation}
 
@@ -1155,7 +1155,7 @@ $$
 &=\psi_c(G(\R)\cdot \frac 1c(-E_\R))\quad\text{(by \eqref{e:KS})}\\
 &=  G(\R)\cdot \psi_c(\frac{-1}c F_\R))\\
 &=G(\R)\cdot (-E_\R^*)\\
-&=\WF(\pi)\quad \text{(by \ref{e:WF})}
+&=\WF(\pi)\quad \text{(by \eqref{e:WF})}
 \end{aligned}
 $$
 which agrees with 
