@@ -147,6 +147,8 @@
 \newcommand{\Kostant}[1]{\mathcal{K}(#1)}
 \newcommand{\ECom}{\mathcal{E}^{\mathcal{C}}_\Omega}
 \begin{document}
+%Jeffrey Adams University of Maryland/IDA Center for Computing Sciences
+%jda@math.umd.edu
 \title{Nilpotent Invariants \\ for Generic Discrete Series of Real Groups}
 \author{Jeffrey Adams \& Alexandre Afgoustidis}
 \maketitle
@@ -606,7 +608,7 @@ $$
 \begin{lemma}
 \label{l:pi_to_av}
   \label{l:AV}
-Suppose $\pi$ is a generic discrete series representation with Harish-Chandra parameter $\lambda\in\t^*$.
+Suppose $\pi$ is a generic discrete series representation and $\lambda\in\t^*$ is a representative of its  Harish-Chandra parameter.
 Set
 
 \begin{equation}
@@ -752,8 +754,10 @@ This proves the first assertion in the Proposition; the second assertion follows
 
 \begin{corollary}
 \label{c:same}
-Suppose $\pi$ is a generic discrete series representation with Harish-Chandra parameter $\lambda$.
-Then $\AV(\pi)$, $\WF(\pi)$ and $\Wh(\pi)$ only depend on the Weyl chamber of $\lambda$.
+Suppose $\pi,\pi'$ are generic discrete series representations. Let  $\lambda,\lambda'$ be representatives
+for the Harish-Chandra parameters of $\pi,\pi'$. If 
+$\lambda,\lambda'$ are in the same  Weyl chamber then
+$\pi,\pi'$ have the same associated variety, wave-front set, and Whittaker models.
 \end{corollary}
 
 \begin{proof}
@@ -773,7 +777,7 @@ The same result holds for $\Wh(\pi)$ and $\AV(\pi)$.
 \end{corollary}
 
 \begin{proof}
-If  $\mathscr{C}, \mathscr{C}'$ are in the same $W_K$-orbit, then the Harish-Chandra parameters of $\pi$, $\pi'$ have representatives in the same Weyl chamber; therefore $\Wh(\pi)=\Wh(\pi')$ by Corollary \ref{c:same}.
+If  $\mathscr{C}, \mathscr{C}'$ are in the same $W_K$-orbit, then the Harish-Chandra parameters of $\pi$, $\pi'$ have representatives in the same Weyl chamber; therefore $\Wh(\pi)=\Wh(\pi')$ by Corollary~\ref{c:same}.
 
 Suppose $\WF(\pi)=\WF(\pi')$. By Lemma \ref{lem:Kost_and_AC} we may assume
 $\lambda=w\lambda'$ for some $w\in W$, i.e. $\pi,\pi'$ are contained
@@ -782,18 +786,6 @@ we know $\Wh(\pi)=\Wh(\pi')$ if and only if $\pi\simeq \pi'$.
 This holds if and only if $\lambda'=w\lambda$ with $w\in W_K$, 
 i.e. $\mathscr{C}$ and $\mathscr{C}'$ are $W_K$-conjugate.
 \end{proof}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 \subsection{$\AV$ and $\WF$: the Kostant--Sekiguchi correspondence } \label{sec:Sekiguchi}
