@@ -155,7 +155,7 @@ Let $G$ be a connected complex reductive group, defined over $\R$, and consider 
 
 We are interested in representations of~$G(\R)$ which admit Whittaker models. For this we consider pairs $(B,\eta)$ where 
 \begin{enumerate}[(i)]
-\item $B$ is a Borel subgroup of~$G$ defined over~$\R$, with real points $B(\R)$,
+\item $B$ is a Borel subgroup of~$G$ defined over~$\R$,
 \item $\eta$ is a character of the nilpotent radical~$N(\R)$ of~$B(\R)$, subject to the condition that~$\eta$ is nontrivial on each simple root space.
 \end{enumerate}
 The existence of a Borel subgroup satisfying (i) is the definition of $G$ being quasisplit, which we assume holds from now on.
@@ -182,8 +182,7 @@ them, defined very differently. The first is the \emph{wavefront set} $\WF(\pi)$
 which is an analytic invariant.
 The second is the \emph{associated variety} $\AV(\pi)$, which is
 defined  algebraically.
-Both consist of nilpotent elements of the dual of the Lie algebra of~$G$, and are defined as
-coadjoint orbits (of two different kinds).
+Both consist of nilpotent elements of the dual of the Lie algebra of~$G$.
 The invariants $\Wh(\pi), \WF(\pi)$ and $\AV(\pi)$ are closely related to each other.
 
 We now focus on the case of a generic discrete series representation
@@ -198,7 +197,7 @@ of this paper is to give a self-contained account of these matters. More precise
 \item Give an elementary proof that  passage from~$\pi$ to $\mathfrak{w}(\pi)$, $\WF(\pi)$ and $\AV(\pi)$ defines bijections between generic discrete series in an $L$-packet for $G(\R)$, Whittaker data for $G(\R)$, and the appropriate sets of nilpotent orbits;
 \item Given one of the invariants $\Wh(\pi)$, $\WF(\pi)$ or $\AV(\pi)$, explain in the simplest possible terms how to explicitly reconstruct the other two.
 \end{enumerate}
-Many results in this note are well known. We  tried to give new and simplified proofs for as many of them as we could; for instance, Section~\ref{sec:Sekiguchi} contains a simple proof that $\WF(\pi)$ and $\AV(\pi)$ are exchanged by the Kostant--Sekiguchi correspondence. Otherwise we tried to give convenient references.
+Many results in this note are well known. We give new and simplified proofs for as many of them as we could; for instance, Section~\ref{sec:Sekiguchi} contains a simple proof that $\WF(\pi)$ and $\AV(\pi)$ are exchanged by the Kostant--Sekiguchi correspondence. Otherwise we give convenient references.
 
 \section{Some invariants of irreducible representations}
 
@@ -217,7 +216,7 @@ Let $\s$ be the $-1$ eigenspace of $\theta$ acting on~$\g$, where we use the not
 \subsubsection*{Nilpotent orbits in $\g^*$} 
 \label{s:dual}
 Let $\N$ be the set of nilpotent elements of $\g$. Several of the invariants below are related to~$\N$, but are more naturally defined as subsets of the dual vector space~$\g^\ast$.
-Therefore we need to pass to the dual Lie algebra $\g^*$, and it is important to do this as canonically as possible, i.e. in a manner as independent as possible of a choice
+Therefore we need to pass to the dual Lie algebra $\g^*$, and it is important to do this as independently as possible of a choice
 of isomorphism $\g\simeq\g^*$. 
 
 First we define the nilpotent cone in $\g^*$ as follows. 
@@ -238,8 +237,8 @@ $$
 $$
 
 Using $\psi_\kappa$ we shall transfer to $\g^\ast$ several notions usually defined on $\g$: the asymptotic cone, the Kostant section, and the Kostant--Sekiguchi corresondence. In each case the resulting notions are independent of the
-choice of $\kappa$. See Section~\ref{sec:Sekiguchi}.
-In Section~\ref{s:AV} we need to be more precise: we choose  $\kappa$ to be the Killing form. (More generally, we could take any non-degenerate
+choice of $\kappa$. See Sections~\ref{s:gds} and \ref{sec:Sekiguchi}.
+In Section~\ref{s:AV} we need to be more precise: we choose  $\kappa$ to be the Killing form  (or any non-degenerate
 invariant form which is negative definite on the Lie algebra of a maximal compact subgroup.)
 
 \subsubsection*{Representations} 
@@ -249,7 +248,7 @@ See \cite{greenbook} for details.
 Suppose $\pi$ is an irreducible admissible representation of $G(\R)$  on a Hilbert space. 
 The underlying
 $(\g,K)$-module is on the space of $K$-finite vectors in
-$V$; we will denote it by~$\pi_K$ in this paper. 
+$V$; we will denote it by~$\pi_K$. 
 
 Conversely if $\pi$ is an irreducible $(\g,K)$-module it can be
 realized as the $K$-finite vectors of a Hilbert space representation, which we
@@ -288,7 +287,7 @@ We define the associated variety of a Hilbert space representation to be that of
 Now suppose $\pi$ is an irreducible admissible representation of $G(\R)$ on a Hilbert space $\mH$. 
 The \emph{wave-front
   set} $\WF(\pi)$ is an analytic invariant determined by the
-singularities of the global character of $\pi$ near the identity. See \cite{howe_wave_front, bv_local_structure, HarrisHeOlafsson} for the definition. 
+singularity of the global character of $\pi$ near the identity. See \cite{howe_wave_front, bv_local_structure, HarrisHeOlafsson} for the definition. 
 The set~$\WF(\pi)$  is a closed $G(\R)$-invariant subset of the nilpotent cone in
 $i\g(\R)^*$. As such it is the union of a finite number of nilpotent $G(\R)$-orbits. Again, this depends only on the equivalence class of~$\pi$.
 
@@ -297,7 +296,7 @@ Hilbert space globalization.
 
 \subsubsection*{Whittaker models}
 
-Suppose again that $\pi$ is an irreducible admissible representation of $G(\R)$ on a Hilbert space $\mH$. We consider the corresponding actions of $G(\R)$ on the space~$\mH^\infty$ of smooth vectors in $\mH$, and on its dual $\mH^{-\infty}$; and we still denote them by~$\pi$. Let~$(B, \eta)$ be a pair satisfying conditions (i)-(ii) of the Introduction. We say $\pi$ has a $(B,\eta)$-Whittaker model
+Suppose again that $\pi$ is an irreducible admissible representation of $G(\R)$ on a Hilbert space $\mH$. We consider the corresponding actions of $G(\R)$ on the space~$\mH^\infty$ of smooth vectors in $\mH$, and on its dual $\mH^{-\infty}$. Let~$(B, \eta)$ be a pair satisfying conditions (i)-(ii) of the Introduction. We say $\pi$ has a $(B,\eta)$-Whittaker model
 if there exists a nonzero element $v$ in~$\mH^{-\infty}$ such that $\pi(n)(v)=\eta(n)v$ for all $n$ in the nilradical $N(\R)$ of $B(\R)$. See~\cite{matumoto}. If~$\w$ is the corresponding Whittaker datum, i.e. the $G(\R)$-conjugacy class of the pair $(B, \eta)$, we say~$\pi$ has a $\w$-Whittaker model.  
 
 We write $\Wh(\pi)$ for the set of Whittaker data~$\w$ such that $\pi$ has a $\w$-Whittaker model.
@@ -459,7 +458,7 @@ Let us first set up some general notation. When~$A$ is a group and $\tau$ is an 
 
 
 We now take~$A=G$, and continue to assume~$\tau$ is an involutive automorphism. Then the short exact sequence $1\rightarrow Z \rightarrow G \rightarrow \Gad\rightarrow 1$ 
-gives rise to a ``long" exact sequence of pointed sets:
+gives rise to a long exact sequence of pointed sets:
 \begin{equation} \label{long_ptset}
 1\rightarrow Z^\tau \rightarrow G^\tau \rightarrow \Gad^{\tau} \overset{\psi_\tau}{\longrightarrow} H^1(\tau,Z)\to H^1(\tau,G)\rightarrow H^1(\tau,\Gad).
 \end{equation}
@@ -501,6 +500,9 @@ Let $g$ be an element of $G$ such that $\gamma = gZ$; then $z=g \sigma(g^{-1})$ 
 Let $\gamma_0$ be the image of $z_0^{-1} k^{-1} g$ in $\Gad$. Then $\gamma_0 \in (G^{\sigma})_\ad$, and $\gamma_0$ is equal to the image of $k^{-1} g$ in $\Gad$. The element $\kappa=\gamma \gamma_0^{-1}$ of $\Gad$  is therefore $\sigma$-invariant, and since $\kappa=kZ$, we also have $(\theta\sigma)(\kappa)=\kappa$; we conclude that $\theta(\kappa) = \kappa$, q.e.d. 
 
 Let us prove~(b). To show that when $g\in (\Gad)^\sigma \cap (\Gad)^\theta$ is a representative of $x \in Q_{\sigma}(G)$,  the image of~$g$ in  $Q_\theta(G)$ depends only on~$x$, it is enough to show that  $(G^\sigma)_\ad \cap (\Gad)^\theta \subset (G^\theta)_{\ad}$. This follows from \cite[Proposition 5.4]{galois}, applied to the action of~$G$ on~$\Gad$ and the obvious involutions. We conclude that taking $x \in Q_{\sigma}(G)$ to the image $\varphi(x)$ of $g$ in $Q_{\theta}(G)$ gives a well-defined map $\varphi\colon Q_{\sigma}(G)\to Q_{\theta}(G)$, which is clearly a group homomorphism. Exchanging the roles of $\sigma$ and $\theta$, we get a well-defined map $Q_{\theta}(G) \to Q_{\sigma}(G)$, which is the inverse of $\varphi$; therefore $\varphi$ is an isomorphism.
+
+\qed
+
 
 %where $\varphi_{\sigma}$ and $\varphi_{\theta}$ are induced by the inclusion $Z \hookrightarrow G$. Since the horizontal arrows are isomorphisms in the category of pointed sets, they induce a canonical bijection between the kernels of $\varphi_{\sigma}$ and $\varphi_{\theta}$. 
 %
@@ -647,12 +649,14 @@ description of~$\WF(\pi)$, based on the description of $\AV(\pi)$ in
 the previous paragraph and on the Sekiguchi correspondence.
 
 \subsection{Whittaker data of generic discrete series}
+\label{s:gds}
 
 The following discussion summarizes results from \cite[Section~3]{adams_kaletha}.
 
 
 Suppose $X\in i\g(\R)^*\subset \g^*$ is a regular nilpotent element (see Section \ref{s:dual}).
-Let $\overline{\mathfrak b}(\R)$ be the kernel of $X$. This is the Lie algebra of~$\overline{B}(\R)$, where$\overline{B}$ is a Borel subgroup of~$G$ defined over $\R$.
+Let $\overline{\mathfrak b}(\R)$ be the kernel of $X$. This is the Lie algebra of~$\overline{B}(\R)$, where
+$\overline{B}$ is an $\R$-Borel subgroup of~$G$.
 Choose an $\R$-Cartan subgroup $T$ of
 $\overline B$, and let~$B$ be the  Borel
 subgroup opposite to~$\overline{B}$, characterized by $B\cap \overline B=T$.
@@ -683,8 +687,6 @@ Then $\pi$ is $\w$-generic if and only if $\Kostant{X}$ meets $\mathcal{O}_\pi$.
 \end{proposition}
 
 
-This confirms that  the corresponding statement  in the $p$-adic case \cite{debacker_reeder_generic, kaletha_epipelagic}
-applies to the real case as well.
 
 \begin{lemma}[\phantom{}{\cite[Lemma 3.3.4]{adams_kaletha}}]
 \label{lem:Kost_and_AC}
@@ -920,7 +922,7 @@ Let $\g=\sl(2,\C)$ be the complexified Lie algebra.
 Then $\g(\R)=\g(\C)^\sigma$ where $\sigma\colon X \to \overline X$ is complex conjugation. 
 Set $\theta(X)=X^t$, so $\g(\C)^\theta$  is the complexified Lie algebra of a maximal compact subgroup of $SL(2,\R)$.
 
-We begin by defining different bases of~$\g$. Start with the following basis:
+We begin by defining two  bases of~$\g$. Start with the following basis:
 $$
 E_\R=\begin{pmatrix}0&i\\0&0\end{pmatrix},\quad 
 F_\R=\begin{pmatrix}0&0\\-i&0\end{pmatrix},\quad
@@ -1079,7 +1081,7 @@ $$
 \WF(\pi(\lambda_{ik}))=\AC(G(\R)\cdot \lambda_{ik}).
 $$
 
-First let us compute $\AC(G(\R)\cdot kH_\theta)=\AC(G(\R)\cdot\begin{pmatrix}0&-ik\\ik&0
+First we compute $\AC(G(\R)\cdot kH_\theta)=\AC(G(\R)\cdot\begin{pmatrix}0&-ik\\ik&0
 \end{pmatrix})$ for $k\in \Z_{\ne 0}$.
 Here we are taking the real asymptotic cone; since $kH_\theta\in i\g(\R)$ this is a subset of $i\g(\R)$. 
 Taking the limit as $x\rightarrow \infty$ in 
