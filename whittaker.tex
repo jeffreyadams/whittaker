@@ -1,9 +1,8 @@
-%edited starting 8/27/17 for re-submission to Duke
 \documentclass[10pt,leqno]{article}
+
 \usepackage{verbatim}
 \usepackage{amssymb, amscd}
 \usepackage{mathtools}
-%\usepackage{amsrefs}
 \usepackage{rotating}
 \usepackage{xcolor}
 \usepackage{amsmath}
@@ -11,7 +10,6 @@
 \usepackage{enumerate}
 \usepackage[colorlinks=true, linktoc=page, citecolor=blue, linkcolor=blue, urlcolor=blue]{hyperref}
 
-%\usepackage{showkeys}
 \usepackage{tabularx}
 \setlength\extrarowheight{4pt}   %spacing in tables
 \usepackage{theorem}
@@ -147,10 +145,11 @@
 \newcommand{\Kostant}[1]{\mathcal{K}(#1)}
 \newcommand{\ECom}{\mathcal{E}^{\mathcal{C}}_\Omega}
 \begin{document}
-%Jeffrey Adams University of Maryland/IDA Center for Computing Sciences
-%jda@math.umd.edu
+
 \title{Nilpotent Invariants \\ for Generic Discrete Series of Real Groups}
-\author{Jeffrey Adams \& Alexandre Afgoustidis}
+\author{Jeffrey Adams\footnote{University of Maryland \& IDA Center for Computing Sciences ; \url{jda@math.umd.edu}} {} \& Alexandre Afgoustidis\footnote{CNRS \& Université de Lorraine, Nancy \& Metz ; \url{alexandre.afgoustidis@math.cnrs.fr}}}
+%\email{alexandre.afgoustidis@math.cnrs.fr}
+
 \maketitle
 
 Let $G$ be a connected complex reductive group, defined over $\R$, and consider the group $G(\R)$ of real points. 
@@ -175,7 +174,7 @@ a useful invariant of generic representations.
 For instance, in the local Langlands correspondence, if $\Pi$ is a tempered $L$-packet for $G(\R)$ and $\w$ is a Whittaker datum, then $\Pi$ contains a unique representation
 having a $\w$-Whittaker model. This plays a role in describing the internal structure of $L$-packets.
 If $\Pi$ is a discrete series $L$-packet then each generic representation in the packet has a unique
-Whittaker model, so the generic representations in $\Pi$ are parametrized by their Whittaker models.
+Whittaker model, so the generic representations in~$\Pi$ are parametrized by their Whittaker models.
 It is conjectured that these properties hold in the $p$-adic case as well, and this is known in many cases.
 
 There are other invariants attached to an
@@ -185,7 +184,7 @@ which is an analytic invariant.
 The second is the \emph{associated variety} $\AV(\pi)$, which is
 defined  algebraically.
 Both consist of nilpotent elements of the dual of the Lie algebra of~$G$.
-The invariants $\Wh(\pi), \WF(\pi)$ and $\AV(\pi)$ are closely related to each other.
+The invariants $\Wh(\pi), \WF(\pi)$ and~$\AV(\pi)$ are closely related to each other.
 
 We now focus on the case of a generic discrete series representation
 $\pi$ of $G(\R)$, so $\Wh(\pi)$ is a single Whittaker datum.  In this
@@ -213,7 +212,7 @@ Set $\g=\Lie(G)$ and $\g(\R)=\Lie(G(\R))$.
 Choose a Cartan involution $\theta$ for $G$. This means:
 $\theta$ is an algebraic involution, commuting with~$\sigma$,
 and $G(\R)^\theta$ is a maximal compact subgroup of~$G(\R)$. Set $K=G^\theta$ and $K(\R)=G(\R)^\theta=K^\sigma$.
-Let $\s$ be the $-1$ eigenspace of $\theta$ acting on~$\g$, where we use the notation $\sigma, \theta$ also for the automorphisms of~$\g$ induced by the above involutions.
+Let $\s$ be the $(-1)$-eigenspace of $\theta$ acting on~$\g$, where we use the notation $\sigma, \theta$ also for the automorphisms of~$\g$ induced by the above involutions.
 
 \subsubsection*{Nilpotent orbits in $\g^*$} 
 \label{s:dual}
@@ -272,7 +271,7 @@ nilpotent $K$-orbits on $\s^*$. For the definition, and many properties, see \ci
 
 A related invariant is the associated variety of the annihilator $I_\pi$ of $\pi$ in the universal enveloping algebra, 
 denoted $\AVann(\pi)$.
-This is a subset of $\N^*\subset\g^*$, and is the closure of a single complex nilpotent orbit: see \cite[Section 1, Theorem 4.7]{vogan_bowdoin}. Both $\AV(\pi)$ and $\AVann(\pi)$ depend only on the equivalence class of~$\pi$.
+This is a subset of $\N^*$ of~$\g^*$, and is the closure of a single complex nilpotent orbit: see \cite[Section 1, Theorem~4.7]{vogan_bowdoin}. Both $\AV(\pi)$ and $\AVann(\pi)$ depend only on the equivalence class of~$\pi$.
 
 The Gelfand--Kirillov dimension~$\GK(\pi)$ of~$\pi$ can be defined in several different ways~\cite{vogan-gelfand-kirillov}; but one of them is
 $$
@@ -456,7 +455,7 @@ The proof uses an interpretation of $Q_\sigma(G)$ and $Q_\theta(G)$ in terms of 
 
 The groups $Q_{\sigma}(G)$ and $Q_{\theta}(G)$ are instances of the following construction: if~$\tau$ is an involutive automorphism of~$G$, then it preserves~$Z$ and induces an involution of~$\Gad$, still denoted $\tau$; we may then set $Q_{\tau}(G)=(\Gad)^{\tau}/(G^{\tau})_{\ad}$, where $(G^{\tau})_{\ad}$ is the image of~$G^{\tau}$ in~$\Gad$. In this situation~$Q_{\tau}(G)$ has a simple interpretation in Galois cohomology, which we now recall. 
 
-Let us first set up some general notation. When~$A$ is a group and $\tau$ is an involutive automorphism of~$A$, consider the cohomology sets $H^0(\tau, A)$ and $H^1(\tau, A)$ attached to the action of $\Z/2\Z$ on~$A$ by~$\tau$. We shall view   $H^0(\tau, A)$ as the fixed-point-set $A^{\tau}$, and $H^1(\tau,A)$ as the quotient of $A^{-\tau} = \{ a \in A, \tau(a)=a^{-1}\}$ by the equivalence relation $a \sim x a \tau(x^{-1})$ for all $x \in A$. The set $H^1(\tau, A)$ has a distinguished point $1$, coming from the identity of~$A$; but in general it is just a pointed set, and not a group if~$A$ is nonabelian. 
+Let us first set up some general notation. When~$A$ is a group and $\tau$ is an involutive automorphism of~$A$, consider the cohomology sets $H^0(\tau, A)$ and $H^1(\tau, A)$ attached to the action of $\Z/2\Z$ on~$A$ by~$\tau$. We shall view   $H^0(\tau, A)$ as the fixed-point-set $A^{\tau}$, and $H^1(\tau,A)$ as the quotient of \mbox{$A^{-\tau} = \{ a \in A, \tau(a)=a^{-1}\}$} by the equivalence relation $a \sim x a \tau(x^{-1})$ for all $x \in A$. The set $H^1(\tau, A)$ has a distinguished point $1$, coming from the identity of~$A$; but in general it is just a pointed set, and not a group if~$A$ is nonabelian. 
 
 
 We now take~$A=G$, and continue to assume~$\tau$ is an involutive automorphism. Then the short exact sequence $1\rightarrow Z \rightarrow G \rightarrow \Gad\rightarrow 1$ 
@@ -533,7 +532,7 @@ Then $(\pi^q)_K\simeq (\pi_K)^{\varphi(g)}$.
 
 
 
-Because of Lemmas~\ref{lem:iso_q} and \ref{lem:action_q}, we write $Q(G)$ for the group $Q_\sigma(G)$ or $Q_\theta(G)$, depending on the situation.
+Because of Lemmas~\ref{lem:iso_q} and \ref{lem:action_q}, we write $Q(G)$ for the group $Q_\sigma(G)$ or~$Q_\theta(G)$, depending on the situation.
 
 
 
@@ -599,7 +598,7 @@ let $\Delta^+(\lambda)=\{\alpha \in \Delta \mid \langle\lambda,\ch\alpha\rangle>
 and let $S(\lambda)\subset\Delta^+(\lambda)$ be the simple roots.
 For $\alpha\in \Delta$, let $\g_\alpha$ be the corresponding root space, and choose a non-zero element $X_\alpha\in\g_\alpha$ for each $\alpha$.
 
-In this section only we need to  choose a particular an isomorphism $\gder\simeq \gder^*$.
+In this section only we need to  choose a particular an isomorphism \mbox{$\gder\simeq \gder^*$}.
 For this we let $\kappa$ be the killing form, and define $\psi_\kappa:\gder\rightarrow \gder^*$ by
 $$
 \psi_\kappa(X)(Y)=\kappa(X,Y)\quad (X,Y\in \gder).
@@ -762,7 +761,7 @@ $\pi,\pi'$ have the same associated variety, wave-front set, and Whittaker model
 
 \begin{proof}
 This follows from Lemma \ref{l:pi_to_av} for the associated variety;
-from Lemma \ref{lem:WF_and_AC} for the wave front set, and Lemma \ref{lem:Kost_and_AC} (or Corollary \ref{cor:matumoto})
+from Lemma~\ref{lem:WF_and_AC} and Proposition~\ref{prop:AC_chamber} for the wave front set, and Lemma \ref{lem:Kost_and_AC} (or Corollary \ref{cor:matumoto})
 for the Whittaker model.
 \end{proof}
 
@@ -923,7 +922,7 @@ $$
 These elements satisfy the standard $SL(2)$ commutation relations: 
 \[ [E_\R, F_\R] = H_\R, \quad [H_\R, E_\R] = 2E_\R, \quad [H_\R, F_\R] = -2F_\R. \]
 
-Furthermore $E_\R,F_\R$ are in the $-1$-eigenspace of $\sigma$, and we have
+Furthermore $E_\R,F_\R$ are in the $(-1)$-eigenspace of $\sigma$, and we have
 $\theta(E_\R)=F_\R$ and $\theta(H_\R)=-H_\R$.
 
 It is helpful to keep in mind that $E_\R,F_\R$ are $G(\R)$-conjugate,
@@ -936,7 +935,7 @@ E_\theta=\frac12\begin{pmatrix}1&i\\i&-1\end{pmatrix}, \quad
 F_\theta=\frac12\begin{pmatrix}1&-i\\-i&-1\end{pmatrix},\quad
 H_\theta=\begin{pmatrix}0&-i\\i&0\end{pmatrix}.
 $$
-These also satisfy the standard $SL(2)$ commutation relations; $E_\theta,F_\theta$ are in the $-1$-eigenspace of $\theta$; 
+These also satisfy the standard $SL(2)$ commutation relations; $E_\theta,F_\theta$ are in the $(-1)$-eigenspace of $\theta$; 
 and  $\sigma(E_\theta)=F_\theta,\sigma(H_\theta)=-H_\theta$.
 
 The change of bases are given by:
@@ -1161,7 +1160,7 @@ Proposition \ref{Sekiguchi_result}.
 
 Finally, let us check Proposition \ref{p:Kostant}, 
 which says $\Wh(\pi)=\w_X\Leftrightarrow \K(X)\cap\O_\pi\ne \emptyset$. 
-Assume $k>0$. Then
+Assume $k>0$. Then 
 $$
 \Wh(\pi(\lambda_{ik}))=G(\R)\cdot(-E_\R^*).
 $$
