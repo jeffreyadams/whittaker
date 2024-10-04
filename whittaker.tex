@@ -152,6 +152,7 @@
 
 \maketitle
 
+
 Let $G$ be a connected complex reductive group, defined over $\R$, and consider the group $G(\R)$ of real points. 
 
 We are interested in representations of~$G(\R)$ which admit Whittaker models. For this we consider pairs $(B,\eta)$ where 
@@ -708,7 +709,7 @@ $$
 
 \subsection{Geometry of Kostant sections and asymptotic cones}
 
-By Lemma \ref{l:pi_to_av} the associated variety of a discrete representation only depends on the Weyl chamber of its Harish-Chandra parameter. 
+By Lemma \ref{l:pi_to_av} the associated variety of a discrete representation only depends on the $W_K$-orbit of any Weyl chamber containing a representative of its Harish-Chandra parameter. 
 The same holds for the wave front set and Whittaker data by Theorem \ref{th:main}. This can also be proved directly 
 using some geometric facts.
 
@@ -745,7 +746,7 @@ Now let $\mathcal{S}$ be the unit sphere of $\t$ for the norm induced by the giv
 
 Given regular nilpotent orbits $\Omega$ and $\Omega'$, we deduce that $\mathcal{S}_\Omega \cap \mathcal{S}_{\Omega'}$ is an open subset of the $\mathcal{S} \cap \mathcal{C}$.
 
-Now consider the set $\Sigma$ of all points on $\mathcal{S} \cap \mathcal{C}$ which arise as the radial projection of the Harish-Chandra parameter~$H$ of some generic discrete series representation. Since the Harish-Chandra parameters for discrete series are (a translate of) an integral lattice, the set $\Sigma$ is dense in $\mathcal{S} \cap \mathcal{C}$. Therefore if the open set $\mathcal{S}_\Omega \cap \mathcal{S}_{\Omega'}$ is nonempty, there must exist at least one generic discrete series representation~$\pi$ whose Harish-Chandra projects to $\mathcal{S}_\Omega \cap \mathcal{S}_{\Omega'}$. By Lemma~\ref{lem:WF_and_AC} this means $\Omega$ and $\Omega'$ must be contained in $\WF(\pi)$, which implies $\Omega = \Omega'$ since the wavefront set is the closure of a single orbit if $\pi$ is a generic discrete series. 
+Now consider the set $\Sigma$ of all points on $\mathcal{S} \cap \mathcal{C}$ which arise as the radial projection of an element~$H$ corresponding to a representative in $\t^\ast$ for the Harish-Chandra parameter of some generic discrete series representation. Since the representatives for Harish-Chandra parameters of discrete series are (a translate of) an integral lattice, the set $\Sigma$ is dense in $\mathcal{S} \cap \mathcal{C}$. Therefore if the open set $\mathcal{S}_\Omega \cap \mathcal{S}_{\Omega'}$ is nonempty, there must exist at least one generic discrete series representation~$\pi$ with a Harish-Chandra parameter representative which projects to $\mathcal{S}_\Omega \cap \mathcal{S}_{\Omega'}$. By Lemma~\ref{lem:WF_and_AC} this means $\Omega$ and $\Omega'$ must be contained in $\WF(\pi)$, which implies $\Omega = \Omega'$ since the wavefront set is the closure of a single orbit if $\pi$ is a generic discrete series. 
 
 We conclude that if $\Omega \neq \Omega'$, then $\mathcal{S}_\Omega$ and $\mathcal{S}_\Omega$ are disjoint, and therefore $\ECom$ and $\mathcal{E}^{\mathcal{C}}_{\Omega'}$ are disjoint open subsets of~$\mathcal{C}$. Since $\mathcal{C}$ is connected and equal to the union of all subsets $\mathcal{E}^{\mathcal{C}}_{\Omega}$, the chamber $\mathcal{C}$ must be equal to a single $\ECom$.
 
@@ -1160,9 +1161,9 @@ Proposition \ref{Sekiguchi_result}.
 
 Finally, let us check Proposition \ref{p:Kostant}, 
 which says $\Wh(\pi)=\w_X\Leftrightarrow \K(X)\cap\O_\pi\ne \emptyset$. 
-Assume $k>0$. Then 
+Assume $k>0$. Then by~\eqref{e:WF} and Corollary~\ref{cor:matumoto} we have
 $$
-\Wh(\pi(\lambda_{ik}))=G(\R)\cdot(-E_\R^*).
+\Wh(\pi(\lambda_{ik}))=\mathfrak{w}_{-E_\R^*}.
 $$
 On the other hand, we can compute
 $$
@@ -1177,7 +1178,7 @@ $$
 \K(-E_\R^*)\cap G(\R)\cdot 2H_{\theta}^*\ne\emptyset\quad (k>0).
 $$
 The case $k<0$ is similar; in that case we conclude
-$\Wh(\pi_{\lambda_ik})=G(\R)E_\R^*$, and $\K(E_\R^*)\cap G(\R)\cdot (-2H_\theta)\ne \emptyset$.
+$\Wh(\pi_{\lambda_{ik}})=\mathfrak{w}_{E_\R^\ast}$, and $\K(E_\R^*)\cap G(\R)\cdot (-2H_\theta)\ne \emptyset$.
 
 
 
