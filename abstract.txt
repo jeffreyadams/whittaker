@@ -3,10 +3,10 @@ Suppose $\pi$ is an irreducible representation of $G(\R)$ having a Whittaker mod
 and consider three invariants of $\pi$ related to nilpotents elements of the Lie algebra of~$G$ (or its dual): 
 the associated variety, the wave-front set, and the set of Whittaker data for which $\pi$ has a Whittaker model. 
 If pi is a discrete series representation, these invariants are known to determine each other. 
-We provide a self-contained account of the matter, 
+We provide a self-contained account of this and related results,
 including an elementary proof that passage from~$\pi$ to the three invariants defines natural bijections between 
 the generic discrete series in an $L$-packet, the possible Whittaker data for $G(\R)$, and the appropriate sets of nilpotent orbits. 
 Given one of the three invariants, we also explain how to reconstruct the other two. 
 Many of the results were known: we give simplified proofs for several of them, 
 for instance a simple proof (for generic discrete series) that the associated variety and the wave-front set 
-are exchanged by the Kostant--Sekiguchi correspondence.
+are related by the Kostant--Sekiguchi correspondence.
