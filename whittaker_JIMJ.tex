@@ -196,17 +196,17 @@ of this paper is to give a self-contained account of these matters. More precise
 \item Give an elementary proof that  passage from~$\pi$ to $\mathfrak{w}(\pi)$, $\WF(\pi)$ and $\AV(\pi)$ defines bijections between generic discrete series in an $L$-packet for $G(\R)$, Whittaker data for $G(\R)$, and the appropriate sets of nilpotent orbits;
 \item Given one of the invariants $\Wh(\pi)$, $\WF(\pi)$ or $\AV(\pi)$, explain in the simplest possible terms how to explicitly reconstruct the other two.
 \end{enumerate}
-Many results in this note were known. We gave new and simplified proofs for as many of them as we could; for instance, Section~\ref{sec:Sekiguchi} contains a simple proof that $\WF(\pi)$ and $\AV(\pi)$ are exchanged by the Kostant--Sekiguchi correspondence. Otherwise we give convenient references.
+Many results in this note are known. We gave new and simplified proofs for as many of them as we could; for instance, Section~\ref{sec:Sekiguchi} contains a simple proof that $\WF(\pi)$ and $\AV(\pi)$ are exchanged by the Kostant--Sekiguchi correspondence. Otherwise we give convenient references.
 
 \section{Some invariants of irreducible representations}
 
 \subsection{Basic notation}
 
 \subsubsection{Involutions}~
- By definition there exists an anti-holomorphic involution~$\sigma$ of~$G$ such that $G(\R) = G^\sigma$. Fix such an involution~$\sigma$, and choose a Cartan involution $\theta$ for $G$. This means:
+ In our setting we may view $G(\R)$ as the fixed-point group $G^\sigma$, where $\sigma$ is an anti-holomorphic involution~$\sigma$ of~$G$ such that $G(\R) = G^\sigma$. Fix such an involution~$\sigma$, and choose a compatible Cartan involution~$\theta$ for $G$. This means:
 $\theta$ is an algebraic involution, commuting with~$\sigma$,
 and $G(\R)^\theta$ is a maximal compact subgroup of~$G(\R)$. Set $K=G^\theta$ and $K(\R)=G(\R)^\theta=K^\sigma$.
-Set $\g=\Lie(G)$, and let $\s$ be the $(-1)$-eigenspace of $\theta$ acting on~$\g$, where we use the notation $\sigma, \theta$ also for the automorphisms of~$\g$ induced by the above involutions. Set $\g(\R)=\Lie(G(\R))$.
+Set $\g=\Lie(G)$, and let $\s$ be the $(-1)$-eigenspace of~$\theta$ acting on~$\g$, where we use the notation $\sigma, \theta$ also for the automorphisms of~$\g$ induced by the above involutions. Set $\g(\R)=\Lie(G(\R))$.
 
 \subsubsection{Nilpotent orbits in $\g^*$}~
 \label{s:dual}
@@ -317,7 +317,7 @@ From now on we use the terms {\it large} and {\it generic} interchangeably.
 
 \subsection{Discrete series and Harish-Chandra parameters} \label{sec:discrete_series}
 
-Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup, i.e. there exists a $\theta$-stable Cartan subgroup~$T$ of~$G$  such that~$T(\R) \cap G_d$ is  compact, where $G_d$ is the derived group of~$G$. Throughout the paper, we assume $G(\R)$ does have discrete series representation, we fix  a Cartan subgroup $T \subset G$ satisfying the conditions above, and we let~$\mathfrak{t}$ denote the Lie algebra of~$T$, which is a Cartan subalgebra of~$\g$. 
+Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup, i.e. there exists a $\theta$-stable Cartan subgroup~$T$ of~$G$  such that~$T(\R) \cap G_d$ is  compact, where $G_d$ is the derived group of~$G$. Throughout the paper, we assume $G(\R)$ does have relative discrete series representation, we fix  a Cartan subgroup $T \subset G$ satisfying the conditions above, and we let~$\mathfrak{t}$ denote the Lie algebra of~$T$, which is a Cartan subalgebra of~$\g$. 
 
 Choose a  positive system~$\Delta^+$  for the roots of~$\t$ in~$\g$, and let~$\rho \in \mathfrak{t}^\ast$ be the half-sum of positive roots. Let~$\Lambda \subset \mathfrak{t}^\ast$ be the set of elements~$\lambda \in \mathfrak{t}^\ast$ which are \emph{regular} (i.e. the linear form $\lambda$ does not vanish on any coroot), and such that $\lambda-\rho$  is the differential of a character of~$T(\R)$. The action of the Weyl group~$W=W(\g, \t)$ preserves~$\Lambda$. Let~$W_K\subset W$ be the subgroup $\mathrm{Norm}_K(T)/T$. 
 
@@ -569,6 +569,8 @@ As for~(b), it follows directly from the definition of the associated variety. T
 
 
 \section{Explicit versions of the dictionary}\label{sec:explicit}
+
+We encourage the reader to consult the example of $\mathrm{SL}(2,\R)$ in the Appendix (\S\,\ref{sec:appendix}) when reading this section.
 
 \subsection{Associated Variety of generic discrete series}
 \label{s:AV}
@@ -883,7 +885,7 @@ $$
 $$
 Then $\pi$ is the discrete series representation in $\Pi$ whose Harish-Chandra parameter is dominant for $\Delta^+$. 
 
-\section{Appendix: the case of $SL(2,\R)$}
+\section{Appendix: the case of $SL(2,\R)$}\label{sec:appendix}
 
 We illustrate the results of Section~\ref{sec:explicit} by making the case of $SL(2,\R)$ fully explicit.
 
