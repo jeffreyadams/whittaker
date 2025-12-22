@@ -419,7 +419,9 @@ The theorem then follows immediately from observations (i)-(ii), and from the fo
 In particular, if~$Q$ acts transitively on~$A$ and simply transitively on~$B$, then~$f$ must be a bijection and the action of~$Q$ on~$A$ must be simply transitive.
 \end{lemma}
 
-\begin{remarkplain} \textcolor{red}{[NEW]} {The group $Q$ is an elementary abelian $2$-group. It is trivial when $G$ is adjoint, and when $G$ is simple  the cardinal of~$Q$ is at most~$4$. See Remark~\ref{rk:size_Q} for a more precise discussion.} \textcolor{red}{[/NEW]}\end{remarkplain} 
+\begin{remarkplain} \textcolor{red}{[NEW]} {The group $Q$ is an elementary abelian $2$-group. It is trivial when $G$ is adjoint, and when $G$ is simple  the cardinal of~$Q$ is at most~$4$. See Remark~\ref{rk:size_Q} for a more precise discussion.} \end{remarkplain}
+
+\begin{exampleplain} If $G(\R)$ is the symplectic group $\mathrm{Sp}(2n, \R)$, then $Q \simeq \Z/2\Z$ and there are two distinct Whittaker data for $G(\R)$. If $\Pi$ is the $L$-packet of discrete series with the same infinitesimal character as the trivial representation, then $\Pi_{\mathrm{gen}}$ has two elements, and the correspondence $\pi \mapsto \Wh(\pi)$ in Theorem~\ref{th:main} was made explicit by Mœglin and Renard \cite[Proposition~4.1]{moeglin_renard} following work of Wallach~\cite{wallach} and Oda~\cite{oda}. As we shall see their result agrees with the description in Section~\ref{sec:alternate_WF} below. \textcolor{red}{[/NEW]}\end{exampleplain} 
 
 
 \begin{remarkplain} 
@@ -924,7 +926,13 @@ Define $F_\theta=F_\pi$ as in \eqref{e:Fpi}, and choose  $E_\theta$, $H_\theta$ 
 $$
 \WF(\pi)=G(\R)\cdot \psi(F_\R), \quad \text{where $F_\R = \frac i2(-E_\theta+F_\theta-H_\theta)\in\N\cap i\g(\R)$.}
 $$\end{lemma}
-There is a partial converse to this statement if we consider discrete series within a single $L$-packet. Fix an $L$-packet~$\Pi$ of discrete series, and consider a regular semisimple orbit~$\Omega$ in~$\Op \cap i\g(\R)^\ast$; then we can determine the generic representation~$\pi \in \Pi$ with $\WF(\pi)=\Omega$, as follows. Fix~$\xi_\R \in \Omega$, write $\xi_\R=F_\R^\ast$ with $F_\R \in \g$ and let $E_\R, H_\R \in \g$ be such that $(E_\R, H_\R, F_\R)$ is an  $\mathrm{SL}(2)$-triple with $\theta(E_\R)=-F_\R$. Set
+
+\begin{exampleplain} \textcolor{red}{[NEW]} Suppose $G(\R) = \mathrm{Sp}(2n, \R)$ and ~$\pi$ is the generic discrete series representation denoted  $\pi_{\mathbf{B}_+, \mathbf{T}}$ in \cite[Section~4.2]{moeglin_renard}. Take up the notation above and use the discussion in Section~\ref{s:AV} to define a pinning $\mathcal{P}$ of~$G$; then the corresponding Borel subgroup is the subgroup $\textbf{B}_{+}$ of \cite{moeglin_renard}. If $X_\mathcal{P}$ is the principal nilpotent element defined in \cite[Section 3.1]{adams_kaletha}, then the Whittaker data $\mathfrak{w}_{\psi(F_\R)}$  coincides with  $\mathfrak{w}_{X_\mathcal{P}}$: see \cite[Lemma 3.1.2]{adams_kaletha}. By Lemma~\ref{lem:explicit_WF} and Corollary~\ref{cor:matumoto} above we deduce that $\Wh(\pi)$ is the Whittaker datum attached to the pinning~$\mathcal{P}$ and the additive character  $\Lambda\colon x \mapsto e^{ix}$ of~$\R$. This is the Whittaker datum denoted by $\Wh_1$ in \cite[loc. cit.]{moeglin_renard}, therefore our results are consistent with \cite[Proposition~4.1]{moeglin_renard}. 
+\textcolor{red}{[/NEW]} 
+\end{exampleplain} 
+
+
+\begin{remarkplain} There is a partial converse to this statement if we consider discrete series within a single $L$-packet. Fix an $L$-packet~$\Pi$ of discrete series, and consider a regular semisimple orbit~$\Omega$ in~$\Op \cap i\g(\R)^\ast$; then we can determine the generic representation~$\pi \in \Pi$ with $\WF(\pi)=\Omega$, as follows. Fix~$\xi_\R \in \Omega$, write $\xi_\R=F_\R^\ast$ with $F_\R \in \g$ and let $E_\R, H_\R \in \g$ be such that $(E_\R, H_\R, F_\R)$ is an  $\mathrm{SL}(2)$-triple with $\theta(E_\R)=-F_\R$. Set
 $$
 H_\theta=E_\R-F_\R.
 $$
@@ -934,7 +942,7 @@ $$
 \Delta^+=\{\alpha\in\Delta(\t,\g)\mid  \alpha(H_\theta)>0\}.
 $$
 Then $\pi$ is the discrete series representation in $\Pi$ whose Harish-Chandra parameter is dominant for $\Delta^+$. 
-
+\end{remarkplain}
 \section{Appendix: the case of $SL(2,\R)$}
 
 We illustrate the results of Section~\ref{sec:explicit} by making the case of $SL(2,\R)$ fully explicit.
