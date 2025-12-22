@@ -296,12 +296,12 @@ $i\g(\R)^*$. As such it is the union of a finite number of nilpotent $G(\R)$-orb
 We define the wave front set of a $(\g,K)$-module to be that of its 
 Hilbert space globalization. 
 
-\subsubsection*{Whittaker models}
+\subsubsection*{Whittaker models}\label{sec:whittaker_defs}
 
-Suppose again that $\pi$ is an irreducible admissible representation of $G(\R)$ on a Hilbert space $\mH$. We consider the corresponding actions of $G(\R)$ on the space~$\mH^\infty$ of smooth vectors in $\mH$, and on its dual $\mH^{-\infty}$. Let~$(B, \eta)$ be a pair satisfying conditions (i)-(ii) of the Introduction. We say $\pi$ has a $(B,\eta)$-Whittaker model
+Suppose again that $\pi$ is an irreducible admissible representation of $G(\R)$ on a Hilbert space $\mH$. We consider the corresponding actions of $G(\R)$ on the space~$\mH^\infty$ of smooth vectors in $\mH$, and on its dual $\mH^{-\infty}$. Let~$(B, \eta)$ be a pair satisfying conditions (i)-(ii) of the Introduction; we shall say $(B, \eta)$ is a \emph{Whittaker pair}. We say $\pi$ has a \emph{$(B,\eta)$-Whittaker model}
 if there exists a nonzero element $v$ in~$\mH^{-\infty}$ such that $\pi(n)(v)=\eta(n)v$ for all $n$ in the nilradical $N(\R)$ of $B(\R)$. See~\cite{matumoto}. \textcolor{red}{[NEW]} This condition depends only on the $G(\R)$-conjugacy class of the pair $(B, \eta)$. It is equivalent to the existence of a $G$-equivariant embedding of $\mH^\infty$ into the space of smooth sections of the equivariant line bundle over $G(\R)/N(\R)$ determined by $\eta$ (for the quasi-regular action of~$G$ on sections); the image of that embedding is a geometric realization of (the smooth vectors of)~$\pi$ which is the origin of the terminology ``Whittaker model for~$\pi$''. \textcolor{red}{[/NEW]} 
 
- If~$\w$ is the corresponding Whittaker datum, i.e. the $G(\R)$-conjugacy class of the pair $(B, \eta)$, we say~$\pi$ has a $\w$-Whittaker model.  
+ If~$\w$ is the corresponding Whittaker datum, i.e. the $G(\R)$-conjugacy class of the pair $(B, \eta)$, we say~$\pi$ has a \emph{$\w$-Whittaker model}.  
 
 We write $\Wh(\pi)$ for the set of Whittaker data~$\w$ such that $\pi$ has a $\w$-Whittaker model.
 If $\pi$ has a unique Whittaker datum $\w$ we write $\Wh(\pi)=\w$.
@@ -340,7 +340,7 @@ Choose a  positive system~$\Delta^+$  for the roots of~$\t$ in~$\g$, and let~$\r
 
 Then any discrete series representation of~$G(\R)$ has a \emph{Harish-Chandra parameter}, which is an element of~$\Lambda/W_K$. In fact, suppose~$\lambda$ is an element of~$\Lambda$ and suppose $\zeta$ is a character of the center~$Z(\R)$ of~$G(\R)$ whose differential agrees with~$\lambda-\rho$ on the intersection $T(\R) \cap Z(\R)$; then the pair $(\lambda, \zeta)$  determines a discrete series representation~$\pi_{\lambda, \zeta}$ of~$G(\R)$. Every discrete series representation arises in this way, and $\pi_{\lambda, \zeta}=\pi_{\lambda', \zeta'}$ if and only if $\zeta=\zeta'$ and $\lambda, \lambda'$ are $W_K$-conjugate. See  \cite[Section 8]{AV1} and \cite{Contragredient} for more on the parametrization.  
 
-Recall that the \emph{Weyl chambers} of~$\mathfrak{t}^\ast$ are the connected components of the set of regular elements. Each Weyl chamber specifies a positive root system for the roots of $\mathfrak{t}$ in~$\g$, \textcolor{red}{[new]} and a Borel subgroup of~$G$ containing~$T$ and defined over~$\R$ \textcolor{red}{[/new]}. We say a Weyl chamber is \emph{large} if the corresponding simple roots are all noncompact. 
+Recall that the \emph{Weyl chambers} of~$\mathfrak{t}^\ast$ are the connected components of the set of regular elements. Each Weyl chamber specifies a positive root system for the roots of $\mathfrak{t}$ in~$\g$, \textcolor{red}{[new]} and a Borel subgroup of~$G$ containing~$T$ and defined over~$\R$ \textcolor{red}{[/new]}. We say a Weyl chamber is \emph{large}, or that the corresponding Borel subgroup is large, if the corresponding simple roots are all noncompact. 
 
 If~$\lambda \in \mathfrak{t}^\ast$ is a representative for the Harish-Chandra parameter of a discrete series representation $\pi$, then~$\pi$ is generic if and only if the Weyl chamber containing~$\lambda$ is large. See~\cite[Section 6]{vogan-gelfand-kirillov}. \textcolor{red}{[new]} In the terminology of Shelstad~\cite[Section 2.3]{shelstad}, if $B$~is the corresponding Borel subgroup of~$G$, then $(B, T)$ is a fundamental Borel pair of Whittaker type.\textcolor{red}{[/new]} 
 
@@ -409,7 +409,7 @@ Let us now explain the strategy of the proof, which is mainly an exercise in put
 \item[(ii)] the maps $\pi \mapsto \Wh(\pi)$, $\pi \mapsto \AV(\pi)$ and $\pi\mapsto \WF(\pi)$  are equivariant for these actions.
 \end{itemize}
 
-\textcolor{red}{[NEW]} For the action on~(1) see Section~\ref{sec:action_DS}. For the action on~(2) and the equivariance of $\pi \mapsto \Wh(\pi)$, see Section~\ref{sec:action_whitt}. For the action on~(4) and the equivariance of the map $\pi \mapsto \AV(\pi)$, see Section~\ref{sec:action_AV}. For the action on~(3) and the equivariance of $\pi \mapsto \WF(\pi)$ see Section~\ref{sec:action_WF}. \textcolor{red}{[/NEW]}
+\textcolor{red}{[NEW]} For the action on~(1) see Sections~\ref{sec:action_DS} and~\ref{sec:action_transitivity}. For the action on~(2) and the equivariance of $\pi \mapsto \Wh(\pi)$, see Section~\ref{sec:action_whitt}. For the action on~(4) and the equivariance of the map $\pi \mapsto \AV(\pi)$, see Section~\ref{sec:action_AV}. For the action on~(3) and the equivariance of $\pi \mapsto \WF(\pi)$ see Section~\ref{sec:action_WF}. \textcolor{red}{[/NEW]}
 
 The theorem then follows immediately from observations (i)-(ii), and from the following basic fact on group actions, whose proof is left to the reader.
 
@@ -449,7 +449,7 @@ Q_\sigma(G)=(\Gad)^\sigma/(G^\sigma)_\ad=\Gad(\R)/\G(\R)_\ad.
 $$
 This finite group may be viewed as a group of outer automorphisms of~$G(\R)$.
 
-\begin{remarkplain} \textcolor{red}{(NEW)} \label{rk:size_Q} When $G$ is adjoint, it immediately follows from the definitions that $(G_\ad)^\sigma = (G^\sigma)_{\ad}$, therefore $Q_\sigma(G)$ is trivial in that case. 
+\begin{remarkplain} \textcolor{red}{[NEW]} \label{rk:size_Q} When $G$ is adjoint, it immediately follows from the definitions that $(G_\ad)^\sigma = (G^\sigma)_{\ad}$, therefore $Q_\sigma(G)$ is trivial in that case. 
 
 In general, the group $G(\R)_{\ad}=(G^\sigma)_{\ad}$ contains the identity component of~$\Gad(\R)$, because the above injection $(G^\sigma)_{\ad} \hookrightarrow (\Gad)^\sigma$ is an isomorphism on the Lie algebra level. Therefore  $Q_\sigma(G)$ may be viewed as a quotient of the component group of $\Gad(\R)$, and is an elementary abelian $2$-group. 
 
@@ -564,11 +564,16 @@ Then $(\pi^q)_K\simeq (\pi_K)^{\varphi(g)}$.
 
 Because of Lemmas~\ref{lem:iso_q} and \ref{lem:action_q}, we write $Q(G)$ for the group $Q_\sigma(G)$ or~$Q_\theta(G)$, depending on the situation.
 
-\begin{center} \textcolor{red}{TO DO : explain that this preserves generic representations, and  DS representations within a single $L$-packet.\\ Then explain why the action is transitive.   }\end{center} 
+\subsubsection{\textcolor{red}{(NEW SEC.)} On Whittaker data and generic representations}\label{sec:action_whitt}
 
-\subsubsection{\textcolor{red}{(NEW)} On Whittaker data}\label{sec:action_whitt}
+Suppose $\tilde{q} \in \Gad^\sigma$. For every Whittaker pair $(B, \eta)$ as in Section~\ref{sec:whittaker_defs}, the pair $q\cdot (B, \eta)=\big(\tilde{q} B \tilde{q}^{-1}, \eta \circ (x \mapsto \tilde{q} x \tilde{q}^{-1})\big)$ is again a Whittaker pair, which is conjugate to $(B, \eta)$ if and only if $\tilde{q} \in (G^\sigma)_{\ad}$. This determines an action of $Q_\sigma(G)$ on the set of Whittaker data for~$G(\R)$, which we shall denote by $(q, \mathfrak{w}) \mapsto q \cdot \mathfrak{w}$. This action is simply transitive: see \cite[Lemma 3.1.3]{adams_kaletha} for an elementary argument.
 
-\begin{center} \textcolor{red}{TO DO : explain how $Q_\sigma(G)$ acts on Whittaker data, and refer to \cite[Lemma 3.1.3]{adams_kaletha} for the simple transitivity; point out that $\pi \mapsto \Wh(\pi)$ is equivariant.   }\end{center} 
+Now let $\pi$ be a generic discrete series representation of~$G(\R)$. Let $q$ be an element of $Q_\sigma(G)$, with a representative $\tilde{q}$ in $\Gad^\sigma$.  For every Whittaker pair $(B, \eta)$ such that $\pi$ has a $(B, \eta)$-Whittaker model, it is immediate from the definitions that the representation $\pi \circ (x \mapsto \tilde{q} x\tilde{q}^{-1})$ is again a discrete series, and that it has a $\tilde{q}\cdot (B, \eta)$-Whittaker model. Passing to equivalence classes we see that $\pi^q$ is generic, and satisfies $\Wh(\pi^q)=q \cdot \Wh(\pi)$. Therefore the map $\pi \mapsto \Wh(\pi)$ is $Q_\sigma(G)$-equivariant.
+
+\subsubsection{On generic discrete series in a single $L$-packet}\label{sec:action_transitivity}
+
+\begin{center} \textcolor{red}{TO DO : explain that the action of $Q_\sigma$ on generic DS preserves $L$-packets.\\ Then explain why the action on is transitive.\\
+Perhaps adding something about $L$-packets in \S~\ref{sec:discrete_series} would be useful. }\end{center} 
 
 
 \subsubsection{On real nilpotent orbits} \label{sec:action_WF}
