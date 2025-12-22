@@ -406,7 +406,10 @@ Let us now explain the strategy of the proof, which is mainly an exercise in put
 \item[(i)] it acts transitively on~(1), and simply transitively on (2)--(4);
 \item[(ii)] the maps $\pi \mapsto \Wh(\pi)$, $\pi \mapsto \AV(\pi)$ and $\pi\mapsto \WF(\pi)$  are equivariant for these actions.
 \end{itemize}
-The theorem follows immediately from these two observations, and from the following basic fact on group actions, whose proof is left to the reader.
+
+For the action on~(1) see Section~\ref{sec:action_DS}. For the action on~(2) and the equivariance of $\pi \mapsto \Wh(\pi)$, see Section~\ref{sec:action_whitt}. For the action on~(4) and the equivariance of the map $\pi \mapsto \AV(\pi)$, see Section~\ref{sec:action_AV}. For the action on~(3) and the equivariance of $\pi \mapsto \WF(\pi)$ see Section~\ref{sec:action_WF}. 
+
+The theorem then follows immediately from observations (i)-(ii), and from the following basic fact on group actions, whose proof is left to the reader.
 
 \begin{lemma} Suppose a group $Q$ acts on two sets $A, B$ and let $f\colon A \to B$ be a $Q$-equivariant map. 
 \begin{itemize}
@@ -416,14 +419,13 @@ The theorem follows immediately from these two observations, and from the follow
 In particular, if~$Q$ acts transitively on~$A$ and simply transitively on~$B$, then~$f$ must be a bijection and the action of~$Q$ on~$A$ must be simply transitive.
 \end{lemma}
 
-
-\begin{center} \textcolor{red}{TODO : indicate in which sections of the paper we prove each of the statements in (i)-(ii) about the actions of $Q(G)$. }\end{center} 
-
-
-\begin{remark} \textcolor{red}{\textup{TODO : add a remark about the case of fundamental series packets, in case there is no DS. }}\end{remark} 
+\begin{remarkplain} \textup{The group $Q$ is a finite abelian group, in fact an elementary abelian $2$-group. It is trivial when $G$ is adjoint, and when $G$ is a simple group the cardinal of~$Q$ is at most~$4$. See Remark~\ref{rk:size_Q} for a more precise discussion.} \end{remarkplain} 
 
 
-\begin{remark} \textcolor{red}{\textup{TODO : say what this looks like when $G$ is adjoint, or simply connected, and add a remark on the general case.}  }\end{remark} 
+\begin{remarkplain} \textcolor{red}{\textup{TODO : add a remark about the case of fundamental series packets, in case there is no DS. }}\end{remarkplain} 
+
+
+
 
 
 
@@ -440,6 +442,15 @@ $$
 Q_\sigma(G)=(\Gad)^\sigma/(G^\sigma)_\ad=\Gad(\R)/\G(\R)_\ad.
 $$
 This finite group may be viewed as a group of outer automorphisms of~$G(\R)$.
+
+\begin{remarkplain} \label{rk:size_Q} When $G$ is adjoint, it immediately follows from the definitions that $(G_\ad)^\sigma = (G^\sigma)_{\ad}$, therefore $Q_\sigma(G)$ is trivial in that case. 
+
+In general, the group $G(\R)_{\ad}=(G^\sigma)_{\ad}$ contains the identity component of~$\Gad(\R)$, because the above injection $(G^\sigma)_{\ad} \hookrightarrow (\Gad)^\sigma$ is an isomorphism on the Lie algebra level. Therefore  $Q_\sigma(G)$ may be viewed as a quotient of the component group of $\Gad(\R)$, and is an elementary abelian $2$-group. 
+
+When $G(\R)$ is connected, which happens for instance if $G$ is simply connected, the group $G(\R)_{\ad}$ is itself connected, and therefore equal to the identity component of $\Gad(\R)$. In that case $Q_\sigma(\R)$ is isomorphic with the component group of $\Gad(\R)$.
+
+For the concrete computation of this component group in case  $G$ is simple, see the tables in \cite[Section~10]{galois}. In particular  $Q_\sigma(\R)$ has at most four elements in that case.
+\end{remarkplain}
 
 
 A similar discussion applies to the involution $\theta$.
@@ -527,7 +538,7 @@ Let us prove~(b). To show that when $g\in (\Gad)^\sigma \cap (\Gad)^\theta$ is a
 \subsection{Actions of~$Q(G)$}
 
 
-\subsubsection*{On representations} 
+\subsubsection{On representations} \label{sec:action_DS}
 
 
 
@@ -549,8 +560,12 @@ Because of Lemmas~\ref{lem:iso_q} and \ref{lem:action_q}, we write $Q(G)$ for th
 
 \begin{center} \textcolor{red}{TO DO : explain that this preserves generic representations, and  DS representations within a single $L$-packet.\\ Then explain why the action is transitive.   }\end{center} 
 
+\subsubsection{\textcolor{red}{(NEW)} On Whittaker data}\label{sec:action_whitt}
 
-\subsubsection*{On real nilpotent orbits} 
+\begin{center} \textcolor{red}{TO DO : explain how $Q_\sigma(G)$ acts on Whittaker data, and refer to \cite[Lemma 3.1.3]{adams_kaletha} for the simple transitivity; point out that $\pi \mapsto \Wh(\pi)$ is equivariant.   }\end{center} 
+
+
+\subsubsection{On real nilpotent orbits} \label{sec:action_WF}
 
 To define the action of~$Q_{\sigma}(G)$ on~(4), first observe that~$\Gad$ acts on~$\g$ by the adjoint action. This action preserves~$\Op$, and its restriction to~$\Gad(\R)$ preserves~$\Op\cap i\g(\R)^*$. Since elements on a given~$G(\R)_{\mathrm{ad}}$-orbit are in the same~$G(\R)$-orbit, this induces an action of $Q_{\sigma}(G)=\Gad(\R)/G(\R)_{\mathrm{ad}}$ on~$(\Op\cap i\g(\R)^*)/G(\R)$.
 
@@ -584,6 +599,8 @@ Part~(2) of the proposition is comes from general properties of the wavefront se
 %\end{aligned}
 %$$
 %where the middle line uses the equality $H^1_\sigma(\Gamma,\Stab_G(X))=H^1_\sigma(\Gamma,Z)$, which comes from the fact that $\Stab_G(X)=ZU$  as explained in the proof. The resulting bijection  $(\Op\cap i\g(\R))/G(\R)\simeq Q_\sigma(\R)$ is equivariant (for the actions of $Q_\sigma(G)$ on $(\Op\cap i\g(\R))/G(\R)$ described above, and the action of  $Q_\sigma(G)$ on itself by multiplication), and this gives another proof of~(1). 
+
+\subsubsection{On regular nilpotent $K$-orbits} \label{sec:action_AV}
 
 On the other hand $Q(G)$, realized as $Q_\theta(G)$, is a group of automorphisms of $(\g,K)$.
 It induces actions on $\s^*$, $\Op$ and $\Op\cap\s^*$, and on $(\g,K)$-modules.
