@@ -338,9 +338,9 @@ Choose a  positive system~$\Delta^+$  for the roots of~$\t$ in~$\g$, and let~$\r
 
 Then any discrete series representation of~$G(\R)$ has a \emph{Harish-Chandra parameter}, which is an element of~$\Lambda/W_K$. In fact, suppose~$\lambda$ is an element of~$\Lambda$ and suppose $\zeta$ is a character of the center~$Z(\R)$ of~$G(\R)$ whose differential agrees with~$\lambda-\rho$ on the intersection $T(\R) \cap Z(\R)$; then the pair $(\lambda, \zeta)$  determines a discrete series representation~$\pi_{\lambda, \zeta}$ of~$G(\R)$. Every discrete series representation arises in this way, and $\pi_{\lambda, \zeta}=\pi_{\lambda', \zeta'}$ if and only if $\zeta=\zeta'$ and $\lambda, \lambda'$ are $W_K$-conjugate. See  \cite[Section 8]{AV1} and \cite{Contragredient} for more on the parametrization.  
 
-Recall that the \emph{Weyl chambers} of~$\mathfrak{t}^\ast$ are the connected components of the set of regular elements. Each Weyl chamber specifies a positive root system for the roots of $\mathfrak{t}$ in~$\g$, and we say a Weyl chamber is \emph{large} if the corresponding simple roots are all noncompact. 
+Recall that the \emph{Weyl chambers} of~$\mathfrak{t}^\ast$ are the connected components of the set of regular elements. Each Weyl chamber specifies a positive root system for the roots of $\mathfrak{t}$ in~$\g$, \textcolor{red}{[new]} and a Borel subgroup of~$G$ containing~$T$ and defined over~$\R$ \textcolor{red}{[/new]}. We say a Weyl chamber is \emph{large} if the corresponding simple roots are all noncompact. 
 
-If~$\lambda \in \mathfrak{t}^\ast$ is a representative for the Harish-Chandra parameter of a discrete series representation $\pi$, then~$\pi$ is generic if and only if the Weyl chamber containing~$\lambda$ is large. See~\cite[Section 6]{vogan-gelfand-kirillov}.
+If~$\lambda \in \mathfrak{t}^\ast$ is a representative for the Harish-Chandra parameter of a discrete series representation $\pi$, then~$\pi$ is generic if and only if the Weyl chamber containing~$\lambda$ is large. See~\cite[Section 6]{vogan-gelfand-kirillov}. \textcolor{red}{[new]} In the terminology of Shelstad~\cite[Section 2.3]{shelstad}, if $B$~is the corresponding Borel subgroup of~$G$, then $(B, T)$ is a fundamental Borel pair of Whittaker type.\textcolor{red}{[/new]} 
 
 
 \subsection{The invariants for generic discrete series} 
@@ -422,7 +422,9 @@ In particular, if~$Q$ acts transitively on~$A$ and simply transitively on~$B$, t
 \begin{remarkplain} \textcolor{red}{[NEW]} {The group $Q$ is an elementary abelian $2$-group. It is trivial when $G$ is adjoint, and when $G$ is simple  the cardinal of~$Q$ is at most~$4$. See Remark~\ref{rk:size_Q} for a more precise discussion.} \textcolor{red}{[/NEW]}\end{remarkplain} 
 
 
-\begin{remarkplain} \textcolor{red}{\textup{TODO : add a remark about the case of fundamental series packets, in case there is no DS. }}\end{remarkplain} 
+\begin{remarkplain} 
+ \textcolor{red}{[NEW]} Not all quasi-split real groups have discrete series representations. But if $G(\R)$ is a quasi-split real group, then the  \emph{fundamental series} representations that are generic are irreducibly induced from generic discrete series of a maximal cuspidal Levi subgroup $M(\R)$ of $G(\R)$. Using \cite[Chapter~14]{abv}, especially Lemma 14.11 there, one may relate Whittaker data for $G(\R)$ with Whittaker data for $M(\R)$, and the generic fundamental series representations in a given $L$-packet for $G(\R)$ (together with the attached Whittaker data) with  generic discrete series representations for maximal cuspidal Levi subgroups. We shall not pursue this here. \textcolor{red}{[/NEW]}
+ \end{remarkplain} 
 
 
 
