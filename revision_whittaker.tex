@@ -162,7 +162,7 @@ We are interested in representations of~$G(\R)$ which admit Whittaker models. Fo
 \end{enumerate}
 The existence of a Borel subgroup satisfying (i) is the definition of $G$ being quasisplit, which we assume holds from now on.
 
-Recall that a representation $\pi$ of~$G(\R)$ is said to {have a $(B,\eta)$-Whittaker model} if it has a nonzero distribution vector on which $N(\R)$ acts by $\eta$ (for a more careful statement of the definition and terminology see Section~\ref{sec:invariants}).
+Recall that a representation $\pi$ of~$G(\R)$ is said to {have a $(B,\eta)$-Whittaker model} if it has a nonzero distribution vector on which $N(\R)$ acts by $\eta$ (for a precise statement of the definition and terminology see Section~\ref{sec:invariants}).
 This condition only depends on the conjugacy class of the pair, 
 so we  consider pairs $(B,\eta)$ modulo conjugation by $G(\R)$, and refer to such a conjugacy class
 as a {\it Whittaker datum}.
@@ -180,9 +180,8 @@ It is conjectured that these properties hold in the $p$-adic case as well, and t
 
 There are other invariants attached to an
 irreducible representation $\pi$.  We will be concerned with two of
-them, defined very differently. The first is the \emph{wavefront set} $\WF(\pi)$,
-which is an analytic invariant.
-The second is the \emph{associated variety} $\AV(\pi)$, which is
+the: the \emph{wavefront set} $\WF(\pi)$,
+which is an analytic invariant, an the \emph{associated variety} $\AV(\pi)$, which is
 defined  algebraically.
 Both consist of nilpotent elements of the dual of the Lie algebra of~$G$.
 The invariants $\Wh(\pi), \WF(\pi)$ and~$\AV(\pi)$ are closely related to each other.
@@ -191,15 +190,13 @@ We now focus on the case of a generic discrete series representation
 $\pi$ of $G(\R)$, so $\Wh(\pi)$ is a single Whittaker datum.  In this
 case the invariants $\Wh(\pi), \WF(\pi)$ and $\AV(\pi)$ determine each
 other. This is well known to experts, but not so easy to extract
-from the literature. 
-
-The purpose
+from the literature. The purpose
 of this paper is to give a self-contained account of these matters. More precisely, we will do two things:
 \begin{enumerate}
 \item Give an elementary proof that  passage from~$\pi$ to $\mathfrak{w}(\pi)$, $\WF(\pi)$ and $\AV(\pi)$ defines bijections between generic discrete series in an $L$-packet for $G(\R)$, Whittaker data for $G(\R)$, and the appropriate sets of nilpotent orbits;
 \item Given one of the invariants $\Wh(\pi)$, $\WF(\pi)$ or $\AV(\pi)$, explain in the simplest possible terms how to explicitly reconstruct the other two.
 \end{enumerate}
-Many results in this note are well known. We give new and simplified proofs for as many of them as we could; for instance, Section~\ref{sec:Sekiguchi} contains a simple proof that $\WF(\pi)$ and $\AV(\pi)$ are exchanged by the Kostant--Sekiguchi correspondence. Otherwise we give convenient references.
+Most of the  results in this note are well known. We give new and simplified proofs for as many of them as possible; for instance, Section~\ref{sec:Sekiguchi} contains a simple proof that $\WF(\pi)$ and $\AV(\pi)$ are exchanged by the Kostant--Sekiguchi correspondence. Otherwise we give convenient references.
 
 \section{Some invariants of irreducible representations}
 
@@ -218,8 +215,8 @@ Let $\s$ be the $(-1)$-eigenspace of $\theta$ acting on~$\g$, where we use the n
 \subsubsection*{Nilpotent orbits in $\g^*$} 
 \label{s:dual}
 Let $\N$ be the set of nilpotent elements of $\g$. Several of the invariants below are related to~$\N$, but are more naturally defined as subsets of the dual vector space~$\g^\ast$.
-Therefore we need to pass to the dual Lie algebra $\g^*$, and it is important to do this as independently as possible of a choice
-of isomorphism $\g\simeq\g^*$. 
+Therefore we need to pass to the dual Lie algebra $\g^*$, and it is important to do this as independently of a choice
+of isomorphism $\g\simeq\g^*$ as possible.
 
 First we define the nilpotent cone in $\g^*$ as follows. 
 We say an element of~$\g^*$ is \emph{nilpotent} if its $G$-orbit is a (weak) cone, i.e. closed under multiplication by~$\C^*$,
@@ -244,7 +241,7 @@ In Section~\ref{s:AV} we need to be more precise: we choose  $\kappa$ to be the 
 invariant form which is negative definite on the Lie algebra of a maximal compact subgroup.)
 
 \subsubsection*{Representations} 
-We need to pass back and forth between representations of $G(\R)$ and $(\g,K)$-modules.
+We  pass back and forth between representations of $G(\R)$ and $(\g,K)$-modules.
 See \cite{greenbook} for details.
 
 Suppose $\pi$ is an irreducible admissible representation of $G(\R)$  on a Hilbert space. 
@@ -272,13 +269,13 @@ nilpotent $K$-orbits on $\s^*$. For the definition, and many properties, see \ci
 
 A related invariant is the associated variety of the annihilator $I_\pi$ of $\pi$ in the universal enveloping algebra, 
 denoted $\AVann(\pi)$.
-This is a subset of $\N^*$ of~$\g^*$, and is the closure of a single complex nilpotent orbit: see \cite[Section 1, Theorem~4.7]{vogan_bowdoin}. Both $\AV(\pi)$ and $\AVann(\pi)$ depend only on the equivalence class of~$\pi$.
+This is a subset of $\N^*\subset\g^*$, and is the closure of a single complex nilpotent orbit: see \cite[Section 1, Theorem~4.7]{vogan_bowdoin}. Both $\AV(\pi)$ and $\AVann(\pi)$ depend only on the equivalence class of~$\pi$.
 
 The Gelfand--Kirillov dimension~$\GK(\pi)$ of~$\pi$ can be defined in several different ways~\cite{vogan-gelfand-kirillov}; but one of them is
 $$
 GK(\pi)=\dim(\AV(\pi))=\frac12\dim(\AVann(\pi)).
 $$
-(All dimensions are complex unless otherwise stated.)
+All dimensions are complex unless otherwise stated.
 
 
 We define the associated variety of a Hilbert space representation to be that of  its underlying $(\g,K)$-module.
@@ -333,16 +330,35 @@ From now on we use the terms {\it large} and {\it generic} interchangeably.
 
 \subsection{Discrete series and Harish-Chandra parameters} \label{sec:discrete_series}
 
-Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup, i.e. there exists a $\theta$-stable Cartan subgroup~$T$ of~$G$  such that~$T(\R) \cap G_d$ is  compact, where $G_d$ is the derived group of~$G$. Throughout the paper, we assume $G(\R)$ does have discrete series representation, we fix  a Cartan subgroup $T \subset G$ satisfying the conditions above, and we let~$\mathfrak{t}$ denote the Lie algebra of~$T$, which is a Cartan subalgebra of~$\g$. 
+Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup, i.e.  a $\theta$-stable Cartan subgroup~$T$ of~$G$  such that~$T(\R) \cap G_d$ is  compact, where $G_d$ is the derived group of~$G$. Throughout the paper, we assume $G(\R)$ does have discrete series representation, we fix  a Cartan subgroup $T \subset G$ satisfying the conditions above, and we let~$\mathfrak{t}$ denote the Lie algebra of~$T$, which is a Cartan subalgebra of~$\g$. 
 
-Choose a  positive system~$\Delta^+$  for the roots of~$\t$ in~$\g$, and let~$\rho \in \mathfrak{t}^\ast$ be the half-sum of positive roots. Let~$\Lambda \subset \mathfrak{t}^\ast$ be the set of elements~$\lambda \in \mathfrak{t}^\ast$ which are \emph{regular} (i.e. the linear form $\lambda$ does not vanish on any coroot), and such that $\lambda-\rho$  is the differential of a character of~$T(\R)$. The action of the Weyl group~$W=W(\g, \t)$ preserves~$\Lambda$. Let~$W_K\subset W$ be the subgroup $\mathrm{Norm}_K(T)/T$. 
+Choose a  positive system~$\Delta^+$  for the roots of~$\t$ in~$\g$, and let~$\rho \in \mathfrak{t}^\ast$ be the half-sum of positive roots. Let~$\Lambda \subset \mathfrak{t}^\ast$ be the set of elements~$\lambda \in \mathfrak{t}^\ast$ which are \emph{regular} (i.e. $\lambda$ does not vanish on any coroot), and such that $\lambda-\rho$  is the differential of a character of~$T(\R)$. The action of the Weyl group~$W=W(\g, \t)$ preserves~$\Lambda$. Let~$W_K\subset W$ be the subgroup $\mathrm{Norm}_K(T)/T$. 
 
 
-Then any discrete series representation of~$G(\R)$ has a \emph{Harish-Chandra parameter}, which is an element of~$\Lambda/W_K$. In fact, suppose~$\lambda$ is an element of~$\Lambda$ and suppose $\zeta$ is a character of the center~$Z(\R)$ of~$G(\R)$ whose differential agrees with~$\lambda-\rho$ on the intersection $T(\R) \cap Z(\R)$; then the pair $(\lambda, \zeta)$  determines a discrete series representation~$\pi_{\lambda, \zeta}$ of~$G(\R)$. Every discrete series representation arises in this way, and $\pi_{\lambda, \zeta}=\pi_{\lambda', \zeta'}$ if and only if $\zeta=\zeta'$ and $\lambda, \lambda'$ are $W_K$-conjugate. See  \cite[Section 8]{AV1} and \cite{Contragredient} for more on the parametrization.  
+Each discrete series representation of~$G(\R)$ has a
+\emph{Harish-Chandra parameter}, which is an element of~$\Lambda$.
+More precisely, suppose~$\lambda\in\Lambda$ and
+$\zeta$ is a character of the center~$Z(\R)$ of~$G(\R)$ whose
+differential agrees with~$\lambda-\rho$ on the intersection $T(\R)
+\cap Z(\R)$. Then the pair $(\lambda, \zeta)$ determines a discrete
+series representation~$\pi_{\lambda, \zeta}$ of~$G(\R)$. Every
+discrete series representation arises in this way.
+
+
+
+An L-packet of discrete series representations is precisely the set of discrete series with given
+infinitesimal and central characters.
+There is an action of $W$ on the set of discrete series representations: $w\cdot \pi_{\lambda,\zeta}=\pi_{w\lambda,\zeta}$.
+This action preserves,
+and is transitive on, each L-packet $\Pi$.
+Furthermore the stabilizer of any  $\pi\in \Pi$ is $W_K$. 
 
 Recall that the \emph{Weyl chambers} of~$\mathfrak{t}^\ast$ are the connected components of the set of regular elements. Each Weyl chamber specifies a positive root system for the roots of $\mathfrak{t}$ in~$\g$, \textcolor{red}{[new]} and a Borel subgroup of~$G$ containing~$T$ and defined over~$\R$ \textcolor{red}{[/new]}. We say a Weyl chamber is \emph{large}, or that the corresponding Borel subgroup is large, if the corresponding simple roots are all noncompact. 
 
-If~$\lambda \in \mathfrak{t}^\ast$ is a representative for the Harish-Chandra parameter of a discrete series representation $\pi$, then~$\pi$ is generic if and only if the Weyl chamber containing~$\lambda$ is large. See~\cite[Section 6]{vogan-gelfand-kirillov}. \textcolor{red}{[new]} In the terminology of Shelstad~\cite[Section 2.3]{shelstad}, if $B$~is the corresponding Borel subgroup of~$G$, then $(B, T)$ is a fundamental Borel pair of Whittaker type.\textcolor{red}{[/new]} 
+If~$\lambda \in \mathfrak{t}^\ast$ is a representative for the Harish-Chandra parameter of a discrete series representation $\pi$, then~$\pi$ is generic if and only if the Weyl chamber containing~$\lambda$ is large. See~\cite[Section 6]{vogan-gelfand-kirillov}. \textcolor{red}{[new]} In the terminology of Shelstad~\cite[Section 2.3]{shelstad}, if $B$~is the corresponding Borel subgroup of~$G$, then $(B, T)$ is a fundamental Borel pair of Whittaker type.\textcolor{red}{[/new]}
+ 
+
+
 
 
 \subsection{The invariants for generic discrete series} 
@@ -364,7 +380,7 @@ For (b) see \cite[Proposition A.9]{AV1}.
 
 Part~(c) follows from~\cite[Lemma B]{rossmann_limit_orbits}. Let us explain how to go from there to  assertion~(c), using standard facts on the asymptotic cone recalled below (\S\,{}\ref{sec:asymp_cone}).
 
-Let~$\mathfrak{t}^+$ be a Weyl chamber in~$\mathfrak{t}^\ast$ containing a representative~$\lambda$ for the Harish-Chandra parameter of~$\pi$. Write $\lim_{x \to 0(\mathfrak{t}^+)}\left[ G(\R)\cdot x\right]$ for the set of all elements $y \in i\g(\R)^\ast$ such that every $G(\R)$-invariant neighborhood of~$y$ contains all elements of~$\mathfrak{t}^+$ sufficiently close to zero. By Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{t}^+$ is a large Weyl chamber, then $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ is a single $G(\R)$-orbit.  Since this does happen when~$\pi$ is a generic discrete series representation, to prove assertion~(c)  it is enough to check the closure of $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ contains $\WF(\pi)$ in that case. Now, the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} implies that the closure of $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ contains the asymptotic cone of the orbit $G(\R)\cdot \lambda$  (see  Section~\ref{sec:asymp_cone} below). Therefore assertion~(c) follows from the fact that this asymptotic cone is equal to  $\WF(\pi)$  (Lemma~\ref{lem:WF_and_AC} below).
+Let~$\mathfrak{t}^+$ be a Weyl chamber in~$\mathfrak{t}^\ast$ containing a representative~$\lambda$ for the Harish-Chandra parameter of~$\pi$. Write $\lim_{x \to 0(\mathfrak{t}^+)}\left[ G(\R)\cdot x\right]$ for the set of all elements $y \in i\g(\R)^\ast$ such that every $G(\R)$-invariant neighborhood of~$y$ contains all elements of~$\mathfrak{t}^+$ sufficiently close to zero. By Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{t}^+$ is a large Weyl chamber, then $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ is a single $G(\R)$-orbit.  Since this is the case when~$\pi$ is a generic discrete series representation, to prove assertion~(c)  it is enough to check the closure of $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ contains $\WF(\pi)$ in that case. Now, the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} implies that the closure of $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ contains the asymptotic cone of the orbit $G(\R)\cdot \lambda$  (see  Section~\ref{sec:asymp_cone} below). Therefore assertion~(c) follows from the fact that this asymptotic cone is equal to  $\WF(\pi)$  (Lemma~\ref{lem:WF_and_AC} below).
 \end{proof}
 
 Because of Proposition~\ref{invariants_ds} we will abuse notation slightly, as follows. If~$\pi$ is a generic discrete series representation of~$G(\R)$ and~$\O$ is a $K$-orbit in~$\s^\ast$, we write $AV(\pi)=\O$ to indicate that $AV(\pi)$ is the closure of the $K$-orbit $\O$. 
@@ -405,23 +421,27 @@ coincides with the Kostant--Sekiguchi correspondence.
 
 Let us now explain the strategy of the proof, which is mainly an exercise in putting together some references that are rather scattered in the literature. What we shall actually do is: introduce a finite group~$Q(G)$, and point out that 
 \begin{itemize}
-\item[(i)] it acts transitively on~(1), and simply transitively on (2)--(4);
+\item[(i)] $Q$ acts transitively on~(1), and simply transitively on (2)--(4);
 \item[(ii)] the maps $\pi \mapsto \Wh(\pi)$, $\pi \mapsto \AV(\pi)$ and $\pi\mapsto \WF(\pi)$  are equivariant for these actions.
 \end{itemize}
 
-\textcolor{red}{[NEW]} For the action on~(1) see Sections~\ref{sec:action_DS} and~\ref{sec:action_transitivity}. For the action on~(2) and the equivariance of $\pi \mapsto \Wh(\pi)$, see Section~\ref{sec:action_whitt}. For the action on~(4) and the equivariance of the map $\pi \mapsto \AV(\pi)$, see Section~\ref{sec:action_AV}. For the action on~(3) and the equivariance of $\pi \mapsto \WF(\pi)$ see Section~\ref{sec:action_WF}. \textcolor{red}{[/NEW]}
-
-The theorem then follows immediately from observations (i)-(ii), and from the following basic fact on group actions, whose proof is left to the reader.
+\textcolor{red}{[NEW]}
+For details on these actions and their properties see Section \ref{sec:actions}.
+\begin{comment}
+  For the action on~(1) see Sections~\ref{sec:action_DS} and~\ref{sec:action_transitivity}. For the action on~(2) and the equivariance of $\pi \mapsto \Wh(\pi)$, see Section~\ref{sec:action_whitt}. For the action on~(4) and the equivariance of the map $\pi \mapsto \AV(\pi)$, see Section~\ref{sec:action_AV}. For the action on~(3) and the equivariance of $\pi \mapsto \WF(\pi)$ see Section~\ref{sec:action_WF}.
+\end{comment}
+\textcolor{red}{[/NEW]}
+The theorem then follows immediately from these observations, and from the following basic fact on group actions, whose proof is left to the reader.
 
 \begin{lemma} Suppose a group $Q$ acts on two sets $A, B$ and let $f\colon A \to B$ be a $Q$-equivariant map. 
 \begin{itemize}
 \item[(a)] If $Q$ acts transitively on~$B$,  then~$f$ is surjective\textup{;}
 \item[(b)] If $Q$ acts transitively on~$A$ and freely on~$B$, then~$f$ is injective.
 \end{itemize}
-In particular, if~$Q$ acts transitively on~$A$ and simply transitively on~$B$, then~$f$ must be a bijection and the action of~$Q$ on~$A$ must be simply transitive.
+In particular, if~$Q$ acts transitively on~$A$ and simply transitively on~$B$, then~$f$ is a bijection and the action of~$Q$ on~$A$ is simply transitive.
 \end{lemma}
 
-\begin{remarkplain} \textcolor{red}{[NEW]} {The group $Q$ is an elementary abelian $2$-group. It is trivial when $G$ is adjoint, and when $G$ is simple  the cardinal of~$Q$ is at most~$4$. See Remark~\ref{rk:size_Q} for a more precise discussion.} \end{remarkplain}
+\begin{remarkplain} \textcolor{red}{[NEW]} {The group $Q$ is an elementary abelian $2$-group. It is trivial when $G$ is adjoint, and when $G$ is simple  the cardinality of~$Q$ is at most~$4$. See Remark~\ref{rk:size_Q} for a more precise information.} \end{remarkplain}
 
 \begin{exampleplain} \textcolor{red}{[NEW]} If $G(\R)$ is the symplectic group $\mathrm{Sp}(2n, \R)$, then $Q \simeq \Z/2\Z$ and there are two distinct Whittaker data for $G(\R)$. If $\Pi$ is the $L$-packet of discrete series with the same infinitesimal character as the trivial representation, then $\Pi_{\mathrm{gen}}$ has two elements, and the correspondence $\pi \mapsto \Wh(\pi)$ in Theorem~\ref{th:main} was made explicit by Mœglin and Renard \cite[Proposition~4.1]{moeglin_renard}, based on work of Wallach~\cite{wallach} and Oda~\cite{oda} for $n=1,2$. As we shall see their result agrees with the description in Section~\ref{sec:alternate_WF} below. \textcolor{red}{[/NEW]}\end{exampleplain} 
 
@@ -463,7 +483,7 @@ A similar discussion applies to the involution $\theta$.
 Then $Z^\theta$ is the center of $K=G^\theta$ and  $\theta$ factors to $\Gad$.
 We define $(G^\theta)_\ad=G^\theta/Z^\theta$ and
 $$
-Q_\theta(G)=(\Gad)^\theta/(G^\theta)_\ad =(\Gad)^\theta/\Kad.
+Q_\theta(G)=(\Gad)^\theta/(G^\theta)_\ad.
 $$
 This is a group of outer automorphisms of $K$. 
 
@@ -542,6 +562,7 @@ Let us prove~(b). To show that when $g\in (\Gad)^\sigma \cap (\Gad)^\theta$ is a
 
 
 \subsection{Actions of~$Q(G)$}
+\label{sec:actions}
 
 
 \subsubsection{On representations} \label{sec:action_DS}
@@ -572,8 +593,44 @@ Now let $\pi$ be a generic discrete series representation of~$G(\R)$. Let $q$ be
 
 \subsubsection{On generic discrete series in a single $L$-packet}\label{sec:action_transitivity}
 
-\begin{center} \textcolor{red}{TO DO : explain that the action of $Q_\sigma$ on generic DS preserves $L$-packets.\\ Then explain why the action on is transitive.\\
-Perhaps adding something about $L$-packets in \S~\ref{sec:discrete_series} would be useful. }\end{center} 
+Suppose $\Pi$ is an L-packet of discrete series for a quasisplit group, so $\pi$ contains generic representations.
+Recall from Section \ref{sec:discrete_series} $\Pi$ is the set of discrete series with
+fixed infinitesimal character the $W$-orbit of $\lambda\in \Lambda$ and central character $\zeta$.
+
+\begin{lemma}The group $Q$ acts simply transitively on the generic representations in $\Pi$.
+\end{lemma}
+
+\begin{proof}
+Recall from Section \ref{sec:discrete_series} that $W$ acts
+transitively on $\Pi$, so fix a generic representation  $\pi_{\lambda,\zeta}\in \Pi$.
+The central character $\zeta$ plays no role so we drop it from the notation.
+
+We define an action of $Q$ on $\Pi$.
+The group $(\Gad)^\theta$ is the image, under projection from $G$ to $\Gad=G/Z$,
+of the elements $g\in G$ satisfying $g\inv \theta(g)\in Z$, and we suppress the projection
+and consider $Q$ as the quotient of this subgroup of $G$.
+For such an element $g$, 
+after multiplying by an
+element of $K$ we can assume $g\in \Norm_{G}(T)$. Let $w$ be the image of $g$ in $W$, and
+define $g\cdot \pi_\lambda=\pi_{w\lambda}$. It is immediate that this defines an action of $Q$ on $\Pi$.
+
+Now suppose $\pi=\pi_\lambda$ is generic, i.e. every simple root in
+$\Delta^+(w\lambda)$ is non-compact, and $g\in G$ satisfies $g\inv\theta(g)\in Z$.
+As before we can assume
+$g\in \Norm_G(T)$, with image $w\in W$.  
+The condition on $g$ 
+means that $\int(g)$ commutes with $\theta$, so
+$\int(g)(X_\alpha)=X_{w\alpha}$ is also non-compact. Therefore $\pi_{w\lambda}$ is generic. 
+The converse holds as well: if $\pi_{w\lambda}$ is generic then $g\in (\Gad)^\theta$
+where $g\in\Norm_G(T)$ maps to $w$.
+
+Therefore $Q$ acts transitively on the generic elements of $\Pi$. Since the stabilizer of any element of $\Pi$ is $W_K$, and this is the image of the denominator $(G^\theta)_{ad}$ of $Q$, 
+it follows immediately that this action is simply transitive.
+
+\end{proof}
+
+  
+  
 
 
 \subsubsection{On real nilpotent orbits} \label{sec:action_WF}
@@ -725,7 +782,7 @@ Since $\psi$ is unique on each simple factor up to a non-zero scalar, it is easy
 
 \begin{proposition}[\phantom{}{\cite[Proposition 3.3.3]{adams_kaletha}}]\label{JeffTasho_criterion}
   \label{p:Kostant}
-Suppose $\pi$ is a generic discrete series representation of~$G(\R)$. Suppose~$\pi$ be a Whittaker datum for~$G(\R)$, and let~$X \in i\g(\R)^*$ be a regular nilpotent element such that $\w = \w_X$. 
+Suppose $\pi$ is a generic discrete series representation of~$G(\R)$. Let $\pi$ be a Whittaker datum for~$G(\R)$, and let~$X \in i\g(\R)^*$ be a regular nilpotent element such that $\w = \w_X$. 
 Then $\pi$ is $\w$-generic if and only if $\Kostant{X}$ meets $\mathcal{O}_\pi$. 
 \end{proposition}
 
