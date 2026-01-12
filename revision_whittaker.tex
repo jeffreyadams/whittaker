@@ -180,7 +180,7 @@ It is conjectured that these properties hold in the $p$-adic case as well, and t
 
 There are other invariants attached to an
 irreducible representation $\pi$.  We will be concerned with two of
-the: the \emph{wavefront set} $\WF(\pi)$,
+them: the \emph{wavefront set} $\WF(\pi)$,
 which is an analytic invariant, an the \emph{associated variety} $\AV(\pi)$, which is
 defined  algebraically.
 Both consist of nilpotent elements of the dual of the Lie algebra of~$G$.
@@ -197,6 +197,8 @@ of this paper is to give a self-contained account of these matters. More precise
 \item Given one of the invariants $\Wh(\pi)$, $\WF(\pi)$ or $\AV(\pi)$, explain in the simplest possible terms how to explicitly reconstruct the other two.
 \end{enumerate}
 Most of the  results in this note are well known. We give new and simplified proofs for as many of them as possible; for instance, Section~\ref{sec:Sekiguchi} contains a simple proof that $\WF(\pi)$ and $\AV(\pi)$ are exchanged by the Kostant--Sekiguchi correspondence. Otherwise we give convenient references.
+
+We thank the referee for some helpful suggestions.
 
 \section{Some invariants of irreducible representations}
 
@@ -361,33 +363,30 @@ Furthermore the stabilizer of any  $\pi\in \Pi$ is $W_K$.
 
 Let $\Gad=G/Z(G)$ be the adjoint group of $G$, and $\Kad=(\Gad)^\theta$.
 The Weyl groups of $G$ and $\Gad$ are canonically isomorphic, so we can identify $W_{\Kad}$ with a subgroup of $W=W(G,T)$. It is immediate from the definition that if $g\in \Norm_G(T)$ then the image of $g$ in $W$
-is in $W(\Kad)$ if and only if $\int(g)$ commutes with $\theta$, or equivalently
+is in $W(\Kad)$ if and only if $\int(g)$ (conjugation by $g$)  commutes with $\theta$, or equivalently
 $g\inv \theta(g)\in Z(G)$.
 
-\begin{equation}
-  \label{e:WKad}
-g\inv \theta(g)\in Z(G).
-\end{equation}
-
 \begin{lemma}
-  Suppose $\pi=\pi_{\lambda,\zeta}$ is generic discrete series
+  \label{l:bijectiongeneric}
+  Suppose $\pi=\pi_{\lambda,\zeta}$ is a generic discrete series
   representation. Then $\pi_{w\lambda,\zeta}$ is generic if and only
-  if $w\in W_{\Kad}$, and the generic elements of the L-packet of $\pi$ are in bijection with $W(\Kad)/W(K)$.
+  if $w\in W_{\Kad}$, and the generic elements of the L-packet of $\pi$ are in bijection with $W_{\Kad}/W_K$.
 \end{lemma}
 
 \begin{proof}
 The central character $\zeta$ plays no role so we drop it from the
-notation.  Suppose $g\in \Norm_G(T)$. By the discussion preceding the
+notation.  Suppose $g\in \Norm_G(T)$ with image $w\in W$.
+By the discussion preceding the
 Lemma we have to show every simple root of $\Delta^+(w\lambda)$ is
 non-compact if and only if $\int(g)$ commutes with $\theta$.  Suppose
 $\alpha$ is a simple root for $\Delta^+(\lambda)$, so by assumption it
 is non-compact.  If $\int(g)$ commutes with $\theta$, then
-$\theta(\int(g)X_\alpha)=\int(g)(\theta(X_\alpha))=-\int(g)\theta(X_\alpha)$,
+$\theta(\int(g)X_\alpha)=\int(g)(\theta(X_\alpha))=-\int(g)(X_\alpha)$,
 so $\theta(\alpha)$ is also non-compact.
 Conversely if $\int(g)X_\alpha$ is non-compact then $\theta(\int(g)X_\alpha)=\int(g)\theta(X_\alpha)$,
 and writing any root as a sum of simple roots we see $\theta$ commutes with $\int(g)$.
 
-The second assertion follows from the fact that $W$ acts transitively on the L-packet; $w\in W$ preserves the property of being generic if and only if $w\in W(\Kad)$, and the stabilizer of any element is $W_K$.
+The second assertion follows from the fact that $W$ acts transitively on the L-packet; $w\in W$ preserves the property of being generic if and only if $w\in W_{\Kad}$, and the stabilizer of any element is $W_K$.
 \end{proof}
 
 We will see shortly that $W_{\Kad}/W_K$ has an alternative description as the group $Q(G)$ (Section \ref{s:Q}).
@@ -475,10 +474,6 @@ The theorem then follows immediately from these observations, and from the follo
 In particular, if~$Q$ acts transitively on~$A$ and simply transitively on~$B$, then~$f$ is a bijection and the action of~$Q$ on~$A$ is simply transitive.
 \end{lemma}
 
-\begin{remarkplain}{The group $Q$ is an elementary abelian $2$-group. It is trivial when $G$ is adjoint, and when $G$ is simple  the cardinality of~$Q$ is at most~$4$. See Remark~\ref{rk:size_Q} for a more precise information.} \end{remarkplain}
-
-\begin{exampleplain}If $G(\R)$ is the symplectic group $\mathrm{Sp}(2n, \R)$, then $Q \simeq \Z/2\Z$ and there are two distinct Whittaker data for $G(\R)$. If $\Pi$ is the $L$-packet of discrete series with the same infinitesimal character as the trivial representation, then $\Pi_{\mathrm{gen}}$ has two elements, and the correspondence $\pi \mapsto \Wh(\pi)$ in Theorem~\ref{th:main} was made explicit by Mœglin and Renard \cite[Proposition~4.1]{moeglin_renard}, based on work of Wallach~\cite{wallach} and Oda~\cite{oda} for $n=1,2$. As we shall see their result agrees with the description in Section~\ref{sec:alternate_WF} below. \end{exampleplain} 
-
 
 \begin{remarkplain} 
 Not all quasi-split real groups have discrete series representations. But if $G(\R)$ is a quasi-split real group, then the  \emph{fundamental series} representations that are generic are irreducibly induced from generic discrete series of a maximal cuspidal Levi subgroup $M(\R)$ of $G(\R)$. Using \cite[Chapter~14]{abv}, especially Lemma 14.11 there, one may relate Whittaker data for $G(\R)$ with Whittaker data for $M(\R)$, and the generic fundamental series representations in a given $L$-packet for $G(\R)$ (together with the attached Whittaker data) with  generic discrete series representations for maximal cuspidal Levi subgroups. We shall not pursue this here. 
@@ -533,8 +528,32 @@ Every element of $Q_\sigma(G)=(\Gad)^\sigma/(G^\sigma)_\ad$ has a representative
 \end{itemize}
 \end{lemma}
 
+Therefore we write $Q(G)$ for the group $Q_\sigma(G)$ or~$Q_\theta(G)$, depending on the situation.
 
-The proof uses an interpretation of $Q_\sigma(G)$ and $Q_\theta(G)$ in terms of group cohomology, which we now spell out. 
+The proof uses an interpretation of $Q_\sigma(G)$ and $Q_\theta(G)$ in terms of group cohomology, which we spell out in the next section.
+
+As mentioned in Section \ref{sec:discrete_series} the group $Q$ has an interpretation in terms of the Weyl group.
+
+\begin{lemma}
+  The group $Q(G)$ is isomorphic to $W_{\Kad}/W_K$ (cf. Section \ref{sec:discrete_series}).
+  Consequently $Q(G)$ acts simple transitively on the generic members of any generic discrete series L-packet.
+\end{lemma}
+
+\begin{proof}
+This is straightforward.  We work with $Q_\theta$.
+If $g\in (\Gad)^\theta$, choose $x\in (G^\theta)_{\mathrm{ad}}$ so that
+$x(gTg\inv)x\inv=T$, i.e. $xg\in \Norm_G(T)$.
+
+$xg\in \Norm_G(T)$. This induces a well-defined map
+from $W_{\Kad}$ to $Q_\theta(G)$, and it is easy to see the kernel is precisely $W_K$.
+The last  conclusion is from Lemma \ref{l:bijectiongeneric}.
+\end{proof}
+
+\begin{remarkplain}{The group $Q$ is an elementary abelian $2$-group. It is trivial when $G$ is adjoint, and when $G$ is simple  the cardinality of~$Q$ is at most~$4$. See Remark~\ref{rk:size_Q} for a more precise information.} \end{remarkplain}
+
+\begin{exampleplain}If $G(\R)$ is the symplectic group $\mathrm{Sp}(2n, \R)$, then $Q \simeq \Z/2\Z$ and there are two distinct Whittaker data for $G(\R)$. If $\Pi$ is the $L$-packet of discrete series with the same infinitesimal character as the trivial representation, then $\Pi_{\mathrm{gen}}$ has two elements, and the correspondence $\pi \mapsto \Wh(\pi)$ in Theorem~\ref{th:main} was made explicit by Mœglin and Renard \cite[Proposition~4.1]{moeglin_renard}, based on work of Wallach~\cite{wallach} and Oda~\cite{oda} for $n=1,2$. As we shall see their result agrees with the description in Section~\ref{sec:alternate_WF} below. \end{exampleplain} 
+
+
 
 \subsubsection{Connection with group cohomology}
 
@@ -589,16 +608,6 @@ Let us prove~(b). To show that when $g\in (\Gad)^\sigma \cap (\Gad)^\theta$ is a
 
 \qed
 
-\begin{lemma}
-  The group $Q(G)$ is isomorphic to $W_{\Kad}/W_K$ of Section \ref{sec:discrete_series}.
-  Consequently $Q(G)$ acts simple transitively on the generic members of an L-packet of discrete series.
-\end{lemma}
-
-\begin{proof}
-This is straightforward. We work with $Q_\theta$.  If $g\in (\Gad)^\theta$, choose $x\in (G^\theta)_{\mathrm{ad}}$ so that $xg\in \Norm_G(T)$. This induces a well-defined map
-from $W_{\Kad}$ to $Q_\theta(G)$, and it is easy to see the kernel is precisely $W_K$.
-\end{proof}
-
 %where $\varphi_{\sigma}$ and $\varphi_{\theta}$ are induced by the inclusion $Z \hookrightarrow G$. Since the horizontal arrows are isomorphisms in the category of pointed sets, they induce a canonical bijection between the kernels of $\varphi_{\sigma}$ and $\varphi_{\theta}$. 
 %
 %; by~\eqref{interp_q_cohomology} this gives a canonical bijection 
@@ -624,10 +633,6 @@ Suppose $\pi$ is the equivalence class of an irreducible Hilbert space represent
 Suppose $q\in Q_\sigma(G)$. 
 Then $(\pi^q)_K\simeq (\pi_K)^{\varphi(g)}$.
 \end{lemma}
-
-
-
-Because of Lemmas~\ref{lem:iso_q} and \ref{lem:action_q}, we write $Q(G)$ for the group $Q_\sigma(G)$ or~$Q_\theta(G)$, depending on the situation.
 
 \subsubsection{On Whittaker data and generic representations}\label{sec:action_whitt}
 
