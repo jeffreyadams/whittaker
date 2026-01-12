@@ -296,7 +296,7 @@ Hilbert space globalization.
 \subsubsection*{Whittaker models}\label{sec:whittaker_defs}
 
 Suppose again that $\pi$ is an irreducible admissible representation of $G(\R)$ on a Hilbert space $\mH$. We consider the corresponding actions of $G(\R)$ on the space~$\mH^\infty$ of smooth vectors in $\mH$, and on its dual $\mH^{-\infty}$. Let~$(B, \eta)$ be a pair satisfying conditions (i)-(ii) of the Introduction; we shall say $(B, \eta)$ is a \emph{Whittaker pair}. We say $\pi$ has a \emph{$(B,\eta)$-Whittaker model}
-if there exists a nonzero element $v$ in~$\mH^{-\infty}$ such that $\pi(n)(v)=\eta(n)v$ for all $n$ in the nilradical $N(\R)$ of $B(\R)$. See~\cite{matumoto}. \textcolor{red}{[NEW]} This condition depends only on the $G(\R)$-conjugacy class of the pair $(B, \eta)$. It is equivalent to the existence of a $G$-equivariant embedding of $\mH^\infty$ into the space of smooth sections of the equivariant line bundle over $G(\R)/N(\R)$ determined by $\eta$ (for the quasi-regular action of~$G$ on sections); the image of that embedding is a geometric realization of (the smooth vectors of)~$\pi$ which is the origin of the terminology ``Whittaker model for~$\pi$''. \textcolor{red}{[/NEW]} 
+if there exists a nonzero element $v$ in~$\mH^{-\infty}$ such that $\pi(n)(v)=\eta(n)v$ for all $n$ in the nilradical $N(\R)$ of $B(\R)$. See~\cite{matumoto}.This condition depends only on the $G(\R)$-conjugacy class of the pair $(B, \eta)$. It is equivalent to the existence of a $G$-equivariant embedding of $\mH^\infty$ into the space of smooth sections of the equivariant line bundle over $G(\R)/N(\R)$ determined by $\eta$ (for the quasi-regular action of~$G$ on sections); the image of that embedding is a geometric realization of (the smooth vectors of)~$\pi$ which is the origin of the terminology ``Whittaker model for~$\pi$''. 
 
  If~$\w$ is the corresponding Whittaker datum, i.e. the $G(\R)$-conjugacy class of the pair $(B, \eta)$, we say~$\pi$ has a \emph{$\w$-Whittaker model}.  
 
@@ -332,7 +332,7 @@ From now on we use the terms {\it large} and {\it generic} interchangeably.
 
 Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup, i.e.  a $\theta$-stable Cartan subgroup~$T$ of~$G$  such that~$T(\R) \cap G_d$ is  compact, where $G_d$ is the derived group of~$G$. Throughout the paper, we assume $G(\R)$ does have discrete series representation, we fix  a Cartan subgroup $T \subset G$ satisfying the conditions above, and we let~$\mathfrak{t}$ denote the Lie algebra of~$T$, which is a Cartan subalgebra of~$\g$. 
 
-Choose a  positive system~$\Delta^+$  for the roots of~$\t$ in~$\g$, and let~$\rho \in \mathfrak{t}^\ast$ be the half-sum of positive roots. Let~$\Lambda \subset \mathfrak{t}^\ast$ be the set of elements~$\lambda \in \mathfrak{t}^\ast$ which are \emph{regular} (i.e. $\lambda$ does not vanish on any coroot), and such that $\lambda-\rho$  is the differential of a character of~$T(\R)$. The action of the Weyl group~$W=W(\g, \t)$ preserves~$\Lambda$. Let~$W_K\subset W$ be the subgroup $\mathrm{Norm}_K(T)/T$. 
+Choose a  positive system~$\Delta^+$  for the roots of~$\t$ in~$\g$, and let~$\rho \in \mathfrak{t}^\ast$ be the half-sum of positive roots. Let~$\Lambda \subset \mathfrak{t}^\ast$ be the set of elements~$\lambda \in \mathfrak{t}^\ast$ which are \emph{regular} (i.e. $\lambda$ does not vanish on any coroot), and such that $\lambda-\rho$  is the differential of a character of~$T(\R)$. The action of the Weyl group~$W=W(\g, \t)$ preserves~$\Lambda$. Let~$W_K\subset W$ be the subgroup $\mathrm{Norm}_K(T)/T$. If $\lambda\in \Lambda$ let $\Delta^+(\lambda)$ be the roots $\alpha$ so that $\langle \ch\alpha,\lambda\rangle>0$.
 
 
 Each discrete series representation of~$G(\R)$ has a
@@ -344,6 +344,12 @@ differential agrees with~$\lambda-\rho$ on the intersection $T(\R)
 series representation~$\pi_{\lambda, \zeta}$ of~$G(\R)$. Every
 discrete series representation arises in this way.
 
+We say a set of positive roots $\Delta^+$, or the corresponding Weyl
+chamber, is large if every simple root is non-compact.
+If $\pi=\pi_{\lambda,\zeta}$ is a discrete series representation the $\pi$ is generic if and only
+if $\Delta^+(\lambda)$ is large.
+See~\cite[Section 6]{vogan-gelfand-kirillov}. In the terminology of Shelstad~\cite[Section 2.3]{shelstad}, if $B$~is the corresponding Borel subgroup of~$G$, then $(B, T)$ is a fundamental Borel pair of Whittaker type.
+
 
 
 An L-packet of discrete series representations is precisely the set of discrete series with given
@@ -353,10 +359,39 @@ This action preserves,
 and is transitive on, each L-packet $\Pi$.
 Furthermore the stabilizer of any  $\pi\in \Pi$ is $W_K$. 
 
-Recall that the \emph{Weyl chambers} of~$\mathfrak{t}^\ast$ are the connected components of the set of regular elements. Each Weyl chamber specifies a positive root system for the roots of $\mathfrak{t}$ in~$\g$, \textcolor{red}{[new]} and a Borel subgroup of~$G$ containing~$T$ and defined over~$\R$ \textcolor{red}{[/new]}. We say a Weyl chamber is \emph{large}, or that the corresponding Borel subgroup is large, if the corresponding simple roots are all noncompact. 
+Let $\Gad=G/Z(G)$ be the adjoint group of $G$, and $\Kad=(\Gad)^\theta$.
+The Weyl groups of $G$ and $\Gad$ are canonically isomorphic, so we can identify $W_{\Kad}$ with a subgroup of $W=W(G,T)$. It is immediate from the definition that if $g\in \Norm_G(T)$ then the image of $g$ in $W$
+is in $W(\Kad)$ if and only if $\int(g)$ commutes with $\theta$, or equivalently
+$g\inv \theta(g)\in Z(G)$.
 
-If~$\lambda \in \mathfrak{t}^\ast$ is a representative for the Harish-Chandra parameter of a discrete series representation $\pi$, then~$\pi$ is generic if and only if the Weyl chamber containing~$\lambda$ is large. See~\cite[Section 6]{vogan-gelfand-kirillov}. \textcolor{red}{[new]} In the terminology of Shelstad~\cite[Section 2.3]{shelstad}, if $B$~is the corresponding Borel subgroup of~$G$, then $(B, T)$ is a fundamental Borel pair of Whittaker type.\textcolor{red}{[/new]}
- 
+\begin{equation}
+  \label{e:WKad}
+g\inv \theta(g)\in Z(G).
+\end{equation}
+
+\begin{lemma}
+  Suppose $\pi=\pi_{\lambda,\zeta}$ is generic discrete series
+  representation. Then $\pi_{w\lambda,\zeta}$ is generic if and only
+  if $w\in W_{\Kad}$, and the generic elements of the L-packet of $\pi$ are in bijection with $W(\Kad)/W(K)$.
+\end{lemma}
+
+\begin{proof}
+The central character $\zeta$ plays no role so we drop it from the
+notation.  Suppose $g\in \Norm_G(T)$. By the discussion preceding the
+Lemma we have to show every simple root of $\Delta^+(w\lambda)$ is
+non-compact if and only if $\int(g)$ commutes with $\theta$.  Suppose
+$\alpha$ is a simple root for $\Delta^+(\lambda)$, so by assumption it
+is non-compact.  If $\int(g)$ commutes with $\theta$, then
+$\theta(\int(g)X_\alpha)=\int(g)(\theta(X_\alpha))=-\int(g)\theta(X_\alpha)$,
+so $\theta(\alpha)$ is also non-compact.
+Conversely if $\int(g)X_\alpha$ is non-compact then $\theta(\int(g)X_\alpha)=\int(g)\theta(X_\alpha)$,
+and writing any root as a sum of simple roots we see $\theta$ commutes with $\int(g)$.
+
+The second assertion follows from the fact that $W$ acts transitively on the L-packet; $w\in W$ preserves the property of being generic if and only if $w\in W(\Kad)$, and the stabilizer of any element is $W_K$.
+\end{proof}
+
+We will see shortly that $W_{\Kad}/W_K$ has an alternative description as the group $Q(G)$ (Section \ref{s:Q}).
+
 
 
 
@@ -425,12 +460,11 @@ Let us now explain the strategy of the proof, which is mainly an exercise in put
 \item[(ii)] the maps $\pi \mapsto \Wh(\pi)$, $\pi \mapsto \AV(\pi)$ and $\pi\mapsto \WF(\pi)$  are equivariant for these actions.
 \end{itemize}
 
-\textcolor{red}{[NEW]}
+
 For details on these actions and their properties see Section \ref{sec:actions}.
 \begin{comment}
   For the action on~(1) see Sections~\ref{sec:action_DS} and~\ref{sec:action_transitivity}. For the action on~(2) and the equivariance of $\pi \mapsto \Wh(\pi)$, see Section~\ref{sec:action_whitt}. For the action on~(4) and the equivariance of the map $\pi \mapsto \AV(\pi)$, see Section~\ref{sec:action_AV}. For the action on~(3) and the equivariance of $\pi \mapsto \WF(\pi)$ see Section~\ref{sec:action_WF}.
 \end{comment}
-\textcolor{red}{[/NEW]}
 The theorem then follows immediately from these observations, and from the following basic fact on group actions, whose proof is left to the reader.
 
 \begin{lemma} Suppose a group $Q$ acts on two sets $A, B$ and let $f\colon A \to B$ be a $Q$-equivariant map. 
@@ -441,13 +475,13 @@ The theorem then follows immediately from these observations, and from the follo
 In particular, if~$Q$ acts transitively on~$A$ and simply transitively on~$B$, then~$f$ is a bijection and the action of~$Q$ on~$A$ is simply transitive.
 \end{lemma}
 
-\begin{remarkplain} \textcolor{red}{[NEW]} {The group $Q$ is an elementary abelian $2$-group. It is trivial when $G$ is adjoint, and when $G$ is simple  the cardinality of~$Q$ is at most~$4$. See Remark~\ref{rk:size_Q} for a more precise information.} \end{remarkplain}
+\begin{remarkplain}{The group $Q$ is an elementary abelian $2$-group. It is trivial when $G$ is adjoint, and when $G$ is simple  the cardinality of~$Q$ is at most~$4$. See Remark~\ref{rk:size_Q} for a more precise information.} \end{remarkplain}
 
-\begin{exampleplain} \textcolor{red}{[NEW]} If $G(\R)$ is the symplectic group $\mathrm{Sp}(2n, \R)$, then $Q \simeq \Z/2\Z$ and there are two distinct Whittaker data for $G(\R)$. If $\Pi$ is the $L$-packet of discrete series with the same infinitesimal character as the trivial representation, then $\Pi_{\mathrm{gen}}$ has two elements, and the correspondence $\pi \mapsto \Wh(\pi)$ in Theorem~\ref{th:main} was made explicit by Mœglin and Renard \cite[Proposition~4.1]{moeglin_renard}, based on work of Wallach~\cite{wallach} and Oda~\cite{oda} for $n=1,2$. As we shall see their result agrees with the description in Section~\ref{sec:alternate_WF} below. \textcolor{red}{[/NEW]}\end{exampleplain} 
+\begin{exampleplain}If $G(\R)$ is the symplectic group $\mathrm{Sp}(2n, \R)$, then $Q \simeq \Z/2\Z$ and there are two distinct Whittaker data for $G(\R)$. If $\Pi$ is the $L$-packet of discrete series with the same infinitesimal character as the trivial representation, then $\Pi_{\mathrm{gen}}$ has two elements, and the correspondence $\pi \mapsto \Wh(\pi)$ in Theorem~\ref{th:main} was made explicit by Mœglin and Renard \cite[Proposition~4.1]{moeglin_renard}, based on work of Wallach~\cite{wallach} and Oda~\cite{oda} for $n=1,2$. As we shall see their result agrees with the description in Section~\ref{sec:alternate_WF} below. \end{exampleplain} 
 
 
 \begin{remarkplain} 
- \textcolor{red}{[NEW]} Not all quasi-split real groups have discrete series representations. But if $G(\R)$ is a quasi-split real group, then the  \emph{fundamental series} representations that are generic are irreducibly induced from generic discrete series of a maximal cuspidal Levi subgroup $M(\R)$ of $G(\R)$. Using \cite[Chapter~14]{abv}, especially Lemma 14.11 there, one may relate Whittaker data for $G(\R)$ with Whittaker data for $M(\R)$, and the generic fundamental series representations in a given $L$-packet for $G(\R)$ (together with the attached Whittaker data) with  generic discrete series representations for maximal cuspidal Levi subgroups. We shall not pursue this here. \textcolor{red}{[/NEW]}
+Not all quasi-split real groups have discrete series representations. But if $G(\R)$ is a quasi-split real group, then the  \emph{fundamental series} representations that are generic are irreducibly induced from generic discrete series of a maximal cuspidal Levi subgroup $M(\R)$ of $G(\R)$. Using \cite[Chapter~14]{abv}, especially Lemma 14.11 there, one may relate Whittaker data for $G(\R)$ with Whittaker data for $M(\R)$, and the generic fundamental series representations in a given $L$-packet for $G(\R)$ (together with the attached Whittaker data) with  generic discrete series representations for maximal cuspidal Levi subgroups. We shall not pursue this here. 
  \end{remarkplain} 
 
 
@@ -456,6 +490,7 @@ In particular, if~$Q$ acts transitively on~$A$ and simply transitively on~$B$, t
 
 
 \subsection{The groups $Q_\sigma(G)$ and $Q_{\theta}(G)$}
+\label{s:Q}
 
 \subsubsection{Definition of the two groups, and canonical isomorphism}
 
@@ -469,13 +504,13 @@ Q_\sigma(G)=(\Gad)^\sigma/(G^\sigma)_\ad=\Gad(\R)/\G(\R)_\ad.
 $$
 This finite group may be viewed as a group of outer automorphisms of~$G(\R)$.
 
-\begin{remarkplain} \textcolor{red}{[NEW]} \label{rk:size_Q} When $G$ is adjoint, it immediately follows from the definitions that $(G_\ad)^\sigma = (G^\sigma)_{\ad}$, therefore $Q_\sigma(G)$ is trivial in that case. 
+\begin{remarkplain}\label{rk:size_Q} When $G$ is adjoint, it immediately follows from the definitions that $(G_\ad)^\sigma = (G^\sigma)_{\ad}$, therefore $Q_\sigma(G)$ is trivial in that case. 
 
 In general, the group $G(\R)_{\ad}=(G^\sigma)_{\ad}$ contains the identity component of~$\Gad(\R)$, because the above injection $(G^\sigma)_{\ad} \hookrightarrow (\Gad)^\sigma$ is an isomorphism on the Lie algebra level. Therefore  $Q_\sigma(G)$ may be viewed as a quotient of the component group of $\Gad(\R)$, and is an elementary abelian $2$-group. 
 
 When $G(\R)$ is connected, which happens for instance if $G$ is simply connected, the group $G(\R)_{\ad}$ is itself connected, and therefore equal to the identity component of $\Gad(\R)$. In that case $Q_\sigma(\R)$ is the component group of $\Gad(\R)$.
 
-For the concrete computation of this component group in case  $G$ is simple, see the tables in \cite[Section~10]{galois}. In particular  $Q_\sigma(\R)$ has at most four elements in that case.\textcolor{red}{[/NEW]}
+For the concrete computation of this component group in case  $G$ is simple, see the tables in \cite[Section~10]{galois}. In particular  $Q_\sigma(\R)$ has at most four elements in that case.
 \end{remarkplain}
 
 
@@ -554,6 +589,15 @@ Let us prove~(b). To show that when $g\in (\Gad)^\sigma \cap (\Gad)^\theta$ is a
 
 \qed
 
+\begin{lemma}
+  The group $Q(G)$ is isomorphic to $W_{\Kad}/W_K$ of Section \ref{sec:discrete_series}.
+  Consequently $Q(G)$ acts simple transitively on the generic members of an L-packet of discrete series.
+\end{lemma}
+
+\begin{proof}
+This is straightforward. We work with $Q_\theta$.  If $g\in (\Gad)^\theta$, choose $x\in (G^\theta)_{\mathrm{ad}}$ so that $xg\in \Norm_G(T)$. This induces a well-defined map
+from $W_{\Kad}$ to $Q_\theta(G)$, and it is easy to see the kernel is precisely $W_K$.
+\end{proof}
 
 %where $\varphi_{\sigma}$ and $\varphi_{\theta}$ are induced by the inclusion $Z \hookrightarrow G$. Since the horizontal arrows are isomorphisms in the category of pointed sets, they induce a canonical bijection between the kernels of $\varphi_{\sigma}$ and $\varphi_{\theta}$. 
 %
@@ -585,12 +629,13 @@ Then $(\pi^q)_K\simeq (\pi_K)^{\varphi(g)}$.
 
 Because of Lemmas~\ref{lem:iso_q} and \ref{lem:action_q}, we write $Q(G)$ for the group $Q_\sigma(G)$ or~$Q_\theta(G)$, depending on the situation.
 
-\subsubsection{\textcolor{red}{(NEW SEC.)} On Whittaker data and generic representations}\label{sec:action_whitt}
+\subsubsection{On Whittaker data and generic representations}\label{sec:action_whitt}
 
 Suppose $\tilde{q} \in \Gad^\sigma$. For every Whittaker pair $(B, \eta)$ as in Section~\ref{sec:whittaker_defs}, the pair $q\cdot (B, \eta)=\big(\tilde{q} B \tilde{q}^{-1}, \eta \circ (x \mapsto \tilde{q} x \tilde{q}^{-1})\big)$ is again a Whittaker pair, which is conjugate to $(B, \eta)$ if and only if $\tilde{q} \in (G^\sigma)_{\ad}$. This determines an action of $Q_\sigma(G)$ on the set of Whittaker data for~$G(\R)$, which we shall denote by $(q, \mathfrak{w}) \mapsto q \cdot \mathfrak{w}$. This action is simply transitive: see \cite[Lemma 3.1.3]{adams_kaletha} for an elementary argument.
 
 Now let $\pi$ be a generic discrete series representation of~$G(\R)$. Let $q$ be an element of $Q_\sigma(G)$, with a representative $\tilde{q}$ in $\Gad^\sigma$.  For every Whittaker pair $(B, \eta)$ such that $\pi$ has a $(B, \eta)$-Whittaker model, it is immediate from the definitions that the representation $\pi \circ (x \mapsto \tilde{q} x\tilde{q}^{-1})$ is again a discrete series, and that it has a $\tilde{q}\cdot (B, \eta)$-Whittaker model. Passing to equivalence classes we see that $\pi^q$ is generic, and satisfies $\Wh(\pi^q)=q \cdot \Wh(\pi)$. Therefore the map $\pi \mapsto \Wh(\pi)$ is $Q_\sigma(G)$-equivariant.
 
+\begin{comment}
 \subsubsection{On generic discrete series in a single $L$-packet}\label{sec:action_transitivity}
 
 Suppose $\Pi$ is an L-packet of discrete series for a quasisplit group, so $\pi$ contains generic representations.
@@ -628,7 +673,7 @@ Therefore $Q$ acts transitively on the generic elements of $\Pi$. Since the stab
 it follows immediately that this action is simply transitive.
 
 \end{proof}
-
+\end{comment}
   
   
 
@@ -992,8 +1037,8 @@ $$
 \WF(\pi)=G(\R)\cdot \psi(F_\R), \quad \text{where $F_\R = \frac i2(-E_\theta+F_\theta-H_\theta)\in\N\cap i\g(\R)$.}
 $$\end{lemma}
 
-\begin{exampleplain} \textcolor{red}{[NEW]} Suppose $G(\R) = \mathrm{Sp}(2n, \R)$ and ~$\pi$ is the generic discrete series representation denoted  $\pi_{\mathbf{B}_+, \mathbf{T}}$ in \cite[Section~4.2]{moeglin_renard}. Take up the notation above and use the discussion in Section~\ref{s:AV} to define a pinning $\mathcal{P}$ of~$G$; then the corresponding Borel subgroup is the subgroup $\textbf{B}_{+}$ of \cite{moeglin_renard}. If $X_\mathcal{P}$ is the principal nilpotent element defined in \cite[Section 3.1]{adams_kaletha}, then the Whittaker data $\mathfrak{w}_{\psi(F_\R)}$  coincides with  $\mathfrak{w}_{X_\mathcal{P}}$: see \cite[Lemma 3.1.2]{adams_kaletha}. By Lemma~\ref{lem:explicit_WF} and Corollary~\ref{cor:matumoto} above we deduce that $\Wh(\pi)$ is the Whittaker datum attached to the pinning~$\mathcal{P}$ and the additive character  $\Lambda\colon x \mapsto e^{ix}$ of~$\R$. This is the Whittaker datum denoted by $\Wh_1$ in \cite[loc. cit.]{moeglin_renard}, therefore our results are consistent with \cite[Proposition~4.1]{moeglin_renard}. 
-\textcolor{red}{[/NEW]} 
+\begin{exampleplain}Suppose $G(\R) = \mathrm{Sp}(2n, \R)$ and ~$\pi$ is the generic discrete series representation denoted  $\pi_{\mathbf{B}_+, \mathbf{T}}$ in \cite[Section~4.2]{moeglin_renard}. Take up the notation above and use the discussion in Section~\ref{s:AV} to define a pinning $\mathcal{P}$ of~$G$; then the corresponding Borel subgroup is the subgroup $\textbf{B}_{+}$ of \cite{moeglin_renard}. If $X_\mathcal{P}$ is the principal nilpotent element defined in \cite[Section 3.1]{adams_kaletha}, then the Whittaker data $\mathfrak{w}_{\psi(F_\R)}$  coincides with  $\mathfrak{w}_{X_\mathcal{P}}$: see \cite[Lemma 3.1.2]{adams_kaletha}. By Lemma~\ref{lem:explicit_WF} and Corollary~\ref{cor:matumoto} above we deduce that $\Wh(\pi)$ is the Whittaker datum attached to the pinning~$\mathcal{P}$ and the additive character  $\Lambda\colon x \mapsto e^{ix}$ of~$\R$. This is the Whittaker datum denoted by $\Wh_1$ in \cite[loc. cit.]{moeglin_renard}, therefore our results are consistent with \cite[Proposition~4.1]{moeglin_renard}. 
+
 \end{exampleplain} 
 
 
