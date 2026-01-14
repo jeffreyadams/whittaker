@@ -328,8 +328,9 @@ See \cite{vogan_bowdoin}, in particular Corollary 4.7 and Theorem 8.4.
 From now on we use the terms {\it large} and {\it generic} interchangeably.
 
 
-\subsection{Discrete series and Harish-Chandra parameters} \label{sec:discrete_series}
+\subsection{Discrete series and $L$-packets} \label{sec:discrete_series}
 
+\subsubsection{Parametrization and infinitesimal character}
 Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup, i.e.  a $\theta$-stable Cartan subgroup~$T$ of~$G$  such that~$T(\R) \cap G_d$ is  compact, where $G_d$ is the derived group of~$G$. Throughout the paper, we assume $G(\R)$ does have discrete series representation, we fix  a Cartan subgroup $T \subset G$ satisfying the conditions above, and we let~$\mathfrak{t}$ denote the Lie algebra of~$T$, which is a Cartan subalgebra of~$\g$. 
 
 Choose a  positive system~$\Delta^+$  for the roots of~$\t$ in~$\g$, and let~$\rho \in \mathfrak{t}^\ast$ be the half-sum of positive roots. Let~$\Lambda \subset \mathfrak{t}^\ast$ be the set of elements~$\lambda \in \mathfrak{t}^\ast$ which are \emph{regular} (i.e. $\lambda$ does not vanish on any coroot), and such that $\lambda-\rho$  is the differential of a character of~$T(\R)$. The action of the Weyl group~$W=W(\g, \t)$ preserves~$\Lambda$. Let~$W_K\subset W$ be the subgroup $\mathrm{Norm}_K(T)/T$. If $\lambda\in \Lambda$ let $\Delta^+(\lambda)$ be the roots $\alpha$ so that $\langle \ch\alpha,\lambda\rangle>0$.
@@ -340,28 +341,29 @@ Each discrete series representation of~$G(\R)$ has a
 More precisely, suppose~$\lambda\in\Lambda$ and
 $\zeta$ is a character of the center~$Z(\R)$ of~$G(\R)$ whose
 differential agrees with~$\lambda-\rho$ on the intersection $T(\R)
-\cap Z(\R)$. Then the pair $(\lambda, \zeta)$ determines a discrete
+\cap Z(\R)$. Then the pair $(\lambda, \zeta)$ determines (uniquely up to unitary equivalence) a discrete
 series representation~$\pi_{\lambda, \zeta}$ of~$G(\R)$. Every
-discrete series representation arises in this way.
+discrete series representation arises in this way. The \emph{infinitesimal character} of~$\pi_{\lambda, \zeta}$ is defined to be the image of~$\lambda$ in $\mathfrak{t}^\ast/W$.
 
 We say a set of positive roots $\Delta^+$, or the corresponding Weyl
 chamber, is large if every simple root is non-compact.
-If $\pi=\pi_{\lambda,\zeta}$ is a discrete series representation the $\pi$ is generic if and only
+If $\pi=\pi_{\lambda,\zeta}$ is a discrete series representation then $\pi$ is generic if and only
 if $\Delta^+(\lambda)$ is large.
-See~\cite[Section 6]{vogan-gelfand-kirillov}. In the terminology of Shelstad~\cite[Section 2.3]{shelstad}, if $B$~is the corresponding Borel subgroup of~$G$, then $(B, T)$ is a fundamental Borel pair of Whittaker type.
+See~\cite[Section~6]{vogan-gelfand-kirillov}. In the terminology of Shelstad~\cite[Section 2.3]{shelstad}, if $B$~is the corresponding Borel subgroup of~$G$, then $(B, T)$ is a fundamental Borel pair of Whittaker type.
 
 
 
-An L-packet of discrete series representations is precisely the set of discrete series with given
-infinitesimal and central characters.
-There is an action of $W$ on the set of discrete series representations: $w\cdot \pi_{\lambda,\zeta}=\pi_{w\lambda,\zeta}$.
-This action preserves,
-and is transitive on, each L-packet $\Pi$.
-Furthermore the stabilizer of any  $\pi\in \Pi$ is $W_K$. 
+\subsubsection{Discrete series $L$-packets}
+By definition $L$-packet of discrete series representations for $G(\R)$ is precisely the set of discrete series with a given
+infinitesimal and a given central character. This is a finite set. 
 
-Let $\Gad=G/Z(G)$ be the adjoint group of $G$, and $\Kad=(\Gad)^\theta$.
+The group $W$ has an action on  the set of equivalence classes of discrete series representations, given by $w\cdot \pi_{\lambda,\zeta}=\pi_{w\lambda,\zeta}$. This action preserves,
+and is transitive on, each $L$-packet $\Pi$.
+Furthermore the stabilizer of any  $\pi\in \Pi$ is $W_K$. For all this see \cite[Section~4]{contragredient}.
+
+To discuss the generic elements in a discrete series $L$-packet let us introduce the adjoint group $\Gad=G/Z(G)$, and set $\Kad=(\Gad)^\theta$.
 The Weyl groups of $G$ and $\Gad$ are canonically isomorphic, so we can identify $W_{\Kad}$ with a subgroup of $W=W(G,T)$. It is immediate from the definition that if $g\in \Norm_G(T)$ then the image of $g$ in $W$
-is in $W(\Kad)$ if and only if $\int(g)$ commutes with $\theta$, or equivalently
+is in $W_{\Kad}$ if and only if $\int(g)$ commutes with $\theta$, or equivalently
 $g\inv \theta(g)\in Z(G)$.
 
 \begin{equation}
@@ -372,7 +374,7 @@ g\inv \theta(g)\in Z(G).
 \begin{lemma}
   Suppose $\pi=\pi_{\lambda,\zeta}$ is generic discrete series
   representation. Then $\pi_{w\lambda,\zeta}$ is generic if and only
-  if $w\in W_{\Kad}$, and the generic elements of the L-packet of $\pi$ are in bijection with $W(\Kad)/W(K)$.
+  if $w\in W_{\Kad}$. The map $w \mapsto \pi_{w\lambda}$ induces a bijection between $W_{\Kad}/W_K$ and the generic elements of the L-packet of $\pi$.
 \end{lemma}
 
 \begin{proof}
@@ -387,10 +389,10 @@ so $\theta(\alpha)$ is also non-compact.
 Conversely if $\int(g)X_\alpha$ is non-compact then $\theta(\int(g)X_\alpha)=\int(g)\theta(X_\alpha)$,
 and writing any root as a sum of simple roots we see $\theta$ commutes with $\int(g)$.
 
-The second assertion follows from the fact that $W$ acts transitively on the L-packet; $w\in W$ preserves the property of being generic if and only if $w\in W(\Kad)$, and the stabilizer of any element is $W_K$.
+The second assertion follows from the fact that $W$ acts transitively on the $L$-packet: by the first part an element $w\in W$ preserves the property of being generic if and only if $w\in W_{\Kad}$, and the stabilizer of any element is $W_K$.
 \end{proof}
 
-We will see shortly that $W_{\Kad}/W_K$ has an alternative description as the group $Q(G)$ (Section \ref{s:Q}).
+We will see shortly alternative descriptions for the group $W_{\Kad}/W_K$: see Section \ref{s:Q}.
 
 
 
@@ -454,14 +456,14 @@ coincides with the Kostant--Sekiguchi correspondence.
 
 
 
-Let us now explain the strategy of the proof, which is mainly an exercise in putting together some references that are rather scattered in the literature. What we shall actually do is: introduce a finite group~$Q(G)$, and point out that 
+Let us now explain the strategy of the proof, which is mainly an exercise in putting together some references that are rather scattered in the literature. What we shall actually do is: consider the finite group~$Q(G)=W_{\Kad}/W_K$ from Section~\ref{sec:discrete_series} , and point out that 
 \begin{itemize}
-\item[(i)] $Q$ acts transitively on~(1), and simply transitively on (2)--(4);
+\item[(i)] $Q(G)$ acts transitively on~(1), and simply transitively on (2)--(4);
 \item[(ii)] the maps $\pi \mapsto \Wh(\pi)$, $\pi \mapsto \AV(\pi)$ and $\pi\mapsto \WF(\pi)$  are equivariant for these actions.
 \end{itemize}
 
 
-For details on these actions and their properties see Section \ref{sec:actions}.
+We discussed the transitive action on~(1) in Section~\ref{sec:discrete_series}; for the  actions on (2)-(4) and the properties asserted in~(i)-(ii)  see Section \ref{sec:actions}.
 \begin{comment}
   For the action on~(1) see Sections~\ref{sec:action_DS} and~\ref{sec:action_transitivity}. For the action on~(2) and the equivariance of $\pi \mapsto \Wh(\pi)$, see Section~\ref{sec:action_whitt}. For the action on~(4) and the equivariance of the map $\pi \mapsto \AV(\pi)$, see Section~\ref{sec:action_AV}. For the action on~(3) and the equivariance of $\pi \mapsto \WF(\pi)$ see Section~\ref{sec:action_WF}.
 \end{comment}
@@ -475,7 +477,7 @@ The theorem then follows immediately from these observations, and from the follo
 In particular, if~$Q$ acts transitively on~$A$ and simply transitively on~$B$, then~$f$ is a bijection and the action of~$Q$ on~$A$ is simply transitive.
 \end{lemma}
 
-\begin{remarkplain}{The group $Q$ is an elementary abelian $2$-group. It is trivial when $G$ is adjoint, and when $G$ is simple  the cardinality of~$Q$ is at most~$4$. See Remark~\ref{rk:size_Q} for a more precise information.} \end{remarkplain}
+\begin{remarkplain}{The group $Q$ is an elementary abelian $2$-group. It is trivial when $G$ is adjoint, and when $G$ is simple  the cardinality of~$Q$ is at most~$4$. See Remark~\ref{rk:size_Q} for the proof and for more precise information.} \end{remarkplain}
 
 \begin{exampleplain}If $G(\R)$ is the symplectic group $\mathrm{Sp}(2n, \R)$, then $Q \simeq \Z/2\Z$ and there are two distinct Whittaker data for $G(\R)$. If $\Pi$ is the $L$-packet of discrete series with the same infinitesimal character as the trivial representation, then $\Pi_{\mathrm{gen}}$ has two elements, and the correspondence $\pi \mapsto \Wh(\pi)$ in Theorem~\ref{th:main} was made explicit by Mœglin and Renard \cite[Proposition~4.1]{moeglin_renard}, based on work of Wallach~\cite{wallach} and Oda~\cite{oda} for $n=1,2$. As we shall see their result agrees with the description in Section~\ref{sec:alternate_WF} below. \end{exampleplain} 
 
@@ -534,7 +536,18 @@ Every element of $Q_\sigma(G)=(\Gad)^\sigma/(G^\sigma)_\ad$ has a representative
 \end{lemma}
 
 
-The proof uses an interpretation of $Q_\sigma(G)$ and $Q_\theta(G)$ in terms of group cohomology, which we now spell out. 
+We shall prove this in Section~\ref{sec:proof_lemma}, using an interpretation of $Q_\sigma(G)$ and $Q_\theta(G)$ in terms of group cohomology which we  spell out in the next section.
+Before that, let us point out that the groups $Q_\sigma(G)$, $Q_\theta(G)$ are isomorphic with the group $W_{\Kad}/W_K$ of Section~\ref{sec:discrete_series}.
+
+We work with $Q_\theta(G)$.  If $g\in (\Gad)^\theta$, choose $x\in (G^\theta)_{\mathrm{ad}}$ so that $xg\in \Norm_G(T)$.
+This induces a well-defined map
+ $\psi\colon W_{\Kad} \to Q_\theta(G)$,
+and it is easy to see the kernel is precisely $W_K$. Therefore:
+ \begin{lemma}
+  The map  $\psi\colon W_{\Kad} \to Q_\theta(G)$ induces an isomorphism between $Q(G)=W_{\Kad}/W_K$ and $Q_\theta(G)$. 
+  Consequently $Q(G)$ acts simple transitively on the generic members of an L-packet of discrete series.
+\end{lemma}
+
 
 \subsubsection{Connection with group cohomology}
 
@@ -558,7 +571,7 @@ where $\varphi_\tau$ is induced by the inclusion $Z^{-\tau} \hookrightarrow G^{-
 %We can spell out the inverse of~\eqref{interp_q_cohomology} as follows. Suppose~$\zeta \in H^1(\tau, Z)$ is the equivalence class of  $z \in Z^{-\tau}$. By definition we have $\varphi_\tau(\zeta)=1$ if and only if there exists $g \in G$ such that $z = g \tau(g^{-1})$.  In that case $\tau(g) =z^{-1}g$, therefore the projection of~$g$ in $\Gad=G/Z$ is an element $\tilde{q}$ of~$\Gad^{\tau}$. It follows immediately from the definitions that the class of $\tilde{q}$ in $Q_{\tau}(G)=\Gad^\tau/(G^\tau)_\ad$ depends only on $\zeta$ and not on the choice of $g$ or $z$. If $q$ denotes this equivalence class, then the map $\zeta \to q$ is the inverse of~\eqref{interp_q_cohomology}. 
  
 
-\subsubsection{Proof of Lemma~\ref{lem:iso_q}}
+\subsubsection{Proof of Lemma~\ref{lem:iso_q}}\label{sec:proof_lemma}
 
 The proof of Lemma~\ref{lem:iso_q} uses Galois cohomology for the compact real form.  Recall $\theta\sigma = \sigma\theta$, and $G^{\sigma\theta}$ is a compact real form of~$G$. 
 The involutions $\sigma$ and $\theta$ coincide on $G^{\sigma\theta}$,
@@ -586,18 +599,9 @@ Let $g$ be an element of $G$ such that $\gamma = gZ$; then $z=g \sigma(g^{-1})$ 
 Let $\gamma_0$ be the image of $z_0^{-1} k^{-1} g$ in $\Gad$. Then $\gamma_0 \in (G^{\sigma})_\ad$, and $\gamma_0$ is equal to the image of $k^{-1} g$ in $\Gad$. The element $\kappa=\gamma \gamma_0^{-1}$ of $\Gad$  is therefore $\sigma$-invariant, and since $\kappa=kZ$, we also have $(\theta\sigma)(\kappa)=\kappa$; we conclude that $\theta(\kappa) = \kappa$, q.e.d. 
 
 Let us prove~(b). To show that when $g\in (\Gad)^\sigma \cap (\Gad)^\theta$ is a representative of $x \in Q_{\sigma}(G)$,  the image of~$g$ in  $Q_\theta(G)$ depends only on~$x$, it is enough to show that  $(G^\sigma)_\ad \cap (\Gad)^\theta \subset (G^\theta)_{\ad}$. This follows from \cite[Proposition 5.4]{galois}, applied to the action of~$G$ on~$\Gad$ and the obvious involutions. We conclude that taking $x \in Q_{\sigma}(G)$ to the image $\varphi(x)$ of $g$ in $Q_{\theta}(G)$ gives a well-defined map $\varphi\colon Q_{\sigma}(G)\to Q_{\theta}(G)$, which is clearly a group homomorphism. Exchanging the roles of $\sigma$ and $\theta$, we get a well-defined map $Q_{\theta}(G) \to Q_{\sigma}(G)$, which is the inverse of $\varphi$; therefore $\varphi$ is an isomorphism.
-
 \qed
 
-\begin{lemma}
-  The group $Q(G)$ is isomorphic to $W_{\Kad}/W_K$ of Section \ref{sec:discrete_series}.
-  Consequently $Q(G)$ acts simple transitively on the generic members of an L-packet of discrete series.
-\end{lemma}
 
-\begin{proof}
-This is straightforward. We work with $Q_\theta$.  If $g\in (\Gad)^\theta$, choose $x\in (G^\theta)_{\mathrm{ad}}$ so that $xg\in \Norm_G(T)$. This induces a well-defined map
-from $W_{\Kad}$ to $Q_\theta(G)$, and it is easy to see the kernel is precisely $W_K$.
-\end{proof}
 
 %where $\varphi_{\sigma}$ and $\varphi_{\theta}$ are induced by the inclusion $Z \hookrightarrow G$. Since the horizontal arrows are isomorphisms in the category of pointed sets, they induce a canonical bijection between the kernels of $\varphi_{\sigma}$ and $\varphi_{\theta}$. 
 %
@@ -627,7 +631,7 @@ Then $(\pi^q)_K\simeq (\pi_K)^{\varphi(g)}$.
 
 
 
-Because of Lemmas~\ref{lem:iso_q} and \ref{lem:action_q}, we write $Q(G)$ for the group $Q_\sigma(G)$ or~$Q_\theta(G)$, depending on the situation.
+Because of Lemmas~\ref{lem:iso_q} and \ref{lem:action_q}, we write $Q(G)$ for the group $Q_\sigma(G)$ or~$Q_\theta(G)$, depending on the situation.\footnote{AA 2026-I-14:  we should spell out that if $\pi$ is a discrete series then this fits with the action of $W_{\Kad}/W_K$ defined in Sect.~\ref{sec:discrete_series}.}
 
 \subsubsection{On Whittaker data and generic representations}\label{sec:action_whitt}
 
