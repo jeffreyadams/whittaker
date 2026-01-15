@@ -1,0 +1,178 @@
+\documentclass[10pt,leqno]{article}
+
+\usepackage{verbatim}
+\usepackage{amssymb, amscd}
+\usepackage{mathtools}
+\usepackage{rotating}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{enumerate}
+\usepackage[colorlinks=true, linktoc=page, citecolor=blue, linkcolor=blue, urlcolor=blue]{hyperref}
+
+\usepackage{tabularx}
+\setlength\extrarowheight{4pt}   %spacing in tables
+\usepackage{theorem}
+\usepackage[matrix,tips,frame,color,line,poly,curve]{xy}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\newcommand\kappaarrow[2]{#1\overset\kappa\rightarrow#2}
+\newtheorem{theorem}[equation]{Theorem}
+\newtheorem{corollary}[equation]{Corollary}
+\newtheorem{definition}[equation]{Definition}
+\newtheorem{lemma}[equation]{Lemma}
+\newtheorem{desideratum}[equation]{Desideratum}
+\newtheorem{conjecture}[equation]{Conjecture}
+\newtheorem{proposition}[equation]{Proposition}
+\newtheorem{remark}[equation]{Remark}
+{\theorembodyfont{\rmfamily}\newtheorem{theoremplain}[equation]{Theorem}
+\newtheorem{remarkplain}[equation]{Remark}
+\newtheorem{editorialremarkplain}[equation]{Editorial Remark}
+\newtheorem{exampleplain}[equation]{Example}
+\newtheorem{corollaryplain}[equation]{Corollary}
+\newtheorem{mytable}[equation]{Table}
+}
+
+\renewcommand{\sec}[1]{\section{#1}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+  \setcounter{equation}{0}}
+\newcommand{\subsec}[1]{\subsection{#1}
+\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+  \setcounter{equation}{0}}
+
+\newcommand{\subsubsec}[1]{\subsubsection{#1}
+\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+  \setcounter{equation}{0}}
+
+% Danger, Will Robinson!
+\def\danger{\begin{trivlist}\item[]\noindent%
+\begingroup\hangindent=3pc\hangafter=-2%\clubpenalty=10000%
+\def\par{\endgraf\endgroup}%
+\hbox to0pt{\hskip-\hangindent\dbend\hfill}\ignorespaces}
+\def\enddanger{\par\end{trivlist}}
+
+
+\numberwithin{equation}{section}
+
+
+
+\newcommand{\Gext}{\negthinspace\negthinspace\phantom{a}^\delta G}
+\newcommand{\thetaG}{\negthinspace\negthinspace\phantom{a}^\theta
+  G(\C)}
+\newcommand{\thetaK}{\negthinspace\negthinspace\phantom{a}^\theta K(\C)}
+\newcommand{\qed}{\hfill $\square$ \medskip}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\qed}
+\newcommand\exact[3]{1\rightarrow #1\rightarrow #2\rightarrow #3\rightarrow1}
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Inv}{\mathrm{Invol}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\gr}{\mathrm{gr}}
+\newcommand{\Out}{\mathrm{Out}}
+\newcommand{\Int}{\mathrm{Int}}
+\renewcommand{\int}{\mathrm{int}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\kernel}{\mathrm{kernel}}
+\newcommand{\Ad}{\mathrm{Ad}}
+\newcommand{\ad}{\mathrm{ad}}
+\newcommand{\zinv}{\mathrm{inv}}
+\newcommand{\SRF}{\mathrm{SRF}}
+\newcommand{\Gad}{G_\mathrm{ad}}
+\newcommand{\Gsc}{G_\mathrm{sc}}
+\newcommand{\Zsc}{Z_\mathrm{sc}}
+\newcommand{\Ztor}{Z_\mathrm{tor}}
+\newcommand{\Gbar}{\overline G}
+\newcommand{\Kad}{K_\mathrm{ad}}
+\newcommand{\Gal}{\mathrm{Gal}}
+\newcommand{\Norm}{\mathrm{Norm}}
+\newcommand{\Cent}{\mathrm{Cent}}
+\newcommand{\Stab}{\mathrm{Stab}}
+\newcommand{\I}{\mathcal I}
+\newcommand{\mH}{\mathcal H}
+\renewcommand{\O}{\mathcal O}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\W}{\mathbb W}
+\newcommand{\Ztwo}{\mathbb Z_2}
+\newcommand{\N}{\mathcal N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\G}{G}
+\renewcommand{\H}{\mathbb H}
+\newcommand{\h}{\mathfrak h}
+\newcommand{\n}{\mathfrak n}
+\renewcommand{\sl}{\mathfrak s\mathfrak l}
+\renewcommand{\P}{\mathfrak p}
+\renewcommand{\a}{\mathfrak a}
+\newcommand{\zk}{\mathfrak z_\mathfrak k}
+\newcommand{\A}{\mathbb A}
+\newcommand{\K}{\mathcal K}
+\newcommand{\B}{\mathcal B}
+\renewcommand{\k}{\mathfrak k}
+\newcommand{\spint}{\widetilde{Spin}}
+\newcommand{\ch}[1]{#1^\vee}
+\newcommand\sigmaqc{\sigma_{\text{qc}}}
+\newcommand\thetaqc{\theta_{\text{qc}}}
+\newcommand{\Fgal}{F_{\text{gal}}}
+\newcommand{\Falg}{F_{\text{alg}}}
+\newcommand{\cl}{\mathit{cl}}
+\newcommand{\Lie}{\mathrm{Lie}}
+\newcommand{\opp}{\text{-opp}}
+
+\renewcommand{\t}{\mathfrak t}
+\newcommand{\su}{\mathfrak s\mathfrak u}
+\newcommand{\g}{\mathfrak g}
+\newcommand{\gder}{\mathfrak g_{\mathrm{der}}}
+\newcommand\inv{^{-1}}
+\newcommand\wh{\widehat}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\SL}{\text{SL}}
+\newcommand{\SO}{\text{SO}}
+\newcommand{\SU}{\text{SU}}
+\newcommand{\Spin}{\text{Spin}}
+\newcommand{\chGGamma}{\phantom{a}^\vee G^\Gamma}
+\newcommand{\GGamma}{G^\Gamma}
+\newcommand{\s}{\mathfrak s}
+\newcommand{\w}{\mathfrak w}
+\newcommand{\AV}{\mathrm{AV}}
+\newcommand{\KS}{\mathrm{KS}}
+\newcommand{\Wh}{\mathrm{Wh}}
+\newcommand{\WF}{\mathrm{WF}}
+\newcommand{\AC}{\mathrm{AC}}
+\newcommand{\AVann}{\mathrm{AV}_{\mathrm{ann}}}
+\newcommand{\GK}{\mathrm{GK}}
+\newcommand{\Op}{\O_p}
+\newcommand{\Kostant}[1]{\mathcal{K}(#1)}
+\newcommand{\ECom}{\mathcal{E}^{\mathcal{C}}_\Omega}
+\begin{document}
+
+\title{Nilpotent Invariants \\ for Generic Discrete Series of Real Groups}
+\author{Jeffrey Adams\footnote{University of Maryland \& IDA Center for Computing Sciences ; \url{jda@math.umd.edu}} {} \& Alexandre Afgoustidis\footnote{CNRS \& Université de Lorraine, Nancy \& Metz ; \url{alexandre.afgoustidis@math.cnrs.fr}}}
+\date{}
+
+
+We thank the referee for useful comments and suggestions. Here is a quick response on the 10 remarks in the report. 
+
+\begin{itemize}
+\item Comments 2, 3, 4 pointed out typos; we corrected these and a few others. A diff file is attached for convenience.
+
+\item Comments 1 and 9 were about terminology:
+\begin{itemize}
+\item Concerning \#1, on the ``model'' of the representation implicit in the terminology ``Whittaker model'', we have added a discussion of the origin of the terminology in Section~1.2, and a reference to that discussion in the Introduction.
+\item Concerning \#9, on Shelstad's ``fundamental Borel pairs of Whittaker type'', we now mention the relationship with our notation in Section~1.4.1, when recalling the genericity criterion for discrete series. 
+\end{itemize}
+
+\item Comment 5 spotted an important omission in the original version: you are entirely right that we forgot to explain why the action of $Q(G)$ on the generic elements of an $L$-packet is (simply) transitive. This is now done in a new Section~1.4.2, which also describes $L$-packets. This uses an interpretation of $Q(G)$ as a quotient of the Weyl group, and the corresponding action on large Weyl chambers; the compatibility with the other incarnations of $Q(G)$, as $Q_\sigma$ and $Q_\theta$, is explained in a new Lemma 2.7, and at the end of Section~2.3.1. 
+
+\item Comment 6 asked for the common cardinal of the sets in Theorem 2.1 for classical groups or exceptional groups. This amounts to a description of $Q(G)$. We have added new remarks 1.3 and 2.5, which prove that $Q(\R)$ is a product of groups $\Z/2\Z$ and give an upper bound on the cardinality: the group $Q(G)$ is a quotient of the component group of $\Gad(\R)$. The precise cardinality depends on the isogeny. For simple groups these have been tabled in a paper of the first author with Taibi, and we gave references (in particular, the referee's guess was correct).
+
+\item Comment 8 suggested to cite references on work of Moeglin--Renard, Oda and Wallach on Whittaker models for generic discrete series of symplectic groups, and whether it is possible to check the compatibility between these results and ours. The main point is to match the two generic discrete series in an $L$-packet with the two possible Whittaker data for $\mathrm{Sp}(2n, \R)$. This can be done using the descriptions in Section~3 of our paper, plus a few remarks concerning the relationship between pinnings and Whittaker data, spelled out in the recent paper of the first author and Kaletha. We have added Examples 2.3 and 3.17 to discuss this and outline the comparison. 
+
+\item Finally, comment 7 asked whether there is something general behind an observation of the referee on the various pure inner forms that contribute to a given superpacket of discrete series, in the case of unitary or special orthogonal groups. \textcolor{red}{... Find something to say!} 
+\end{itemize}
+
+
+\bibliographystyle{plain}
+\bibliography{Refs}
+
+\end{document}
