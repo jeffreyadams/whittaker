@@ -201,7 +201,7 @@ of this paper is to give a self-contained account of these matters. More precise
 \item Give an elementary proof that  passage from~$\pi$ to $\mathfrak{w}(\pi)$, $\WF(\pi)$ and $\AV(\pi)$ defines bijections between generic discrete series in an $L$-packet for $G(\R)$, Whittaker data for $G(\R)$, and the appropriate sets of nilpotent orbits;
 \item Given one of the invariants $\Wh(\pi)$, $\WF(\pi)$ or $\AV(\pi)$, explain in the simplest possible terms how to explicitly reconstruct the other two.
 \end{enumerate}
-Most results in this note were known. We gave new and simplified proofs for as many of them as possible; for instance, Section~\ref{sec:Sekiguchi} contains a simple proof that $\WF(\pi)$ and $\AV(\pi)$ are exchanged by the Kostant--Sekiguchi correspondence. Otherwise we give convenient references.
+Many results in this note were known. We gave new and simplified proofs for as many of them as possible; for instance, Section~\ref{sec:Sekiguchi} contains a simple proof that $\WF(\pi)$ and $\AV(\pi)$ are exchanged by the Kostant--Sekiguchi correspondence. Otherwise we give convenient references.
 
 We thank the referee for helpful suggestions.
 
@@ -337,9 +337,9 @@ From now on we use the terms {\it large} and {\it generic} interchangeably.
 \subsection{Discrete series and $L$-packets} \label{sec:discrete_series}
 
 \subsubsection{Discrete series representations}~
-Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup, i.e.  a $\theta$-stable Cartan subgroup~$T$ of~$G$  such that~$T(\R) \cap G_d$ is  compact, where $G_d$ is the derived group of~$G$. Throughout the paper, we assume $G(\R)$ does have discrete series representation, we fix  a Cartan subgroup $T \subset G$ satisfying the conditions above, and we let~$\mathfrak{t}$ denote the Lie algebra of~$T$, which is a Cartan subalgebra of~$\g$. 
+Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup, i.e.  a $\theta$-stable Cartan subgroup~$T$ of~$G$  such that~$T(\R) \cap G_d$ is  compact, where $G_d$ is the derived group of~$G$. Throughout the paper, we assume $G(\R)$ does have discrete series representations, we fix  a Cartan subgroup $T \subset G$ satisfying the conditions above, and we let~$\mathfrak{t}$ denote the Lie algebra of~$T$, which is a Cartan subalgebra of~$\g$. 
 
-Choose a  positive system~$\Delta^+$  for the roots of~$\t$ in~$\g$, and let~$\rho \in \mathfrak{t}^\ast$ be the half-sum of positive roots. Let~$\Lambda \subset \mathfrak{t}^\ast$ be the set of elements~$\lambda \in \mathfrak{t}^\ast$ which are \emph{regular} (i.e. $\lambda$ does not vanish on any coroot) and such that $\lambda-\rho$  is the differential of a character of~$T(\R)$. The action of the Weyl group~$W=W(\g, \t)$ preserves~$\Lambda$. 
+Choose a  positive system~$\Delta^+$  for the roots of~$\t$ in~$\g$, and let~$\rho \in \mathfrak{t}^\ast$ be the half-sum of positive roots. Let~$\Lambda \subset \mathfrak{t}^\ast$ be the set of elements~$\lambda \in \mathfrak{t}^\ast$ which are \emph{regular} (i.e. $\lambda$ does not vanish on any coroot) and such that $\lambda-\rho$  is the differential of a character of~$T(\R)$. The set $\Lambda$ does not depend on the choice of $\Delta^+$, and is preserved by the action of the Weyl group~$W=W(\g, \t)$ on $\t^\ast$. 
 
 Each discrete series representation of~$G(\R)$ has an \emph{infinitesimal character} or
 \emph{Harish-Chandra parameter}, which is an element of~$\Lambda/W$.
@@ -347,7 +347,7 @@ More precisely, suppose~$\lambda\in\Lambda$ and
 $\zeta$ is a character of the center~$Z(\R)$ of~$G(\R)$ whose
 differential agrees with~$\lambda-\rho$ on the intersection $T(\R)
 \cap Z(\R)$. Then the pair $(\lambda, \zeta)$ determines, uniquely up to unitary equivalence, a discrete
-series representation~$\pi_{\lambda, \zeta}$ of~$G(\R)$. Every
+series representation~$\pi_{\lambda, \zeta}$ of~$G(\R)$: see \cite[Section~4]{Contragredient}. Every
 discrete series representation arises in this way. The \emph{infinitesimal character} of~$\pi_{\lambda, \zeta}$ is defined to be the image of~$\lambda$ in $\mathfrak{t}^\ast/W$, and the \emph{central character} is $\zeta$. See \cite[Section~8]{AV1} and \cite{Contragredient} for more on the parametrization.
 
 There is a simple criterion for genericity in terms of this parametrization. Let us say a set of positive roots $\Delta^+$, or the corresponding Weyl
@@ -360,7 +360,7 @@ See~\cite[Section~6]{vogan-gelfand-kirillov}. In the terminology of Shelstad~\ci
 
 \subsubsection{Discrete series $L$-packets}~
 By definition an \emph{$L$-packet of discrete series representations} for $G(\R)$ is precisely the set of discrete series with a given
-infinitesimal and a given central character. Each $L$-packet is a finite set, and each discrete series representation belongs to a single $L$-packet. 
+infinitesimal character and a given central character. Each $L$-packet is a finite set, and each discrete series representation belongs to a single $L$-packet. 
 
 The group $W$ has an action on  the set of equivalence classes of discrete series representations, given by $w\cdot \pi_{\lambda,\zeta}=\pi_{w\lambda,\zeta}$. This action preserves,
 and is transitive on, each $L$-packet~$\Pi$.
@@ -380,13 +380,12 @@ is in $W_{\Kad}$ if and only if $\int(g)$ (conjugation by $g$) commutes with $\t
 \end{lemma}
 
 \begin{proof}
-The central character $\zeta$ plays no role so we drop it from the
-notation.  Suppose $g\in \Norm_G(T)$, with image $w\in W$.
+ Suppose $g\in \Norm_G(T)$, with image $w\in W$.
 By the discussion preceding the Lemma,
 we have to show every simple root of $\Delta^+(w\lambda)$ is
-non-compact if and only if $\int(g)$ commutes with~$\theta$.  Suppose
+non-compact if and only if the endomorphism $\int(g)$ commutes with~$\theta$.  Suppose
 $\alpha$ is a simple root for $\Delta^+(\lambda)$, so by assumption it
-is non-compact.  If $\int(g)$ commutes with $\theta$, then
+is non-compact.  If the endomorphism $\int(g)$ commutes with $\theta$, then 
 $\theta(\int(g)X_\alpha)=\int(g)(\theta(X_\alpha))=-\int(g)(X_\alpha)$,
 so $\theta(\alpha)$ is also non-compact.
 Conversely if $\int(g)X_\alpha$ is non-compact then $\theta(\int(g)X_\alpha)=\int(g)\theta(X_\alpha)$,
@@ -474,15 +473,12 @@ Let us now explain the strategy of the proof, which is mainly an exercise in put
 We discussed the simply transitive action on~(1) in Section~\ref{sec:discrete_series}; for the definitions of the actions on (2)-(4) and the other properties in~(i)-(ii)  see Section \ref{sec:actions}. This will use several realizations for the group $Q(G)$, spelled out in Section~\ref{s:Q}.
 
 
-The theorem then follows immediately from observations (i)-(ii) and from the following basic fact on group actions, whose proof is left to the reader.
+The theorem then follows immediately from observations (i)-(ii) and from the  elementary fact that if a group~$Q$ acts simply transitively on two sets $A$ and~$B$, then any $Q$-equivariant map from $A$ to $B$ must be bijective. 
 
-\begin{lemma}
-Suppose a group $Q$ acts simply transitively on two sets $A$ and~$B$; then any~$Q$-equivariant map from~$A$ to~$B$ is bijective. 
-\end{lemma}
 
 
 \begin{example}
-If $G(\R)$ is the symplectic group $\mathrm{Sp}(2n, \R)$, then $Q(G) \simeq \Z/2\Z$ and there are two distinct Whittaker data for $G(\R)$. If $\Pi$ is the $L$-packet of discrete series with the same infinitesimal character as the trivial representation, then $\Pi_{\mathrm{gen}}$ has two elements, and the correspondence $\pi \mapsto \Wh(\pi)$ in Theorem~\ref{th:main} was made explicit by Mœglin and Renard \cite[Proposition~4.1]{moeglin_renard}, based on work of Wallach~\cite{wallach} and Oda~\cite{oda} for $n=1,2$. As we shall see their result agrees with the description in Section~\ref{sec:alternate_WF} below. \end{example} 
+If $G(\R)$ is the symplectic group $\mathrm{Sp}(2n, \R)$, then $Q(G) \simeq \Z/2\Z$ and there are two distinct Whittaker data for $G(\R)$. If $\Pi$ is the $L$-packet of discrete series with the same infinitesimal character as the trivial representation, then $\Pi_{\mathrm{gen}}$ has two elements, and the correspondence $\pi \mapsto \Wh(\pi)$ in Theorem~\ref{th:main} was made explicit by Mœglin and Renard \cite[Proposition~4.1]{moeglin_renard}, based on work of Wallach~\cite{wallach} and Oda~\cite{oda} for $n=1,2$. As we shall see (in Section~\ref{sec:alternate_WF}), this result agrees with our description of  $\pi \mapsto \Wh(\pi)$, given in Section~\ref{s:gds}. \end{example} 
 
 
 \begin{remark} 
@@ -509,7 +505,7 @@ This finite group may be viewed as a group of outer automorphisms of~$G(\R)$.
 
 \begin{remark}\label{rk:size_Q} When $G$ is adjoint, it immediately follows from the definitions that $(G_\ad)^\sigma = (G^\sigma)_{\ad}$, therefore $Q_\sigma(G)$ is trivial in that case. 
 
-In general, the group $G(\R)_{\ad}=(G^\sigma)_{\ad}$ contains the identity component of~$\Gad(\R)$, because the above injection $(G^\sigma)_{\ad} \hookrightarrow (\Gad)^\sigma$ is an isomorphism on the Lie algebra level. Therefore  $Q_\sigma(G)$ may be viewed as a quotient of the component group of $\Gad(\R)$, and is an elementary abelian $2$-group. 
+In general, the group $G(\R)_{\ad}=(G^\sigma)_{\ad}$ contains the identity component of~$\Gad(\R)$, because the above injection $(G^\sigma)_{\ad} \hookrightarrow (\Gad)^\sigma$ is an isomorphism on the Lie algebra level. Therefore  $Q_\sigma(G)$ may be viewed as a quotient of the component group of $\Gad(\R)$; since the latter is an elementary abelian $2$-group, the same holds for $Q_\sigma(G)$. 
 
 When $G(\R)$ is connected, which happens for instance if $G$ is simply connected, the group $G(\R)_{\ad}$ is itself connected, and therefore equal to the identity component of~$\Gad(\R)$. In that case $Q_\sigma(\R)$ is the component group of~$\Gad(\R)$.
 
@@ -1005,11 +1001,11 @@ $$
 $$\end{lemma}
 
 \begin{example}
-Suppose $G(\R) = \mathrm{Sp}(2n, \R)$ and ~$\pi$ is the generic discrete series representation denoted  $\pi_{\mathbf{B}_+, \mathbf{T}}$ in \cite[Section~4.2]{moeglin_renard}. Take up the notation above and use the discussion in Section~\ref{s:AV} to define a pinning $\mathcal{P}$ of~$G$; then the corresponding Borel subgroup is the subgroup $\textbf{B}_{+}$ of \cite{moeglin_renard}. If $X_\mathcal{P}$ is the principal nilpotent element defined in \cite[Section 3.1]{adams_kaletha}, then the Whittaker data $\mathfrak{w}_{\psi(F_\R)}$  coincides with  $\mathfrak{w}_{X_\mathcal{P}}$: see \cite[Lemma 3.1.2]{adams_kaletha}. By Lemma~\ref{lem:explicit_WF} and Corollary~\ref{cor:matumoto} above we deduce that $\Wh(\pi)$ is the Whittaker datum attached to the pinning~$\mathcal{P}$ and the additive character  $\Lambda\colon x \mapsto e^{ix}$ of~$\R$. This is the Whittaker datum denoted by $\Wh_1$ in \cite[loc. cit.]{moeglin_renard}, therefore our results are consistent with \cite[Proposition~4.1]{moeglin_renard}. 
+Suppose $G(\R) = \mathrm{Sp}(2n, \R)$ and ~$\pi$ is the generic discrete series representation denoted  $\pi_{\mathbf{B}_+, \mathbf{T}}$ in \cite[Section~4.2]{moeglin_renard}. As in Section~\ref{s:AV},  fix a nonzero root vector~$X_\alpha$  for each simple root $\alpha$ of $\mathbf{T}$ in the Borel subgroup $\mathbf{B}_+$. These determine a pinning $\mathcal{P}=(\mathbf{T}, \mathbf{B}_+, \{X_\alpha\})$ of~$G$. Following \cite[Section 3.1, see before Lemma 3.1.2]{adams_kaletha}, we may attach to $\mathcal{P}$ a principal nilpotent element $X_\mathcal{P}$; with this notation it follows from \cite[Lemma 3.1.2]{adams_kaletha} that the Whittaker data $\mathfrak{w}_{\psi(F_\R)}$  and  $\mathfrak{w}_{X_\mathcal{P}}$ are identical. By Lemma~\ref{lem:explicit_WF} and Corollary~\ref{cor:matumoto}, in the terminology of \cite{adams_kaletha}, this means $\Wh(\pi)$ is the Whittaker datum attached to the pinning~$\mathcal{P}$ and the additive character  $\Lambda\colon x \mapsto e^{ix}$ of~$\R$. The latter is the Whittaker datum denoted~$\Wh_1$ in \cite[Section~4.2]{moeglin_renard}, and therefore our results are consistent with \cite[Proposition~4.1]{moeglin_renard}. 
 \end{example} 
 
 
-There is a partial converse to this statement if we consider discrete series within a single $L$-packet. Fix an $L$-packet~$\Pi$ of discrete series, and consider a regular semisimple orbit~$\Omega$ in~$\Op \cap i\g(\R)^\ast$; then we can determine the generic representation~$\pi \in \Pi$ with $\WF(\pi)=\Omega$, as follows. Fix~$\xi_\R \in \Omega$, write $\xi_\R=F_\R^\ast$ with $F_\R \in \g$ and let $E_\R, H_\R \in \g$ be such that $(E_\R, H_\R, F_\R)$ is an  $\mathrm{SL}(2)$-triple with $\theta(E_\R)=-F_\R$. Set
+There is a partial converse to Lemma~\ref{lem:explicit_WF} if we consider discrete series within a single $L$-packet. Fix an $L$-packet~$\Pi$ of discrete series, and consider a regular semisimple orbit~$\Omega$ in~$\Op \cap i\g(\R)^\ast$; then we can determine the generic representation~$\pi \in \Pi$ with $\WF(\pi)=\Omega$, as follows. Fix~$\xi_\R \in \Omega$, write $\xi_\R=F_\R^\ast$ with $F_\R \in \g$ and let $E_\R, H_\R \in \g$ be such that $(E_\R, H_\R, F_\R)$ is an  $\mathrm{SL}(2)$-triple with $\theta(E_\R)=-F_\R$. Set
 $$
 H_\theta=E_\R-F_\R.
 $$
