@@ -1,0 +1,131 @@
+156,157c156
+< Let $G$ be a connected complex reductive group, defined over $\R$, and consider the group $G(\R)$ of real points. 
+< 
+---
+> Let $G$ be a connected complex reductive group, defined over $\R$, and consider the group $G(\R)$ of real points.
+161c160
+< \item $\eta$ is a character of the nilpotent radical~$N(\R)$ of~$B(\R)$, subject to the condition that~$\eta$ is nontrivial on each simple root space.
+---
+> \item $\eta$ is a character of the nilpotent radical~$N(\R)$ of~$B(\R)$, which  is nontrivial on each simple root space.
+194c193
+< of this paper is to give a self-contained account of these matters. More precisely, we will do two things:
+---
+> of this paper is to give a self-contained account of these matters. More precisely, we will:
+210c209
+< Let~$\sigma$ be the anti-holomorphic involution defining~$G(\R)$.
+---
+> Let~$\sigma$ be the anti-holomorphic involution defining~$G(\R)$: $G(\R)=G^\sigma$.
+231c230
+< Suppose we fix a non-degenerate, $G(\R)$-invariant bilinear form $\kappa$ on $\g(\R)$. This is equivalent to having a non-degenerate bilinear form on~$\g$ which is both $G(\C)$- and Galois-invariant. The restriction of the form to each simple factor
+---
+> Alternatively, this is equivalent to having a non-degenerate bilinear form on~$\g$ which is both $G(\C)$- and Galois-invariant. The restriction of the form to each simple factor
+240c239
+< Using $\psi_\kappa$ we shall transfer to $\g^\ast$ several notions usually defined on $\g$: the asymptotic cone, the Kostant section, and the Kostant--Sekiguchi corresondence. In each case the resulting notions are independent of the
+---
+> Using $\psi_\kappa$ we shall transfer to $\g^\ast$ several notions usually defined on $\g$: the asymptotic cone, the Kostant section, and the Kostant--Sekiguchi correspondence. In each case the resulting notions are independent of the
+243c242
+< invariant form which is negative definite on the Lie algebra of a maximal compact subgroup.)
+---
+> invariant form which is negative definite on the Lie algebra of a maximal compact subgroup).
+252c251
+< $V$; we will denote it by~$\pi_K$. 
+---
+> $V$; we  denote it by~$\pi_K$. 
+276c275
+< The Gelfand--Kirillov dimension~$\GK(\pi)$ of~$\pi$ can be defined in several different ways~\cite{vogan-gelfand-kirillov}; but one of them is
+---
+> The Gelfand--Kirillov dimension~$\GK(\pi)$ of~$\pi$ can be defined in several different ways~\cite{vogan-gelfand-kirillov};  one of them is
+333c332
+< \subsection{Discrete series and $L$-packets} \label{sec:discrete_series}
+---
+> \subsection{Discrete series $L$-packets} \label{sec:discrete_series}
+336c335
+< Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup, i.e.  a $\theta$-stable Cartan subgroup~$T$ of~$G$  such that~$T(\R) \cap G_d$ is  compact, where $G_d$ is the derived group of~$G$. Throughout the paper, we assume $G(\R)$ does have discrete series representation, we fix  a Cartan subgroup $T \subset G$ satisfying the conditions above, and we let~$\mathfrak{t}$ denote the Lie algebra of~$T$, which is a Cartan subalgebra of~$\g$. 
+---
+> Recall $G(\R)$ has relative discrete series representations if and only if it has a relatively compact Cartan subgroup, i.e.  a $\theta$ and $\sigma$-stable Cartan subgroup~$T$ of~$G$  such that~$T(\R) \cap G_d$ is  compact, where $G_d$ is the derived group of~$G$. Throughout the paper, we assume $G(\R)$  has discrete series representations, we fix  a Cartan subgroup $T \subset G$ satisfying the conditions above, and we let~$\mathfrak{t}$ denote the Lie algebra of~$T$, which is a Cartan subalgebra of~$\g$. 
+352c351
+< If $\pi\simeq\pi_{\lambda,\zeta}$ is a discrete series representation, then $\pi$ is generic if and only
+---
+> If $\pi\simeq\pi_{\lambda,\zeta}$ is a discrete series representation, then $\pi$ is large if and only
+360c359
+< infinitesimal and a given central character. Each $L$-packet is a finite set, and each discrete series representation belongs to a single $L$-packet. 
+---
+> infinitesimal character and a given central character. Each $L$-packet is a finite set, and each discrete series representation belongs to a single $L$-packet. 
+387c386
+< so $\theta(\alpha)$ is also non-compact.
+---
+> so $\int(g)\alpha=w\alpha$ is also non-compact.
+399c398
+< See in particular Remark~\ref{rk:size_Q} and Lemma~\ref{lem:third_Q}. 
+---
+> See  Remark~\ref{rk:size_Q} and Lemma~\ref{lem:third_Q}. 
+402,405d400
+< 
+< 
+< 
+< 
+425c420,422
+< Let~$\mathfrak{t}^+$ be a Weyl chamber in~$\mathfrak{t}^\ast$ containing a representative~$\lambda$ for the Harish-Chandra parameter of~$\pi$. Write $\lim_{x \to 0(\mathfrak{t}^+)}\left[ G(\R)\cdot x\right]$ for the set of all elements $y \in i\g(\R)^\ast$ such that every $G(\R)$-invariant neighborhood of~$y$ contains all elements of~$\mathfrak{t}^+$ sufficiently close to zero. By Lemma B in~\cite{rossmann_limit_orbits}, if $\mathfrak{t}^+$ is a large Weyl chamber, then $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ is a single $G(\R)$-orbit.  Since this is the case when~$\pi$ is a generic discrete series representation, to prove assertion~(c)  it is enough to check the closure of $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ contains $\WF(\pi)$ in that case. Now, the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} implies that the closure of $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ contains the asymptotic cone of the orbit $G(\R)\cdot \lambda$  (see  Section~\ref{sec:asymp_cone} below). Therefore assertion~(c) follows from the fact that this asymptotic cone is equal to  $\WF(\pi)$  (Lemma~\ref{lem:WF_and_AC} below).
+---
+> Let~$\mathfrak{t}^+$ be a Weyl chamber in~$\mathfrak{t}^\ast$ containing a representative~$\lambda$ for the Harish-Chandra parameter of~$\pi$.
+> Define  $\lim_{x \to 0(\mathfrak{t}^+)}\left[ G(\R)\cdot x\right]$ as in \cite{rossmann_limit_orbits}. 
+> By Lemma B in~{\it loc.cit.} if $\mathfrak{t}^+$ is a large Weyl chamber, then $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ is a single $G(\R)$-orbit.  Since this is the case when~$\pi$ is a generic discrete series representation, to prove assertion~(c)  it is enough to check the closure of $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ contains $\WF(\pi)$ in that case. Now, the equivalence between conditions  (L1) and (L2) on page 2 of~\cite{rossmann_limit_orbits} implies that the closure of $\lim_{x \to 0(\mathfrak{t}^+)} \left[G(\R)\cdot x\right]$ contains the asymptotic cone of the orbit $G(\R)\cdot \lambda$  (see  Section~\ref{sec:asymp_cone} below). Therefore assertion~(c) follows from the fact that this asymptotic cone is equal to  $\WF(\pi)$  (Lemma~\ref{lem:WF_and_AC} below).
+459c456
+< prove, using elementary arguments, that (3) $\leftrightarrow$ (4)
+---
+> prove, using elementary arguments, that the bijection (3) $\leftrightarrow$ (4) we give
+502c499
+< \subsubsection{Definition of the two groups, and canonical isomorphism}\label{sec:first_defs_q}
+---
+> \subsubsection{Definition of the two groups, and a canonical isomorphism}\label{sec:first_defs_q}
+600c597
+< In~\eqref{long_ptset} the connecting map  $ \psi_\tau\colon \Gad^{\tau} \rightarrow H^1(\tau,Z)$ is defined as follows: if $\gamma \in \Gad^{\tau}$ is the coset $gZ$, then $g\tau(g^{-1}) \in Z^{-\tau}$, and $\psi_\tau$ sends~$\gamma$ to the class of $g \tau(g^{-1})$ in $H^1(\tau, Z)$. The kernel of~$\psi_\tau$ is $(G^\tau)_{\ad}$. Since~\eqref{long_ptset} is exact we deduce that $\psi_\tau$ induces a canonical  bijection
+---
+> The connecting map  $ \psi_\tau\colon \Gad^{\tau} \rightarrow H^1(\tau,Z)$ is defined as follows: if $\gamma \in \Gad^{\tau}$ is the coset $gZ$, then $g\tau(g^{-1}) \in Z^{-\tau}$, and $\psi_\tau$ sends~$\gamma$ to the class of $g \tau(g^{-1})$ in $H^1(\tau, Z)$. The kernel of~$\psi_\tau$ is $(G^\tau)_{\ad}$. Since~\eqref{long_ptset} is exact we deduce that $\psi_\tau$ induces a canonical  bijection
+635c632
+< Let $\gamma_0$ be the image of $z_0^{-1} k^{-1} g$ in $\Gad$. Then $\gamma_0 \in (G^{\sigma})_\ad$, and $\gamma_0$ is equal to the image of $k^{-1} g$ in $\Gad$. The element $\kappa=\gamma \gamma_0^{-1}$ of $\Gad$  is therefore $\sigma$-invariant, and since $\kappa=kZ$, we also have $(\theta\sigma)(\kappa)=\kappa$; we conclude that $\theta(\kappa) = \kappa$, q.e.d. 
+---
+> Let $\gamma_0$ be the image of $z_0^{-1} k^{-1} g$ in $\Gad$. Then $\gamma_0 \in (G^{\sigma})_\ad$, and $\gamma_0$ is equal to the image of $k^{-1} g$ in $\Gad$. The element $\kappa=\gamma \gamma_0^{-1}$ of $\Gad$  is therefore $\sigma$-invariant, and since $\kappa=kZ$, we also have $(\theta\sigma)(\kappa)=\kappa$; we conclude that $\theta(\kappa) = \kappa$.
+656c653
+< Similarly the actions of $\Gad^\theta$ on~$\g$ and~$K$ induce an action of $Q_\theta(G)$ on equivalence classes of $(\g,K)$-modules, for which we use analogous notation.
+---
+> Similarly the actions of $\Gad^\theta$ on~$\g$ and~$K$ induce an action of $Q_\theta(G)$ on equivalence classes of $(\g,K)$-modules, for which we use similar notation.
+673c670
+< Suppose $\tilde{q} \in \Gad^\sigma$. For every Whittaker pair $(B, \eta)$ as in Section~\ref{sec:whittaker_defs}, the pair $q\cdot (B, \eta)=\big(\tilde{q} B \tilde{q}^{-1}, \eta \circ (x \mapsto \tilde{q} x \tilde{q}^{-1})\big)$ is again a Whittaker pair, which is conjugate to $(B, \eta)$ if and only if $\tilde{q} \in (G^\sigma)_{\ad}$. This determines an action of $Q_\sigma(G)$ on the set of Whittaker data for~$G(\R)$, which we shall denote by $(q, \mathfrak{w}) \mapsto q \cdot \mathfrak{w}$. This action is simply transitive: see \cite[Lemma 3.1.3]{adams_kaletha} for an elementary argument.
+---
+> Suppose $\tilde{q} \in \Gad^\sigma$. For every Whittaker pair $(B, \eta)$ as in Section~\ref{sec:whittaker_defs}, the pair $\tilde q\cdot (B, \eta)=\big(\tilde{q} B \tilde{q}^{-1}, \eta \circ (x \mapsto \tilde{q} x \tilde{q}^{-1})\big)$ is again a Whittaker pair, which is conjugate to $(B, \eta)$ if and only if $\tilde{q} \in (G^\sigma)_{\ad}$. This determines an action of $Q_\sigma(G)$ on the set of Whittaker data for~$G(\R)$, which we shall denote by $(q, \mathfrak{w}) \mapsto q \cdot \mathfrak{w}$. This action is simply transitive: see \cite[Lemma 3.1.3]{adams_kaletha} for an elementary argument.
+675c672,673
+< Now let $\pi$ be a generic discrete series representation of~$G(\R)$. Let $q$ be an element of $Q_\sigma(G)$, with a representative $\tilde{q}$ in $\Gad^\sigma$.  For every Whittaker pair $(B, \eta)$ such that $\pi$ has a $(B, \eta)$-Whittaker model, it is immediate from the definitions that the representation $\pi \circ (x \mapsto \tilde{q} x\tilde{q}^{-1})$ is again a discrete series, and that it has a $\tilde{q}\cdot (B, \eta)$-Whittaker model. Passing to equivalence classes we see that $\pi^q$ is generic, and satisfies $\Wh(\pi^q)=q \cdot \Wh(\pi)$. Therefore the map $\pi \mapsto \Wh(\pi)$ is $Q_\sigma(G)$-equivariant.
+---
+> Now let $\pi$ be a generic discrete series representation of~$G(\R)$. Let $q$ be an element of $Q_\sigma(G)$, with a representative $\tilde{q}$ in $\Gad^\sigma$.  For every Whittaker pair $(B, \eta)$ such that $\pi$ has a $(B, \eta)$-Whittaker model, it is immediate from the definitions that the representation
+> $\pi^{\tilde g}$ is again a discrete series representation, and that it has a $\tilde{q}\cdot (B, \eta)$-Whittaker model. Passing to equivalence classes we see that $\pi^q$ is generic, and satisfies $\Wh(\pi^q)=q \cdot \Wh(\pi)$. Therefore the map $\pi \mapsto \Wh(\pi)$ is $Q_\sigma(G)$-equivariant.
+722c720
+< To define the action of~$Q_{\sigma}(G)$ on~(4), first observe that~$\Gad$ acts on~$\g$ by the adjoint action. This action preserves~$\Op$, and its restriction to~$\Gad(\R)$ preserves~$\Op\cap i\g(\R)^*$. Since elements on a given~$G(\R)_{\mathrm{ad}}$-orbit are in the same~$G(\R)$-orbit, this induces an action of $Q_{\sigma}(G)=\Gad(\R)/G(\R)_{\mathrm{ad}}$ on~$(\Op\cap i\g(\R)^*)/G(\R)$.
+---
+> To define the action of~$Q_{\sigma}(G)$ on~(4), first observe that~$\Gad$ acts on~$\g$ by the adjoint action. This action preserves~$\Op$, and its restriction to~$\Gad(\R)$ preserves~$\Op\cap i\g(\R)^*$. Since elements of a given~$G(\R)_{\mathrm{ad}}$-orbit are in the same~$G(\R)$-orbit, this induces an action of $Q_{\sigma}(G)=\Gad(\R)/G(\R)_{\mathrm{ad}}$ on~$(\Op\cap i\g(\R)^*)/G(\R)$.
+757c755
+< On the other hand $Q(G)$, realized as $Q_\theta(G)$, is a group of automorphisms of $(\g,K)$.
+---
+> Next, $Q(G)$, realized as $Q_\theta(G)$, is a group of automorphisms of $(\g,K)$.
+769c767
+< As for~(2), it follows directly from the definition of the associated variety. This uses filtrations of the universal enveloping algebra of~$\g$ which are all invariant under $\Gad^{\theta_{\ad}}$: see for instance the Introduction of~\cite{vogan_bowdoin}. Inspecting the definitions in \emph{loc. cit.} it becomes clear that the map $\pi \mapsto \AV(\pi)$, taking a generic discrete series $(\g,K)$-module  (or rather its equivalence class) to its associated variety, is equivariant under~$Q_{\theta}(G)$, proving~(2). 
+---
+> As for~(2), it follows directly from the definition of the associated variety. This uses filtrations of the universal enveloping algebra of~$\g$ which are all invariant under $\Gad^{\theta_{\ad}}$: see for instance the Introduction of~\cite{vogan_bowdoin}. Inspecting the definitions in \emph{loc. cit.} it is clear that the map $\pi \mapsto \AV(\pi)$, taking a generic discrete series $(\g,K)$-module  (or rather its equivalence class) to its associated variety, is equivariant under~$Q_{\theta}(G)$, proving~(2). 
+784c782
+< In this section only we need to  choose a particular an isomorphism \mbox{$\gder\simeq \gder^*$}.
+---
+> In this section only we need to  choose a particular  isomorphism \mbox{$\gder\simeq \gder^*$}.
+894c892,893
+< By Lemma \ref{l:pi_to_av} the associated variety of a discrete representation only depends on the $W_K$-orbit of any Weyl chamber containing a representative of its Harish-Chandra parameter. 
+---
+> By Lemma \ref{l:pi_to_av} the associated variety of a discrete representation only depends on  the
+> the $W_K$-orbit of any Weyl chamber containing a representative of its Harish-Chandra parameter. 
+920c919
+< Using Lemma~\ref{lem:Kost_and_AC} again, we see that all those orbits $\mathcal{O}'$ satisfy $F \in \AC(\mathcal{O}')$,
+---
+> Using Lemma~\ref{lem:Kost_and_AC} again, we see that all these orbits $\mathcal{O}'$ satisfy $F \in \AC(\mathcal{O}')$,
+1013c1012,1013
+< We may choose $H_\R, F_\R \in \g$ such that $(H_\R,E_\R,F_\R)$ is an $\mathrm{SL}(2)$-triple and  $E_\R$  contained in $i\g(\R)$,
+---
+> We may choose $H_\R, F_\R \in \g$ such that $(H_\R,E_\R,F_\R)$ is an $\mathrm{SL}(2)$-triple and  $E_\R$  is
+> contained in $i\g(\R)$,
